@@ -28,7 +28,7 @@ activates virtual environment
 Generally, we will create a new git branch for each new feature. This is a good practice because in the future if we further update the branch after some discussions, the pull request will be automatically updated. Let's create a new branch to make a very simple change to amend the readme.md file:
 
 ```
-git checkout -b [new-feature]
+git checkout -b newfeature
 ```
 After making the relevant additions to build the new features, we will just commit the new changes and checkout to the git master branch:
 ```
