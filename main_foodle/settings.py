@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'foodle.urls'
+ROOT_URLCONF = 'main_foodle.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'foodle.wsgi.application'
+WSGI_APPLICATION = 'main_foodle.wsgi.application'
 
 
 # Database
