@@ -6,10 +6,10 @@
 
 Clone this directory and CD into it. 
 
-'''
+```
 git clone [ssh-url] foodle
 cd foodle
-'''
+```
 
 Then issue the following commands
 
