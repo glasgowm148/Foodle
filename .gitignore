@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.DS_Store
+MARK_local_env/
 
 # C extensions
 *.so
@@ -103,4 +105,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 Resources/Design/website.psd
+
 MARK_local_env/
+
