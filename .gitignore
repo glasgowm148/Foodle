@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 .DS_Store
 MARK_local_env/
+foodle/node_modules/
 
 # C extensions
 *.so
