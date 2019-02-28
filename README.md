@@ -36,6 +36,10 @@ git add .
 git commit -m "information added in readme"
 git checkout master
 ```
+
+Add your local env to .gitignore!
+
+
 At this point, we will push the branch to the remote repository. 
 For this we will first check the branch name with the new feature as well as the git remote repository aliases. 
 Then we will push the changes using 
