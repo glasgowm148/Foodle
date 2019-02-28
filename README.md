@@ -1,5 +1,5 @@
 # Foodle
-testbranch
+## Angular Branch
 
 
 # Mark
@@ -7,7 +7,7 @@ testbranch
 Clone this directory and CD into it. 
 
 ```
-git clone [ssh-url] foodle
+git clone https://github.com/glasgowm148/Foodle.git
 cd foodle
 ```
 
@@ -16,14 +16,14 @@ Then issue the following commands
 installs the virtualenv
 ```pip3 install virtualenv```
 
-sets up a virtualenv called 'venv'
-```virtualenv -p python3 venv```
+sets up a virtualenv called 'MYNAME_local_env'
+```virtualenv -p python3 MYNAME_local_env```
 
 installs requirements 'django'
-```pip install -r requirements.txt```
+```pip3 install -r requirements.txt```
 
 activates virtual environment
-```. venv/bin/activate```
+```. MYNAME_local_env/bin/activate```
 
 Generally, we will create a new git branch for each new feature. This is a good practice because in the future if we further update the branch after some discussions, the pull request will be automatically updated. Let's create a new branch to make a very simple change to amend the readme.md file:
 
@@ -49,3 +49,16 @@ origin  git@github.com:[forked-repo-owner-username]/[repo-name].git (fetch)
 origin  git@github.com:[forked-repo-owner-username]/[repo-name].git (push)
 $ git push origin readme
 ```
+## Setting up Angular
+
+npm install -g @angular/cli
+ng new foodle
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS    (.css )
+cd foodle/
+ng serve
+
+You should now be able to access the angular front-end
+
+http://localhost:4200
+
