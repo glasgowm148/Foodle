@@ -44,11 +44,13 @@ Note : Add your local env to .gitignore!
 
 
 #### Configure Angular
+```sh
 cd microblog/front-end
 npm install
 ng build
 cd ../..
 python manage.py runserver
+```
 
 
 
