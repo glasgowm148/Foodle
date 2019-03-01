@@ -11,6 +11,7 @@ Intro Paragraph
 # Requirements
 
 * Python 3+ !!
+* NPM
 
 Check with
 
@@ -42,9 +43,9 @@ cd foodle
 #### Set up the virtual environment using virtualenv
 ```sh
 pip3 install virtualenv
-virtualenv -p python3 $USER
-. $USER/bin/activate
-pip3 install -r requirements.txt
+virtualenv -p python3.6 name
+. name/bin/activate
+pip3.6 install -r requirements.txt
 
 ```
 Note : Add your local env to .gitignore!
