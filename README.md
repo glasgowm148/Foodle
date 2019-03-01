@@ -1,46 +1,67 @@
 # Foodle
 > A responsive web application for finding deals within walking distance built using Django and Angular. 
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+
 
 Intro Paragraph
 
 
 ![](NOTES/header.png)
 
-## Installation
+# Installation
 
-#### OS X & Linux:
+## OS X & Linux:
 
-##### Clone the directory to your local drive
+### Requirements
+
+You need the following to run this app:
+
+* Python 3.5 or higher (Python 2.x is not supported by Django 2.x)
+* [Pipenv](https://pipenv.readthedocs.io/)
+* Node v8.x or higher
+* NPM v5.x or higher
+
+### Setup
+
+Open a terminal at the repo root, and run the following:
+
+### Clone the directory to your local drive
+
 ```sh
-git clone https://github.com/glasgowm148/Foodle.git
+git clone https://github.com/glasgowm148/Foodle_dev.git
 cd foodle
 ```
 
-##### Set up the virtual environment using virtualenv
+
+#### Set up the virtual environment using virtualenv
 ```sh
 pip3 install virtualenv
-virtualenv -p python3 $USER_local_env
+virtualenv -p python3 $USER
 pip3 install -r requirements.txt
-. MYNAME_local_env/bin/activate
+. $USER/bin/activate
 ```
 Note : Add your local env to .gitignore!
 
 
-##### Install Angular cli
-```sh
-npm install -g @angular/cli
-ng new foodle
-? Would you like to add Angular routing? Yes
-? Which stylesheet format would you like to use? CSS    (.css )
-cd foodle/
-ng serve
-```
+#### Configure Angular
+cd microblog/front-end
+npm install
+ng build
+cd ../..
+python manage.py runserver
 
-###### You should now be able to access the angular front-end at localhost:4200
+
+
+#### You should now be able to access the  front-end 
+
+127.0.0.1:8000
+
+#### Logging into the app
+
+The database included in this repository contains two users. The following are their usernames and passwords, which you may use for testing:
+
+- admin / admin123
+- user1 / example123
 
 
 ## Release History
