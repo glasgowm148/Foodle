@@ -8,7 +8,15 @@ Intro Paragraph
 
 ![](NOTES/header.png)
 
+# Requirements
 
+* Python 3+ !!
+
+Check with
+
+```
+python -V
+```
 
 # Installation
 
@@ -35,8 +43,9 @@ cd foodle
 ```sh
 pip3 install virtualenv
 virtualenv -p python3 $USER
-pip3 install -r requirements.txt
 . $USER/bin/activate
+pip3 install -r requirements.txt
+
 ```
 Note : Add your local env to .gitignore!
 
@@ -50,9 +59,7 @@ cd ../..
 python manage.py runserver
 ```
 
-
-
-#### You should now be able to access the  front-end 
+##### You should now be able to access the front-end 
 
 127.0.0.1:8000
 
