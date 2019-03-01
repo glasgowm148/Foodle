@@ -12,15 +12,6 @@ Intro Paragraph
 
 ## OS X & Linux:
 
-### Requirements
-
-You need the following to run this app:
-
-* Python 3.5 or higher (Python 2.x is not supported by Django 2.x)
-* [Pipenv](https://pipenv.readthedocs.io/)
-* Node v8.x or higher
-* NPM v5.x or higher
-
 ### Setup
 
 Open a terminal at the repo root, and run the following:
