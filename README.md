@@ -8,8 +8,6 @@
 Intro Paragraph
 
 
-```
-
 ![](header.png)
 
 ## Installation
@@ -18,7 +16,6 @@ Intro Paragraph
 
 ##### Clone the directory to your local drive
 ```sh
-
 git clone https://github.com/glasgowm148/Foodle.git
 cd foodle
 ```
@@ -77,6 +74,7 @@ After making the relevant additions to build the new features, we will just comm
 git add .
 git commit -m "myfeature info"
 git checkout develop
+```
 
 #### Incorporating a finished feature on develop ¶
 
