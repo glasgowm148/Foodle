@@ -82,19 +82,19 @@ After making the relevant additions to build the new features, we will just comm
 ```
 git add .
 git commit -m "myfeature info"
-git checkout develop
+git checkout dev
 ```
 
 #### Incorporating a finished feature on develop ¶
 
 ```
-Switched to branch 'develop'
+Switched to branch 'dev'
 $ git merge --no-ff myfeature
 Updating ea1b82a..05e9557
 (Summary of changes)
 $ git branch -d myfeature
 Deleted branch myfeature (was 05e9557).
-$ git push origin develop
+$ git push origin dev
 ```
 
 
