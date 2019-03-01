@@ -8,7 +8,7 @@
 Intro Paragraph
 
 
-![](header.png)
+![](NOTES/header.png)
 
 ## Installation
 
@@ -45,23 +45,11 @@ ng serve
 
 ## Release History
 
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
 * 0.0.1
     * Work in progress
 
-## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the MIT license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## Contributing
-
-### Version Control (Git)
+## Version Control (Git)
 
 
 Generally, we will create a new git branch for each new feature. This is a good practice because in the future if we further update the branch after some discussions, the pull request will be automatically updated. Let's create a new branch to make a very simple change to amend the readme.md file:
