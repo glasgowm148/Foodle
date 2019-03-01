@@ -30,6 +30,8 @@ virtualenv -p python3 $USER_local_env
 pip3 install -r requirements.txt
 . MYNAME_local_env/bin/activate
 ```
+Note : Add your local env to .gitignore!
+
 
 ##### Install Angular cli
 ```sh
@@ -68,30 +70,27 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 Generally, we will create a new git branch for each new feature. This is a good practice because in the future if we further update the branch after some discussions, the pull request will be automatically updated. Let's create a new branch to make a very simple change to amend the readme.md file:
 
 ```
-git checkout -b newfeature
+git checkout -b myfeature develop
 ```
-After making the relevant additions to build the new features, we will just commit the new changes and checkout to the git master branch:
+After making the relevant additions to build the new features, we will just commit the new changes and checkout to the git develop branch:
 ```
 git add .
-git commit -m "information added in readme"
-git checkout master
-```
+git commit -m "myfeature info"
+git checkout develop
 
-Add your local env to .gitignore!
-
-
-At this point, we will push the branch to the remote repository. 
-For this we will first check the branch name with the new feature as well as the git remote repository aliases. 
-Then we will push the changes using 
+#### Incorporating a finished feature on develop ¶
 
 ```
-git push [git-remote-alias] [branch-name]:
-git branch
-* master
-readme
-$ git remote -v
-origin  git@github.com:[forked-repo-owner-username]/[repo-name].git (fetch)
-origin  git@github.com:[forked-repo-owner-username]/[repo-name].git (push)
-$ git push origin readme
+Switched to branch 'develop'
+$ git merge --no-ff myfeature
+Updating ea1b82a..05e9557
+(Summary of changes)
+$ git branch -d myfeature
+Deleted branch myfeature (was 05e9557).
+$ git push origin develop
 ```
+
+
+
+
 
