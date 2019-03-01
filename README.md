@@ -8,7 +8,14 @@ Intro Paragraph
 
 ![](NOTES/header.png)
 
+
+
 # Installation
+
+* angular_django_cors - The Django project and main settings file
+* microblog - An app within the project, containing the Django Rest Framework views and URL routing
+* static/ng-demo - The Angular app source code lives here
+* static/dist - The compiled Angular app is here
 
 ## OS X & Linux:
 
