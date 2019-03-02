@@ -19,20 +19,26 @@ Check your python version with
 python -V
 ```
 
-# Installation
+# Folders
 
-* angular_django_cors - The Django project and main settings file
-* foodle - An app within the project, containing the Django Rest Framework views and URL routing
-* static/ng-demo - The Angular app source code lives here
-* static/dist - The compiled Angular app is here
+* angular_django
+    * Django project and main settings.py 
+* foodle
+    * Our app within the project, containing the Django Rest Framework views and URL routing (urls.py)
+    * /front-end/ : local npm install
+    * static/templates : base.html, index.html, etc. 
+    * static/dist : The compiled Angular app is here
+* NOTES
+    * Any general notes/loose files place here. 
 
-## OS X & Linux:
+Most of these files are local. Only the folders angular_django/ foodle/ and NOTES/ manage.py and a few system files (requirements.txt/lock files, etc) 
+are synced on Git.
 
-### Setup
+# Setup
 
-Open a terminal at the repo root, and run the following:
 
-### Clone the directory to your local drive
+
+## Clone the directory to your local drive
 
 ```sh
 git clone https://github.com/glasgowm148/Foodle_dev.git
@@ -40,17 +46,7 @@ cd foodle
 ```
 
 
-#### Set up the virtual environment using virtualenv
-##### On Mac OSX : Ensure the environment is py3.6
-```sh
-pip3.6 install virtualenv
-virtualenv -p python3.6 venv
-. venv/bin/activate
-pip3.6 install -r requirements.txt
-./config.sh
-```
-
-
+## Set up the virtual environment using virtualenv
 
 #### Windows
 
@@ -62,20 +58,29 @@ pip install -r requirements.txt
 ./config.sh
 ```
 
+#### On Mac OSX : Ensure the environment is py3.6
+```sh
+pip3.6 install virtualenv
+virtualenv -p python3.6 venv
+. venv/bin/activate
+pip3.6 install -r requirements.txt
+./config.sh
+```
 
+The config.sh file installs npm and launches manage.py runserver
 
-##### You should now be able to access the front-end 
+### Giving you access to the front-end 
 
-127.0.0.1:8000
+http://127.0.0.1:8000
 
-#### Logging into the app
+#### Dummy logins (temp)
 
 The database included in this repository contains two users. The following are their usernames and passwords, which you may use for testing:
 
 - admin / admin123
 - user1 / example123
 
-#### VSCode
+#### VSCode Tips
 
 If you're using vscode. Open the command pallet and type 'Shell - install 'code' in command PATH'
 
@@ -84,6 +89,8 @@ Then you can just type
 `code .` from within Foodle_dev/ to open the project in vscode
 
 Command Pallet - > Python : Enable Linting 
+
+Get the material icons theme.
 
 
 ## Release History
@@ -94,30 +101,40 @@ Command Pallet - > Python : Enable Linting
 
 ## Version Control (Git)
 
+```sh
+git status
+```
 
-Generally, we will create a new git branch for each new feature. This is a good practice because in the future if we further update the branch after some discussions, the pull request will be automatically updated. Let's create a new branch to make a very simple change to amend the readme.md file:
+Always keep an eye on git status. This tells you which files aren't staged ('stage' using : `git add .`), and all other deviations your local files are from the last commit. 
 
+
+```sh
+git checkout -b myfeature dev
 ```
-git checkout -b myfeature develop
+
+Create a new git branch for each new feature. This is a good practice because in the future if we further update the branch, the pull request will be automatically updated.
+
+
+
+#### Incorporating a finished feature on develop ¶
+After making the relevant additions to build the new features,
+
+Use 
+```sh
+git fetch // to pull changes from the remote branch. You can then compare changes & modify as needed.
+git pull // to fetch+merge
 ```
-After making the relevant additions to build the new features, we will just commit the new changes and checkout to the git develop branch:
-```
+
+
+Once any conflicts are resolved, we can  commit the new changes and checkout to the git `dev` branch:
+```sh
 git add .
 git commit -m "myfeature info"
 git checkout dev
 ```
 
-#### Incorporating a finished feature on develop ¶
 
-```
-Switched to branch 'dev'
-$ git merge --no-ff myfeature
-Updating ea1b82a..05e9557
-(Summary of changes)
-$ git branch -d myfeature
-Deleted branch myfeature (was 05e9557).
-$ git push origin dev
-```
+
 
 
 
