@@ -10,6 +10,5 @@ if $(git commit -am Deploy); then # Commit the changes, if any
   echo 'Changes Committed'
 fi
 git push 
-#git push heroku deploy:dev # Deploy to Heroku
-git checkout master # Checkout master again
+git checkout dev # Checkout dev again
 git stash pop # And restore the changes

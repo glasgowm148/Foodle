@@ -42,3 +42,6 @@ yarn add mjml@4.3.1
 # Check all the correct dependencies are installed
 
 git status
+
+# rm -f package-lock.json && npm install
+
