@@ -54,7 +54,7 @@
                 "sha256:e1cc1cd6b658aa4e052f5f2b148bfda08091d7c3558529708342e37e4e33f72c"
             ],
             "index": "pypi",
-            "version": "==2.1.1"
+            "version": "==2.1.7"
         },
         "django-rest-swagger": {
             "hashes": [
@@ -139,7 +139,7 @@
                 "sha256:ec22d826a36ed72a7358ff3fe56cbd4ba69dd7a6718ffd450ff0e9df7a47ce6a"
             ],
             "index": "pypi",
-            "version": "==2.19.1"
+            "version": "==2.20.0"
         },
         "simplejson": {
             "hashes": [
