@@ -5,7 +5,6 @@
 
 Intro Paragraph
 
-
 ![](NOTES/header.png)
 
 # Requirements
@@ -14,7 +13,7 @@ Intro Paragraph
 * NPM
 
 
-Check with
+Check your python version with
 
 ```
 python -V
@@ -23,7 +22,7 @@ python -V
 # Installation
 
 * angular_django_cors - The Django project and main settings file
-* microblog - An app within the project, containing the Django Rest Framework views and URL routing
+* foodle - An app within the project, containing the Django Rest Framework views and URL routing
 * static/ng-demo - The Angular app source code lives here
 * static/dist - The compiled Angular app is here
 
@@ -51,10 +50,18 @@ pip3.6 install -r requirements.txt
 ```
 Note : Add your local env to .gitignore!
 
+##### On Windows
+
+```sh
+pip install virtualenv
+python -m venv name
+name\Scripts\activate
+```
+
 
 #### Configure Angular
 ```sh
-cd microblog/front-end
+cd foodle/front-end
 npm install -g @angular/cli@6
 ng update @angular/cli @angular/core
 ng build
@@ -72,6 +79,16 @@ The database included in this repository contains two users. The following are t
 
 - admin / admin123
 - user1 / example123
+
+#### VSCode
+
+If you're using vscode. Open the command pallet and type 'Shell - install 'code' in command PATH'
+
+Then you can just type
+
+`code .` from within Foodle_dev/ to open the project in vscode
+
+Command Pallet - > Python : Enable Linting 
 
 
 ## Release History
