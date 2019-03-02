@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'localhost',
-    '212.71.237.14'
+    'localhost',     # To run locally
+    '212.71.237.14'  # Linode VPS
 ]
 
 
@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'foodle'
+    'rest_framework', # REST framework connects python with angular. 
+    'foodle' # Main Application
 ]
 
 MIDDLEWARE = [

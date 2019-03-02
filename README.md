@@ -43,32 +43,24 @@ cd foodle
 #### Set up the virtual environment using virtualenv
 ```sh
 pip3.6 install virtualenv
-virtualenv -p python3.6 name
-. name/bin/activate
+virtualenv -p python3.6 venv
+. venv/bin/activate
 pip3.6 install -r requirements.txt
-
+./config.sh
 ```
-Note : Add your local env to .gitignore!
 
-##### On Windows
+
+
+#### Windows
 
 ```sh
 pip install virtualenv
 python -m venv name
 name\Scripts\activate
+pip install -r requirements.txt
+./config.sh
 ```
 
-
-#### Configure Angular
-```sh
-cd foodle/front-end
-npm install -g @angular/cli@6
-ng update @angular/cli @angular/core
-ng build
-ng serve
-cd ../..
-python manage.py runserver
-```
 
 ##### You should now be able to access the front-end 
 
