@@ -41,6 +41,7 @@ cd foodle
 
 
 #### Set up the virtual environment using virtualenv
+##### On Mac OSX : Ensure the environment is py3.6
 ```sh
 pip3.6 install virtualenv
 virtualenv -p python3.6 venv
@@ -60,6 +61,7 @@ name\Scripts\activate
 pip install -r requirements.txt
 ./config.sh
 ```
+
 
 
 ##### You should now be able to access the front-end 

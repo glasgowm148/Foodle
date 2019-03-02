@@ -9,7 +9,7 @@ cd foodle/front-end
 # install globablly (within the environment)
 npm cache verify
 # if npm version is < 5 then use `npm cache clean`
-echo "npm install -g @angular/cli@latest - installs the latest version"
+echo "##### npm install -g @angular/cli@latest - installs the latest version #####"
 npm install -g @angular/cli@latest
 
 # update the node package to be on the same cli as the core
@@ -19,23 +19,20 @@ ng update @angular/cli @angular/core
 # which will use the locally installed angular-cli.
 
 
+# ng build command writes generated build artifacts to the output folder (/dist)
 ng build
 
-
-#
-ng serve
-
-return 
-#exit (back into main console so we can CD)
 
 # CD back into the home directory ./Foodle_dev
 cd ../..
 
-# Run the python server - which is configured to 
+echo "##### npm installed successfully. Initialising python....#####"
+
+# Run the python server - which is linked with angular via the REST framework. 
 python manage.py runserver
 
 #webpack-bundle-tracker@0.4.2-beta
-yarn add mjml@4.3.1
+#yarn add mjml@4.3.1
 # mjml@4.3.1 -  the only framework that makes responsive-email easy
 
 # npm ls --depth 0
@@ -45,3 +42,4 @@ git status
 
 # rm -f package-lock.json && npm install
 
+#  grep -rli 'angular_django_example' * | xargs -I@ sed -i 's/angular_django_example/anglular_djangod/g' @
