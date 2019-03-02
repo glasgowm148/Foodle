@@ -52,8 +52,8 @@ cd foodle
 
 ```sh
 pip install virtualenv
-python -m venv name
-name\Scripts\activate
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 ./config.sh
 ```
