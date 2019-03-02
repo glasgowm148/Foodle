@@ -13,6 +13,7 @@ Intro Paragraph
 * Python 3+ !!
 * NPM
 
+
 Check with
 
 ```
@@ -55,6 +56,7 @@ Note : Add your local env to .gitignore!
 ```sh
 cd microblog/front-end
 npm install -g @angular/cli@6
+ng update @angular/cli @angular/core
 ng build
 cd ../..
 python manage.py runserver
