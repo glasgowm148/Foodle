@@ -65,6 +65,7 @@ cd foodle/front-end
 npm install -g @angular/cli@6
 ng update @angular/cli @angular/core
 ng build
+ng serve
 cd ../..
 python manage.py runserver
 ```
