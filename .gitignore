@@ -2,6 +2,7 @@
 __pycache__
 venv
 microblog/static/front-end
+foodle/static/front-end
 mark
 linode/
 .DS_Store
