@@ -16,6 +16,7 @@ ng build
 cd ../..
 python manage.py runserver
 """
+cd /.
 echo " ~~~~~~ Foodle : Repo initialisation Bash shell script ~~~~~~ "
 
 echo "The follow file configures the following : "
