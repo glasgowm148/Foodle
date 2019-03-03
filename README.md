@@ -9,13 +9,11 @@
 # Requirements
 
 * Python 3+ !!
-* NPM
-
-
-Check your python version with
+* NPM (Javascript package manager)
 
 ```
 python -V
+ngm help ngm
 ```
 
 # Folders
@@ -30,14 +28,9 @@ python -V
 * NOTES
     * Any general notes/loose files place here. 
 
-Most of these files are local. Only the folders angular_django/ foodle/ and NOTES/ manage.py and a few system files (requirements.txt/lock files, etc) 
-are synced on Git.
+## Running locally
 
-# Setup
-
-
-
-## Clone the directory to your local drive
+### Clone the directory to your local drive
 
 ```sh
 git clone https://github.com/glasgowm148/Foodle_dev.git
@@ -45,13 +38,9 @@ cd Foodle_dev
 ```
 
 
-## Installation
+### Installation
 
 #### Mac OSX / Linux 
-The following bash/sh scripts configure the project and check dependencies. 
-
-Execute from git clone root
-
 ```sh
 ./config.sh
 ./check.sh
@@ -59,7 +48,7 @@ Execute from git clone root
 
 #### Windows
 
-```sh
+```sh initial_win.sh
 pip install virtualenv
 python -m venv venv
 venv\Scripts\activate
@@ -71,6 +60,13 @@ ng build
 cd ../..
 python manage.py runserver
 ```
+```sh
+venv\Scripts\activate       // Ensure you are in your venv
+npm ls --depth 0            // Ensures correct dependencies 
+git status                  // Check the status of the branch
+```
+
+
 
 **or if sh is installed**
 ```sh
