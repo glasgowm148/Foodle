@@ -16,17 +16,41 @@ python -V
 ngm help ngm
 ```
 
+
 # Folders
 
-* angular_django
-    * Django project and main settings.py 
-* foodle
-    * Our app within the project, containing the Django Rest Framework views and URL routing (urls.py)
-    * /front-end/ : local npm install
-    * static/templates : base.html, index.html, etc. 
-    * static/dist : The compiled Angular app is here
-* NOTES
-    * Any general notes/loose files place here. 
+
+Foodle_dev/ :: main directory
+
+/angular_django/  :: local to your install. Django project and main settings.py  
+ * __init__.py
+ * settings.py
+ * urls.py
+ * wsgi.py :: not needed on pythonanywhere 
+
+
+/foodle/ :: Our app within the project, containing the Django Rest Framework views and URL routing (urls.py)
+* front-end :: local package.json requirements (npm install)
+* migrations ::
+* static :: Main site build
+    * templates :: base.html // index.html // etc
+    * dist :: Compiled Angular App
+* Django app files apps.py, models,py, etc...
+
+/NOTES/ :: misc. files
+
+/sh/ :: shell scripts
+
+/venv/ :: local to your install
+
+.gitignore/ :: Files to be ignored from git push
+
+manage.py :: main python executable 
+
+Pipfile :: pipenv dependencies? remove ? 
+
+requirements.txt :: requirements set by django
+
 
 ## Running locally
 

@@ -63,18 +63,9 @@ npm ls --depth 0
 echo " ~~~~~~ Git Stauts :: ~~~~~~ "
 git status
 
-echo " ~~~~~~ Spawning venv in subshell ~~~~~~ "
-
-script_dir=`dirname $0`
-cd $script_dir
-/bin/bash -c ". ../venv/bin/activate; exec /bin/bash -i"
-
 echo "~~~~~~ manage.py runserver ~~~~~~"
 
 
 
 # Run the python server - which is linked with angular via the REST framework. 
 python manage.py runserver
-
-echo "~~~~~~ All configured successfully. ~~~~~~"
-echo "~~~~~~ Open a new tab and run ./check.sh ~~~~~~"
