@@ -61,8 +61,8 @@ pip install -r requirements.txt
 #### Mac OSX / Linux 
 ```sh
 pip3.6 install virtualenv
-virtualenv -p python3.6 venv
-. venv/bin/activate
+virtualenv -p python3.6 venv2
+. venv2/bin/activate
 pip3.6 install -r requirements.txt
 ./config.sh
 ```

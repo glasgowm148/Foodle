@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Foodle : Repo initialisation Bash shell script"
+echo " ~~~~~~ Foodle : Repo initialisation Bash shell script ~~~~~~ "
 
 echo "The follow file configures the following : "
 echo "Setting up venv + installing requirements.txt"
@@ -7,12 +7,12 @@ echo "Install & Building npm"
 echo "serving using python manage.py runserver"
 echo "Estimated time : 1-5 minutes"
 
-echo "Configuring a local python 3.6 virtualenv"
+echo " ~~~~~~ Configuring a local python 3.6 virtualenv ~~~~~~ "
 
 pip3.6 install virtualenv
 virtualenv -p python3.6 venv
 . venv/bin/activate
-echo "venv activated - installing project requirements.txt"
+echo "~~~~~~ venv activated - installing project requirements.txt ~~~~~~"
 pip3.6 install -r requirements.txt
 
 

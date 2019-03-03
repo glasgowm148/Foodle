@@ -10,7 +10,7 @@ npm ls --depth 0
 echo " ~~~~~~ Git Stauts :: ~~~~~~ "
 git status
 
-echo " ~~~~~~ Entering venv ~~~~~~ "
+echo " ~~~~~~ Spawning venv in subshell ~~~~~~ "
 
 script_dir=`dirname $0`
 cd $script_dir
