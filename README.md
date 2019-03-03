@@ -3,8 +3,7 @@
 
 
 
-Intro Paragraph
-
+"Where Deals Become Meals"™️
 ![](NOTES/header.png)
 
 # Requirements
@@ -46,7 +45,17 @@ cd Foodle_dev
 ```
 
 
-## Set up the virtual environment using virtualenv
+## Installation
+
+#### Mac OSX / Linux 
+The following bash/sh scripts configure the project and check dependencies. 
+
+Execute from git clone root
+
+```sh
+./config.sh
+./check.sh
+```
 
 #### Windows
 
@@ -63,40 +72,25 @@ cd ../..
 python manage.py runserver
 ```
 
-or if sh is installed
+**or if sh is installed**
 ```sh
 sh initial_win.sh
-```
-
-#### Mac OSX / Linux 
-The following bash/sh scripts configure the project and check dependencies. 
-
-Execute from git clone root
-
-```sh
-./config.sh
-./check.sh
 ```
 
 ### Access via ::
 
 http://127.0.0.1:8000
 
-##### Dummy logins (temp)
 - admin / admin123
 - user1 / example123
 
 #### VSCode Tips
 
-If you're using vscode. Open the command pallet and type 'Shell - install 'code' in command PATH'
-
-Then you can just type
-
-`code .` from within Foodle_dev/ to open the project in vscode
-
-Command Pallet - > Python : Enable Linting 
-
-Get the material icons theme.
+* Open the command pallet and type 'Shell - install 'code' in command PATH'
+* Then you can just type
+* `code .` from within Foodle_dev/ to open the project in vscode
+* Command Pallet - > Python : Enable Linting 
+* Get the material icons theme.
 
 
 ## Release History
