@@ -69,19 +69,20 @@ sh initial_win.sh
 ```
 
 #### Mac OSX / Linux 
+The following bash/sh scripts configure the project and check dependencies. 
+
+Execute from git clone root
+
 ```sh
 ./config.sh
+./check.sh
 ```
 
-
-### Giving you access to the front-end 
+### Access via ::
 
 http://127.0.0.1:8000
 
-#### Dummy logins (temp)
-
-The database included in this repository contains two users. The following are their usernames and passwords, which you may use for testing:
-
+##### Dummy logins (temp)
 - admin / admin123
 - user1 / example123
 
@@ -99,9 +100,10 @@ Get the material icons theme.
 
 
 ## Release History
-
+* 0.0.2
+    * shell scripts + backend tidy/customise. {settings/config}
 * 0.0.1
-    * Work in progress
+    * fork angular-django
 
 
 ## Version Control (Git)
@@ -110,35 +112,36 @@ Get the material icons theme.
 git status
 ```
 
-Always keep an eye on git status. This tells you which files aren't staged ('stage' using : `git add .`), and all other deviations your local files are from the last commit. 
+Keep an eye on `git status.`
 
+This tells you which files are modified / unstaged 
+
+(stage files for commit using : `git add .`) 
+
+Open a new branch for each [Project](https://github.com/glasgowm148/Foodle_dev/projects). 
 
 ```sh
 git checkout -b myfeature dev
 ```
 
-Create a new git branch for each new feature. This is a good practice because in the future if we further update the branch, the pull request will be automatically updated.
+Several people can work on the same project - push/pull often when working in teams to avoid merge conflicts 
 
+#### Pushing local changes to feature branch ¶
+*Ensure you are in the correct branch at all times* 
 
-
-#### Incorporating a finished feature on develop ¶
 After making the relevant additions to build the new features,
 
-Use 
+
 ```sh
-git fetch // to pull changes from the remote branch. You can then compare changes & modify as needed.
-git pull // to fetch+merge
+git status          // 
+git fetch           // to pull changes from the remote branch. 
+                    // Then compare changes & modify as needed.
+git pull            // fetch + merge
+git commit -a       //
+git add .           // stage all files in ./ to be commited
+git commit -m "x"   // x := commit message
+git push            // push the new changes to git
 ```
-
-
-Once any conflicts are resolved, we can  commit the new changes and checkout to the git `dev` branch:
-```sh
-git add .
-git commit -m "myfeature info"
-git checkout dev
-```
-
-
 
 
 

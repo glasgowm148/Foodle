@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Mac OSX / Linux config script. Run check.sh after. 
 echo " ~~~~~~ Foodle : Repo initialisation Bash shell script ~~~~~~ "
 
 echo "The follow file configures the following : "
