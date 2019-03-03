@@ -53,6 +53,21 @@ echo "~~~~~~ npm installed successfully. ~~~~~~"
 cd ../..
 echo "$(pwd)"
 
+echo " ~~~~~~ Current working directory :: ~~~~~~ "
+echo "$(pwd)"
+
+echo " ~~~~~~ Dependecy Check ::  ~~~~~~ "
+
+npm ls --depth 0
+
+echo " ~~~~~~ Git Stauts :: ~~~~~~ "
+git status
+
+echo " ~~~~~~ Spawning venv in subshell ~~~~~~ "
+
+script_dir=`dirname $0`
+cd $script_dir
+/bin/bash -c ". ../venv/bin/activate; exec /bin/bash -i"
 
 echo "~~~~~~ manage.py runserver ~~~~~~"
 
@@ -63,18 +78,3 @@ python manage.py runserver
 
 echo "~~~~~~ All configured successfully. ~~~~~~"
 echo "~~~~~~ Open a new tab and run ./check.sh ~~~~~~"
-
-
-#WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| awk '{print $5}')
-#xdotool windowfocus $WID
-#xdotool key ctrl+shift+t
-#wmctrl -i -a $WID
-# This will auto determine the corresponding terminal and opens the tab accordingly.
-# https://stackoverflow.com/questions/1188959/open-a-new-tab-in-gnome-terminal-using-command-line
-
-
-# notes
-
-#webpack-bundle-tracker@0.4.2-beta
-#yarn add mjml@4.3.1
-# mjml@4.3.1 -  the only framework that makes responsive-email easy
