@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',     # To run locally
-    '212.71.237.14'  # Linode VPS
+    '212.71.237.14',  # Linode VPS
+    'http://markglasgow148.pythonanywhere.com'
 ]
 
 

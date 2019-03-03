@@ -58,7 +58,7 @@ pip install -r requirements.txt
 ./config.sh
 ```
 
-#### On Mac OSX : Ensure the environment is py3.6
+#### Mac OSX / Linux 
 ```sh
 pip3.6 install virtualenv
 virtualenv -p python3.6 venv
