@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/markglasgow/Documents/GitHub/Foodle_dev/foodle/front-end/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/markglasgow/Documents/GitHub/Foodle_dev/Foodle_dev/foodle/front-end/src/styles.css */"./src/styles.css");
 
 
 /***/ })

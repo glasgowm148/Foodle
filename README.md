@@ -42,8 +42,10 @@ cd Foodle_dev
 
 #### Mac OSX / Linux 
 ```sh
-./config.sh
-./check.sh
+./config.sh             // config venv + npm 
+./check.sh              // check dependencies + git status
+code .                  // vscode command pallet > 
+                        // 'Shell - install 'code' in command PATH'
 ```
 
 #### Windows
