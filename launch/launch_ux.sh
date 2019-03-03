@@ -1,10 +1,11 @@
 #!/bin/bash
 
-echo "Configuring a local python 3.6 virtualenv"
-pip3.6 install virtualenv
-virtualenv -p python3.6 venv
-. venv/bin/activate
-echo "venv activated - installing project requirements.txt"
+#echo "Configuring a local python 3.6 virtualenv"
+#pip3.6 install virtualenv
+#virtualenv -p python3.6 venv
+#. venv/bin/activate
+#echo "venv activated - installing project requirements.txt"
+cd Foodle_dev/
 pip3.6 install -r requirements.txt
 
 
