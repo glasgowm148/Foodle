@@ -1,6 +1,22 @@
 #!/bin/bash
 
-# Mac OSX / Linux config script. Run check.sh after. 
+# Windows needs to be set-up to run .sh files >> 
+# https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
+
+"""
+Windows Commands without comments
+pip install virtualenv
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+cd foodle/front-end 
+npm install -g @angular/cli@latest
+ng update @angular/cli @angular/core
+ng build
+cd ../..
+python manage.py runserver
+"""
+cd /.
 echo " ~~~~~~ Foodle : Repo initialisation Bash shell script ~~~~~~ "
 
 echo "The follow file configures the following : "
@@ -11,11 +27,12 @@ echo "Estimated time : 1-5 minutes"
 
 echo " ~~~~~~ Configuring a local python 3.6 virtualenv ~~~~~~ "
 
-pip3.6 install virtualenv
-virtualenv -p python3.6 venv
-. venv/bin/activate
-echo "~~~~~~ venv activated - installing project requirements.txt ~~~~~~"
-pip3.6 install -r requirements.txt
+pip install virtualenv
+python -m venv venv
+venv\Scripts\activate
+echo " ~~~~~~ venv activated - installing project requirements.txt ~~~~~~ "
+pip install -r requirements.txt
+
 
 
 
@@ -33,10 +50,8 @@ cd foodle/front-end || exit
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
-npm install --save-dev @angular-devkit/build-angular
 
 # update the node package to be on the same cli as the core
-npm update
 ng update @angular/cli @angular/core
 # you can install npx and run npx ng <command> within
 #  the local directory where npm install @angular/cli was run, 
@@ -56,25 +71,8 @@ echo "$(pwd)"
 
 echo "~~~~~~ manage.py runserver ~~~~~~"
 
-
+echo "##### All configured successfully. If the python server runs below #####"
+echo "##### Open a new tab and run ./check.sh #####"
 
 # Run the python server - which is linked with angular via the REST framework. 
 python manage.py runserver
-
-echo "~~~~~~ All configured successfully. ~~~~~~"
-echo "~~~~~~ Open a new tab and run ./check.sh ~~~~~~"
-
-
-#WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| awk '{print $5}')
-#xdotool windowfocus $WID
-#xdotool key ctrl+shift+t
-#wmctrl -i -a $WID
-# This will auto determine the corresponding terminal and opens the tab accordingly.
-# https://stackoverflow.com/questions/1188959/open-a-new-tab-in-gnome-terminal-using-command-line
-
-
-# notes
-
-#webpack-bundle-tracker@0.4.2-beta
-#yarn add mjml@4.3.1
-# mjml@4.3.1 -  the only framework that makes responsive-email easy

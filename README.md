@@ -42,15 +42,18 @@ cd Foodle_dev
 
 #### Mac OSX / Linux 
 ```sh
-./config.sh             // config venv + npm 
-./check.sh              // check dependencies + git status
+./sh/config.sh          // config venv + npm +
+                        // check dependencies + git status +
+                        // runserver
+
+./sh/run.sh             // runs venv + git status + runserver
 code .                  // vscode command pallet > 
                         // 'Shell - install 'code' in command PATH'
 ```
 
 #### Windows
 
-```sh initial_win.sh
+```sh 
 pip install virtualenv
 python -m venv venv
 venv\Scripts\activate
@@ -72,7 +75,7 @@ git status                  // Check the status of the branch
 
 **or if sh is installed**
 ```sh
-sh initial_win.sh
+sh sh/win.sh
 ```
 
 ### Access via ::
