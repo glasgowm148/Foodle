@@ -1,36 +1,12 @@
 #!/bin/bash
 
-if [[ "$OSTYPE" == "linux-gnu" ||  ]]; then
-        # ...
-        pip3.6 install virtualenv
-        virtualenv -p python3.6 venv
-        . venv/bin/activate
-        pip3.6 install -r requirements.txt
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-        # Mac OSX
-        pip3.6 install virtualenv
-        virtualenv -p python3.6 venv
-        . venv/bin/activate
-        pip3.6 install -r requirements.txt
-elif [[ "$OSTYPE" == "cygwin" ]]; then
-        # POSIX compatibility layer and Linux environment emulation for Windows
-elif [[ "$OSTYPE" == "msys" ]]; then
-        # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
-        pip install virtualenv
-        python -m venv venv
-        venv\Scripts\activate
-        pip install -r requirements.txt
-        
-elif [[ "$OSTYPE" == "win32" ]]; then
-        # I'm not sure this can happen.
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
-        # ...
-else
-        # Unknown.
-fi ## Source : https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
+echo "Configuring a local python 3.6 virtualenv"
+pip3.6 install virtualenv
+virtualenv -p python3.6 venv
+. venv/bin/activate
+echo "venv activated - installing project requirements.txt"
+pip3.6 install -r requirements.txt
 
-
-./config.sh
 
 
 # Custom bash/sh script to enter into the correct directory. 
