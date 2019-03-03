@@ -37,19 +37,19 @@ Foodle_dev/ :: main directory
     * dist :: Compiled Angular App
 * Django app files apps.py, models,py, etc...
 
-/NOTES/ :: misc. files
+* NOTES/ :: misc. files
 
-/sh/ :: shell scripts
+* sh/ :: shell scripts (unix) 
 
-/venv/ :: local to your install
+* venv/ :: local to your install
 
-.gitignore/ :: Files to be ignored from git push
+* .gitignore :: Files to be ignored from git push
 
-manage.py :: main python executable 
+* manage.py :: main python executable 
 
-Pipfile :: pipenv dependencies? remove ? 
+* Pipfile :: pipenv dependencies? remove ? 
 
-requirements.txt :: requirements set by django
+* requirements.txt :: requirements set by django
 
 
 ## Running locally
@@ -127,30 +127,14 @@ http://127.0.0.1:8000
 
 ## Version Control (Git)
 
-```sh
-git status
-```
-
-Keep an eye on `git status.`
-
-This tells you which files are modified / unstaged 
-
-(stage files for commit using : `git add .`) 
-
 Open a new branch for each [Project](https://github.com/glasgowm148/Foodle_dev/projects). 
-
 ```sh
-git checkout -b myfeature dev
+git branch myfeature 
+
+git checkout myfeature
 ```
 
-Several people can work on the same project - push/pull often when working in teams to avoid merge conflicts 
-
-
-#### Pushing local changes to feature branch ¶
-*Ensure you are in the correct branch & venv at all times* 
-
-After making the relevant additions to build the new features,
-
+Workflow
 
 ```sh
 git status          // See which files you have modified.
@@ -176,6 +160,24 @@ git commit -m "x"   // x := commit message
 git push            // push the new changes to git
 ```
 
+
+#### Pushing local changes to feature branch ¶
+*Ensure you are in the correct branch & venv at all times* 
+
+
+```sh
+git status
+git fetch
+git add . 
+git pull
+git commit -m "mynewfeatures" 
+git checkout -b myfeature dev
+```
+
+Several people can work on the same project - push/pull often when working in teams to avoid merge conflicts 
+
+
+After making the relevant additions to build the new features,
 
 
 
