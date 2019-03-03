@@ -73,7 +73,7 @@ git status                  // Check the status of the branch
 
 
 
-**or if sh is installed**
+**or if sh is installed (untested)**
 ```sh
 sh sh/win.sh
 ```
@@ -121,24 +121,36 @@ git checkout -b myfeature dev
 
 Several people can work on the same project - push/pull often when working in teams to avoid merge conflicts 
 
+
 #### Pushing local changes to feature branch ¶
-*Ensure you are in the correct branch at all times* 
+*Ensure you are in the correct branch & venv at all times* 
 
 After making the relevant additions to build the new features,
 
 
 ```sh
-git status          // 
+git status          // See which files you have modified.
+                    // git add <file> - stage the files you want to save
+
+git stash           // saves your local modifications away and reverts the working
+                    // directory to match the HEAD commit
+
+git add .           // stage all files in ./ to be commited
+
 git fetch           // to pull changes from the remote branch. 
                     // Then compare changes & modify as needed.
+
 git pull            // fetch + merge
-git commit -a       //
-git add .           // stage all files in ./ to be commited
+
+git commit -a       // Includes all currently changed files in this commit. 
+                    // Keep in mind, however, that untracked (new) files are not included.
+
+git commit --amend  // Rewrites the very last {local} commit 
+
 git commit -m "x"   // x := commit message
+
 git push            // push the new changes to git
 ```
-
-
 
 
 
