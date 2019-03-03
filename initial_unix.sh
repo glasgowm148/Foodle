@@ -19,14 +19,17 @@ pip3.6 install -r requirements.txt
 
 # Custom bash/sh script to enter into the correct directory. 
 echo ""Moving into the foodle/front-end directory""
-echo $PWD
+echo "$(pwd)"
 # foodle - An app within the project, containing the Django Rest Framework views and URL routing
 cd foodle/front-end || exit
 
 # install globablly (within the environment)
 # npm cache verify
 # if npm version is < 5 then use `npm cache clean`
-echo "##### npm install -g @angular/cli@latest - installs the latest version #####"
+
+# rm -f package-lock.json && npm install
+
+echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
 
 # update the node package to be on the same cli as the core
@@ -35,41 +38,35 @@ ng update @angular/cli @angular/core
 #  the local directory where npm install @angular/cli was run, 
 # which will use the locally installed angular-cli.
 
-echo "##### ng build... #####"
+echo " ~~~~~~   ng build... ~~~~~~"
 
 # ng build command writes generated build artifacts to the output folder (/dist)
 ng build
-echo "##### npm installed successfully. #####"
+echo "~~~~~~ npm installed successfully. ~~~~~~"
 
 
 # CD back into the home directory ./Foodle_dev
 cd ../..
-echo $PWD
+echo "$(pwd)"
 
 
-echo "##### manage.py runserver #####"
-
+echo "~~~~~~ manage.py runserver ~~~~~~"
 
 
 
 # Run the python server - which is linked with angular via the REST framework. 
 python manage.py runserver
 
-echo "##### All configured successfully. #####"
+echo "~~~~~~ All configured successfully. ~~~~~~"
+echo "~~~~~~ Open a new tab and run ./check.sh ~~~~~~"
 
 
-WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| awk '{print $5}')
-xdotool windowfocus $WID
-xdotool key ctrl+shift+t
-wmctrl -i -a $WID
+#WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| awk '{print $5}')
+#xdotool windowfocus $WID
+#xdotool key ctrl+shift+t
+#wmctrl -i -a $WID
 # This will auto determine the corresponding terminal and opens the tab accordingly.
 # https://stackoverflow.com/questions/1188959/open-a-new-tab-in-gnome-terminal-using-command-line
-
-
-# Check all the correct dependencies are installed
-npm ls --depth 0
-
-git status
 
 
 # notes
