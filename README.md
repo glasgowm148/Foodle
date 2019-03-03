@@ -42,7 +42,7 @@ are synced on Git.
 
 ```sh
 git clone https://github.com/glasgowm148/Foodle_dev.git
-cd foodle
+cd Foodle_dev
 ```
 
 
