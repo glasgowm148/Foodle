@@ -1,4 +1,21 @@
 #!/bin/bash
+
+# Windows needs to be set-up to run .sh files >> 
+# https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
+
+"""
+Windows Commands without comments
+pip install virtualenv
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+cd foodle/front-end 
+npm install -g @angular/cli@latest
+ng update @angular/cli @angular/core
+ng build
+cd ../..
+python manage.py runserver
+"""
 echo " ~~~~~~ Foodle : Repo initialisation Bash shell script ~~~~~~ "
 
 echo "The follow file configures the following : "

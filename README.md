@@ -55,19 +55,24 @@ pip install virtualenv
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-./config.sh
+cd foodle/front-end 
+npm install -g @angular/cli@latest
+ng update @angular/cli @angular/core
+ng build
+cd ../..
+python manage.py runserver
+```
+
+or if sh is installed
+```sh
+sh initial_win.sh
 ```
 
 #### Mac OSX / Linux 
 ```sh
-pip3.6 install virtualenv
-virtualenv -p python3.6 venv2
-. venv2/bin/activate
-pip3.6 install -r requirements.txt
 ./config.sh
 ```
 
-The config.sh file installs npm and launches manage.py runserver
 
 ### Giving you access to the front-end 
 
