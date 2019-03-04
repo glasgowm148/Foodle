@@ -10,30 +10,6 @@ echo "Install & Building npm"
 echo "serving using python manage.py runserver"
 echo "Estimated time : 1-5 minutes"
 
-echo " ~~~~~~ Configuring a local python 3.6 virtualenv ~~~~~~ "
-
-pip3.6 install virtualenv
-virtualenv -p python3.6 venv
-. venv/bin/activate
-echo "~~~~~~ venv activated - installing project requirements.txt ~~~~~~"
-pip3.6 install -r requirements.txt
-
-
-
-# Custom bash/sh script to enter into the correct directory. 
-echo ""Moving into the foodle/front-end directory""
-echo "$(pwd)"
-# foodle - An app within the project, containing the Django Rest Framework views and URL routing
-cd foodle/front-end || exit
-
-# install globablly (within the environment)
-# npm cache verify
-# if npm version is < 5 then use `npm cache clean`
-
-# rm -f package-lock.json && npm install
-
-echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
-
 echo " ~~~~~~  changing the default directory for npm  ~~~~~~ "
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
@@ -43,6 +19,30 @@ echo " ~~~~~~   add ~/.npm-global to your path  ~~~~~~ "
 
 echo 'PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 
+echo " ~~~~~~ Configuring a local python 3.6 virtualenv ~~~~~~ "
+
+pip3.6 install virtualenv
+virtualenv -p python3.6 venv
+. venv/bin/activate
+echo "~~~~~~ venv activated - installing project requirements.txt ~~~~~~"
+pip3.6 install -r requirements.txt
+
+
+# install globablly (within the environment)
+# npm cache verify
+# if npm version is < 5 then use `npm cache clean`
+
+# rm -f package-lock.json && npm install
+
+
+
+
+echo ""Moving into the foodle/front-end directory""
+echo "$(pwd)"
+# foodle - An app within the project, containing the Django Rest Framework views and URL routing
+cd foodle/front-end || exit
+
+echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
 npm install --save-dev @angular-devkit/build-angular
 
@@ -75,8 +75,3 @@ echo " ~~~~~~ Git Stauts :: ~~~~~~ "
 git status
 
 echo "~~~~~~ manage.py runserver ~~~~~~"
-
-
-
-# Run the python server - which is linked with angular via the REST framework. 
-python manage.py runserver
