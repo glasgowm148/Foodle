@@ -22,34 +22,36 @@ ngm help ngm
 
 Foodle_dev/ :: main directory
 
-/angular_django/  :: local to your install. Django project and main settings.py  
- * __init__.py
- * settings.py
- * urls.py
- * wsgi.py :: not needed on pythonanywhere 
+* /angular_django/  :: local to your install. Django project and main settings.py  
+    * __ init __.py
+    * settings.py
+    * urls.py
+    * wsgi.py :: not needed on pythonanywhere 
 
 
-/foodle/ :: Our app within the project, containing the Django Rest Framework views and URL routing (urls.py)
-* front-end :: local package.json requirements (npm install)
-* migrations ::
-* static :: Main site build
+* /foodle/ :: Our app within the project, containing the Django Rest Framework views and URL routing (urls.py)
+    * migrations ::
+    * static :: Main site build
+        * front-end :: local package.json requirements (npm install)
     * templates :: base.html // index.html // etc
     * dist :: Compiled Angular App
-* Django app files apps.py, models,py, etc...
+    * Main Django app files apps.py, models,py, etc...
 
 * NOTES/ :: misc. files
 
-* sh/ :: shell scripts (unix) 
+* sh/ :: shell configuration scripts (unix) 
 
-* venv/ :: local to your install
+* venv/ :: local environment (your install)
 
-* .gitignore :: Files to be ignored from git push
+* Misc files
 
-* manage.py :: main python executable 
+    * .gitignore :: Files to be ignored from git push
 
-* Pipfile :: pipenv dependencies? remove ? 
+    * manage.py :: main python executable 
 
-* requirements.txt :: requirements set by django
+    * Pipfile :: pipenv dependencies? remove ? 
+
+    * requirements.txt :: requirements set by django
 
 
 ## Running locally
@@ -71,8 +73,9 @@ cd Foodle_dev
                         // runserver
 
 ./sh/run.sh             // runs venv + git status + runserver
-code .                  // vscode command pallet > 
-                        // 'Shell - install 'code' in command PATH'
+
+code .                  // "vscode command pallet > 
+                        // Shell - install 'code' in command PATH"
 ```
 
 #### Windows
@@ -125,13 +128,29 @@ http://127.0.0.1:8000
     * fork angular-django
 
 
+## NPM Commands
+```
+npm is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry.
+```
+Command                | Description                                      |
+-----------------------|--------------------------------------------------|
+`$ npm start`          | Start the development server
+`$ npm test`           | Lint, validate deps & run tests
+`$ npm run build`      | Compile all files into `dist/`
+`$ npm run create`     | Generate a scaffold file
+`$ npm run inspect`    | Inspect the bundle's dependencies
+
+
 ## Version Control (Git)
 
 Open a new branch for each [Project](https://github.com/glasgowm148/Foodle_dev/projects). 
 ```sh
 git branch myfeature 
-
 git checkout myfeature
+
+or
+
+git checkout -b myfeature  // creates a new branch and moves into it
 ```
 
 Workflow
@@ -177,7 +196,6 @@ git checkout -b myfeature dev
 Several people can work on the same project - push/pull often when working in teams to avoid merge conflicts 
 
 
-After making the relevant additions to build the new features,
 
 
 
