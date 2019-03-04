@@ -2,7 +2,6 @@
 
 # PythonAnywhere config script. Run run.sh after. 
 
-fish
 echo " ~~~~~~ Foodle : Repo initialisation Bash shell script ~~~~~~ "
 
 echo "The follow file configures the following : "
