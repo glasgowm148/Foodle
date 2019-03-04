@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Mac OSX / Linux config script. Run check.sh after. 
+# PythonAnywhere config script. Run run.sh after. 
+
+fish
 echo " ~~~~~~ Foodle : Repo initialisation Bash shell script ~~~~~~ "
 
 echo "The follow file configures the following : "
@@ -33,9 +35,13 @@ cd foodle/front-end || exit
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 
+echo " ~~~~~~  changing the default directory for npm  ~~~~~~ "
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 npm config get prefix
+
+echo " ~~~~~~   add ~/.npm-global to your path  ~~~~~~ "
+
 echo 'PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 
 npm install -g @angular/cli@latest
