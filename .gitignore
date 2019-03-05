@@ -1,6 +1,7 @@
 .idea
 __pycache__
 venv
+foodlevenv
 microblog/static/front-end
 foodle/static/front-end
 mark
@@ -21,6 +22,7 @@ hassan/
 
 # dependencies
 /node_modules
+/foodle/front-end/node_modules
 
 # IDEs and editors
 /.idea
