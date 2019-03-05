@@ -88,6 +88,7 @@ pip install -r requirements.txt
 cd foodle/front-end 
 npm install -g @angular/cli@latest
 ng update @angular/cli @angular/core
+npm install --save @ng-bootstrap/ng-bootstrap
 ng build
 cd ../..
 python manage.py runserver

@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Log In</h2>\n<div class=\"row\" *ngIf=\"!_userService.token\">\n  <div class=\"col-sm-4\">\n    <label>Username:</label><br />\n    <input type=\"text\" name=\"login-username\" [(ngModel)]=\"user.username\">\n    <span *ngFor=\"let error of _userService.errors.username\"><br />{{ error }}</span></div>\n  <div class=\"col-sm-4\">\n    <label>Password:</label><br />\n    <input type=\"password\" name=\"login-password\" [(ngModel)]=\"user.password\">\n    <span *ngFor=\"let error of _userService.errors.password\"><br />{{ error }}</span>\n  </div>\n  <div class=\"col-sm-4\">\n    <button (click)=\"login()\" class=\"btn btn-primary\">Log In</button>&nbsp;\n  </div>\n  <div class=\"col-sm-12\">\n    <span *ngFor=\"let error of _userService.errors.non_field_errors\">{{ error }}<br /></span>\n  </div>\n</div>\n<div class=\"row\" *ngIf=\"_userService.token\">\n  <div class=\"col-sm-12\">You are logged in as {{ _userService.username }}.<br />\n    Token Expires: {{ _userService.token_expires }}<br />\n    <button (click)=\"refreshToken()\" class=\"btn btn-primary\">Refresh Token</button>&nbsp;\n    <button (click)=\"logout()\" class=\"btn btn-primary\">Log Out</button>&nbsp;\n  </div>\n</div>\n\n<h2 class=\"mt-3\">Micro Blog Posts</h2>\n<div *ngFor=\"let post of posts\">\n  <div class=\"row mb-3\">\n    <label class=\"col-md-2\">By:</label>\n    <div class=\"col-md-2 mb-1\">{{ post.user }}</div>\n    <label class=\"col-md-2\">Date:</label>\n    <div class=\"col-md-6\">{{ post.date }}</div>\n    <div class=\"col-md-12\">{{ post.body }}</div>\n  </div>\n</div>\n\n<h3>Create a new post:</h3>\n\n<div class=\"row mb-1\">\n  <label class=\"col-md-3\">Enter your post:</label>\n  <div class=\"col-md-9 mb-1\"><input type=\"text\" name=\"body\" [(ngModel)]=\"new_post.body\"></div>\n  <div class=\"col-md-2 offset-3\">\n    <button (click)=\"createPost()\" class=\"btn btn-primary\">Save</button>\n  </div>\n</div>\n"
+module.exports = "\n<div class=\"container-fluid\">\n\n  <hr>\n\n  <p>\n    This is a demo example forked from the <strong>ng-bootstrap</strong> project: Angular powered Bootstrap.\n    Visit <a href=\"https://ng-bootstrap.github.io/\" target=\"_blank\">https://ng-bootstrap.github.io</a> for more widgets and demos.\n  </p>\n\n  <hr>\n\n  <ngbd-carousel-basic></ngbd-carousel-basic>\n</div>\n\n<!--\n<h2>Log In</h2>\n<div class=\"row\" *ngIf=\"!_userService.token\">\n  <div class=\"col-sm-4\">\n    <label>Username:</label><br />\n    <input type=\"text\" name=\"login-username\" [(ngModel)]=\"user.username\">\n    <span *ngFor=\"let error of _userService.errors.username\"><br />{{ error }}</span></div>\n  <div class=\"col-sm-4\">\n    <label>Password:</label><br />\n    <input type=\"password\" name=\"login-password\" [(ngModel)]=\"user.password\">\n    <span *ngFor=\"let error of _userService.errors.password\"><br />{{ error }}</span>\n  </div>\n  <div class=\"col-sm-4\">\n    <button (click)=\"login()\" class=\"btn btn-primary\">Log In</button>&nbsp;\n  </div>\n  <div class=\"col-sm-12\">\n    <span *ngFor=\"let error of _userService.errors.non_field_errors\">{{ error }}<br /></span>\n  </div>\n</div>\n<div class=\"row\" *ngIf=\"_userService.token\">\n  <div class=\"col-sm-12\">You are logged in as {{ _userService.username }}.<br />\n    Token Expires: {{ _userService.token_expires }}<br />\n    <button (click)=\"refreshToken()\" class=\"btn btn-primary\">Refresh Token</button>&nbsp;\n    <button (click)=\"logout()\" class=\"btn btn-primary\">Log Out</button>&nbsp;\n  </div>\n</div>\n\n<h2 class=\"mt-3\">Micro Blog Posts</h2>\n<div *ngFor=\"let post of posts\">\n  <div class=\"row mb-3\">\n    <label class=\"col-md-2\">By:</label>\n    <div class=\"col-md-2 mb-1\">{{ post.user }}</div>\n    <label class=\"col-md-2\">Date:</label>\n    <div class=\"col-md-6\">{{ post.date }}</div>\n    <div class=\"col-md-12\">{{ post.body }}</div>\n  </div>\n</div>\n\n<h3>Create a new post:</h3>\n\n<div class=\"row mb-1\">\n  <label class=\"col-md-3\">Enter your post:</label>\n  <div class=\"col-md-9 mb-1\"><input type=\"text\" name=\"body\" [(ngModel)]=\"new_post.body\"></div>\n  <div class=\"col-md-2 offset-3\">\n    <button (click)=\"createPost()\" class=\"btn btn-primary\">Save</button>\n  </div>\n</div>\n\n-->\n"
 
 /***/ }),
 
@@ -148,6 +148,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _blog_post_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blog_post.service */ "./src/app/blog_post.service.ts");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _carousel_basic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./carousel-basic */ "./src/app/carousel-basic.ts");
+
+
 
 
 
@@ -162,10 +166,10 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _carousel_basic__WEBPACK_IMPORTED_MODULE_9__["NgbdCarouselBasic"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]
             ],
             providers: [_blog_post_service__WEBPACK_IMPORTED_MODULE_6__["BlogPostService"], _user_service__WEBPACK_IMPORTED_MODULE_7__["UserService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -223,6 +227,45 @@ var BlogPostService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
     ], BlogPostService);
     return BlogPostService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/carousel-basic.html":
+/*!*************************************!*\
+  !*** ./src/app/carousel-basic.html ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/carousel-basic.ts":
+/*!***********************************!*\
+  !*** ./src/app/carousel-basic.ts ***!
+  \***********************************/
+/*! exports provided: NgbdCarouselBasic */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgbdCarouselBasic", function() { return NgbdCarouselBasic; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var NgbdCarouselBasic = /** @class */ (function () {
+    function NgbdCarouselBasic() {
+        this.images = [1, 2, 3].map(function () { return "https://picsum.photos/900/500?random&t=" + Math.random(); });
+    }
+    NgbdCarouselBasic = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({ selector: 'ngbd-carousel-basic', template: __webpack_require__(/*! ./carousel-basic.html */ "./src/app/carousel-basic.html") })
+    ], NgbdCarouselBasic);
+    return NgbdCarouselBasic;
 }());
 
 
