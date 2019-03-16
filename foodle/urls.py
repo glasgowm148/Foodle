@@ -9,5 +9,6 @@ router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
     path(r'api/', include(router.urls)),
-    path(r'', views.index, name='index')
+    path(r'', views.index, name='index'),
+    path(r'^about/', views.about, name='about')
 ]

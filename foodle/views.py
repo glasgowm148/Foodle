@@ -12,6 +12,12 @@ def index(request, path=''):
     """
     return render(request, 'index.html')
 
+def about(request, path=''):
+    """
+    The about page.
+    """
+    return render(request, 'about.html')
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
