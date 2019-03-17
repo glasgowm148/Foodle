@@ -12,13 +12,6 @@ def index(request, path=''):
     """
     return render(request, 'index.html')
 
-def about(request):
-    """
-    The about page.
-    """
-    return render(request, 'about.html')
-
-
 class UserViewSet(viewsets.ModelViewSet):
     """
     Provides basic CRUD functions for the User model
