@@ -1,3 +1,5 @@
+import { RouterModule, Routes } from '@angular/router';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,5 +24,3 @@ import { NgbdCarouselBasic } from './carousel-basic';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
