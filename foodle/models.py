@@ -15,3 +15,15 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.body
+
+class Deal(mdoels.Model):
+    """
+    possible model for holding deals in the database (will change)
+    """
+    name = models.CharField(max_length=128, unique=True)
+    description = models.CharField(max_length=300, default='')
+    views = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name
