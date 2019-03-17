@@ -12,7 +12,7 @@ def index(request, path=''):
     """
     return render(request, 'index.html')
 
-def about(request, path=''):
+def about(request):
     """
     The about page.
     """
