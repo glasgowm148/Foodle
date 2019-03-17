@@ -16,7 +16,7 @@ class BlogPost(models.Model):
     def __str__(self):
         return self.body
 
-class Deal(mdoels.Model):
+class Deal(models.Model):
     """
     possible model for holding deals in the database (will change)
     """
