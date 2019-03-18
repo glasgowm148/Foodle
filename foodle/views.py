@@ -23,7 +23,6 @@ def about(request):
     """
     return render(request, 'templates/about.html')
 
-<<<<<<< HEAD
 # Handle Login and register
 @login_required
 def user_logout(request):
@@ -35,6 +34,10 @@ def some_view(request):
         return HttpResponse("You are logged in.")
     else:
         return HttpResponse("You are not logged in.")
+
+def about(request):
+
+    return render(request, 'about.html')
 
 def user_login(request):
 
@@ -65,17 +68,6 @@ def register(request):
  
     return render(request,'register.html')
 
-# class AboutPageView(TemplateView):
-#    
-=======
-class AboutPageViewSet(viewsets.ModelViewSet):
-    """
-    Provides basic CRUD functions for the User model
-    """
-    queryset = User.objects.all()
-    serializer_class = serializers.UserSerializer
-    permission_classes = (ReadOnly, )
->>>>>>> e06c4ee17e1333877f2031c3b33fd1e43b6dbd75
 
 
 class UserViewSet(viewsets.ModelViewSet):
