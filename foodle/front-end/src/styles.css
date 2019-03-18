@@ -5,15 +5,20 @@
   src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
 }
 
-.navbar {
-  background-color: blueviolet !important;
-}
-.navbar ul {
-  color: white;
-}
-
 .vegan-style {
   font-family: 'vegan';
+}
+
+/* navbar styling */
+.navbar {
+  background-color: blueviolet !important;
+  padding: .8rem;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
 }
 
 /* styling for the slider elements */
@@ -50,14 +55,10 @@ footer {
   background-color: blueviolet !important;
   color: white;
 }
-.bottom-image {
+.bottom-logo {
+  text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-.bottom-image h5 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Datepicker popup icon */
