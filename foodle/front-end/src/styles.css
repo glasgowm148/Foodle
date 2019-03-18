@@ -1,11 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-
+/*
+@font-face {
+  font-family: 'vegan';
+  src: '/foodle/static/font/Vegan Style Personal Use.ttf';
+}
+*/
 .navbar {
   background-color: blueviolet !important;
 }
+/*
+.vegan-style {
+  font-family: 'vegan';
+}
+*/
 
-h1 {
-  color: rgb(163, 29, 58);
+footer {
+  background-color: blueviolet !important;
+  color: white;
 }
 
 /* Datepicker popup icon */
