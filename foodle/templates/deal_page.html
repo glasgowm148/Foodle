@@ -8,13 +8,15 @@
     <title>deal_page.html</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+	
+	<div>
+	    <img id="image" src="{% static "images/soba.png" %}" width="525" height="550" alt="Picture of Soba" />
+	</div>
   
 	<p style="position:absolute;top:344px;left:25px;z-index:2;color:white;font-size:medium">HOME >> BAR SOBA >> DEAL #666</p>
   
-    <img style="position:absolute;top:400px;z-index:2;left:28px" src="soba.png" width="525" height="550" alt="SOBA">	
+    <!-- <img style="position:absolute;top:400px;z-index:2;left:28px" src="soba.png" width="525" height="550" alt="SOBA">	-->
 
-
-	
 	<div id="sideBlock"></div>
     <div id="sideBar1"></div>
 	<div id="sideBar2"></div>
@@ -30,13 +32,13 @@
   var uluru = {lat: 55.872158, lng: -4.287869}; 
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
+      document.getElementById('map'), {zoom: 15, center: uluru});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArVkbIkICLY5uwyIvEXOzMIHbeY-BPSXQ&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
     </script>
 <!-- greg deal_page details (end)	-->
 {% endblock %}
