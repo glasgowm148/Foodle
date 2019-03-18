@@ -1,16 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block content %}
+{% block title_block %}Replaced{% endblock %}
+
+{% block approot %}
 <app-root></app-root>
 
 <p>"Under Construction :: 'Where Deals Become Meals'"</p>
-
-
-<script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
-<script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
-<script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
-<script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
-<script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
-
 {% endblock %}
