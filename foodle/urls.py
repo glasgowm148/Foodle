@@ -11,16 +11,16 @@ router.register(r'users', views.UserViewSet)
 urlpatterns = [
     path(r'api/', include(router.urls)),
     path(r'', views.index, name='index'),
-    path(r'^about/$', views.about, name='about'),
-    path(r'^deal_page/$', views.deal_page, name='deal_page'),
+    path(r'about/', views.about, name='about'),
+    path(r'deal_page/', views.deal_page, name='deal_page'),
 
 
     # Login and Register
     path(r'^register/$',
         views.register,
         name='register'),
-    path(r'^login/$', views.user_login, name='login'),
-    path(r'^logout/$', views.user_logout, name='logout'),
+    path(r'login/', views.user_login, name='login'),
+    path(r'logout/', views.user_logout, name='logout'),
 
 
 ]
