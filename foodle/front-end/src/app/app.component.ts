@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
 import {BlogPostService} from './blog_post.service';
+import {AboutPageService} from './about_page.service';
+
 import {UserService} from './user.service';
 import {throwError} from 'rxjs';  // Angular 6/RxJS 6
 import {Http, Response} from '@angular/http';
@@ -43,22 +45,6 @@ export class AppComponent implements OnInit {
   constructor(private _blogPostService: BlogPostService, private _userService: UserService, private _http:Http) { }
 
 
- // this.c1.name = "eli"
- /** title = 'app';
- // c1:Cust = new About();
- // click1(){
- //   this.getAbout().subscribe(b => this.c1 = b)
- // }
- // */
-
-  getAbout()
-  {
-    return this._http
-          .get("./about")
-        //  .map(r => <Cust>r.json())
-  }
-
-
   ngOnInit() {
     this.getPosts();
     this.new_post = {};
@@ -67,6 +53,8 @@ export class AppComponent implements OnInit {
       password: ''
     };
   }
+
+
 
   login() {
     this._userService.login({'username': this.user.username, 'password': this.user.password});
