@@ -63,7 +63,7 @@ echo " ~~~~~~ Dependecy Check ::  ~~~~~~ "
 
 npm ls --depth 0
 
-echo " ~~~~~~ Git Stauts :: ~~~~~~ "
+echo " ~~~~~~ Git Status :: ~~~~~~ "
 git status
 
 echo "~~~~~~ manage.py runserver ~~~~~~"
