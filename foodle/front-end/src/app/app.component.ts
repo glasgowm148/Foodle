@@ -13,8 +13,9 @@ import {throwError} from 'rxjs';  // Angular 6/RxJS 6
 })
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-slider',
   templateUrl: './app.component.html'
+
 })
 
 
