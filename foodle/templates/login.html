@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<h1 class="light">Login to your Foodle Account</h1>
+<form id="login_form" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    Username: <input type="text" name="username" value="" size="50" />
+    <br />
+    Password: <input type="password" name="password" value="" size="50" />
+    <br />
+    <input class="light" type="submit" value="submit" />
+</form>
+{% endblock %}
+
+
+{% block body_block %}
+
+{% endblock %}
