@@ -3,6 +3,9 @@ import {Component, OnInit} from '@angular/core';
 import {BlogPostService} from './blog_post.service';
 import {UserService} from './user.service';
 import {throwError} from 'rxjs';  // Angular 6/RxJS 6
+import {Http, Response} from '@angular/http';
+
+
 
 
 
