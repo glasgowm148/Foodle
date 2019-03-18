@@ -2,12 +2,12 @@
 {% load staticfiles %}
 
 {% block content %}
-        <h1>Register for your foodle account</h1>
+    <h1>Register for Rango</h1>
     {% if registered %}
-        <strong>thank you for registering!</strong>
+        Rango says: <strong>thank you for registering!</strong>
         <a href="{% url 'index' %}">Return to the homepage.</a><br />
     {% else %}
-        <strong>register here</strong><br />
+        Rango says: <strong>register here!</strong><br />
         <form id="user_form" method="post" action="{% url 'register' %}"
             enctype="multipart/form-data">
         
