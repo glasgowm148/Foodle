@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'vegan';
-  src: 'http://127.0.0.1:5500/foodle/static/font/veganfont.ttf';
+  src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
 }
 
 .navbar {
@@ -22,7 +22,7 @@ footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.bottom-image img {
+.bottom-image h5 {
   display: block;
   margin-left: auto;
   margin-right: auto;
