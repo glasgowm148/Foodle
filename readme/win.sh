@@ -56,6 +56,8 @@ ng update @angular/cli @angular/core
 # you can install npx and run npx ng <command> within
 #  the local directory where npm install @angular/cli was run, 
 # which will use the locally installed angular-cli.
+npm install --save @ng-bootstrap/ng-bootstrap
+
 
 echo " ~~~~~~   ng build... ~~~~~~"
 
