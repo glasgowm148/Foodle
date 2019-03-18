@@ -67,9 +67,7 @@ def user_login(request):
             return HttpResponse("Invalid login details supplied.")
 
     else:
-        return render(request, 'login.html', {
-            "username": username,
-            })
+        return render(request, 'login.html', {})
 
 def register(request):
     
