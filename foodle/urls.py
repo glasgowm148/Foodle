@@ -12,7 +12,7 @@ router.register(r'about', views.AboutPageViewSet)
 urlpatterns = [
     path(r'api/', include(router.urls)),
     path(r'', views.index, name='index'),
-    path(r'^about/', views.about, name='about'),
+    path(r'^about/$', views.about, name='about'),
 
 
 ]
