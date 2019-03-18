@@ -21,7 +21,7 @@ def about(request):
     """
     The about page. This renders the container for the single-page app.
     """
-    return render(request, 'templates/about.html')
+    return render(request, 'about.html')
 
 # Handle Login and register
 @login_required
@@ -67,7 +67,6 @@ def user_login(request):
 def register(request):
  
     return render(request,'register.html')
-
 
 
 class UserViewSet(viewsets.ModelViewSet):
