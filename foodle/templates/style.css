@@ -9,8 +9,8 @@ height:100%;
       
 #map {
 height: 300px;  
-width: 1280; 
-position: fixed;
+width: 100%; 
+position: absolute;
 top : 46px;
 }
 	   
