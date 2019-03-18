@@ -1,5 +1,10 @@
-﻿body{
+﻿html{
+height:100%;
+}
+
+body{
 background-color: rgb(134,132,216);
+height:100%;
 }
       
 #map {
@@ -11,56 +16,64 @@ top : 46px;
 	   
 #breadcrumbs{
 height:30px;
-width: 1264px;
-position: fixed;
+width: 100%;
+position: absolute;
 top:354px;
 background-color: black;
 }
 	   
 #lowerBackground{
 height:650px;
-width: 1264px;
-position: fixed;
+width: 100%;
+position: absolute;
 top:384px;
 background-color: white;
+}
+
+#image{
+	position:absolute;
+	top:400px;
+	z-index:2;
+	left:28px;
+	width:41%
 }
 	   
 #sideBlock{
 height:550px;
-width: 525px;
-position: fixed;
+width: 41%;
+position: absolute;
 top:400px;
-left:573px;
+left:45%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 	   
 #sideBar1{
 height:148px;
-width: 134px;
-position: fixed;
+width: 10.5%;
+position: absolute;
 top:400px;
-left:1118px;
+left:87.75%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar2{
 height:148px;
-width: 134px;
-position: fixed;
+width: 10.5%;
+position: absolute;
 top:551px;
-left:1118px;
+left:87.75%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar3{
 height:248px;
-width: 134px;
-position: fixed;
+width: 10.5%;
+position: absolute;
 top:702px;
-left:1118px;
+left:87.75%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
