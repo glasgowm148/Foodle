@@ -36,26 +36,30 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="{% url 'login' %}">Log in</a>
+					<li class="nav-item">
+							<a class="nav-link" href="{% url 'register' %}">Register</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="#"><i class="fas fa-home"></i></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
+					
 					<li class="nav-item">
 						<a class="nav-link" href="#"><i class="fab fa-github"></i></a>
-					</li>
+					</li>	
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<app-root></app-root>
 
 	{% block content %}{% endblock %}
 
 
 
-<!-- Footer -->
-
+	<!-- Footer -->
 	<footer>
 		<div class="container-fluid padding">
 			<div class="row text-center">
@@ -84,8 +88,9 @@
 					<p>City, State, 00000</p>
 				</div>
 			</div>
-			<div class="bottom-image">
-				<img src="{% static "images/logo.png" %}" alt="logo">
+			<hr class="light">
+			<div class="bottom-logo">
+				<h3 class="vegan-style">Foodle</h3>
 			</div>
 		</div>
 	</footer>

@@ -12,11 +12,12 @@ import { UserService } from './user.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { NgbdCarouselBasic } from './carousel-basic';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, NgbdCarouselBasic
+    AppComponent, NgbdCarouselBasic, LoginComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, HttpModule, NgbModule, ReactiveFormsModule
