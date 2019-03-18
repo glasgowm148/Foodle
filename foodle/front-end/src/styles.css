@@ -5,15 +5,20 @@
   src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
 }
 
-.navbar {
-  background-color: blueviolet !important;
-}
-.navbar ul {
-  color: white;
-}
-
 .vegan-style {
   font-family: 'vegan';
+}
+
+/* navbar styling */
+.navbar {
+  background-color: blueviolet !important;
+  padding: .8rem;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
 }
 
 /* styling for the slider elements */
@@ -50,14 +55,10 @@ footer {
   background-color: blueviolet !important;
   color: white;
 }
-.bottom-image {
+.bottom-logo {
+  text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-.bottom-image h5 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Datepicker popup icon */
@@ -150,3 +151,71 @@ ngbd-table-filtering span.ngb-highlight {
 ngbd-table-complete span.ngb-highlight {
   background-color: yellow;
 }
+
+body{
+  background-color: rgb(134,132,216);
+  }
+
+  #map {
+  height: 300px;
+  width: 1280;
+  position: fixed;
+  top : 46px;
+  }
+
+  #breadcrumbs{
+  height:30px;
+  width: 1264px;
+  position: fixed;
+  top:354px;
+  background-color: black;
+  }
+
+  #lowerBackground{
+  height:650px;
+  width: 1264px;
+  position: fixed;
+  top:384px;
+  background-color: white;
+  }
+
+  #sideBlock{
+  height:550px;
+  width: 525px;
+  position: fixed;
+  top:400px;
+  left:573px;
+  z-index:2;
+  background-color: rgb(134,132,216);
+  }
+
+  #sideBar1{
+  height:148px;
+  width: 134px;
+  position: fixed;
+  top:400px;
+  left:1118px;
+  z-index:2;
+  background-color: rgb(134,132,216);
+  }
+
+  #sideBar2{
+  height:148px;
+  width: 134px;
+  position: fixed;
+  top:551px;
+  left:1118px;
+  z-index:2;
+  background-color: rgb(134,132,216);
+  }
+
+  #sideBar3{
+  height:248px;
+  width: 134px;
+  position: fixed;
+  top:702px;
+  left:1118px;
+  z-index:2;
+  background-color: rgb(134,132,216);
+  }
+
