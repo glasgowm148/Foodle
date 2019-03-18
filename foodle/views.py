@@ -24,6 +24,12 @@ def about(request):
     """
     return render(request, 'about.html')
 
+def deal_page(request):
+    """
+    The about page. This renders the container for the single-page app.
+    """
+    return render(request, 'deal_page.html')
+
 # Handle Login and register
 @login_required
 def user_logout(request):

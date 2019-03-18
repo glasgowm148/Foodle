@@ -12,6 +12,8 @@ urlpatterns = [
     path(r'api/', include(router.urls)),
     path(r'', views.index, name='index'),
     path(r'^about/$', views.about, name='about'),
+    path(r'^deal_page/$', views.about, name='deal_page'),
+
 
     # Login and Register
     path(r'^register/$',
