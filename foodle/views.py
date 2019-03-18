@@ -14,11 +14,11 @@ def index(request, path=''):
     """
     return render(request, 'index.html')
 
-def about(request, path='./about'):
+def about(request):
     """
-    The home page. This renders the container for the single-page app.
+    The about page. This renders the container for the single-page app.
     """
-    return render(request, 'about.html')
+    return render(request, 'templates/about.html')
 
 class AboutPageViewSet(viewsets.ModelViewSet):
     """
