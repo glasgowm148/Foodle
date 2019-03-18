@@ -20,11 +20,14 @@ def about(request, path='./about'):
     """
     return render(request, 'about.html')
 
-# class AboutPageView(TemplateView):
-#    
+class AboutPageViewSet(viewsets.ModelViewSet):
+    """
+    Provides basic CRUD functions for the User model
+    """
+    queryset = User.objects.all()
+    serializer_class = serializers.UserSerializer
+    permission_classes = (ReadOnly, )
 
-#   def get(self, request, **kwargs):
-#      return render(request, 'about.html', context=None) */
 
 class UserViewSet(viewsets.ModelViewSet):
     """
