@@ -18,7 +18,7 @@ import { NgbdCarouselBasic } from './carousel-basic';
     AppComponent, NgbdCarouselBasic
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule, NgbModule, ReactiveFormsModule
+    BrowserModule, FormsModule, HttpClientModule, HttpModule, NgbModule, ReactiveFormsModule
   ],
   providers: [BlogPostService, UserService],
   bootstrap: [AppComponent]

@@ -1,18 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-/*
+
 @font-face {
   font-family: 'vegan';
-  src: '/foodle/static/font/Vegan Style Personal Use.ttf';
+  src: 'http://127.0.0.1:5500/foodle/static/font/veganfont.ttf';
 }
-*/
+
 .navbar {
   background-color: blueviolet !important;
 }
-/*
+
 .vegan-style {
   font-family: 'vegan';
 }
-*/
+
 
 footer {
   background-color: blueviolet !important;

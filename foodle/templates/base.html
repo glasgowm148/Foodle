@@ -40,9 +40,10 @@
 			</div>
 		</div>
 	</nav>
+	<app-root></app-root>
 
 	{% block content %}{% endblock %}
-
+<!-- Nathan Footer-->
 	<footer>
 		<div class="container-fluid padding">
 			<div class="row text-center">
@@ -96,5 +97,13 @@
 		</div>
 	</div>
 </nav>
+
+
+<script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
+
 
 </html>
