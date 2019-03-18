@@ -7,7 +7,7 @@ import {throwError} from 'rxjs';  // Angular 6/RxJS 6
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-slider',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -36,7 +36,24 @@ export class AppComponent implements OnInit {
    */
   public new_post: any;
 
-  constructor(private _blogPostService: BlogPostService, private _userService: UserService) { }
+  constructor(private _blogPostService: BlogPostService, private _userService: UserService, private _http:Http) { }
+
+
+ // this.c1.name = "eli"
+ /** title = 'app';
+ // c1:Cust = new About();
+ // click1(){
+ //   this.getAbout().subscribe(b => this.c1 = b)
+ // }
+ // */
+
+  getAbout()
+  {
+    return this._http
+          .get("./about")
+        //  .map(r => <Cust>r.json())
+  }
+
 
   ngOnInit() {
     this.getPosts();
