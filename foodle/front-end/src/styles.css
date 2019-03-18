@@ -5,6 +5,13 @@
   src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
 .vegan-style {
   font-family: 'vegan';
 }
@@ -33,7 +40,6 @@
 }
 .carousel-caption h1 {
   font-size: 500%;
-  text-transform: uppercase;
   text-shadow: 1px 1px 15px #000;
 }
 .carousel-caption h3 {
@@ -49,6 +55,15 @@
 .btn-primary:hover {
   background-color: #563d7c;
   border: 1px solid #563d7c;
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
 }
 
 footer {

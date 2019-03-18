@@ -23,7 +23,6 @@ def about(request):
     """
     return render(request, 'templates/about.html')
 
-<<<<<<< HEAD
 # Handle Login and register
 @login_required
 def user_logout(request):
@@ -67,7 +66,6 @@ def register(request):
 
 # class AboutPageView(TemplateView):
 #    
-=======
 class AboutPageViewSet(viewsets.ModelViewSet):
     """
     Provides basic CRUD functions for the User model
@@ -75,7 +73,6 @@ class AboutPageViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
     permission_classes = (ReadOnly, )
->>>>>>> e06c4ee17e1333877f2031c3b33fd1e43b6dbd75
 
 
 class UserViewSet(viewsets.ModelViewSet):
