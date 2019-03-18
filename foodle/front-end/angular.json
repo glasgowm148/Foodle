@@ -15,8 +15,6 @@
           "options": {
             "outputPath": "../static/front-end",
             "index": "src/index.html",
-            "about": "src/about.html",
-            "deal": "src/deal_page.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
