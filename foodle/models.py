@@ -2,19 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-
-class UserProfile(models.Model):
-    """
-    A simple user model for register and login forms
-    """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    
-    website = models.URLField(blank=True)
-    picture = models.ImageField(upload_to='profile_images', blank=True)
-    
-    def __str__(self):
-        return self.user.name
-
 class AboutPage(models.Model):
     """
     The "AboutPage" model for the foodle  app

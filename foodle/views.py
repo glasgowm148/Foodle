@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
 from .models import BlogPost
@@ -9,7 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
-from foodle.forms import UserForm, UserProfileForm
+from django.contrib.auth.forms import UserCreationForm
+from foodle.forms import registerForm
 
 
 
@@ -43,8 +44,6 @@ def some_view(request):
     else:
         return HttpResponse("You are not logged in.")
 
-
-
 def user_login(request):
 
     if request.method == 'POST':
@@ -72,39 +71,18 @@ def user_login(request):
 
 def register(request):
     
-    registered = False
-
     if request.method == 'POST':
-        user_form = UserForm(data=request.POST)
-        profile_form = UserProfileForm(data=request.POST)
-        
-        if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save()
-
-            user.set_password(user.password)
-            user.save()
-            
-            profile = profile_form.save(commit=False)
-            profile.user = user
-            
-            if 'picture' in request.FILES:
-                profile.picture = request.FILES['picture']
-            
-
-            profile.save()
-
-            registered = True
-        else:
-            print(user_form.errors, profile_form.errors)
+        form = registerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('login')
     else:
-        user_form = UserForm()
-        profile_form = UserProfileForm()
-
-    return render(request,
-                  'register.html',
-                  {'user_form': user_form,
-                   'profile_form': profile_form, 
-                    'registered': registered})
+        form = registerForm()
+    return render(request, 'register.html', {'form': form})
 
 
 # class AboutPageView(TemplateView):
@@ -130,7 +108,7 @@ class BlogPostViewSet(viewsets.ModelViewSet):
     """
     Provides basic CRUD functions for the Blog Post model
     """
-    
+
     queryset = BlogPost.objects.all()
     serializer_class = serializers.BlogPostSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, )

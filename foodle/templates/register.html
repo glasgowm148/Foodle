@@ -1,25 +1,22 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
 
 {% block content %}
-    <h1>Register for Rango</h1>
-    {% if registered %}
-        <strong>thank you for registering!</strong>
-        <a href="{% url 'index' %}">Return to the homepage.</a><br />
-    {% else %}
-        <strong>register here!</strong><br />
-        <form id="user_form" method="post" action="{% url 'register' %}"
-            enctype="multipart/form-data">
-        
-        {% csrf_token %}
-        
-        <!-- Display each form  -->
-        {{ user_form.as_p }}
-       {{ profile_form.as_p }}
-        
-        <!-- Provide a button to click to submit the form. -->
-        <input type="submit" name="submit" value="Register" />
-    </form>
-    {% endif %}
+  <h2>Foodle Registration</h2>
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit">Sign up</button>
+  </form>
 {% endblock %}
 
