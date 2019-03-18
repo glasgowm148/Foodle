@@ -12,6 +12,11 @@ import {throwError} from 'rxjs';  // Angular 6/RxJS 6
   styleUrls: ['./app.component.css']
 })
 
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html'
+})
+
 
 export class AppComponent implements OnInit {
 
