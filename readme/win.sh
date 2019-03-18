@@ -28,7 +28,7 @@ echo "Estimated time : 1-5 minutes"
 echo " ~~~~~~ Configuring a local python 3.6 virtualenv ~~~~~~ "
 
 pip install virtualenv
-python -m venv venv
+python -m virtualenv venv
 venv\Scripts\activate
 echo " ~~~~~~ venv activated - installing project requirements.txt ~~~~~~ "
 pip install -r requirements.txt
