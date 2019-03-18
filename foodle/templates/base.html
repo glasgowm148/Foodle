@@ -1,8 +1,9 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 
+<html lang="en">
+
 <head>
-	<html lang="en">
 	<meta charset="utf-8">
 	<title>
 		{% block title_block %}Home{% endblock %} | Foodle
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-	
+
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
@@ -42,7 +43,22 @@
 	</nav>
 	<app-root></app-root>
 
+<<<<<<< HEAD
+	{% block approot %}
+		approot not loaded
+	{% endblock %}
+
+	<figure>
+		<div class="fixed-wrap">
+			<div id="fixed">
+
+			</div>
+		</div>
+	</figure>
+
+=======
 	{% block content %}{% endblock %}
+<<<<<<< HEAD
 
 
 <!-- Footer -->
@@ -68,6 +84,49 @@
 </nav>
 
 
+=======
+<!-- Nathan Footer-->
+>>>>>>> a03039b8cffcf6fcb93133a12e5cea25a94dd65a
+	<footer>
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+					<hr class="light">
+					<h5 class="vegan-style">Foodle</h5>
+					<hr class="light">
+					<p>555-555-5555</p>
+					<p>email@myemail.com</p>
+					<p>City, State, 00000</p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Our Hours</h5>
+					<hr class="light">
+					<p>Monday: 9am - 5pm</p>
+					<p>Saturday: 10am - 4pm</p>
+					<p>Sunday: closed</p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Service Area</h5>
+					<hr class="light">
+					<p>City, State, 00000</p>
+					<p>City, State, 00000</p>
+					<p>City, State, 00000</p>
+				</div>
+			</div>
+			<div class="bottom-image">
+				<img src="{% static "images/logo.png" %}" alt="logo">
+			</div>
+		</div>
+	</footer>
+>>>>>>> 15219c839eaf4d1b45cc505adb0e5a13c70aa6a5
 
+	<script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
+</body>
 
 </html>

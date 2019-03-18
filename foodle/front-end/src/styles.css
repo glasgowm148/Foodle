@@ -18,6 +18,15 @@ footer {
   background-color: blueviolet !important;
   color: white;
 }
+.bottom-image {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.bottom-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Datepicker popup icon */
 
