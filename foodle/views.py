@@ -8,6 +8,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 
 
 
@@ -21,7 +22,13 @@ def about(request):
     """
     The about page. This renders the container for the single-page app.
     """
-    return render(request, 'templates/about.html')
+    return render(request, 'about.html')
+
+def deal_page(request):
+    """
+    The about page. This renders the container for the single-page app.
+    """
+    return render(request, 'deal_page.html')
 
 # Handle Login and register
 @login_required
@@ -34,6 +41,8 @@ def some_view(request):
         return HttpResponse("You are logged in.")
     else:
         return HttpResponse("You are not logged in.")
+
+
 
 def user_login(request):
 
@@ -65,7 +74,6 @@ def register(request):
     return render(request,'register.html')
 
 # class AboutPageView(TemplateView):
-#    
 class AboutPageViewSet(viewsets.ModelViewSet):
     """
     Provides basic CRUD functions for the User model
