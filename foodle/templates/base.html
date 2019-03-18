@@ -9,6 +9,10 @@
 		{% block title_block %}Home{% endblock %} | Foodle
 	</title>
 	<base href="/">
+
+	<!-- FontAwesome for social media icons -->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	 crossorigin="anonymous">
@@ -32,10 +36,13 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
+						<a class="nav-link" href="#"><i class="fas fa-home"></i></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fab fa-github"></i></a>
 					</li>
 				</ul>
 			</div>
@@ -44,8 +51,8 @@
 	<app-root></app-root>
 
 	{% block content %}{% endblock %}
-	
-	<!-- Nathan Footer-->
+
+	<!-- Nathan Footer -->
 	<footer>
 		<div class="container-fluid padding">
 			<div class="row text-center">
