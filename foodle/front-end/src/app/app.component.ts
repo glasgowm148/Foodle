@@ -7,14 +7,15 @@ import {throwError} from 'rxjs';  // Angular 6/RxJS 6
 
 
 @Component({
-  selector: 'app-slider',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 
 @Component({
   selector: 'app-slider',
-  templateUrl: './app.component.html'
+  templateUrl: './slider.html'
+
 
 })
 
