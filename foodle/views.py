@@ -73,6 +73,15 @@ def register(request):
  
     return render(request,'register.html')
 
+# class AboutPageView(TemplateView):
+class AboutPageViewSet(viewsets.ModelViewSet):
+    """
+    Provides basic CRUD functions for the User model
+    """
+    queryset = User.objects.all()
+    serializer_class = serializers.UserSerializer
+    permission_classes = (ReadOnly, )
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
