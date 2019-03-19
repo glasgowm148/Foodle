@@ -26,6 +26,21 @@ html, body {
 
 /* Main nav bar */
 
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
 
 
 .navbar {
@@ -86,6 +101,26 @@ html, body {
   border: 1px solid #6648b1;
   background-color: rgb(65, 138, 235) !important;
 }
+
+.btn-submit {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  background-color: rgb(255, 0, 0) !important;
+  }
+
 .btn-primary:hover {
  /*---  background-color: #563d7c;--*/
   border: 1px solid #563d7c;
