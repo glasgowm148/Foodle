@@ -11,7 +11,6 @@
   float: right;
 }
 
-
 html, body {
   height: 100%;
   width: 100%;
@@ -70,10 +69,6 @@ html, body {
 
 
 
-/* navbar styling */
-
-/* Main nav bar */
-
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 580px) {
   #navbar {
@@ -112,7 +107,6 @@ html, body {
 }
 .carousel-caption {
   font-family: 'vegan-style' !important;
-
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
