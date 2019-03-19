@@ -4,38 +4,44 @@
 {% block content %}
 <!-- greg's deal_page details (start) -->
 <div id="map"></div>
- <!--
+<!--
 
 	     <div class="row"> <div class="col-md-12">-->
 
-	     <!--   </div>   </div>-->
+<!--   </div>   </div>-->
 
-	<!--- Don't think breadcrumbs are needed anymore
+<!--- Don't think breadcrumbs are needed anymore
 	    <div class="row">
 	        <div class="col-md-12">
 				<div id="breadcrumbsTEXT" > HOME >> BAR SOBA >> DEAL #666</div>
 	        </div>
       </div>
       -->
-      <div class="container">
-	    <div class="row">
-	        <div class="col-md-5">
-	            <img id="image" class="img-fluid" src="{% static "images/soba.png" %}" alt="Picture of Soba" class="rounded" />
-	        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <img id="image" class="img-fluid" src="{% static " images/soba.png" %}" alt="Picture of Soba" class="rounded" />
+    </div>
 
-	        <div class="col-md-5">
-				<img id="image" class="img-fluid" src="{% static "images/sobaDeal.png" %}" alt="Picture of SobaDeal" class="rounded" />
-	   	    </div>
+    <div class="col-md-5">
+      <img id="image" class="img-fluid" src="{% static " images/sobaDeal.png" %}" alt="Picture of SobaDeal" class="rounded" />
+    </div>
 
-		    <div class="col-md-2 px-0"><br />
-            <a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim
-              Deal</a>
+    <div class="col-md-2 px-0"><br />
+      <a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim
+        Deal</a>
 
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a class="nav-link"
-             href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-			   <!--<button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a class="nav-link"
+        href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+
+
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-facebook"></i></a>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-twitter"></i></a>
+
+
+      <!--<button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
                 <p>Likes:{{ likes }}</p>
 
 				<button id="reportbutton" type="button" class="btn btn-primary btn-lg">REPORT</br>input details</br>below</button>
@@ -43,20 +49,15 @@
 				<textarea id="reportinput"></textarea>
    -->
 
-			    <!-- Facebook -->
+      <!-- Facebook -->
 
-				<!-- <button id="sharetbutton" type="button" class="btn btn-primary btn-lg">SHARE:</button> -->
+      <!-- <button id="sharetbutton" type="button" class="btn btn-primary btn-lg">SHARE:</button>
 
 				<div id="sharebutton" class="panel">
 				    <div  class="panel-body">SHARE:</div>
 				</div>
 
-        <ul class="nav">
-        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-      </ul>
+
 
 
 
@@ -73,31 +74,41 @@
                 <img id="shareButtons" class="img-fluid" src="googlelogo.png" alt="Google+" />
                 </a>
 
-
-		        <!--
+-->
+      <!--
 		        <button type="button" class="btn btn-primary">SHARE</button>
 		        <button type="button" class="btn btn-primary">REPORT</button> -->
-			</div>
+    </div>
 
-		</div>    <!-- row end -->
-	</div>     <!--container end-->
+  </div> <!-- row end -->
+</div>
+<!--container end-->
 
 
-	<!-- MAP DETAILS -->
-    <script>
-// Initialize and add the map
+<!-- MAP DETAILS -->
+<script>
+  // Initialize and add the map
   function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 55.872158, lng: -4.287869};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 15, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
-    </script>
+    // The location of Uluru
+    var uluru = {
+      lat: 55.872158,
+      lng: -4.287869
+    };
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+      document.getElementById('map'), {
+        zoom: 15,
+        center: uluru
+      });
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
+</script>
 <!-- greg deal_page details (end)	-->
 {% endblock %}
