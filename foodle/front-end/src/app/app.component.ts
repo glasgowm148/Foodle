@@ -19,6 +19,12 @@ import {Http, Response} from '@angular/http';
   selector: 'app-slider',
   templateUrl: './slider.html'
 
+})
+
+@Component({
+  selector: 'tab-component',
+  templateUrl: '/tab/tab.component.html'
+
 
 })
 
