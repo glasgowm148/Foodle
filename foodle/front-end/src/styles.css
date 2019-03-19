@@ -29,7 +29,7 @@ html, body {
 /* vegan-style custom font */
 @font-face {
   font-family: 'vegan';
-  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf') !important;
+  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf');
 }
 
 .vegan-style {
