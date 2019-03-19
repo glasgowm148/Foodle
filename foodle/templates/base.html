@@ -19,7 +19,8 @@
 
 
 	<!-- Bootstrap 4 Stylesheet -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" id="bootstrap-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		id="bootstrap-css">
 
 	<!-- Latest version of jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,50 +47,36 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
-			<ul class="navbar-nav ml-auto">
-				<div class="nav-logo">
-					<a href="/">
-						<img class="img-fluid" src="{% static 'images/logo.png' %}" alt="Foodle logo">
-					</a>
-				</div>
-			</ul>
+			<a class="navbar-brand" href="/">
+				<img src="{% static 'images/logo.png' %}" alt="Foodle logo">
+			</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+			
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-
-
 					<li class="nav-item">
 						<a class="nav-link" href="#"><i class="far fa-moon"></i></a>
 					</li>
-
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'about' %}"><i class="fab fa-info"></i></a>
 					</li>
-
-
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'contact' %}"><i class="far fa-envelope"></i></a>
 					</li>
-
 					<li class="nav-item">
-						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
+						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i
+								class="fab fa-github"></i></a>
 					</li>
 
-
 					<li class="nav-item"></li>
+
 					<!-- blank one for dirty spacing fix-->
 
-
-
-
-
-
-
-
 					{% if user.is_authenticated %}
+
 					<li class="nav-item">
 						<a class="nav-link">{{ user.username }}</a>
 					</li>
@@ -99,6 +86,7 @@
 					<li class="nav-item">
 						<a class="btn btn-primary" href="{% url 'logout' %}" role="button">Sign out</a>
 					</li>
+
 					{% else %}
 
 					<li class="nav-item">

@@ -61,15 +61,6 @@ html, body {
 
 /* Nav bar : logo */
 
-.nav-logo h3 {
-  font-family: vegan;
-  color: #fff !important;
-  font-size: 3rem !important;
-  margin-top: 0.8rem;
-  text-align: left;
-  text-shadow: 1px 1px 4px rgb(127, 166, 238);
-}
-
 .navbar-brand {
   text-align: center !important;
 }
