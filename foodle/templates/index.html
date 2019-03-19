@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-<!-- specifies the appearance of the first slider image -->
 {% block first_item %}
     <img src="{% static 'images/donut_cut.png' %}" alt="donut">
     <div class="carousel-caption">
@@ -16,10 +15,9 @@
     </div>
 {% endblock %}
 
-<!-- specifies the appearance of the second slider image -->
 {% block second_item %}
     <img src="{% static 'images/berry_cut.png' %}" alt="berry">
-{% endblock %}
+{% endblock }
 
 {% block content %}
 
@@ -65,6 +63,10 @@
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img" src="{% static 'images/soba.png' %}" alt="Card image">
         </div>
     </div>
     <div class="card">
