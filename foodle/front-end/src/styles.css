@@ -258,6 +258,14 @@ height:100%;
 
 #map {
 height: 300px;
+<<<<<<< HEAD
+width: 100%;
+}
+
+#breadcrumbsBG{
+height:30px;
+=======
+>>>>>>> a9750737f77a67a2368dec583d9f61b7301be2e9
 width: 100%;
 }
 
@@ -308,3 +316,57 @@ width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
+<<<<<<< HEAD
+
+ #sideBar4{
+height:133px;
+width: 10.5%;
+z-index:2;
+background-color: rgb(134,132,216);
+}
+
+#likebutton {
+ padding-top:5px;
+ text-align: center;
+}
+
+#reportbutton {
+	padding-top:5px;
+ text-align: center;
+}
+
+#sharebutton {
+padding-top:5px;
+text-align: center;
+}
+
+#share-buttons{
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+#shareButtons{
+	width:35px;
+	height:100%;
+}
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+=======
+>>>>>>> a9750737f77a67a2368dec583d9f61b7301be2e9
