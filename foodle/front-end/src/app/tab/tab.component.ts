@@ -1,12 +1,9 @@
 import {Component} from '@angular/core';
 
-/**
- * @title Basic use of the tab group
- */
 @Component({
-  selector: 'tab.component',
-  templateUrl: 'tab.component.html',
-  styleUrls: ['tab.component.css'],
+  selector: 'tab-component',
+  templateUrl: './tab-component.html',
+  styleUrls: ['./tab-component.css'],
 })
 export class TabGroupBasicExample {}
 
