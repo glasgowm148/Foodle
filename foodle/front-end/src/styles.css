@@ -7,8 +7,11 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
   /* background colour */
   background-color: #FFF !important;
+=======
+>>>>>>> bb2b922d... small tidy
 
 }
 
@@ -26,6 +29,7 @@ html, body {
 
 /* Main nav bar */
 
+<<<<<<< HEAD
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 580px) {
   #navbar {
@@ -41,6 +45,8 @@ html, body {
   }
 }
 
+=======
+>>>>>>> bb2b922d... small tidy
 
 
 .navbar {
