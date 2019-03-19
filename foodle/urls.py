@@ -13,8 +13,8 @@ urlpatterns = [
     path(r'', views.index, name='index'),
     path(r'about/', views.about, name='about'),
     path(r'deal_page/', views.deal_page, name='deal_page'),
-    path(r'contact/', views.deal_page, name='contact'),
-    path(r'submit/', views.deal_page, name='submit'),
+    path(r'contact/', views.contact, name='contact'),
+    path(r'submit/', views.submit, name='submit'),
 
 
 

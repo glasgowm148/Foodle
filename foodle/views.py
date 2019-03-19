@@ -10,7 +10,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
-from foodle.forms import registerForm
+from .forms import registerForm, SubmitForm
 
 
 
@@ -33,7 +33,26 @@ def deal_page(request):
     return render(request, 'deal_page.html')
 
 def submit(request):
-    return render(request, 'submit.html')
+
+    if request.method == 'POST':
+        submit_form = SubmitForm(data=request.POST)
+
+        if submit_form.is_valid():
+
+            submit = submit_form.save(commit=False)
+
+            if 'picture' in request.FILES:
+                submit.picture = request.FILES['picture']
+
+            submit.save()
+        else:
+            print(submit_form.errors)
+    else:
+        submit_form = SubmitForm()
+
+    return render(request,'submit.html', {'submit_form': submit_form,})
+    
+
 
 def contact(request):
     return render(request, 'contact.html')
@@ -82,6 +101,7 @@ def register(request):
             return redirect('login')
     else:
         form = registerForm()
+
     return render(request, 'register.html', {'form': form})
 
 
