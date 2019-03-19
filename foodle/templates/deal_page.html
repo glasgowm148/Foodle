@@ -3,75 +3,76 @@
 
 {% block content %}
 <!-- greg's deal_page details (start) -->
+<div id="map"></div>
+ <!--   	<div class="container">
 
-   	<div class="container">
-	    <div class="row">
-	        <div class="col-md-12">
-		        <div id="map"></div>
-	        </div>   
-	    </div>     
-	
+	     <div class="row"> <div class="col-md-12">-->
+
+	     <!--   </div>   </div>-->
+
+	<!--- Don't think breadcrumbs are needed anymore
 	    <div class="row">
 	        <div class="col-md-12">
 				<div id="breadcrumbsTEXT" > HOME >> BAR SOBA >> DEAL #666</div>
-	        </div>    
-	    </div>     
-	
+	        </div>
+      </div>
+      -->
+
 	    <div class="row">
 	        <div class="col-md-5">
 	            <img id="image" class="img-fluid" src="{% static "images/soba.png" %}" alt="Picture of Soba" class="rounded" />
 	        </div>
-			
+
 	        <div class="col-md-5">
 				<img id="image" class="img-fluid" src="{% static "images/sobaDeal.png" %}" alt="Picture of SobaDeal" class="rounded" />
 	   	    </div>
-			
+
 		    <div class="col-md-2 px-0">
 			    <button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
                 <p>Likes:{{ likes }}</p>
-				
+
 				<button id="reportbutton" type="button" class="btn btn-primary btn-lg">REPORT</br>input details</br>below</button>
-				
+
 				<textarea id="reportinput"></textarea>
-				
-	
+
+
 			    <!-- Facebook -->
-				
+
 				<!-- <button id="sharetbutton" type="button" class="btn btn-primary btn-lg">SHARE:</button> -->
-				
+
 				<div id="sharebutton" class="panel">
 				    <div  class="panel-body">SHARE:</div>
-				</div>	
-                
-				
+				</div>
+
+
                 <a  type="button" id="shareButtons" class="btn btn-primary btn-sm" href="http://www.facebook.com/sharer.php?u=http://thirdworlds.net" target="_blank" role="button">
                 <img  id="shareButtons" class="img-fluid" src="facebooklogo.jpg" alt="Facebook" />
                 </a>
-				
+
 				<a type="button" id="shareButtons" class="btn btn-primary btn-sm" href="https://twitter.com/share?url=https://thirdworlds.net&amp;text=Foodle&amp;hashtags=DeathGrips" target="_blank" role="button">
                 <img id="shareButtons" class="img-fluid" src="twitterlogo.png" alt="Twitter" />
                 </a>
-				
+
 				<a type="button" id="shareButtons" class="btn btn-primary btn-sm" href="https://plus.google.com/share?url=https://thirdworlds.net" target="_blank" role="button">
                 <img id="shareButtons" class="img-fluid" src="googlelogo.png" alt="Google+" />
                 </a>
-		
-			
-		        <!-- 
+
+
+		        <!--
 		        <button type="button" class="btn btn-primary">SHARE</button>
 		        <button type="button" class="btn btn-primary">REPORT</button> -->
-			</div> 
-	    
+			</div>
+
 		</div>    <!-- row end -->
 	</div>     <!--container end-->
-	
-	
+
+
 	<!-- MAP DETAILS -->
     <script>
 // Initialize and add the map
   function initMap() {
   // The location of Uluru
-  var uluru = {lat: 55.872158, lng: -4.287869}; 
+  var uluru = {lat: 55.872158, lng: -4.287869};
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 15, center: uluru});
