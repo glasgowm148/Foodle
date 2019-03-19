@@ -5,23 +5,8 @@
 <link rel="stylesheet" href="/static/css/input.css">
 {% endblock %}
 
-{% block first_item %}
-    <img src="{% static 'images/donut_cut.png' %}" alt="donut">
-    <div class="carousel-caption">
-        <h1 class="display-2 vegan-style">Login!</h1>
-        <h3>Sign in to your Foodle account!</h3>
-        <button href="{% url 'register' %}" "type="button" class="btn btn-primary btn-lg">
-            REGISTER
-        </button>
-    </div>
-{% endblock %}
 
-{% block second_item %}
-    <img src="{% static 'images/berry_cut.png' %}" alt="berry">
-{% endblock %}
-
-{% block content %}
-
+  
 <!-- other CSS
 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
@@ -81,12 +66,9 @@
 	</div>
 </div>
 -->
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <div class="wrapper fadeInDown">
+{% block content %}
+  <br class="space"/>
+  <div class="wrapper fadeInDown space">
     <div id="formContent">
       <!-- Tabs Titles -->
 
@@ -118,15 +100,17 @@
           {% csrf_token %}
           <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
           <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="btn-primaryfadeIn fourth" value="Log In">
+          <input type="submit" class="btn-primary fadeIn fourth" value="Log In">
         </form>
     
         <!-- Remind Passowrd -->
         <div id="formFooter">
-          <a class="underlineHover" href="#">Forgot Password?</a>
+          <a class="underlineHover" href="{% url 'register' %}">Need an Account?</a>
         </div>
     
       </div>
     </div>
+
+    <br class="space"/>
 
 {% endblock %}

@@ -26,10 +26,15 @@ html {
     margin: 40px 8px 10px 8px; 
     color: #cccccc;
   }
+
+  br.space {
+    line-height: 5;
+  }
   
   
   
   /* STRUCTURE */
+
   .center {
     align-items: center;
     display: flex;
