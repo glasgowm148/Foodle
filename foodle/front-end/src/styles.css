@@ -9,7 +9,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  color: #222;
+  color: #FFF;
 }
 
 .vegan-style {
@@ -31,7 +31,8 @@ html, body {
 /* styling for the slider elements */
 .carousel-inner img {
   width: 100%;
-  height: 100%;
+  height: 60%;
+  padding-bottom: 50px;
 }
 .carousel-caption {
   position: absolute;
@@ -175,14 +176,14 @@ body{
 background-color: rgb(134,132,216);
 height:100%;
 }
-      
+
 #map {
-height: 300px;  
-width: 100%; 
+height: 300px;
+width: 100%;
 position: absolute;
 top : 46px;
 }
-	   
+
 #breadcrumbs{
 height:30px;
 width: 100%;
@@ -190,7 +191,7 @@ position: absolute;
 top:354px;
 background-color: black;
 }
-	   
+
 #lowerBackground{
 height:650px;
 width: 100%;
@@ -206,7 +207,7 @@ background-color: white;
 	left:28px;
 	width:41%
 }
-	   
+
 #sideBlock{
 height:550px;
 width: 41%;
@@ -216,7 +217,7 @@ left:45%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
-	   
+
 #sideBar1{
 height:148px;
 width: 10.5%;
