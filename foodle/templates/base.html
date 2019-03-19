@@ -62,18 +62,23 @@
 						<a class="nav-link" href="{% url 'deal_page' %}"><i class="fas fa-question-circle"></i></a>
 					</li>
 					<li class="nav-item">
-							<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-question-circle"></i></a>
-						</li>
+						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-question-circle"></i></a>
+					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev" ngbPopover="You see, I show up on hover!"
-						 triggers="mouseenter:mouseleave" popoverTitle="Pop title"><i class="far fa-envelope"></i></a>
+						<a class="nav-link" href="{% url 'about' %}" ><i class="far fa-envelope"></i></a>
 					</li>
+
+					<li class="nav-item">
 					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
 					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-plus"></i></a>
+					</li>
+
 					<li class="nav-item"></li>
 					<!-- blank one for dirty spacing fix-->
-					</li>
 
 
 
@@ -86,6 +91,9 @@
 					<li class="nav-item">
 						<a class="nav-link">{{ user.username }}</a>
 					</li>
+
+
+
 					<li class="nav-item">
 						<a class="btn btn-primary" href="{% url 'logout' %}" role="button">Log out</a>
 					</li>
