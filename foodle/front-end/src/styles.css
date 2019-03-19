@@ -53,16 +53,13 @@ html, body {
 }
 
 
-
+/* Navbar CSS */
 .navbar {
   background-color: blueviolet !important;
   padding: .8rem;
 }
-
-/* Nav bar : logo */
-
 .navbar-brand {
-  text-align: center !important;
+  padding-right: .8rem;
 }
 .navbar-nav li {
   padding-right: 20px;
@@ -132,13 +129,24 @@ html, body {
 }
 
 footer {
-  background-color: blueviolet !important;
-  color: white;
+  background-color: blueviolet;
+  color: #d5d5d5;
+  padding-top: 2rem;
 }
-.bottom-logo {
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: #d5d5d5;
+}
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
 }
 
 /* container for slides  */
