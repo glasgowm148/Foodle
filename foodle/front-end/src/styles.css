@@ -74,17 +74,20 @@ html, body {
   height: 100%;
 }
 .carousel-caption {
+  font-family: 'vegan', 'Poppins';
+
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 .carousel-caption h1 {
-  font-size: 500%;
+  font-family: 'vegan', 'Poppins';
+  font-size: 17rem;
   text-shadow: 1px 1px 15px #000;
 }
 .carousel-caption h2, h3 {
   font-family: 'vegan', 'Poppins';
-  font-size: 200%;
+  font-size: 4rem;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
