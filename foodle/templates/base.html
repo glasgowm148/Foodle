@@ -11,8 +11,8 @@
 	<base href="/">
 
 	<meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
 	<!-- Bootstrap 4 Stylesheet -->
@@ -65,7 +65,7 @@
 
 					{% if user.is_authenticated %}
 					<li class="nav-item">
-						<a class="nav-link" >{{ user.username }}</a>
+						<a class="nav-link">{{ user.username }}</a>
 					</li>
 					<li class="nav-item">
 						<a class="btn btn-primary" href="{% url 'logout' %}" role="button">Log out</a>
@@ -82,6 +82,22 @@
 			</div>
 		</div>
 	</nav>
+
+	<!--- Image Slider -->
+	<div id="slides" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active"></li>
+			<li data-target="#slides" data-slide-to="1" class="active"></li>
+		</ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				{% block first_item %}{% endblock %}
+			</div>
+			<div class="carousel-item">
+				{% block second_item %}{% endblock %}
+			</div>
+		</div>
+	</div>
 
 	<div>
 		{% block content %}{% endblock %}
@@ -127,7 +143,7 @@
 	<script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
 	<script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
 	<script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
-	
+
 </body>
 
 </html>
