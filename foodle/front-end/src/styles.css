@@ -23,10 +23,36 @@ html, body {
 
 /* vegan-style custom font */
 
+/*@font-face {
+  font-family: 'vegan-style';
+  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf')  format("truetype"),
+       local('vegan-style');
+}
 @font-face {
   font-family: 'vegan-style';
-  src: url('./assets/veganfont.ttf')  format("truetype"),
-       local('vegan-style');
+  src: url('http://127.0.0.1:8000/static/veganfont-webfont.woff2') format('woff2'),
+       url('http://127.0.0.1:8000/static/veganfont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+       url('http://127.0.0.1:8000/static/font/veganfont-webfont.svg#webfont') format('svg');
+        url('http://127.0.0.1:8000/static/font/veganfont-webfont.eot');
+  src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.eot?#iefix') format('embedded-opentype'),
+
+
+.vegan {
+  font-family: 'vegan-style', cursive; /* apply your font by name and provide fallback fonts using coma separation */
+
+
+
+@font-face{
+	font-family: 'vegan-style';
+	src:
+       url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff2') format('woff2'),
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff') format('woff'),
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.ttf') format('truetype'),
 }
 /*
 @font-face {
@@ -36,9 +62,6 @@ html, body {
 
 
 
-.vegan {
-  font-family: 'vegan-style', cursive; /* apply your font by name and provide fallback fonts using coma separation */
-}
 
 /* navbar styling */
 
