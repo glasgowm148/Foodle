@@ -62,6 +62,7 @@ html, body {
 /* Nav bar : logo */
 
 .nav-logo h3 {
+  font-family: vegan;
   color: #fff !important;
   font-size: 3rem !important;
   margin-top: 0.8rem;
@@ -90,7 +91,7 @@ html, body {
 
 .carousel-caption h3 {
   font-family: vegan;
-  font-size: 10rem;
+  font-size: 3rem;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
@@ -98,7 +99,7 @@ html, body {
 
 .carousel-caption h1 {
   font-family: vegan;
-  font-size: 3rem;
+  font-size: 8rem;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
