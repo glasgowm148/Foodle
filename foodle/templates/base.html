@@ -53,6 +53,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
+						
 					<li class="nav-item">
 						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-moon"></i></a>
 					</li>
@@ -73,9 +74,6 @@
 					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-plus"></i></a>
-					</li>
 
 					<li class="nav-item"></li>
 					<!-- blank one for dirty spacing fix-->
@@ -91,19 +89,20 @@
 					<li class="nav-item">
 						<a class="nav-link">{{ user.username }}</a>
 					</li>
-
-
-
 					<li class="nav-item">
-						<a class="btn btn-primary" href="{% url 'logout' %}" role="button">Log out</a>
+							<a class="btn btn-submit" href="{% url 'register' %}" role="button">Submit</a>
+						</li>
+					<li class="nav-item">
+						<a class="btn-primary" href="{% url 'logout' %}" role="button">Log out</a>
 					</li>
 					{% else %}
-					<li class="nav-item">
-						<a class="btn btn-primary" href="{% url 'login' %}" role="button">Log in</a>
-					</li>
-					<li class="nav-item">
-						<a class="btn btn-primary" href="{% url 'register' %}" role="button">Register</a>
-					</li>
+						
+						<li class="nav-item">
+							<a class="btn btn-primary" href="{% url 'login' %}" role="button">Log in</a>
+						</li>
+						<li class="nav-item">
+							<a class="btn btn-primary" href="{% url 'register' %}" role="button">Register</a>
+						</li>
 					{% endif %}
 				</ul>
 			</div>
