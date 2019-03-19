@@ -255,10 +255,16 @@ body{
 background-color: rgb(134,132,216);
 height:100%;
 }
-
+      
 #map {
-height: 300px;
+height: 300px;  
+width: 100%; 
+}
+	   
+#breadcrumbsBG{
+height:30px;
 width: 100%;
+background-color: black;
 }
 
 #breadcrumbsTEXT{
@@ -267,7 +273,7 @@ color:white;
 font-size:medium;
 background-color:black;
 }
-
+	   
 #lowerBackground{
 height:650px;
 width: 100%;
@@ -280,31 +286,66 @@ background-color: white;
 	width:100%;
 	padding-top:5px; 
 }
-
+	   
 #sideBlock{
 height:550px;
 width: 41%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
-
+	   
 #sideBar1{
-height:148px;
+height:133px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar2{
-height:148px;
+height:133px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar3{
-height:248px;
+height:133px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
+}
+	   
+ #sideBar4{
+height:133px;
+width: 10.5%;
+z-index:2;
+background-color: rgb(134,132,216);
+}
+
+#likebutton {
+ padding-top:5px; 
+ text-align: center;
+}
+
+#reportbutton {
+	padding-top:5px;
+ text-align: center;
+}
+
+#sharebutton {
+padding-top:5px;
+text-align: center;
+}
+
+#share-buttons{
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+#shareButtons{
+	width:35px;
+	height:100%;
 }
