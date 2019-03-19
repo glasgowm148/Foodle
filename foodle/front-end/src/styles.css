@@ -22,15 +22,22 @@ html, body {
 }
 
 /* vegan-style custom font */
+
+@font-face {
+  font-family: 'vegan-style';
+  src: url('./assets/veganfont.ttf')  format("truetype"),
+       local('vegan-style');
+}
+/*
 @font-face {
   font-family: 'vegan';
   src: url(http://client.assets.woof.sh/glasgow/vegan.ttf);
-}
+}*/
 
 
 
 .vegan {
-  font-family: 'vegan', cursive; /* apply your font by name and provide fallback fonts using coma separation */
+  font-family: 'vegan-style', cursive; /* apply your font by name and provide fallback fonts using coma separation */
 }
 
 /* navbar styling */
@@ -74,19 +81,19 @@ html, body {
   height: 100%;
 }
 .carousel-caption {
-  font-family: 'vegan', 'Poppins';
+  font-family: 'vegan-style' !important;
 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 .carousel-caption h1 {
-  font-family: 'vegan', 'Poppins';
+  font-family: 'vegan-style' !important;
   font-size: 17rem;
   text-shadow: 1px 1px 15px #000;
 }
 .carousel-caption h2, h3 {
-  font-family: 'vegan', 'Poppins';
+  font-family: 'vegan-style' !important;
   font-size: 4rem;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
