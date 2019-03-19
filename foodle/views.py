@@ -44,12 +44,6 @@ def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
 
-def some_view(request):
-    if not request.user.is_authenticated():
-        return HttpResponse("You are logged in.")
-    else:
-        return HttpResponse("You are not logged in.")
-
 def user_login(request):
 
     if request.method == 'POST':
@@ -65,7 +59,7 @@ def user_login(request):
                 return HttpResponseRedirect(reverse('index'))
 
             else:
-                return HttpResponse("Your Rango account is disabled.")
+                return HttpResponse("Your account is disabled.")
 
         else:
 
