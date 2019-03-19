@@ -7,7 +7,7 @@ import {MatNativeDateModule} from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './material-module';
+//import {DemoMaterialModule} from './material-module';
 import { CommonModule } from '@angular/common';
 
 
@@ -19,7 +19,7 @@ import {TabGroupBasicExample} from './app/tab/tab.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    DemoMaterialModule,
+    //DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     CommonModule,
