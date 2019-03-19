@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+<!-- specifies the appearance of the first slider image -->
 {% block first_item %}
     <img src="{% static 'images/donut_cut.png' %}" alt="donut">
     <div class="carousel-caption">
@@ -15,9 +16,10 @@
     </div>
 {% endblock %}
 
+<!-- specifies the appearance of the second slider image -->
 {% block second_item %}
     <img src="{% static 'images/berry_cut.png' %}" alt="berry">
-{% endblock }
+{% endblock %}
 
 {% block content %}
 
