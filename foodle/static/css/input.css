@@ -274,6 +274,7 @@ html {
   
   .underlineHover:hover {
     color: #0d0d0d;
+    text-decoration: none;
   }
   
   .underlineHover:hover:after{
