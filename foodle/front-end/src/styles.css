@@ -16,7 +16,7 @@ html, body {
 /* vegan-style custom font */
 @font-face {
   font-family: 'vegan';
-  src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
+  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf');
 }
 
 .vegan-style {
@@ -56,17 +56,19 @@ html, body {
   text-shadow: 1px 1px 15px #000;
 }
 .carousel-caption h3 {
-  font-size: 200%;
+  font-family: vegan;
+  font-size: 300%;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
 }
 .btn-primary {
-  background-color: #6648b1;
+/*--- background-color: #6648b1;--*/
   border: 1px solid #6648b1;
+  background-color: rgb(65, 138, 235) !important;
 }
 .btn-primary:hover {
-  background-color: #563d7c;
+ /*---  background-color: #563d7c;--*/
   border: 1px solid #563d7c;
 }
 
