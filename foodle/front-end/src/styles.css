@@ -53,7 +53,8 @@ html, body {
 @font-face {
     font-family: 'vegan-style';
     src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff2') format('woff2'),
-         url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff') format('woff');
+         url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff') format('woff'),
+         url('http://127.0.0.1:8000/static/font/veganfont-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
