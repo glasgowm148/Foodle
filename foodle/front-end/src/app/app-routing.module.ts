@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 
 import {DemoMaterialModule} from './material-module';
 
-import {TabGroupBasicExample} from './app/app.tab.component';
+import {TabGroupBasicExample} from './app.tab.component';
 
 @NgModule({
   imports: [
@@ -19,6 +19,7 @@ import {TabGroupBasicExample} from './app/app.tab.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     CommonModule,
@@ -34,7 +35,3 @@ export class AppRoutingModule { }
 
 platformBrowserDynamic().bootstrapModule(AppRoutingModule);
 
-
-/**  Copyright 2019 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
