@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
 
 body {
   font-family: Roboto, Arial, sans-serif;
@@ -15,7 +17,6 @@ body {
   float: right;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 html, body {
   height: 100%;
@@ -29,11 +30,13 @@ html, body {
 /* vegan-style custom font */
 @font-face {
   font-family: 'vegan';
-  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf');
+  src: url(http://client.assets.woof.sh/glasgow/vegan.ttf);
 }
 
+
+
 .vegan-style {
-  font-family: 'vegan';
+  font-family: 'vegan', cursive; /* apply your font by name and provide fallback fonts using coma separation */
 }
 
 /* navbar styling */

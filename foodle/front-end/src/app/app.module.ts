@@ -13,11 +13,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { NgbdCarouselBasic } from './carousel-basic';
 import { LoginComponent } from './login/login.component';
+import { AppTabComponent } from './app.tab.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, NgbdCarouselBasic, LoginComponent
+    AppComponent, NgbdCarouselBasic, LoginComponent, AppTabComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, HttpModule, NgbModule, ReactiveFormsModule
