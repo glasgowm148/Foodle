@@ -7,11 +7,11 @@ import {MatNativeDateModule} from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './material-module';
 import { CommonModule } from '@angular/common';
 
+import {DemoMaterialModule} from './material-module';
 
-import {TabGroupBasicExample} from './app/tab/tab.component';
+import {TabGroupBasicExample} from './app/app.tab.component';
 
 @NgModule({
   imports: [
@@ -19,10 +19,10 @@ import {TabGroupBasicExample} from './app/tab/tab.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
     CommonModule,
+    TabGroupBasicExample
   ],
   entryComponents: [TabGroupBasicExample],
   declarations: [TabGroupBasicExample],
