@@ -2,10 +2,21 @@
 {% load staticfiles %}
 
 {% block content %}
-    <h1 class="light">Login to your Foodle Account</h1>
+<div s>
+    <br />
 
+    <h1 color:wight style="text-align: center;">Login to your Foodle Account</h1>
     <!-- Google Log in-->
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="" data-height="40"data-longtitle="true"  style="width: 75%;margin: 0 auto;">button</div>
+    <br />
 
     <script>
         function onSignIn(googleUser) {
@@ -23,16 +34,33 @@
           console.log("ID Token: " + id_token);
         }
       </script>
-  
 
+    
     <form id="login_form" method="post" action="{% url 'login' %}">
         {% csrf_token %}
-        Username: <input type="text" name="username" value="" size="50" />
+        <div style="width: 50%; margin: 0 auto;"class="col-sm-2 col-form-label col-form-label-sm">
+        <input class="form-control" type="text" name="username" placeholder="Username"/>
         <br />
-        Password: <input type="password" name="password" value="" size="50" />
+       </div>
+       <div style="width: 50%; margin: 0 auto;"class="col-sm-2 col-form-label col-form-label-sm">
+        <input class="form-control" name="password" value=""  placeholder="password"/>
         <br />
-        <input class="light" type="submit" value="submit" />
+      </div>
+      <div style="text-align: center">
+        <input class="btn btn-primary" type="submit" value="submit" />
+      </div>
     </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
 
 {% endblock %}
 
