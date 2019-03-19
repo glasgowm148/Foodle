@@ -76,7 +76,7 @@ html, body {
 }
 .carousel-caption {
   position: absolute;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -258,13 +258,15 @@ height:100%;
 
 #map {
 height: 300px;
+<<<<<<< HEAD
 width: 100%;
 }
 
 #breadcrumbsBG{
 height:30px;
+=======
+>>>>>>> a9750737f77a67a2368dec583d9f61b7301be2e9
 width: 100%;
-background-color: black;
 }
 
 #breadcrumbsTEXT{
@@ -284,7 +286,7 @@ background-color: white;
 	z-index:4;
 	height:450px;
 	width:100%;
-	padding-top:5px;
+	padding-top:5px; 
 }
 
 #sideBlock{
@@ -295,25 +297,26 @@ background-color: rgb(134,132,216);
 }
 
 #sideBar1{
-height:133px;
+height:148px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar2{
-height:133px;
+height:148px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar3{
-height:133px;
+height:248px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
+<<<<<<< HEAD
 
  #sideBar4{
 height:133px;
@@ -365,3 +368,5 @@ body {
   font-size: 8pt;
   float: right;
 }
+=======
+>>>>>>> a9750737f77a67a2368dec583d9f61b7301be2e9
