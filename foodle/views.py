@@ -45,6 +45,8 @@ def submit(request):
                 submit.picture = request.FILES['picture']
 
             submit.save()
+            return HttpResponseRedirect(reverse('index'))
+
         else:
             print(submit_form.errors)
     else:
