@@ -26,6 +26,12 @@ def about(request):
     """
     return render(request, 'about.html')
 
+def font(request):
+    """
+    The about page. This renders the container for the single-page app.
+    """
+    return render(request, 'veganfont.ttf')
+
 def deal_page(request):
     """
     The about page. This renders the container for the single-page app.

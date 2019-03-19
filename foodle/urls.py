@@ -13,6 +13,8 @@ urlpatterns = [
     path(r'', views.index, name='index'),
     path(r'about/', views.about, name='about'),
     path(r'deal_page/', views.deal_page, name='deal_page'),
+    path(r'font/', views.font, name='font'),
+
 
 
     # Login and Register
