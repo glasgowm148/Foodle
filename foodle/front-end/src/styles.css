@@ -11,7 +11,6 @@
   float: right;
 }
 
-
 html, body {
   height: 100%;
   width: 100%;
@@ -23,11 +22,44 @@ html, body {
 
 /* vegan-style custom font */
 
-@font-face {
+/*@font-face {
   font-family: 'vegan-style';
-  src: url('./assets/veganfont.ttf')  format("truetype"),
+  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf')  format("truetype"),
        local('vegan-style');
 }
+@font-face {
+  font-family: 'vegan-style';
+  src: url('http://127.0.0.1:8000/static/veganfont-webfont.woff2') format('woff2'),
+       url('http://127.0.0.1:8000/static/veganfont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.svg#webfont') format('svg');
+
+@font-face{
+	font-family: 'vegan-style';
+	src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.eot');
+  src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.eot?#iefix') format('embedded-opentype'),
+       url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff2') format('woff2'),
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff') format('woff'),
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.ttf') format('truetype'),
+}
+.vegan {
+  font-family: 'vegan-style', cursive; /* apply your font by name and provide fallback fonts using coma separation */
+
+
+@font-face {
+    font-family: 'vegan-style';
+    src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff2') format('woff2'),
+         url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /*
 @font-face {
   font-family: 'vegan';
@@ -36,13 +68,6 @@ html, body {
 
 
 
-.vegan {
-  font-family: 'vegan-style', cursive; /* apply your font by name and provide fallback fonts using coma separation */
-}
-
-/* navbar styling */
-
-/* Main nav bar */
 
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 580px) {
@@ -82,7 +107,6 @@ html, body {
 }
 .carousel-caption {
   font-family: 'vegan-style' !important;
-
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
