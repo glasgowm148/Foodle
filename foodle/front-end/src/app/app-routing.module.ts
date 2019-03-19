@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import {DemoMaterialModule} from './material-module';
 
 import {AppTabComponent} from './app.tab.component';
+import { MatTabsModule } from '@angular/material';
+
 
 @NgModule({
   imports: [
@@ -19,6 +21,7 @@ import {AppTabComponent} from './app.tab.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    MatTabsModule,
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,

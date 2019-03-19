@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
@@ -17,6 +19,7 @@ body {
   float: right;
 }
 
+
 html, body {
   height: 100%;
   width: 100%;
@@ -29,11 +32,13 @@ html, body {
 /* vegan-style custom font */
 @font-face {
   font-family: 'vegan';
-  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf');
+  src: url(http://client.assets.woof.sh/glasgow/vegan.ttf);
 }
 
+
+
 .vegan-style {
-  font-family: 'vegan';
+  font-family: 'vegan', cursive; /* apply your font by name and provide fallback fonts using coma separation */
 }
 
 /* navbar styling */
@@ -248,15 +253,16 @@ body{
 background-color: rgb(134,132,216);
 height:100%;
 }
-
+      
 #map {
-height: 300px;
-width: 100%;
+height: 300px;  
+width: 100%; 
 }
-
+	   
 #breadcrumbsBG{
 height:30px;
 width: 100%;
+background-color: black;
 }
 
 #breadcrumbsTEXT{
@@ -265,7 +271,7 @@ color:white;
 font-size:medium;
 background-color:black;
 }
-
+	   
 #lowerBackground{
 height:650px;
 width: 100%;
@@ -276,37 +282,37 @@ background-color: white;
 	z-index:4;
 	height:450px;
 	width:100%;
-	padding-top:5px;
+	padding-top:5px; 
 }
-
+	   
 #sideBlock{
 height:550px;
 width: 41%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
-
+	   
 #sideBar1{
-height:148px;
+height:133px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar2{
-height:148px;
+height:133px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
 
 #sideBar3{
-height:248px;
+height:133px;
 width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
-
+	   
  #sideBar4{
 height:133px;
 width: 10.5%;
@@ -315,18 +321,41 @@ background-color: rgb(134,132,216);
 }
 
 #likebutton {
- padding-top:5px;
+ margin-top:5px; 
  text-align: center;
+ max-width:150px;
+ 	margin-left:auto;
+	margin-right:auto;
+	display:block;
 }
 
 #reportbutton {
-	padding-top:5px;
+	margin-top:5px;
+	max-width:150px;
  text-align: center;
+ 	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+#reportinput{
+	margin-top:5px;
+	height: 70px;
+	width: 150px;
+ 	margin-left:auto;
+	margin-right:auto;
+	display:block;
 }
 
 #sharebutton {
-padding-top:5px;
+	background-color:blue;
+	height: 50px;
 text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	margin-top:5px;
+	margin-bottom:0px;
 }
 
 #share-buttons{
@@ -338,8 +367,12 @@ display: inline;
 }
 
 #shareButtons{
-	width:35px;
-	height:100%;
+	width:40px;
+	height:40px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	margin-top:5px;
 }
 
 
