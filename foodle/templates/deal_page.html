@@ -4,7 +4,7 @@
 {% block content %}
 <!-- greg's deal_page details (start) -->
 <div id="map"></div>
- <!--   	<div class="container">
+ <!--
 
 	     <div class="row"> <div class="col-md-12">-->
 
@@ -17,7 +17,7 @@
 	        </div>
       </div>
       -->
-
+      <div class="container">
 	    <div class="row">
 	        <div class="col-md-5">
 	            <img id="image" class="img-fluid" src="{% static "images/soba.png" %}" alt="Picture of Soba" class="rounded" />
@@ -27,14 +27,21 @@
 				<img id="image" class="img-fluid" src="{% static "images/sobaDeal.png" %}" alt="Picture of SobaDeal" class="rounded" />
 	   	    </div>
 
-		    <div class="col-md-2 px-0">
-			    <button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
+		    <div class="col-md-2 px-0"><br />
+            <a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim
+              Deal</a>
+
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a class="nav-link"
+             href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+			   <!--<button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
                 <p>Likes:{{ likes }}</p>
 
 				<button id="reportbutton" type="button" class="btn btn-primary btn-lg">REPORT</br>input details</br>below</button>
 
 				<textarea id="reportinput"></textarea>
-
+   -->
 
 			    <!-- Facebook -->
 
@@ -43,6 +50,15 @@
 				<div id="sharebutton" class="panel">
 				    <div  class="panel-body">SHARE:</div>
 				</div>
+
+        <ul class="nav">
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+      </ul>
+
+
 
 
                 <a  type="button" id="shareButtons" class="btn btn-primary btn-sm" href="http://www.facebook.com/sharer.php?u=http://thirdworlds.net" target="_blank" role="button">
