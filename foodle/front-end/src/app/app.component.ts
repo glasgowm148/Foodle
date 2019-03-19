@@ -9,8 +9,6 @@ import {Http, Response} from '@angular/http';
 
 
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
