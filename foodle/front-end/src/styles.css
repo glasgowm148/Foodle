@@ -149,6 +149,12 @@ footer {
   padding-bottom: 1rem;
 }
 
+/* container for slides  */
+
+.container {
+  max-width: 75% !important;
+}
+
 
 /* Datepicker popup icon */
 
