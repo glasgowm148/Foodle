@@ -4,29 +4,39 @@
 {% block content %}
 <!-- greg's deal_page details (start) -->
 
-    <!-- NOT REQURIED? 
-    <head>
-    <title>deal_page.html</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-	 NOTE REQURIED? -->
+   <div class="container">
+	    <div class="row">
+	        <div class="col-md-12">
+		        <div id="map"></div>
+	        </div>   
+	    </div>     
 	
-	<div>
-	    <img id="image" src="{% static "images/soba.png" %}" width="525" height="550" alt="Picture of Soba" />
-	</div>
-  
-	<p style="position:absolute;top:344px;left:25px;z-index:2;color:white;font-size:medium">HOME >> BAR SOBA >> DEAL #666</p>
-  
-    <!-- <img style="position:absolute;top:400px;z-index:2;left:28px" src="soba.png" width="525" height="550" alt="SOBA">	-->
-
-	<div id="sideBlock"></div>
-    <div id="sideBar1"></div>
-	<div id="sideBar2"></div>
-	<div id="sideBar3"></div>
-    <div id="map"></div>
-	<div id="breadcrumbs"></div>
-	<div id="lowerBackground"></div>
+	    <div class="row">
+	        <div class="col-md-12">
+				<div id="breadcrumbsTEXT" > HOME >> BAR SOBA >> DEAL #666</div>
+	        </div>    
+	    </div>     
 	
+	    <div class="row">
+	        <div class="col-md-5">
+	            <img id="image" class="img-fluid" src="soba.png" alt="Picture of Soba" class="rounded" />
+	        </div>
+	  
+	        <div class="col-md-5">
+				<img id="image" class="img-fluid" src="sobaDeal.png" alt="Picture of Soba" class="rounded" />
+	   	    </div>
+			
+		    <div class="col-md-2">
+		        <button type="button" class="btn btn-primary">LIKE/SAVE</button>
+		        <button type="button" class="btn btn-primary">SHARE</button>
+		        <button type="button" class="btn btn-primary">REPORT</button>
+			</div> 
+	    
+		</div>    
+	</div>     <!--container end-->
+	
+	
+	<!-- MAP DETAILS -->
     <script>
 // Initialize and add the map
   function initMap() {
