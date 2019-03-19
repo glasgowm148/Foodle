@@ -1,52 +1,41 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block content %}
-<!--- Image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-	<ul class="carousel-indicators">
-		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1" class="active"></li>
-	</ul>
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-			<img class="img-fluid" src="{% static 'images/donut_cut.png' %}" alt="donut">
-			<div class="carousel-caption">
-				<h1 class="display-2 vegan-style">Foodle</h1>
-				<h3 class="display-2 vegan-style">Where meals become deals!</h3>
-				<!--  <button type="button" class="btn btn-outline-light btn-lg">
-                    VIEW DEALS
-               </button>
-                <button type="button" class="btn btn-primary btn-lg">
-                    Login
-                </button> --->
-			</div>
-		</div>
-
-	</div>
+{% block first_item %}
+<img src="{% static 'images/sliders/donut_cut.png' %}" alt="donut">
+<div class="carousel-caption">
+	<h1 class="display-2 vegan-style">Foodle</h1>
+	<h3 class="vegan-style">Where meals become deals!</h3>
 </div>
+{% endblock %}
 
+{% block second_item %}
+<img src="{% static 'images/sliders/slider_bg_berry.png' %}" alt="berry">
+{% endblock %}
+
+{% block content %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="mat-app-background basic-container">
-		<app-tab-component>loading</app-tab-component>
+	<app-tab-component>loading</app-tab-component>
 
 </div>
 
 
 
 <div class="container">
-
 	<div class="card-columns">
 		<div class="card">
 			<img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/soba.png' %}" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title">BAR SOBA :: 50% OFF FOR STUDENTS</h5>
-				<p class="card-text">Bar Soba offers a 50% discount card for all students. Available Mon-Thur and Fri until 12.</p>
-          <ul class="nav">
-			<a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim Deal</a>
+				<p class="card-text">Bar Soba offers a 50% discount card for all students. Available Mon-Thur and Fri until 12.
+				</p>
+				<ul class="nav">
+					<a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35"
+						role="button">Claim Deal</a>
 
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a class="nav-link"
-					 href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
+						class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
 					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
 					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
 				</ul>
@@ -66,16 +55,18 @@
 			<img class="card-img-top" src="{% static 'images/dominos.png' %}" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title">DOMINOS :: 35% OFF</h5>
-				<p class="card-text">Unlock 35% online student discount at Domino's Pizza when you spend £25 with Student Beans iD.
+				<p class="card-text">Unlock 35% online student discount at Domino's Pizza when you spend £25 with Student Beans
+					iD.
 
 					Use our Dominos Pizza student discount code at the checkout to enjoy 35% off your order.</p>
 				<ul class="nav">
 
-					<a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim
+					<a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35"
+						role="button">Claim
 						Deal</a>
 
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a class="nav-link"
-					 href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
+						class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
 					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
 					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
 				</ul>
@@ -83,23 +74,26 @@
 		</div>
 		<div class="card bg-primary text-white text-center p-3">
 			<blockquote class="blockquote mb-0">
-        <p>Join today to save, like and submit deals!</p>
-      </blockquote>
-            <div id="btn-white" >
-                <a class="white-text" href="{% url 'register' %}">Need an Account?</a>
-              </div>
+				<p>Join today to save, like and submit deals!</p>
+			</blockquote>
+			<div id="btn-white">
+				<a class="white-text" href="{% url 'register' %}">Need an Account?</a>
+			</div>
 		</div>
 		<div class="card text-center">
 			<div class="card-body">
 				<h5 class="card-title">Not seeing anything you fancy?</h5>
 				<p class="card-text">Check out our resource page for links to relevent sites</p>
-				<p class="card-text"><small class="text-muted"> <div id="formFooter" >
-            <a class="underlineHover" href="{% url 'register' %}">Resources</a>
-          </div></small></p>
+				<p class="card-text"><small class="text-muted">
+						<div id="formFooter">
+							<a class="underlineHover" href="{% url 'register' %}">Resources</a>
+						</div>
+					</small></p>
 			</div>
 		</div>
 		<div class="card">
-			<img class="card-img" href="{% url 'deal_page' %}" src="{% static 'images/internal_button.png' %}" alt="Card image">
+			<img class="card-img" href="{% url 'deal_page' %}" src="{% static 'images/internal_button.png' %}"
+				alt="Card image">
 		</div>
 		<div class="card p-3 text-right">
 			<blockquote class="blockquote mb-0">
@@ -115,7 +109,7 @@
 			<div class="card-body">
 				<h5 class="card-title">About</h5>
 				<p class="card-text">Foodle aims to provide you with up-to-date deals on food around campus
-          Create an account to save, like or submit deals</p>
+					Create an account to save, like or submit deals</p>
 				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 			</div>
 		</div>
