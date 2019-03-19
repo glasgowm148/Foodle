@@ -40,6 +40,10 @@ npm update
 ng update @angular/cli @angular/core
 # ng-bootstrap
 npm install --save @ng-bootstrap/ng-bootstrap
+# Angular Material
+npm install --save @angular/material
+
+
 
 # you can install npx and run npx ng <command> within
 #  the local directory where npm install @angular/cli was run, 
