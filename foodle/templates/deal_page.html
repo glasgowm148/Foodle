@@ -30,25 +30,32 @@
 			    <button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
                 <p>Likes:{{ likes }}</p>
 				
-				<button id="reportbutton" type="button" class="btn btn-primary btn-lg">REPORT</button>
+				<button id="reportbutton" type="button" class="btn btn-primary btn-lg">REPORT</br>input details</br>below</button>
 				
-			<div id="share-buttons">
+				<textarea id="reportinput"></textarea>
+				
+	
 			    <!-- Facebook -->
 				
-				<button id="sharetbutton" type="button" class="btn btn-primary btn-lg">SHARE:</button>
+				<!-- <button id="sharetbutton" type="button" class="btn btn-primary btn-lg">SHARE:</button> -->
+				
+				<div id="sharebutton" class="panel">
+				    <div  class="panel-body">SHARE:</div>
+				</div>	
                 
-                <a type="button" class="btn btn-primary btn-sm" href="http://www.facebook.com/sharer.php?u=http://thirdworlds.net" target="_blank" role="button">
-                <img id="shareButtons" class="img-fluid" src="facebooklogo.jpg" alt="Facebook" />
+				
+                <a  type="button" id="shareButtons" class="btn btn-primary btn-sm" href="http://www.facebook.com/sharer.php?u=http://thirdworlds.net" target="_blank" role="button">
+                <img  id="shareButtons" class="img-fluid" src="facebooklogo.jpg" alt="Facebook" />
                 </a>
 				
-				<a type="button" class="btn btn-primary btn-sm" href="https://twitter.com/share?url=https://thirdworlds.net&amp;text=Foodle&amp;hashtags=DeathGrips" target="_blank" role="button">
-                <img id="shareButtons" src="twitterlogo.png" alt="Twitter" />
+				<a type="button" id="shareButtons" class="btn btn-primary btn-sm" href="https://twitter.com/share?url=https://thirdworlds.net&amp;text=Foodle&amp;hashtags=DeathGrips" target="_blank" role="button">
+                <img id="shareButtons" class="img-fluid" src="twitterlogo.png" alt="Twitter" />
                 </a>
 				
-				<a type="button" class="btn btn-primary btn-sm" href="https://plus.google.com/share?url=https://thirdworlds.net" target="_blank" role="button">
-                <img id="shareButtons" src="googlelogo.png" alt="Google+" />
+				<a type="button" id="shareButtons" class="btn btn-primary btn-sm" href="https://plus.google.com/share?url=https://thirdworlds.net" target="_blank" role="button">
+                <img id="shareButtons" class="img-fluid" src="googlelogo.png" alt="Google+" />
                 </a>
-			</div>
+		
 			
 		        <!-- 
 		        <button type="button" class="btn btn-primary">SHARE</button>
