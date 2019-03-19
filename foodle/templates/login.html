@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block head %}
+<link rel="stylesheet" href="/static/css/input.css">
+{% endblock %}
+
 {% block content %}
 <div s>
     <br />
@@ -15,56 +19,51 @@
     <br />
     <br />
 
-    <div class="g-signin2" data-onsuccess="onSignIn" -theme="light" data-width="" data-height="40"data-longtitle="true"  style="width: 75%;margin: 0 auto;">button</div>
-    <br />
-
-    <script>
-        function onSignIn(googleUser) {
-          // Useful data for your client-side scripts:
-          var profile = googleUser.getBasicProfile();
-          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-          console.log('Full Name: ' + profile.getName());
-          console.log('Given Name: ' + profile.getGivenName());
-          console.log('Family Name: ' + profile.getFamilyName());
-          console.log("Image URL: " + profile.getImageUrl());
-          console.log("Email: " + profile.getEmail());
-  
-          // The ID token you need to pass to your backend:
-          var id_token = googleUser.getAuthResponse().id_token;
-          console.log("ID Token: " + id_token);
-        }
-      </script>
-
     
-    <form id="login_form" method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        <div style="width: 50%; margin: 0 auto;"class="col-sm-2 col-form-label col-form-label-sm">
-        <input class="form-control" type="text" name="username" placeholder="Username"/>
-        <br />
-       </div>
-       <div style="width: 50%; margin: 0 auto;"class="col-sm-2 col-form-label col-form-label-sm">
-        <input class="form-control" name="password" value=""  placeholder="password"/>
-        <br />
-      </div>
-      <div style="text-align: center">
-        <input class="btn btn-primary" type="submit" value="submit" />
-      </div>
-    </form>
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+    
+        <!-- Icon -->
+        <div class="fadeIn first"></div>
+        <br />
+        <div class="g-signin2 center" data-onsuccess="onSignIn" -theme="light" data-width="" data-height="40"data-longtitle="true">button</div>
+        <br />
+
+        <script>
+            function onSignIn(googleUser) {
+              // Useful data for your client-side scripts:
+              var profile = googleUser.getBasicProfile();
+              console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+              console.log('Full Name: ' + profile.getName());
+              console.log('Given Name: ' + profile.getGivenName());
+              console.log('Family Name: ' + profile.getFamilyName());
+              console.log("Image URL: " + profile.getImageUrl());
+              console.log("Email: " + profile.getEmail());
+      
+              // The ID token you need to pass to your backend:
+              var id_token = googleUser.getAuthResponse().id_token;
+              console.log("ID Token: " + id_token);
+            }
+          </script>
+    
+        <!-- Login Form -->
+        <form id="login_form" method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+          <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+    
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+    
+      </div>
+    </div>
 
 
 {% endblock %}
 
-
-{% block body_block %}
-
-{% endblock %}
