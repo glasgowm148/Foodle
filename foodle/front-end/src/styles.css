@@ -35,7 +35,7 @@ html, body {
 
 
 
-.vegan-style {
+.vegan-style h1 {
   font-family: 'vegan', cursive; /* apply your font by name and provide fallback fonts using coma separation */
 }
 
@@ -272,12 +272,12 @@ body{
 background-color: rgb(134,132,216);
 height:100%;
 }
-      
+
 #map {
-height: 300px;  
-width: 100%; 
+height: 300px;
+width: 100%;
 }
-	   
+
 #breadcrumbsBG{
 height:30px;
 width: 100%;
@@ -290,7 +290,7 @@ color:white;
 font-size:medium;
 background-color:black;
 }
-	   
+
 #lowerBackground{
 height:650px;
 width: 100%;
@@ -301,16 +301,16 @@ background-color: white;
 	z-index:4;
 	height:450px;
 	width:100%;
-	padding-top:5px; 
+	padding-top:5px;
 }
-	   
+
 #sideBlock{
 height:550px;
 width: 41%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
-	   
+
 #sideBar1{
 height:133px;
 width: 10.5%;
@@ -331,7 +331,7 @@ width: 10.5%;
 z-index:2;
 background-color: rgb(134,132,216);
 }
-	   
+
  #sideBar4{
 height:133px;
 width: 10.5%;
@@ -340,7 +340,7 @@ background-color: rgb(134,132,216);
 }
 
 #likebutton {
- margin-top:5px; 
+ margin-top:5px;
  text-align: center;
  max-width:150px;
  	margin-left:auto;
