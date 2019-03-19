@@ -110,7 +110,11 @@ html, body {
   background-color: rgb(65, 138, 235) !important;
 }
 
-.btn-submit {
+.white-text{
+  background-color: #FFF;
+}
+
+.btn-white {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -126,7 +130,7 @@ html, body {
   line-height: 1.5;
   border-radius: .25rem;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  background-color: rgb(255, 0, 0) !important;
+  background-color: #FFF(255, 0, 0) !important;
   }
 
 .btn-primary:hover {
