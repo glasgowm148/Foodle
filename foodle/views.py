@@ -32,6 +32,12 @@ def deal_page(request):
     """
     return render(request, 'deal_page.html')
 
+def submit(request):
+    return render(request, 'submit.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
 # Handle Login and register
 @login_required
 def user_logout(request):
