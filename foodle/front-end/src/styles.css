@@ -1,22 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-@font-face {
-  font-family: 'vegan';
-  src: url('/font');
-}
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  color: #FFF;
+  /* background colour */
+  background-color: #FFF !important;
+
 }
 
 /* vegan-style custom font */
 @font-face {
   font-family: 'vegan';
-  src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
+  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf');
 }
 
 .vegan-style {
@@ -24,14 +23,28 @@ html, body {
 }
 
 /* navbar styling */
+
+/* Main nav bar */
+
+
+
 .navbar {
   background-color: blueviolet !important;
   padding: .8rem;
 }
 
+/* Nav bar : logo */
+
+.nav-logo h3 {
+  color: #fff !important;
+  font-size: 3rem !important;
+  margin-top: 0.8rem;
+  text-align: left;
+  text-shadow: 1px 1px 4px rgb(127, 166, 238);
+}
+
 .navbar-brand {
   text-align: center !important;
-
 }
 .navbar-nav li {
   padding-right: 20px;
@@ -43,7 +56,7 @@ html, body {
 /* styling for the slider elements */
 .carousel-inner img {
   width: 100%;
-  height: 60%;
+  height: 40% !important;
   padding-bottom: 50px;
 }
 .carousel-caption {
@@ -51,22 +64,30 @@ html, body {
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* slider text */
+
 .carousel-caption h1 {
-  font-size: 500%;
-  text-shadow: 1px 1px 15px #000;
+  font-size: 15rem;
+  text-shadow: 2px 2px 4px rgb(127, 166, 238);
 }
+
+/* navbar logo css */
+
 .carousel-caption h3 {
-  font-size: 200%;
+  font-family: vegan;
+  font-size: 3rem;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
 }
 .btn-primary {
-  background-color: #6648b1;
+/*--- background-color: #6648b1;--*/
   border: 1px solid #6648b1;
+  background-color: rgb(65, 138, 235) !important;
 }
 .btn-primary:hover {
-  background-color: #563d7c;
+ /*---  background-color: #563d7c;--*/
   border: 1px solid #563d7c;
 }
 
@@ -89,12 +110,6 @@ footer {
   padding-bottom: 1rem;
 }
 
-.nav-logo {
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 45%
-}
 
 /* Datepicker popup icon */
 
