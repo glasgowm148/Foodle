@@ -4,7 +4,7 @@
 {% block content %}
 <!-- greg's deal_page details (start) -->
 
-   <div class="container">
+   	<div class="container">
 	    <div class="row">
 	        <div class="col-md-12">
 		        <div id="map"></div>
@@ -26,13 +26,36 @@
 				<img id="image" class="img-fluid" src="sobaDeal.png" alt="Picture of Soba" class="rounded" />
 	   	    </div>
 			
-		    <div class="col-md-2">
-		        <button type="button" class="btn btn-primary">LIKE/SAVE</button>
+		    <div class="col-md-2 px-0">
+			    <button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
+                <p>Likes:{{ likes }}</p>
+				
+				<button id="reportbutton" type="button" class="btn btn-primary btn-lg">REPORT</button>
+				
+			<div id="share-buttons">
+			    <!-- Facebook -->
+				
+				<button id="sharetbutton" type="button" class="btn btn-primary btn-lg">SHARE:</button>
+                
+                <a type="button" class="btn btn-primary btn-sm" href="http://www.facebook.com/sharer.php?u=http://thirdworlds.net" target="_blank" role="button">
+                <img id="shareButtons" class="img-fluid" src="facebooklogo.jpg" alt="Facebook" />
+                </a>
+				
+				<a type="button" class="btn btn-primary btn-sm" href="https://twitter.com/share?url=https://thirdworlds.net&amp;text=Foodle&amp;hashtags=DeathGrips" target="_blank" role="button">
+                <img id="shareButtons" src="twitterlogo.png" alt="Twitter" />
+                </a>
+				
+				<a type="button" class="btn btn-primary btn-sm" href="https://plus.google.com/share?url=https://thirdworlds.net" target="_blank" role="button">
+                <img id="shareButtons" src="googlelogo.png" alt="Google+" />
+                </a>
+			</div>
+			
+		        <!-- 
 		        <button type="button" class="btn btn-primary">SHARE</button>
-		        <button type="button" class="btn btn-primary">REPORT</button>
+		        <button type="button" class="btn btn-primary">REPORT</button> -->
 			</div> 
 	    
-		</div>    
+		</div>    <!-- row end -->
 	</div>     <!--container end-->
 	
 	
