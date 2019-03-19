@@ -98,9 +98,9 @@
         <!-- Login Form -->
         <form id="login_form" method="post" action="{% url 'login' %}">
           {% csrf_token %}
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In">
+          <input type="text" id="login" class="fadeIn second" name="username" placeholder="username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'username'" />
+          <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'password'" />
+          <button type="submit" class="fadeIn fourth"> Log in </button>
         </form>
     
         <!-- Register link -->
