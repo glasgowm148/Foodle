@@ -22,8 +22,8 @@ import {Http, Response} from '@angular/http';
 })
 
 @Component({
-  selector: 'tab-component',
-  templateUrl: '/tab/tab.component.html'
+  selector: 'app-tab-component',
+  templateUrl: '/tab/app.tab.component.html'
 
 
 })
