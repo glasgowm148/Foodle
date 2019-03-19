@@ -1,15 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-
-@font-face {
-  font-family: 'vegan';
-  src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
   color: #222;
+}
+
+/* vegan-style custom font */
+@font-face {
+  font-family: 'vegan';
+  src: url('http://127.0.0.1:5500/foodle/static/font/veganfont.ttf');
 }
 
 .vegan-style {
