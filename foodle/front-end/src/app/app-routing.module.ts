@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 
 import {DemoMaterialModule} from './material-module';
 
-import {TabGroupBasicExample} from './app.tab.component';
+import {AppTabComponent} from './app.tab.component';
 
 @NgModule({
   imports: [
@@ -23,11 +23,11 @@ import {TabGroupBasicExample} from './app.tab.component';
     MatNativeDateModule,
     ReactiveFormsModule,
     CommonModule,
-    TabGroupBasicExample
+    AppTabComponent
   ],
-  entryComponents: [TabGroupBasicExample],
-  declarations: [TabGroupBasicExample],
-  bootstrap: [TabGroupBasicExample],
+  entryComponents: [AppTabComponent],
+  declarations: [AppTabComponent],
+  bootstrap: [AppTabComponent],
   providers: []
 })
 export class AppRoutingModule { }

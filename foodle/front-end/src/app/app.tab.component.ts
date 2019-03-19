@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
   templateUrl: './app-tab-component.html',
   styleUrls: ['./tab-component.css'],
 })
-export class TabGroupBasicExample {}
+export class AppTabComponent {}
 
 
 /**  Copyright 2019 Google Inc. All Rights Reserved.
