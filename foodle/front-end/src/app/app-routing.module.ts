@@ -11,7 +11,7 @@ import {DemoMaterialModule} from './material-module';
 import { CommonModule } from '@angular/common';
 
 
-import {TabGroupBasicExample} from './app/tab-group-basic-example';
+import {TabGroupBasicExample} from './app/tab/tab.component';
 
 @NgModule({
   imports: [
