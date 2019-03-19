@@ -46,48 +46,63 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
-				<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-								<a class="nav-link" href="#"><i class="fas fa-home"></i></a>
-							</li>
-						</ul>
-						<div class="nav-logo">
-								<h3 class="vegan-style">Foodle</h3>
-							</div>
+			<ul class="navbar-nav ml-auto">
+				<div class="nav-logo">
+					<a href ="/"><h3 class="vegan-style">Foodle</h3></a>
+				</div>
+			</ul>
+
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-								<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-moon"></i></a>
-							</li>
-					
 			
+
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-question-circle"></i></a>
+						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-moon"></i></a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev" ngbPopover="You see, I show up on hover!" triggers="mouseenter:mouseleave" popoverTitle="Pop title"><i class="far fa-envelope"></i></a>
+							<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-info"></i></a>
+						</li>
+
+
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about' %}" ><i class="far fa-envelope"></i></a>
 					</li>
-						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
+
+					<li class="nav-item">
+					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
 					</li>
+
+
+					<li class="nav-item"></li>
+					<!-- blank one for dirty spacing fix-->
+
+
+
+
+
+
+
 
 					{% if user.is_authenticated %}
 					<li class="nav-item">
 						<a class="nav-link">{{ user.username }}</a>
 					</li>
 					<li class="nav-item">
-						<a class="btn btn-primary" href="{% url 'logout' %}" role="button">Log out</a>
+							<a class="btn btn-submit" href="{% url 'register' %}" role="button">Submit</a>
+						</li>
+					<li class="nav-item">
+						<a class="btn-primary" href="{% url 'logout' %}" role="button">Sign out</a>
 					</li>
 					{% else %}
-					<li class="nav-item">
-						<a class="btn btn-primary" href="{% url 'login' %}" role="button">Log in</a>
-					</li>
-					<li class="nav-item">
-						<a class="btn btn-primary" href="{% url 'register' %}" role="button">Register</a>
-					</li>
+						
+						<li class="nav-item">
+							<a class="btn btn-primary" href="{% url 'login' %}" role="button">Account</a>
+						</li>
+
 					{% endif %}
 				</ul>
 			</div>
@@ -154,7 +169,6 @@
 	<script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
 	<script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
 	<script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
-
 </body>
 
 </html>

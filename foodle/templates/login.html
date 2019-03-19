@@ -5,31 +5,92 @@
 <link rel="stylesheet" href="/static/css/input.css">
 {% endblock %}
 
+{% block first_item %}
+    <img src="{% static 'images/donut_cut.png' %}" alt="donut">
+    <div class="carousel-caption">
+        <h1 class="display-2 vegan-style">Login!</h1>
+        <h3>Sign in to your Foodle account!</h3>
+        <button type="button" class="btn btn-primary btn-lg">
+            REGISTER
+        </button>
+    </div>
+{% endblock %}
+
+{% block second_item %}
+    <img src="{% static 'images/berry_cut.png' %}" alt="berry">
+{% endblock %}
+
 {% block content %}
-<div s>
-    <br />
 
-    <h1 color:wight style="text-align: center;">Login to your Foodle Account</h1>
-    <!-- Google Log in-->
+<!-- other CSS
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+<script>
+	function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+  
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+    }
+</script>
 
-    
+<form id="login_form" method="post" action="{% url 'login' %}">
+	{% csrf_token %}
+	Username: <input type="text" name="username" value="" size="50" />
+	<br />
+	Password: <input type="password" name="password" value="" size="50" />
+	<br />
+	<input class="light" type="submit" value="submit" />
+</form>
 
-    <div class="wrapper fadeInDown">
-      <div id="formContent">
-        <!-- Tabs Titles -->
-    
-        <!-- Icon -->
-        <div class="fadeIn first"></div>
-        <br />
-        <div class="g-signin2 center" data-onsuccess="onSignIn" -theme="light" data-width="" data-height="40"data-longtitle="true">button</div>
-        <br />
+
+<div class="modal-dialog text-center">
+	<div class="col-sm-8 main-section">
+		<div class="modal-content">
+			<div class="col-12 user-img">
+				<img src="{% static 'images/f.png' %}" alt="foodle_f.png">
+			</div>
+
+			<form class="col-12">
+				{% csrf_token %}
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter Username">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter Password">
+				</div>
+
+				<input value="submit"  class="button" type="submit" class="btn">
+					<i class="fas fa-sign-in-alt"></i>Login
+				</input>
+
+				<div class="col-12 forgot">
+					<a href="#">Forgot Password?</a>
+				</div>
+			</form>
+		</div> 
+	</div>
+</div>
+-->
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first"></div>
+      <br />
+      <div class="g-signin2 center" data-onsuccess="onSignIn" -theme="light" data-width="" data-height="40"data-longtitle="true">button</div>
+      <br />
 
         <script>
             function onSignIn(googleUser) {
@@ -64,6 +125,4 @@
       </div>
     </div>
 
-
 {% endblock %}
-
