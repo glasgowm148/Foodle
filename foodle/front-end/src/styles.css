@@ -203,9 +203,6 @@ ngbd-table-complete span.ngb-highlight {
   background-color: yellow;
 }
 
-
-/* Carosel */
-
 /* Datepicker popup icon */
 
 button.calendar, button.calendar:active {
@@ -383,21 +380,18 @@ display: inline;
 
 /* ----- Nathan CSS For Carousel Responsiveness ----- */
 
-/* styling for the slider elements */
-.carousel-inner img {
-  width: 100%;
-  height: 40% !important;
-  padding-bottom: 50px;
-}
-.carousel-caption {
-  position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-/*---Media Queries --*/
 @media (max-width: 992px) {
-  /* nothing to change here */
+  .carousel-caption {
+    top: 45%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
 }
 @media (max-width: 768px) {
   .carousel-caption {
