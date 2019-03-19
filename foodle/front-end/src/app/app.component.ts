@@ -21,6 +21,7 @@ import {Http, Response} from '@angular/http';
 
 })
 
+<<<<<<< HEAD
 @Component({
   selector: 'app-tab-component',
   templateUrl: './app.tab.component.html'
@@ -28,6 +29,8 @@ import {Http, Response} from '@angular/http';
 
 })
 
+=======
+>>>>>>> 2a2a702cfb775a69ef86ca3b3577891e3c2ec6e9
 
 export class AppComponent implements OnInit {
 
