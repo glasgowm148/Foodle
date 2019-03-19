@@ -2,14 +2,6 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
-
-body {
-  font-family: Roboto, Arial, sans-serif;
-  margin: 0;
-}
-
 .basic-container {
   padding: 30px;
 }
