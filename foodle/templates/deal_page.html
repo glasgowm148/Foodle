@@ -85,29 +85,42 @@
 <!--container end-->
 
 
-<!-- MAP DETAILS -->
 <script>
-  // Initialize and add the map
-  function initMap() {
-    // The location of Uluru
-    var uluru = {
-      lat: 55.872158,
-      lng: -4.287869
-    };
-    // The map, centered at Uluru
-    var map = new google.maps.Map(
-      document.getElementById('map'), {
-        zoom: 15,
-        center: uluru
-      });
-    // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
-
-</script>
+	
+	  <!-- GEOLOCATION MAPPING -->
+	
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 55.872158, lng: -4.287869},zoom: 15});
+        infoWindow = new google.maps.InfoWindow;
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+	  <!-- GEOLOCATION MAPPING -->
+    </script>
+	
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
 </script>
 <!-- greg deal_page details (end)	-->
