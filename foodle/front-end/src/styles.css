@@ -28,6 +28,11 @@ html, body {
   background-color: blueviolet !important;
   padding: .8rem;
 }
+
+.navbar-brand {
+  text-align: center !important;
+
+}
 .navbar-nav li {
   padding-right: 20px;
 }
@@ -82,6 +87,13 @@ footer {
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.nav-logo {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 45%
 }
 
 /* Datepicker popup icon */
