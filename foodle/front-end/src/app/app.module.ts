@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { BlogPostService } from './blog_post.service';
+import { BlogPostService } from './blog_post.service'
 import { UserService } from './user.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -59,7 +59,7 @@ import { CardsAngularComponent } from './cards-angular/cards-angular.component';
     MatMenuModule
   ],
   entryComponents: [TabComponent,CardsAngularComponent],
-  declarations: [TabComponent, CardsAngularComponent,LoginComponent,
+  declarations: [TabComponent, CardsAngularComponent,LoginComponent,ExampleNavbarComponent,
     MatTabsModule, TabComponent, ExampleNavbarComponent, CardsAngularComponent],
   bootstrap: [TabComponent, CardsAngularComponent],
   providers: [BlogPostService, UserService, CardsAngularComponent]
