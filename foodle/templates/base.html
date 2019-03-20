@@ -137,7 +137,11 @@
 					<a class="nav-link" href="{% url 'faq' %}">faq</a>
 					<!--<p>FAQ</p>-->
 					<p>Contact</p>
+					{% if user.is_authenticated %}
 					<p>Submit</p>
+					{% else %}
+					<p><a href="{% url 'login' %}">Login</a></p>
+					{% endif %}
 				</div>
 				<div class="col-md-4">
 					<h5>Get in Touch</h5>
