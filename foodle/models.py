@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class SubmitModel(models.Model):
     info = models.CharField(default='', max_length=200)
-    picture = models.ImageField(upload_to='deals_pictures', blank=True)
+    picture = models.ImageField(upload_to='deals/', blank=True)
 
 class AboutPage(models.Model):
     """
