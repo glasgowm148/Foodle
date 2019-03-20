@@ -19,14 +19,15 @@ import {Http, Response} from '@angular/http';
   selector: 'app-slider',
   templateUrl: './slider.html'
 
-}) */
+})
 
 @Component({
-  selector: 'app-tab-component',
-  templateUrl: './app-tab-component.html'
+  selector: 'app-tab',
+  templateUrl: './tab.component.html'
 
 
 })
+*/
 
 
 export class AppComponent implements OnInit {

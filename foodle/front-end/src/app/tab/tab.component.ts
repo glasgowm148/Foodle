@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-tab-component',
-  templateUrl: './app-tab-component.html',
-  styleUrls: ['./app-tab-component.css'],
+  selector: 'app-tab',
+  templateUrl: 'tab.component.html',
+  styleUrls: ['tab.component.css'],
 })
-export class AppTabComponent {}
+export class TabComponent {}
 
 
 /**  Copyright 2019 Google Inc. All Rights Reserved.

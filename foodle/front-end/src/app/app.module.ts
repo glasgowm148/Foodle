@@ -13,7 +13,6 @@ import { UserService } from './user.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 // import { NgbdCarouselBasic } from './carousel-basic';
-import { AppTabComponent } from './app-tab-component';
 import { MatTabsModule } from '@angular/material';
 
 
@@ -24,6 +23,8 @@ import {DemoMaterialModule} from './material-module';
 
 // Dev added components  - other imports above utilised by these - but these are the main ones.
 import { AppComponent } from './app.component';
+import { TabComponent } from './tab/tab.component';
+
 import { LoginComponent } from './login/login.component';
 //import './polyfills';
 
@@ -44,9 +45,9 @@ import { LoginComponent } from './login/login.component';
     HttpModule,
     NgbModule
   ],
-  entryComponents: [AppTabComponent],
-  declarations: [AppTabComponent, AppComponent, LoginComponent, MatTabsModule, AppTabComponent],
-  bootstrap: [AppTabComponent, AppComponent],
+  entryComponents: [TabComponent],
+  declarations: [TabComponent, AppComponent, LoginComponent, MatTabsModule, TabComponent],
+  bootstrap: [TabComponent, AppComponent],
   providers: [BlogPostService, UserService]
 })
 export class AppModule {}
