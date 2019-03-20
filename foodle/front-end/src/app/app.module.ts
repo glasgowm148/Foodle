@@ -16,7 +16,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MatTabsModule } from '@angular/material';
 
 
-import {MatNativeDateModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule} from '@angular/material';
+import {MatNativeDateModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule} from '@angular/material';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';
@@ -28,6 +28,7 @@ import { TabComponent } from './tab/tab.component';
 import { LoginComponent } from './login/login.component';
 import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 //import './polyfills';
 
 
@@ -36,6 +37,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   imports: [
+    CardsAngularComponent,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -51,12 +53,16 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
-  entryComponents: [TabComponent],
-  declarations: [TabComponent, LoginComponent, MatTabsModule, TabComponent, ExampleNavbarComponent],
-  bootstrap: [TabComponent],
-  providers: [BlogPostService, UserService]
+  entryComponents: [TabComponent,CardsAngularComponent],
+  declarations: [TabComponent, CardsAngularComponent,LoginComponent,
+    MatTabsModule, TabComponent, ExampleNavbarComponent, CardsAngularComponent],
+  bootstrap: [TabComponent, CardsAngularComponent],
+  providers: [BlogPostService, UserService, CardsAngularComponent]
 })
 export class AppModule {}
 

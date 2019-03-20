@@ -13,10 +13,12 @@ import {DemoMaterialModule} from './material-module';
 
 import {TabComponent} from './tab/tab.component';
 import { MatTabsModule } from '@angular/material';
+import {CardsAngularComponent} from './cards-angular/cards-angular.component';
 
 
 @NgModule({
   imports: [
+    CardsAngularComponent,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -28,10 +30,10 @@ import { MatTabsModule } from '@angular/material';
     TabComponent,
     CommonModule
   ],
-  entryComponents: [TabComponent],
-  declarations: [TabComponent],
-  bootstrap: [TabComponent],
-  providers: []
+  entryComponents: [TabComponent, CardsAngularComponent],
+  declarations: [TabComponent, CardsAngularComponent],
+  bootstrap: [TabComponent, CardsAngularComponent],
+  providers: [CardsAngularComponent]
 })
 export class AppRoutingModule { }
 
