@@ -91,8 +91,10 @@ html, body {
   background-color: blueviolet !important;
   padding: .8rem;
 }
+/* Logo */
 .navbar-brand {
   padding-right: .8rem;
+  padding-top: 10px;
 }
 .navbar-nav li {
   padding-right: 20px;
@@ -112,14 +114,20 @@ html, body {
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* FOODLE NAME ON SLIDER CSS */
 .carousel-caption h1 {
   font-family: 'vegan-style' !important;
+  margin-bottom: -.2em !important;
   font-size: 17rem;
   text-shadow: 1px 1px 15px #000;
 }
+
+/* UNDER FOODLE NAME ON SLIDER CSS */
+
 .carousel-caption h2, h3 {
   font-family: 'vegan-style' !important;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
@@ -133,8 +141,10 @@ html, body {
 
 .white-text{
   background-color: #FFF;
+  padding: 1%;
 }
 
+/*-- White button for use around the site ---*/
 .btn-white {
   display: inline-block;
   font-weight: 400;

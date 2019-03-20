@@ -53,7 +53,7 @@ def submit(request):
         submit_form = SubmitForm()
 
     return render(request,'submit.html', {'submit_form': submit_form,})
-    
+
 
 
 def contact(request):
@@ -70,7 +70,7 @@ def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        
+
         user = authenticate(username=username, password=password)
 
         if user:
@@ -91,7 +91,7 @@ def user_login(request):
         return render(request, 'login.html', {})
 
 def register(request):
-    
+
     if request.method == 'POST':
         form = registerForm(request.POST)
         if form.is_valid():

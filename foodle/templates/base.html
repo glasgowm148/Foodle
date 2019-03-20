@@ -48,13 +48,13 @@
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/">
-				<img src="{% static 'images/logo.png' %}" alt="Foodle logo">
+        <h3 class="vegan-style">Foodle</h3>
 			</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			
+
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
@@ -81,7 +81,7 @@
 						<a class="nav-link">{{ user.username }}</a>
 					</li>
 					<li class="nav-item">
-						<a class="btn btn-primary" href="{% url 'register' %}" role="button">Submit</a>
+						<a class="btn btn-primary" href="{% url 'submit' %}" role="button">Submit</a>
 					</li>
 					<li class="nav-item">
 						<a class="btn btn-primary" href="{% url 'logout' %}" role="button">Sign out</a>
@@ -124,7 +124,7 @@
 		<div class="container-fluid padding">
 			<div class="row text-center">
 				<div class="col-md-4">
-					<img src="{% static 'images/logo.png' %}" alt="">
+            <h3 class="vegan-style">Foodle</h3>
 					<hr class="light">
 					<p>555-555-5555</p>
 					<p>email@myemail.com</p>
