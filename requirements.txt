@@ -3,3 +3,4 @@ djangorestframework==3.9.1  # api so angular can talk to the front-end.
 djangorestframework-jwt==1.11.0 # JSON Web Token 
 PyJWT==1.7.1  # PyJWT - OAuth / JSON Web Token Implementation 
 pytz==2018.9  # timezone? - remove ?? 
+Pillow==5.4.1

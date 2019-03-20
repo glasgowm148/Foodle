@@ -35,6 +35,12 @@ code .                  // "vscode command pallet >
 
 #### Windows
 
+**If sh is installed**
+```sh
+sh sh/win.sh
+```
+
+Commands used : 
 ```sh 
 pip install virtualenv
 python -m venv venv
@@ -56,10 +62,7 @@ git status                  // Check the status of the branch
 
 
 
-**or if sh is installed (untested)**
-```sh
-sh sh/win.sh
-```
+
 
 ### Access via ::
 
