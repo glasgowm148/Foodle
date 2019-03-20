@@ -40,12 +40,14 @@ npm update
 ng update @angular/cli @angular/core
 # ng-bootstrap
 npm install --save @ng-bootstrap/ng-bootstrap
+
+echo "change selectors here?"
+
 # Angular Material
 npm install --save @angular/material
 
 # https://www.techiediaries.com/django-angular-tutorial/#Fixing_Hot_Code_Reloadnp
 #npm install webpack-bundle-tracker --save
-
 
 # Slightly different than the above statement - not sure why, gives you theme options, etc.
 ng add @angular/material

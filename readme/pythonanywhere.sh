@@ -32,7 +32,6 @@ pip3.6 install -r requirements.txt
 # npm cache verify
 # if npm version is < 5 then use `npm cache clean`
 
-# rm -f package-lock.json && npm install
 
 
 
@@ -41,6 +40,9 @@ echo ""Moving into the foodle/front-end directory""
 echo "$(pwd)"
 # foodle - An app within the project, containing the Django Rest Framework views and URL routing
 cd foodle/front-end || exit
+
+
+rm -f package-lock.json
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
