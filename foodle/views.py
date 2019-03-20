@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
-from .models import BlogPost
+from .models import BlogPost, SubmitModel
 from . import serializers
 from .permissions import ReadOnly
 from django.views.generic import TemplateView
@@ -30,7 +30,11 @@ def deal_page(request):
     """
     The about page. This renders the container for the single-page app.
     """
-    return render(request, 'deal_page.html')
+    
+    return render(request, 'deal_page.html', {
+        "info": SubmitModel._meta.get_field("info"), 
+        "picture": SubmitModel._meta.get_field("picture"),
+    })
 
 def submit(request):
 
