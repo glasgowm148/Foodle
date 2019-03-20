@@ -1,7 +1,18 @@
 <mat-tab-group>
-    <mat-tab label="First">  Latest Deals </mat-tab>
-    <mat-tab label="Second"> Most Popular </mat-tab>
-    <mat-tab label="Third">  Biggest Discount </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Most <em> Popular </em>
+      </ng-template>
+      <h1>Load Most Popular</h1>
+      <p>...</p>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>thumb_up</mat-icon> Most Liked
+      </ng-template>
+      <h1>Load the most liked cards here</h1>
+      <p>...</p>
+    </mat-tab>
   </mat-tab-group>
 
 
