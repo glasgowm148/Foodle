@@ -49,6 +49,8 @@ npm install --save-dev @angular-devkit/build-angular
 # update the node package to be on the same cli as the core
 npm update
 ng update @angular/cli @angular/core
+ng audit fix --force
+
 # ng-bootstrap
 npm install --save @ng-bootstrap/ng-bootstrap
 # Angular Material
