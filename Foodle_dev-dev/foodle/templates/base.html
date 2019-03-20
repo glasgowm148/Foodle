@@ -1,0 +1,161 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	{% block head %}{% endblock %}
+
+	<meta charset="utf-8">
+	<title>
+		{% block title_block %}Home{% endblock %} | Foodle
+	</title>
+	<base href="/">
+
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+	<!-- Bootstrap 4 Stylesheet -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		id="bootstrap-css">
+
+	<!-- Latest version of jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest version of popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<!-- Latest version of bootstrap.js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- FontAwesome for social media icons -->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="manifest" href="/static/front-end/fav/site.webmanifest">
+	<link rel="mask-icon" href="/static/front-end/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#662ec2">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+<script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
+	<script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="{% static 'images/logo.png' %}" alt="logo">
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'deal_page' %}"><i class="far fa-moon"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about' %}"><i class="fas fa-info-circle"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contact' %}"><i class="far fa-envelope"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
+					</li>
+
+					<li class="nav-item"></li>
+
+					<!-- blank one for dirty spacing fix-->
+
+					{% if user.is_authenticated %}
+
+					<li class="nav-item">
+						<a class="nav-link">{{ user.username }}</a>
+					</li>
+					<li class="nav-item">
+						<a class="btn btn-primary" href="{% url 'submit' %}" role="button">Submit</a>
+					</li>
+					<li class="nav-item">
+						<a class="btn btn-primary" href="{% url 'logout' %}" role="button">Sign out</a>
+					</li>
+
+					{% else %}
+
+					<li class="nav-item">
+						<a class="btn btn-primary" href="{% url 'login' %}" role="button">Account</a>
+					</li>
+
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!--- Image Slider -->
+	<div id="slides" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active"></li>
+			<li data-target="#slides" data-slide-to="1" class="active"></li>
+		</ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				{% block first_item %}{% endblock %}
+			</div>
+			<div class="carousel-item">
+				{% block second_item %}{% endblock %}
+			</div>
+		</div>
+	</div>
+
+	{% block content %}{% endblock %}
+
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-md-4">
+					<img src="{% static 'images/logo.png' %}" alt="logo">
+					<hr class="light">
+					<p>555-555-5555</p>
+					<p>Glasgow, Scotland</p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Links</h5>
+					<hr class="light">
+					<a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+					{% if user.is_authenticated %}
+					<a class="nav-link" href="{% url 'submit' %}">Submit</a>
+					{% else %}
+					<a class="nav-link" href="{% url 'login' %}">Login</a>
+					{% endif %}
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Get in Touch</h5>
+					<hr class="light">
+					<a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+					<a class="nav-link" href="#">Contact</a>
+				</div>
+				<div class="col-12">
+					<hr class="light">
+					<h5 class="">&copy; foodle</h5>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+/* for card sort */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  /* background colour */
+  background-color: #FFF !important;
+}
+
+
+/* vegan-style custom font */
+
+/*@font-face {
+  font-family: 'vegan-style';
+  src: url('http://client.assets.woof.sh/glasgow/vegan.ttf')  format("truetype"),
+       local('vegan-style');
+}
+@font-face {
+  font-family: 'vegan-style';
+  src: url('http://127.0.0.1:8000/static/veganfont-webfont.woff2') format('woff2'),
+       url('http://127.0.0.1:8000/static/veganfont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.svg#webfont') format('svg');
+
+@font-face{
+	font-family: 'vegan-style';
+	src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.eot');
+  src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.eot?#iefix') format('embedded-opentype'),
+       url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff2') format('woff2'),
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff') format('woff'),
+	     url('http://127.0.0.1:8000/static/font/veganfont-webfont.ttf') format('truetype'),
+}
+.vegan {
+  font-family: 'vegan-style', cursive; /* apply your font by name and provide fallback fonts using coma separation */
+
+
+@font-face {
+    font-family: 'vegan-style';
+    src: url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff2') format('woff2'),
+         url('http://127.0.0.1:8000/static/font/veganfont-webfont.woff') format('woff'),
+         url('http://127.0.0.1:8000/static/font/veganfont-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*
+@font-face {
+  font-family: 'vegan';
+  src: url(http://client.assets.woof.sh/glasgow/vegan.ttf);
+}*/
+
+
+
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+
+/* Navbar CSS */
+.navbar {
+  background-color: blueviolet !important;
+  padding: .8rem;
+}
+/* Logo */
+.navbar-brand {
+  padding-right: .8rem;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
+}
+
+/* slider CSS */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-caption {
+  font-family: 'vegan-style' !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* about page CSS */
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+.fa-html5 {
+  color: #e54d26;
+}
+.fa-bold {
+  color: #563d7c;
+}
+.fa-css3-alt {
+  color: #2163af;
+}
+.fa-angular {
+  color: #df0000;
+}
+.fa-html5, .fa-bold, .fa-css3-alt, .fa-angular {
+  font-size: 4em;
+  margin: 1rem;
+}
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-twitter {
+  color: #00aced;
+}
+.fa-google-plus-g {
+  color: #dd4b39;
+}
+.fa-instagram {
+  color: #517fa4;
+}
+.fa-youtube {
+  color: #bb0000;
+}
+.fa-facebook:hover, .fa-twitter:hover, .fa-google-plus-g:hover, .fa-instagram:hover, .fa-youtube:hover {
+  color: #d5d5d5;
+}
+
+/* FOODLE NAME ON SLIDER CSS */
+.carousel-caption h1 {
+  font-family: 'vegan-style' !important;
+  margin-bottom: -.2em !important;
+  font-size: 17rem;
+  text-shadow: 1px 1px 15px #000;
+}
+
+/* UNDER FOODLE NAME ON SLIDER CSS */
+
+.carousel-caption h2, .carousel-caption h3 {
+  font-family: 'vegan-style' !important;
+  font-size: 3rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.carousel-caption h5 {
+  font-family: 'vegan-style' !important;
+  font-size: 2rem;
+  font-weight: 500;
+
+}
+
+.btn-primary {
+/*--- background-color: #6648b1;--*/
+  border: 1px solid #6648b1;
+  background-color: rgb(65, 138, 235) !important;
+}
+
+.white-text{
+  background-color: #FFF;
+  padding: 1%;
+}
+
+/*-- White button for use around the site ---*/
+.btn-white {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  background-color: #FFF(255, 0, 0) !important;
+  }
+
+.btn-primary:hover {
+ /*---  background-color: #563d7c;--*/
+  border: 1px solid #563d7c;
+}
+
+.blockquote-footer {
+  color: #FFF !important;
+}
+
+footer {
+  background-color: blueviolet;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+footer img {
+  width: 170px;
+  height: 50px;
+}
+footer hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+footer a {
+  font-family: 'Poppins';
+  color: #d5d5d5;
+}
+footer a:hover {
+  font-family: 'Poppins';
+  color: #afafaf;
+}
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+/* container for slides  */
+
+.container {
+  max-width: 75% !important;
+}
+
+
+/* Datepicker popup icon */
+
+button.calendar, button.calendar:active {
+  width: 2.75rem;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
+
+/* Sortable table demo */
+
+th[sortable] {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+th[sortable].desc:before, th[sortable].asc:before {
+  content: '';
+  display: block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmxJREFUeAHtmksrRVEUx72fH8CIGQNJkpGUUmakDEiZSJRIZsRQmCkTJRmZmJgQE0kpX0D5DJKJgff7v+ru2u3O3vvc67TOvsdatdrnnP1Y///v7HvvubdbUiIhBISAEBACQkAICAEhIAQ4CXSh2DnyDfmCPEG2Iv9F9MPlM/LHyAecdyMzHYNwR3fdNK/OH9HXl1UCozD24TCvILxizEDWIEzA0FcM8woCgRrJCoS5PIwrANQSMAJX1LEI9bqpQo4JYNFFKRSvIgsxHDVnqZgIkPnNBM0rIGtYk9YOOsqgbgepRCfdbmFtqhFkVEDVPjJp0+Z6e6hRHhqBKgg6ZDCvYBygVmUoEGoh5JTRvIJwhJo1aUOoh4CLPMyvxxi7EWOMgnCGsXXI1GIXlZUYX7ucU+kbR8NW8lh3O7cue0Pk32MKndfUxQFAwxdirk3fHappAnc0oqDPzDfGTBrCfHP04dM4oTV8cxr0SVzH9FF07xD3ib6xCDE+M+aUcVygtWzzbtGX2rPBrEUYfecfQkaFzYi6HjVnGBdtL7epqAlc1+jRdAap74RrnPc4BCijttY2tRcdN0g17w7HqZrXhdJTYAuS3hd8z+vKgK3V1zWPae0mZDMykadBn1hTQBLnZNwVrJpSe/NwEeDsEwCctEOsJTsgxLvCqUl2ACftEGvJDgjxrnBqkh3ASTvEWrIDQrwrnJpkB3DSDrGW7IAQ7wqnJtkBnLRztejXXVu4+mxz/nQ9jR1w5VB86ejLTFcnnDwhzV+F6T+CHZlx6THSjn76eyyBIOPHyDakhBAQAkJACAgBISAEhIAQYCLwC8JxpAmsEGt6AAAAAElFTkSuQmCC') no-repeat;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  float: left;
+  margin-left: -22px;
+}
+
+th[sortable].desc:before {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+
+/* Filtering table demo */
+ngbd-table-filtering span.ngb-highlight {
+  background-color: yellow;
+}
+
+/* Complete table demo */
+ngbd-table-complete span.ngb-highlight {
+  background-color: yellow;
+}
+
+/* Datepicker popup icon */
+
+button.calendar, button.calendar:active {
+  width: 2.75rem;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
+
+/* Sortable table demo */
+
+th[sortable] {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+th[sortable].desc:before, th[sortable].asc:before {
+  content: '';
+  display: block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmxJREFUeAHtmksrRVEUx72fH8CIGQNJkpGUUmakDEiZSJRIZsRQmCkTJRmZmJgQE0kpX0D5DJKJgff7v+ru2u3O3vvc67TOvsdatdrnnP1Y///v7HvvubdbUiIhBISAEBACQkAICAEhIAQ4CXSh2DnyDfmCPEG2Iv9F9MPlM/LHyAecdyMzHYNwR3fdNK/OH9HXl1UCozD24TCvILxizEDWIEzA0FcM8woCgRrJCoS5PIwrANQSMAJX1LEI9bqpQo4JYNFFKRSvIgsxHDVnqZgIkPnNBM0rIGtYk9YOOsqgbgepRCfdbmFtqhFkVEDVPjJp0+Z6e6hRHhqBKgg6ZDCvYBygVmUoEGoh5JTRvIJwhJo1aUOoh4CLPMyvxxi7EWOMgnCGsXXI1GIXlZUYX7ucU+kbR8NW8lh3O7cue0Pk32MKndfUxQFAwxdirk3fHappAnc0oqDPzDfGTBrCfHP04dM4oTV8cxr0SVzH9FF07xD3ib6xCDE+M+aUcVygtWzzbtGX2rPBrEUYfecfQkaFzYi6HjVnGBdtL7epqAlc1+jRdAap74RrnPc4BCijttY2tRcdN0g17w7HqZrXhdJTYAuS3hd8z+vKgK3V1zWPae0mZDMykadBn1hTQBLnZNwVrJpSe/NwEeDsEwCctEOsJTsgxLvCqUl2ACftEGvJDgjxrnBqkh3ASTvEWrIDQrwrnJpkB3DSDrGW7IAQ7wqnJtkBnLRztejXXVu4+mxz/nQ9jR1w5VB86ejLTFcnnDwhzV+F6T+CHZlx6THSjn76eyyBIOPHyDakhBAQAkJACAgBISAEhIAQYCLwC8JxpAmsEGt6AAAAAElFTkSuQmCC') no-repeat;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  float: left;
+  margin-left: -22px;
+}
+
+th[sortable].desc:before {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+
+/* Filtering table demo */
+ngbd-table-filtering span.ngb-highlight {
+  background-color: yellow;
+}
+
+/* Complete table demo */
+ngbd-table-complete span.ngb-highlight {
+  background-color: yellow;
+}
+
+/* greg's ID's */
+
+html{
+height:100%;
+}
+
+body{
+background-color: rgb(134,132,216);
+height:100%;
+}
+
+#map {
+height: 300px;
+width: 100%;
+}
+
+#breadcrumbsBG{
+height:30px;
+width: 100%;
+background-color: black;
+}
+
+#breadcrumbsTEXT{
+z-index:4;
+color:white;
+font-size:medium;
+background-color:black;
+}
+
+#lowerBackground{
+height:650px;
+width: 100%;
+background-color: white;
+}
+
+#image{
+	z-index:4;
+	height:450px;
+	width:100%;
+	padding-top:5px;
+}
+
+#sideBlock{
+height:550px;
+width: 41%;
+z-index:2;
+background-color: rgb(134,132,216);
+}
+
+#sideBar1{
+height:133px;
+width: 10.5%;
+z-index:2;
+background-color: rgb(134,132,216);
+}
+
+#sideBar2{
+height:133px;
+width: 10.5%;
+z-index:2;
+background-color: rgb(134,132,216);
+}
+
+#sideBar3{
+height:133px;
+width: 10.5%;
+z-index:2;
+background-color: rgb(134,132,216);
+}
+
+ #sideBar4{
+height:133px;
+width: 10.5%;
+z-index:2;
+background-color: rgb(134,132,216);
+}
+
+#likebutton {
+ margin-top:5px;
+ text-align: center;
+ max-width:150px;
+ 	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+#reportbutton {
+	margin-top:5px;
+	max-width:150px;
+ text-align: center;
+ 	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+#reportinput{
+	margin-top:5px;
+	height: 70px;
+	width: 150px;
+ 	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+#sharebutton {
+	background-color:blue;
+	height: 50px;
+text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	margin-top:5px;
+	margin-bottom:0px;
+}
+
+#share-buttons{
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+#shareButtons{
+	width:40px;
+	height:40px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	margin-top:5px;
+}
+
+#faqQ{
+text-align:center;
+margin-bottom:10px;
+}
+
+/* ----- Nathan CSS For Carousel Responsiveness ----- */
+
+@media (max-width: 992px) {
+  .carousel-caption {
+    top: 45%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 45%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
+  .social a {
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 40%;
+  }
+  .carousel-caption h1 {
+    font-size: 250%;
+  }
+  .carousel-caption h3 {
+    font-size: 110%;
+  }
+  .carousel-indicators {
+    display: none;
+  }
+  .display-4 {
+    font-size: 160%;
+  }
+  .social a {
+    font-size: 2em;
+    padding: .7rem;
+  }
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}

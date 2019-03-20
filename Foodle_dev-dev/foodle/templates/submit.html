@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/input.css">
+{% endblock %}
+
+{% block content %}
+<br class="space"/>
+<br class="space"/>
+  <div class="wrapper fadeInDown space">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+    <div class="fadeIn first"></div>
+    <br />
+        <form id="user_form" method="post" action="{% url 'submit' %}" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <!-- Display form  -->
+                {% for submit in submit_form %}
+                    {{ submit.label_tag }}
+                    {{ submit }}
+                    <br class="space"/>
+                {% endfor %}
+
+                <!-- Provide a button to click to submit the form. -->
+                <button type="submit"> Submit Deal </button>
+        </form>
+    </div>
+</div>
+
+<br class="space"/>
+<br class="space"/>
+{% endblock %}

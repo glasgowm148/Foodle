@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/img.css">
+{% endblock %}
+
+{% block content %}
+<!-- greg's deal_page details (start) -->
+<div id="map"></div>
+<!--
+
+	     <div class="row"> <div class="col-md-12">-->
+
+<!--   </div>   </div>-->
+
+<!--- Don't think breadcrumbs are needed anymore
+	    <div class="row">
+	        <div class="col-md-12">
+				<div id="breadcrumbsTEXT" > HOME >> BAR SOBA >> DEAL #666</div>
+	        </div>
+      </div>
+      -->
+<div class="container">
+    <br />
+    <br />
+    <br />
+  {% for deal in deals %}
+  <div class="card-columns">
+  
+    <br />
+    <br />
+    <br />
+    <div class="card">
+
+        {% if deal.picture %}
+        <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
+        {% endif %}
+
+        <div class="card-body">
+          <h5 class="card-title">Deal</h5>
+          <p class="card-text">{{deal.info}}</p>
+          <ul class="nav">
+
+            <a class="nav-link btn" href="deal_page"><i class="far fa-heart"></i> {{deal.likes_count}}</a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+          </ul>
+        </div>
+      </div>
+  </div>
+    {% endfor %}
+    <br />
+    <br />
+    <br />
+<!--
+  <div class="row">
+    <div class="col-md-5">
+      <img id="image" class="img-fluid" src="{% static '/images/soba.png' %}" alt="Picture of Soba" class="rounded" />
+    </div>
+
+    <div class="col-md-5">
+      <img id="image" class="img-fluid" src="{% static '/images/sobaDeal.png' %}" alt="Picture of SobaDeal" class="rounded" />
+    </div>
+
+    <div class="col-md-2 px-0"><br />
+      <a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim
+        Deal</a>
+
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+
+
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-facebook"></i></a>
+      <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-twitter"></i></a>
+
+      -->
+      <!--<button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
+                <p>Likes:{{ likes }}</p>
+
+				<button id="reportbutton" type="button" class="btn btn-primary btn-lg">REPORT</br>input details</br>below</button>
+
+				<textarea id="reportinput"></textarea>
+   -->
+
+      <!-- Facebook -->
+
+      <!-- <button id="sharetbutton" type="button" class="btn btn-primary btn-lg">SHARE:</button>
+
+				<div id="sharebutton" class="panel">
+				    <div  class="panel-body">SHARE:</div>
+				</div>
+
+
+
+
+
+
+                <a  type="button" id="shareButtons" class="btn btn-primary btn-sm" href="http://www.facebook.com/sharer.php?u=http://thirdworlds.net" target="_blank" role="button">
+                <img  id="shareButtons" class="img-fluid" src="facebooklogo.jpg" alt="Facebook" />
+                </a>
+
+				<a type="button" id="shareButtons" class="btn btn-primary btn-sm" href="https://twitter.com/share?url=https://thirdworlds.net&amp;text=Foodle&amp;hashtags=DeathGrips" target="_blank" role="button">
+                <img id="shareButtons" class="img-fluid" src="twitterlogo.png" alt="Twitter" />
+                </a>
+
+				<a type="button" id="shareButtons" class="btn btn-primary btn-sm" href="https://plus.google.com/share?url=https://thirdworlds.net" target="_blank" role="button">
+                <img id="shareButtons" class="img-fluid" src="googlelogo.png" alt="Google+" />
+                </a>
+
+-->
+      <!--
+		        <button type="button" class="btn btn-primary">SHARE</button>
+		        <button type="button" class="btn btn-primary">REPORT</button> -->
+    </div>
+
+  </div> <!-- row end -->
+</div>
+<!--container end-->
+
+
+<script>
+	
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 55.872158, lng: -4.287869},zoom: 15});
+        infoWindow = new google.maps.InfoWindow;
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+	
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
+</script>
+<!-- greg deal_page details (end)	-->
+{% endblock %}
