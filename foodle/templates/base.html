@@ -116,9 +116,7 @@
 		</div>
 	</div>
 
-	<div>
-		{% block content %}{% endblock %}
-	</div>
+	{% block content %}{% endblock %}
 
 	<!-- Footer -->
 	<footer>
@@ -128,17 +126,14 @@
           <h5 class="vegan-style">Foodle</h5>
 					<hr class="light">
 					<p>555-555-5555</p>
-					<p>email@myemail.com</p>
-					<p>City, State, 00000</p>
+					<p>Glasgow, Scotland</p>
 				</div>
 				<div class="col-md-4">
 					<h5>Links</h5>
 					<hr class="light">
-					<a class="nav-link" href="{% url 'faq' %}">faq</a>
-					<!--<p>FAQ</p>-->
-					<p>Contact</p>
+					<a class="nav-link" href="{% url 'faq' %}">FAQ</a>
 					{% if user.is_authenticated %}
-					<p>Submit</p>
+					<p><a href="{% url 'submit' %}">Submit</a></p>
 					{% else %}
 					<p><a href="{% url 'login' %}">Login</a></p>
 					{% endif %}
@@ -146,10 +141,11 @@
 				<div class="col-md-4">
 					<h5>Get in Touch</h5>
 					<hr class="light">
-					<p>Open an issue on our git</p>
-					<p>fake@email.com</p>
+					<a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+					<a class="nav-link" href="#">Contact</a>
 				</div>
 				<div class="col-12">
+					<hr class="light">
 					<h5 class="">&copy; foodle</h5>
 				</div>
 			</div>
