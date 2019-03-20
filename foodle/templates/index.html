@@ -1,5 +1,8 @@
+<!-- base contains js/css imports, navbar,header-->
 {% extends 'base.html' %}
+
 {% load staticfiles %}
+
 
 {% block first_item %}
 <img src="{% static 'images/sliders/donut_cut.png' %}" alt="donut">
@@ -25,11 +28,7 @@
   <!-- This loads the Angular Tab App via foodle/front-end/src/app/app.component.ts-->
   <app-root>Loading...</app-root>
 
-  <script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
+
 
 </div>
 
