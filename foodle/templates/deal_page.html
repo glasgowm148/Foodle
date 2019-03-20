@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block head%}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 <!-- greg's deal_page details (start) -->
 <div id="map"></div>
@@ -18,6 +22,35 @@
       </div>
       -->
 <div class="container">
+
+    {% for deal in deals %}
+  
+    <br />
+    <br />
+    <br />
+    <div class="card">
+
+        {% if deal.picture %}
+        <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
+        {% endif %}
+
+        <div class="card-body">
+          <h5 class="card-title">Deal</h5>
+          <p class="card-text">{{deal.info}}</p>
+          <ul class="nav">
+
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
+              class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+          </ul>
+        </div>
+      </div>
+    {% endfor %}
+    <br />
+    <br />
+    <br />
+<!--
   <div class="row">
     <div class="col-md-5">
       <img id="image" class="img-fluid" src="{% static '/images/soba.png' %}" alt="Picture of Soba" class="rounded" />
@@ -40,7 +73,7 @@
       <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-facebook"></i></a>
       <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-twitter"></i></a>
 
-
+      -->
       <!--<button id="likebutton" type="button" class="btn btn-primary btn-lg">LIKE/SAVE</button>
                 <p>Likes:{{ likes }}</p>
 

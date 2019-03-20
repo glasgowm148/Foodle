@@ -30,10 +30,8 @@ def deal_page(request):
     """
     The about page. This renders the container for the single-page app.
     """
-    
     return render(request, 'deal_page.html', {
-        "info": SubmitModel._meta.get_field("info"), 
-        "picture": SubmitModel._meta.get_field("picture"),
+        'deals':  SubmitModel.objects.all()
     })
 
 def submit(request):
