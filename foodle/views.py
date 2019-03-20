@@ -32,7 +32,6 @@ def faq(request):
     """
     return render(request, 'faq.html')
     
-@login_required
 def deal_page(request):
     """
     The about page. This renders the container for the single-page app.
