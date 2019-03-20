@@ -15,15 +15,15 @@ import {Http, Response} from '@angular/http';
   styleUrls: ['./app.component.css']
 })
 
-@Component({
+/*@Component({ - old angular slider
   selector: 'app-slider',
   templateUrl: './slider.html'
 
-})
+}) */
 
 @Component({
   selector: 'app-tab-component',
-  templateUrl: './app.tab.component.html'
+  templateUrl: './app-tab-component.html'
 
 
 })

@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 
 import {DemoMaterialModule} from './material-module';
 
-import {AppTabComponent} from './app.tab.component';
+import {AppTabComponent} from './app-tab-component';
 import { MatTabsModule } from '@angular/material';
 
 

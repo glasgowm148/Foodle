@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-tab-component',
-  templateUrl: './app.tab.component.html',
-  styleUrls: ['./app.tab.component.css'],
+  templateUrl: './app-tab-component.html',
+  styleUrls: ['./app-tab-component.css'],
 })
 export class AppTabComponent {}
 

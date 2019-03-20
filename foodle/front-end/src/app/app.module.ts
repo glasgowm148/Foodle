@@ -11,16 +11,16 @@ import { BlogPostService } from './blog_post.service';
 import { UserService } from './user.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import { NgbdCarouselBasic } from './carousel-basic';
+// import { NgbdCarouselBasic } from './carousel-basic';
 import { LoginComponent } from './login/login.component';
-import { AppTabComponent } from './app.tab.component';
+import { AppTabComponent } from './app-tab-component';
 import { MatTabsModule } from '@angular/material';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, NgbdCarouselBasic, LoginComponent, MatTabsModule, AppTabComponent
+    AppComponent, LoginComponent, MatTabsModule, AppTabComponent //NgbdCarouselBasic
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, HttpModule, NgbModule, ReactiveFormsModule
