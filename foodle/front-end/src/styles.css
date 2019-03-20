@@ -126,6 +126,35 @@ html, body {
   transform: translateY(-50%);
 }
 
+/* about page CSS */
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+.fa-html5 {
+  color: #e54d26;
+}
+.fa-bold {
+  color: #563d7c;
+}
+.fa-css3-alt {
+  color: #2163af;
+}
+.fa-angular {
+  color: #df0000;
+}
+.fa-html5, .fa-bold, .fa-css3-alt, .fa-angular {
+  font-size: 4em;
+  margin: 1rem;
+}
+
 /* FOODLE NAME ON SLIDER CSS */
 .carousel-caption h1 {
   font-family: 'vegan-style' !important;
@@ -136,7 +165,7 @@ html, body {
 
 /* UNDER FOODLE NAME ON SLIDER CSS */
 
-.carousel-caption h2, h3 {
+.carousel-caption h2, .carousel-caption h3 {
   font-family: 'vegan-style' !important;
   font-size: 3rem;
   font-weight: 500;
@@ -156,13 +185,6 @@ html, body {
 /*--- background-color: #6648b1;--*/
   border: 1px solid #6648b1;
   background-color: rgb(65, 138, 235) !important;
-}
-.team {
-  border: 1px solid rgb(65, 138, 235);
-}
-.tem:hover {
-  border: 1px solid rgb(25, 112, 224);
-  background-color: rgb(25, 112, 224) !important;
 }
 
 .white-text{
