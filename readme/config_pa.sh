@@ -49,9 +49,10 @@ npm install --save-dev @angular-devkit/build-angular
 # update the node package to be on the same cli as the core
 npm update
 ng update @angular/cli @angular/core
-# you can install npx and run npx ng <command> within
-#  the local directory where npm install @angular/cli was run, 
-# which will use the locally installed angular-cli.
+# ng-bootstrap
+npm install --save @ng-bootstrap/ng-bootstrap
+# Angular Material
+npm install --save @angular/material
 
 echo " ~~~~~~   ng build... ~~~~~~"
 
