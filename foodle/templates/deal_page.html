@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block head%}
+{% block head %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/img.css">
 {% endblock %}
 
 {% block content %}
@@ -22,8 +23,11 @@
       </div>
       -->
 <div class="container">
-
-    {% for deal in deals %}
+    <br />
+    <br />
+    <br />
+  {% for deal in deals %}
+  <div class="card-columns">
   
     <br />
     <br />
@@ -46,11 +50,11 @@
           </ul>
         </div>
       </div>
+  </div>
     {% endfor %}
     <br />
     <br />
     <br />
-    
 <!--
   <div class="row">
     <div class="col-md-5">
@@ -121,8 +125,6 @@
 
 <script>
 	
-	  <!-- GEOLOCATION MAPPING -->
-	
       var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -152,7 +154,6 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
-	  <!-- GEOLOCATION MAPPING -->
     </script>
 	
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
