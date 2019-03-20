@@ -22,7 +22,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';
 
 // Dev added components  - other imports above utilised by these - but these are the main ones.
-import { AppComponent } from './app.component';
+// import { AppComponent } from './slider/app.component';
 import { TabComponent } from './tab/tab.component';
 
 import { LoginComponent } from './login/login.component';
@@ -46,8 +46,8 @@ import { LoginComponent } from './login/login.component';
     NgbModule
   ],
   entryComponents: [TabComponent],
-  declarations: [TabComponent, AppComponent, LoginComponent, MatTabsModule, TabComponent],
-  bootstrap: [TabComponent, AppComponent],
+  declarations: [TabComponent, LoginComponent, MatTabsModule, TabComponent],
+  bootstrap: [TabComponent],
   providers: [BlogPostService, UserService]
 })
 export class AppModule {}
