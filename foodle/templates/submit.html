@@ -7,6 +7,7 @@
 
 {% block content %}
 <br class="space"/>
+<br class="space"/>
   <div class="wrapper fadeInDown space">
     <div id="formContent">
       <!-- Tabs Titles -->
@@ -22,6 +23,7 @@
                 {% for submit in submit_form %}
                     {{ submit.label_tag }}
                     {{ submit }}
+                    <br class="space"/>
                 {% endfor %}
 
                 <!-- Provide a button to click to submit the form. -->
@@ -30,5 +32,6 @@
     </div>
 </div>
 
+<br class="space"/>
 <br class="space"/>
 {% endblock %}
