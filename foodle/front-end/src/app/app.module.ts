@@ -1,3 +1,5 @@
+
+
 import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,26 +8,49 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
 import { BlogPostService } from './blog_post.service';
 import { UserService } from './user.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 // import { NgbdCarouselBasic } from './carousel-basic';
-import { LoginComponent } from './login/login.component';
 import { AppTabComponent } from './app-tab-component';
 import { MatTabsModule } from '@angular/material';
 
 
+import {MatNativeDateModule} from '@angular/material';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DemoMaterialModule} from './material-module';
+
+// Dev added components  - other imports above utilised by these - but these are the main ones.
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+//import './polyfills';
+
+
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent, LoginComponent, MatTabsModule, AppTabComponent //NgbdCarouselBasic
-  ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule, HttpModule, NgbModule, ReactiveFormsModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    DemoMaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpModule,
+    NgbModule
   ],
-  providers: [BlogPostService, UserService],
-  bootstrap: [AppComponent]
+  entryComponents: [AppTabComponent],
+  declarations: [AppTabComponent, AppComponent, LoginComponent, MatTabsModule, AppTabComponent],
+  bootstrap: [AppTabComponent, AppComponent],
+  providers: [BlogPostService, UserService]
 })
-export class AppModule { }
+export class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+
+
