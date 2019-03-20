@@ -8,6 +8,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { AppComponent } from './app.component';
+
 
 import {DemoMaterialModule} from './material-module';
 
@@ -18,6 +20,7 @@ import {CardsAngularComponent} from './cards-angular/cards-angular.component';
 
 @NgModule({
   imports: [
+    AppComponent,
     CardsAngularComponent,
     BrowserModule,
     BrowserAnimationsModule,
@@ -30,10 +33,10 @@ import {CardsAngularComponent} from './cards-angular/cards-angular.component';
     TabComponent,
     CommonModule
   ],
-  entryComponents: [TabComponent, CardsAngularComponent],
-  declarations: [TabComponent, CardsAngularComponent],
-  bootstrap: [TabComponent, CardsAngularComponent],
-  providers: [CardsAngularComponent]
+  entryComponents: [AppComponent, CardsAngularComponent],
+  declarations: [AppComponent, CardsAngularComponent],
+  bootstrap: [AppComponent, CardsAngularComponent],
+  providers: [CardsAngularComponent,]
 })
 export class AppRoutingModule { }
 

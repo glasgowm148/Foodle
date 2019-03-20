@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-tab',
+  template: '<app-tab></app-tab>',
+  templateUrl: '.app.component.html'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {}
 
-  constructor() { }
 
-  ngOnInit() {
-  }
-
-}
+/**  Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license */
