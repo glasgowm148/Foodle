@@ -3,12 +3,12 @@ from rest_framework import routers
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'posts', views.BlogPostViewSet)
 router.register(r'users', views.UserViewSet)
-from django.contrib.staticfiles.urls import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
 

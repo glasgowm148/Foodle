@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block head%}
+{% block head %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/img.css">
 {% endblock %}
 
 {% block content %}
@@ -22,8 +23,11 @@
       </div>
       -->
 <div class="container">
-
-    {% for deal in deals %}
+    <br />
+    <br />
+    <br />
+  {% for deal in deals %}
+  <div class="card-columns">
   
     <br />
     <br />
@@ -39,13 +43,14 @@
           <p class="card-text">{{deal.info}}</p>
           <ul class="nav">
 
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
-              class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+            <a class="nav-link btn" href="deal_page"><i class="far fa-heart"></i> {{deal.likes_count}}</a>
+            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
           </ul>
         </div>
       </div>
+  </div>
     {% endfor %}
     <br />
     <br />
@@ -120,8 +125,6 @@
 
 <script>
 	
-	  <!-- GEOLOCATION MAPPING -->
-	
       var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -151,7 +154,6 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
-	  <!-- GEOLOCATION MAPPING -->
     </script>
 	
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">

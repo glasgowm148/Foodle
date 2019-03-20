@@ -4,16 +4,16 @@
 {% block first_item %}
 <img src="{% static 'images/sliders/donut_cut.png' %}" alt="donut">
 <div class="carousel-caption">
-	<h1 class="display-2">Foodle</h1>
-	<h3 class="vegan-style">Where deals become meals!</h3>
+  <h1 class="display-2">Foodle</h1>
+  <h3 class="vegan-style">Where deals become meals!</h3>
 </div>
 {% endblock %}
 
 {% block second_item %}
 <img src="{% static 'images/sliders/donut_cut.png' %}" alt="donut">
 <div class="carousel-caption">
-<h1 class="display-2">Takeout</h1>
-<h3 class="vegan-style">Browse Local Offers</h3>
+  <h1 class="display-2">Takeout</h1>
+  <h3 class="vegan-style">Browse Local Offers</h3>
 </div>
 
 {% endblock %}
@@ -22,13 +22,8 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="mat-app-background basic-container">
 
-  <app-tab><mat-tab-group>
-      <mat-tab label="First">Latest Deals | </mat-tab>
-      <mat-tab label="Second">Most Popular | </mat-tab>
-      <mat-tab label="Third">Biggest Discount</mat-tab>
-    </mat-tab-group>
-    <example-navbar>test</example-navbar>
-
+  <!-- This loads the Angular Tab App via foodle/front-end/src/app/app.component.ts-->
+  <app-root>Loading...</app-root>
 
   <script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
   <script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
@@ -40,138 +35,7 @@
 
 
 
-<div class="container">
-	<div class="card-columns">
-		<div class="card">
-			<img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/soba.png' %}" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">BAR SOBA :: 50% OFF FOR STUDENTS</h5>
-				<p class="card-text">Bar Soba offers a 50% discount card for all students. Available Mon-Thur and Fri until 12.
-				</p>
-				<ul class="nav">
-					<a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35"
-						role="button">Claim Deal</a>
-
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
-						class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
-          <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-          <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
-          role="button">Info</a>
-				</ul>
-			</div>
-		</div>
-		<div class="card p-3">
-			<a class="twitter-timeline" href="https://twitter.com/FoodleGlasgow">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
-		<div class="card" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35">
-			<img class="card-img-top" src="{% static 'images/dominos.png' %}" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">DOMINOS :: 35% OFF</h5>
-				<p class="card-text">Unlock 35% online student discount at Domino's Pizza when you spend £25 with Student Beans
-					iD.
-
-					Use our Dominos Pizza student discount code at the checkout to enjoy 35% off your order.</p>
-				<ul class="nav">
-
-					<a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35"
-						role="button">Claim
-						Deal</a>
-
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
-						class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
-          <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-          <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
-          role="button">Info</a>
-				</ul>
-			</div>
-		</div>
-		<div class="card bg-primary text-white text-center p-3">
-			<blockquote class="blockquote mb-0">
-				<p>Join today to save, like and submit deals!</p>
-			</blockquote>
-			<div id="btn-white">
-				<a class="white-text" href="{% url 'register' %}">Register!</a>
-			</div>
-		</div>
-		<div class="card text-center">
-			<div class="card-body">
-				<h5 class="card-title">Not seeing anything you fancy?</h5>
-				<p class="card-text">Check out our resource page for links to relevent sites</p>
-				<p class="card-text"><small class="text-muted">
-						<div id="formFooter">
-							<a class="underlineHover" href="{% url 'register' %}">Resources</a>
-						</div>
-					</small></p>
-			</div>
-    </div>
-
-    <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">About</h5>
-          <p class="card-text">Foodle aims to provide you with up-to-date deals on food around campus
-            Create an account to save, like or submit deals</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
 
 
-		<div class="card">
-			<img class="card-img" href="{% url 'deal_page' %}" src="{% static 'images/internal_button.png' %}"
-				alt="Card image">
-		</div>
-		<div class="card p-3">
 
-      <img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/oneup.png' %}" alt="Card image cap">
-
-			<div class="card-body">
-				<h5 class="card-title">One Up burgers, Royal Exchange Sq</h5>
-				<p class="card-text">Burgers and fries for two or four with an optional glass of wine or bottled beer each at One Up, Royal Exchange Square
-          £8
-				</p>
-				<ul class="nav">
-					<a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
-						role="button">Claim Deal</a>
-
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
-						class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
-					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
-          <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-          <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
-          role="button">Info</a>
-				</ul>
-			</div>
-		</div>
-
-	</div>
-</div>
-
-<mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isHandset$ | async) ? 'over' : 'side'"
-        [opened]="!(isHandset$ | async)">
-      <mat-toolbar>Menu</mat-toolbar>
-      <mat-nav-list>
-        <a mat-list-item href="#">Link 1</a>
-        <a mat-list-item href="#">Link 2</a>
-        <a mat-list-item href="#">Link 3</a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>front-end</span>
-      </mat-toolbar>
-      <!-- Add Content Here -->
-    </mat-sidenav-content>
-  </mat-sidenav-container>
 {% endblock %}

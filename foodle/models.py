@@ -5,6 +5,15 @@ from django.utils import timezone
 class SubmitModel(models.Model):
     info = models.CharField(default='', max_length=200)
     picture = models.ImageField(upload_to='deals/', blank=True)
+    likes = models.IntegerField(default=0)
+    category = models.CharField(default='', max_length=50)
+
+    @property
+    def likes_count(self):
+        return self.likes
+    @property
+    def add_like(self):
+       self.likes += 1
 
 class AboutPage(models.Model):
     """
