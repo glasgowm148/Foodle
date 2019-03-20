@@ -6,7 +6,6 @@ class SubmitModel(models.Model):
     info = models.CharField(default='', max_length=200)
     picture = models.ImageField(upload_to='deals_pictures', blank=True)
 
-
 class AboutPage(models.Model):
     """
     The "AboutPage" model for the foodle  app
