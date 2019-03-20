@@ -4,11 +4,11 @@
     <mat-tab-group>
         <mat-tab>
           <ng-template mat-tab-label>
-            Most <em> Popular </em>
+              <mat-icon>people</mat-icon> Most <em> Popular </em>
           </ng-template>
           <div class="card-columns">
               <div class="card">
-                <img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/soba.png' %}" alt="Card image cap">
+                <img class="card-img-top" href="{% url 'deal_page' %}" src="static/images/soba.png" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">BAR SOBA :: 50% OFF FOR STUDENTS</h5>
                   <p class="card-text">Bar Soba offers a 50% discount card for all students. Available Mon-Thur and Fri until 12.
@@ -28,7 +28,7 @@
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               </div>
               <div class="card" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35">
-                <img class="card-img-top" src="{% static 'images/dominos.png' %}" alt="Card image cap">
+                <img class="card-img-top" src="static/images/dominos.png" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">DOMINOS :: 35% OFF</h5>
                   <p class="card-text">Unlock 35% online student discount at Domino's Pizza when you spend £25 with Student
@@ -82,11 +82,11 @@
 
 
               <div class="card">
-                <img class="card-img" href="{% url 'deal_page' %}" src="{% static 'images/internal_button.png' %}" alt="Card image">
+                <img class="card-img" href="{% url 'deal_page' %}" src="static/images/internal_button.png" alt="Card image">
               </div>
               <div class="card p-3">
 
-                <img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/oneup.png' %}" alt="Card image cap">
+                <img class="card-img-top" href="{% url 'deal_page' %}" src="static/images/oneup.png" alt="Card image cap">
 
                 <div class="card-body">
                   <h5 class="card-title">One Up burgers, Royal Exchange Sq</h5>
@@ -118,7 +118,7 @@
 
         <mat-tab>
             <ng-template mat-tab-label>
-              <mat-icon>thumb_up</mat-icon> Most Saved
+              <mat-icon>folder</mat-icon> Most Saved
             </ng-template>
             <h1>Load the most liked cards here</h1>
             <p>...</p>
@@ -127,33 +127,17 @@
 
           <mat-tab>
               <ng-template mat-tab-label>
-                <mat-icon>folder</mat-icon> Latest
+                <mat-icon>alarm</mat-icon> Latest
               </ng-template>
               <h1>Load the most liked cards here</h1>
               <p>...</p>
             </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                  <mat-icon>map</mat-icon> Closest
+                </ng-template>
+                <h1>Load the most liked cards here</h1>
+                <p>...</p>
+              </mat-tab>
       </mat-tab-group>
-
-<!--
-  {% load staticfiles %}
-
-
-  <mat-tab-group>
-    <mat-tab>
-      <ng-template mat-tab-label>
-        Most <em> Popular </em>
-      </ng-template>
-
-
-
-      <ng-template mat-tab-label>
-        <mat-icon>thumb_up</mat-icon> Most Liked
-      </ng-template>
-      <h1>Load the most liked cards here</h1>
-      <p>...</p>
-    </mat-tab>
-  </mat-tab-group>
-</div>
-
-
--->
