@@ -3,8 +3,9 @@
 cd .
 . venv/bin/activate
 git status
-cd foodle/front-end || exit
 ng new codelyzer
+
+cd foodle/front-end || exit
 ng build
 ng test
 ng lint 
