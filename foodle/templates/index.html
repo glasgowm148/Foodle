@@ -88,29 +88,43 @@
 						</div>
 					</small></p>
 			</div>
-		</div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">About</h5>
+          <p class="card-text">Foodle aims to provide you with up-to-date deals on food around campus
+            Create an account to save, like or submit deals</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+
 		<div class="card">
 			<img class="card-img" href="{% url 'deal_page' %}" src="{% static 'images/internal_button.png' %}"
 				alt="Card image">
 		</div>
-		<div class="card p-3 text-right">
-			<blockquote class="blockquote mb-0">
-				<p>Join today to save, like and submit deals!</p>
-				<footer class="blockquote-footer">
-					<small class="text-muted">
-						Someone famous in <cite title="Source Title">Source Title</cite>
-					</small>
-				</footer>
-			</blockquote>
-		</div>
-		<div class="card">
+		<div class="card p-3">
+
+      <img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/oneup.png' %}" alt="Card image cap">
+
 			<div class="card-body">
-				<h5 class="card-title">About</h5>
-				<p class="card-text">Foodle aims to provide you with up-to-date deals on food around campus
-					Create an account to save, like or submit deals</p>
-				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+				<h5 class="card-title">One Up burgers, Royal Exchange Sq</h5>
+				<p class="card-text">Burgers and fries for two or four with an optional glass of wine or bottled beer each at One Up, Royal Exchange Square
+          £8
+				</p>
+				<ul class="nav">
+					<a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
+						role="button">Claim Deal</a>
+
+					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
+						class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+					<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+				</ul>
 			</div>
 		</div>
+
 	</div>
 </div>
 {% endblock %}
