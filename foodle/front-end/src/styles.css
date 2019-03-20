@@ -157,6 +157,13 @@ html, body {
   border: 1px solid #6648b1;
   background-color: rgb(65, 138, 235) !important;
 }
+.team {
+  border: 1px solid rgb(65, 138, 235);
+}
+.tem:hover {
+  border: 1px solid rgb(25, 112, 224);
+  background-color: rgb(25, 112, 224) !important;
+}
 
 .white-text{
   background-color: #FFF;
@@ -441,6 +448,19 @@ display: inline;
 
 /* ----- Nathan CSS For Carousel Responsiveness ----- */
 
+@media (max-width: 1200px) {
+  .carousel-caption {
+    top: 45%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
+}
 @media (max-width: 992px) {
   .carousel-caption {
     top: 45%;
