@@ -18,6 +18,7 @@ urlpatterns = [
     path(r'deal_page/', views.deal_page, name='deal_page'),
     path(r'contact/', views.contact, name='contact'),
     path(r'submit/', views.submit, name='submit'),
+    path(r'faq/', views.faq, name='faq'),
 
 
 
