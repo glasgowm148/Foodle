@@ -27,10 +27,11 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
+  color: #222;
   /* background colour */
   background-color: #FFF !important;
-
 }
+
 
 /* vegan-style custom font */
 
@@ -248,15 +249,23 @@ footer {
   color: #d5d5d5;
   padding-top: 2rem;
 }
-hr.light {
+footer img {
+  width: 170px;
+  height: 50px;
+}
+footer hr.light {
   border-top: 1px solid #d5d5d5;
   width: 75%;
   margin-top: .8rem;
   margin-bottom: 1rem;
 }
 footer a {
-  font-family: 'Poppin';
+  font-family: 'Poppins';
   color: #d5d5d5;
+}
+footer a:hover {
+  font-family: 'Poppins';
+  color: #afafaf;
 }
 hr.light-100 {
   border-top: 1px solid #d5d5d5;
@@ -559,11 +568,4 @@ display: inline;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
 }

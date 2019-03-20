@@ -43,14 +43,12 @@
 </head>
 
 <body>
-
-    <example-navbar></example-navbar>
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="{% static 'images/logo.png' %}" alt="logo">
-          </a>
+			<a class="navbar-brand" href="#">
+				<img src="{% static 'images/logo.png' %}" alt="logo">
+			</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
@@ -68,8 +66,7 @@
 						<a class="nav-link" href="{% url 'contact' %}"><i class="far fa-envelope"></i></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i
-								class="fab fa-github"></i></a>
+						<a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
 					</li>
 
 					<li class="nav-item"></li>
@@ -123,22 +120,24 @@
 		<div class="container-fluid padding">
 			<div class="row text-center">
 				<div class="col-md-4">
-          <h5 class="vegan-style">Foodle</h5>
+					<img src="{% static 'images/logo.png' %}" alt="logo">
 					<hr class="light">
 					<p>555-555-5555</p>
 					<p>Glasgow, Scotland</p>
 				</div>
 				<div class="col-md-4">
+					<hr class="light">
 					<h5>Links</h5>
 					<hr class="light">
 					<a class="nav-link" href="{% url 'faq' %}">FAQ</a>
 					{% if user.is_authenticated %}
-					<p><a href="{% url 'submit' %}">Submit</a></p>
+					<a class="nav-link" href="{% url 'submit' %}">Submit</a>
 					{% else %}
-					<p><a href="{% url 'login' %}">Login</a></p>
+					<a class="nav-link" href="{% url 'login' %}">Login</a>
 					{% endif %}
 				</div>
 				<div class="col-md-4">
+					<hr class="light">
 					<h5>Get in Touch</h5>
 					<hr class="light">
 					<a class="nav-link" href="{% url 'faq' %}">FAQ</a>
