@@ -43,6 +43,9 @@ npm install --save @ng-bootstrap/ng-bootstrap
 # Angular Material
 npm install --save @angular/material
 
+# Slightly different than the above statement - not sure why, gives you theme options, etc.
+ng add @angular/material
+
 
 
 # you can install npx and run npx ng <command> within

@@ -478,3 +478,6 @@ display: inline;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

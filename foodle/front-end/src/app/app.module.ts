@@ -16,7 +16,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MatTabsModule } from '@angular/material';
 
 
-import {MatNativeDateModule} from '@angular/material';
+import {MatNativeDateModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule} from '@angular/material';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';
@@ -26,6 +26,8 @@ import {DemoMaterialModule} from './material-module';
 import { TabComponent } from './tab/tab.component';
 
 import { LoginComponent } from './login/login.component';
+import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
+import { LayoutModule } from '@angular/cdk/layout';
 //import './polyfills';
 
 
@@ -43,10 +45,16 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
-    NgbModule
+    NgbModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   entryComponents: [TabComponent],
-  declarations: [TabComponent, LoginComponent, MatTabsModule, TabComponent],
+  declarations: [TabComponent, LoginComponent, MatTabsModule, TabComponent, ExampleNavbarComponent],
   bootstrap: [TabComponent],
   providers: [BlogPostService, UserService]
 })
