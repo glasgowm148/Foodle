@@ -1,11 +1,57 @@
+import {HttpClientModule} from '@angular/common/http';
+import {MatNativeDateModule} from '@angular/material';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DemoMaterialModule} from './material-module';
+
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+import { AppComponent }         from './app.component';
+import { TabComponent }   from './tab/tab.component';
 
 
-import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule }     from './app-routing.module';
+
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    DemoMaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
+  ],
+  entryComponents: [AppComponent,TabComponent],
+  declarations: [AppComponent,TabComponent],
+  bootstrap: [ AppComponent, TabComponent ]
+})
+export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BlogPostService } from './blog_post.service'
@@ -69,4 +115,5 @@ export class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 
+*/
 
