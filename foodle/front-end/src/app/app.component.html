@@ -4,7 +4,8 @@
     <mat-tab-group>
         <mat-tab>
           <ng-template mat-tab-label>
-              <mat-icon>people</mat-icon> Most <em> Popular </em>
+              <mat-icon>people</mat-icon>
+              Most <em> Popular </em>
           </ng-template>
           <div class="card-columns">
               <div class="card">
@@ -15,8 +16,7 @@
                   </p>
                   <ul class="nav">
                     <a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim Deal</a>
-                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a>
-                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+                    <a class="nav-link btn" href="deal_page"><i class="far fa-heart"></i> {{deal.likes_count}}</a>                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
                     <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
                     <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
                     <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq" role="button">Info</a>
@@ -43,8 +43,7 @@
                       role="button">Claim
                       Deal</a>
 
-                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
-                      class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+                      <a class="nav-link btn" href="deal_page"><i class="far fa-heart"></i> {{deal.likes_count}}</a>                      class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
                     <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
                     <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
                     <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
@@ -97,8 +96,7 @@
                     <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
                       role="button">Claim Deal</a>
 
-                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
-                      class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+                      <a class="nav-link btn" href="deal_page"><i class="far fa-heart"></i> {{deal.likes_count}}</a>                      class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
                     <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
                     <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
                     <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
@@ -113,8 +111,32 @@
           <ng-template mat-tab-label>
             <mat-icon>thumb_up</mat-icon> Most Liked
           </ng-template>
-          <h1>Load the most liked cards here</h1>
-          <p>...</p>
+          {% for deal in deals %}
+          <div class="card-columns">
+
+            <br />
+            <br />
+            <br />
+            <div class="card">
+
+              {% if deal.picture %}
+              <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
+              {% endif %}
+
+              <div class="card-body">
+                <h5 class="card-title">Deal</h5>
+                <p class="card-text">{{deal.info}}</p>
+                <ul class="nav">
+
+                  <a class="nav-link btn" href="deal_page"><i class="far fa-heart"></i> {{deal.likes_count}}</a>
+                  <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+                  <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+                  <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
         </mat-tab>
 
         <mat-tab>
