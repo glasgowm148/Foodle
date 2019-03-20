@@ -33,6 +33,9 @@ cd foodle/front-end || exit
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
+
+#
+npm install bootstrap
 npm install --save-dev @angular-devkit/build-angular
 
 # update the node package to be on the same cli as the core
