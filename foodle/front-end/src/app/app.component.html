@@ -1,12 +1,134 @@
-<mat-tab-group>
+<div class="container">
+
+
+    <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Most <em> Popular </em>
+          </ng-template>
+          <div class="card-columns">
+              <div class="card">
+                <img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/soba.png' %}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">BAR SOBA :: 50% OFF FOR STUDENTS</h5>
+                  <p class="card-text">Bar Soba offers a 50% discount card for all students. Available Mon-Thur and Fri until 12.
+                  </p>
+                  <ul class="nav">
+                    <a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35" role="button">Claim Deal</a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+                    <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq" role="button">Info</a>
+                  </ul>
+                </div>
+              </div>
+              <div class="card p-3">
+                <a class="twitter-timeline" href="https://twitter.com/FoodleGlasgow">Tweets by TwitterDev</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+              <div class="card" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35">
+                <img class="card-img-top" src="{% static 'images/dominos.png' %}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">DOMINOS :: 35% OFF</h5>
+                  <p class="card-text">Unlock 35% online student discount at Domino's Pizza when you spend £25 with Student
+                    Beans
+                    iD.
+
+                    Use our Dominos Pizza student discount code at the checkout to enjoy 35% off your order.</p>
+                  <ul class="nav">
+
+                    <a class="btn btn-primary" href="https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35"
+                      role="button">Claim
+                      Deal</a>
+
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
+                      class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+                    <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
+                      role="button">Info</a>
+                  </ul>
+                </div>
+              </div>
+              <div class="card bg-primary text-white text-center p-3">
+                <blockquote class="blockquote mb-0">
+                  <p>Join today to save, like and submit deals!</p>
+                </blockquote>
+                <div id="btn-white">
+                  <a class="white-text" href="{% url 'register' %}">Register!</a>
+                </div>
+              </div>
+              <div class="card text-center">
+                <div class="card-body">
+                  <h5 class="card-title">Not seeing anything you fancy?</h5>
+                  <p class="card-text">Check out our resource page for links to relevent sites</p>
+                  <p class="card-text"><small class="text-muted">
+                      <div id="formFooter">
+                        <a class="underlineHover" href="{% url 'register' %}">Resources</a>
+                      </div>
+                    </small></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">About</h5>
+                  <p class="card-text">Foodle aims to provide you with up-to-date deals on food around campus
+                    Create an account to save, like or submit deals</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <img class="card-img" href="{% url 'deal_page' %}" src="{% static 'images/internal_button.png' %}" alt="Card image">
+              </div>
+              <div class="card p-3">
+
+                <img class="card-img-top" href="{% url 'deal_page' %}" src="{% static 'images/oneup.png' %}" alt="Card image cap">
+
+                <div class="card-body">
+                  <h5 class="card-title">One Up burgers, Royal Exchange Sq</h5>
+                  <p class="card-text">Burgers and fries for two or four with an optional glass of wine or bottled beer each - £8
+                  </p>
+                  <ul class="nav">
+                    <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
+                      role="button">Claim Deal</a>
+
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-heart"></i></a><a
+                      class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+                    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+                    <a class="btn btn-primary" href="https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq"
+                      role="button">Info</a>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+        </mat-tab>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>thumb_up</mat-icon> Most Liked
+          </ng-template>
+          <h1>Load the most liked cards here</h1>
+          <p>...</p>
+        </mat-tab>
+      </mat-tab-group>
+
+<!--
+  {% load staticfiles %}
+
+
+  <mat-tab-group>
     <mat-tab>
       <ng-template mat-tab-label>
         Most <em> Popular </em>
       </ng-template>
-      <h1>Load Most Popular</h1>
-      <p>...</p>
-    </mat-tab>
-    <mat-tab>
+
+
+
       <ng-template mat-tab-label>
         <mat-icon>thumb_up</mat-icon> Most Liked
       </ng-template>
@@ -14,8 +136,7 @@
       <p>...</p>
     </mat-tab>
   </mat-tab-group>
+</div>
 
 
-  <!-- Copyright 2019 Google Inc. All Rights Reserved.
-      Use of this source code is governed by an MIT-style license that
-      can be found in the LICENSE file at http://angular.io/license -->
+-->
