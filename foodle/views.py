@@ -135,10 +135,10 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class DealViewSet(viewsets.ModelViewSet):
     """
-    Provides basic CRUD functions for the User model
+    Provides basic CRUD functions for the Deal model
     """
     queryset = SubmitModel.objects.all()
-    serializer_class = serializers.UserSerializer
+    serializer_class = serializers.DealSerializer
     permission_classes = (ReadOnly, )
 
 
