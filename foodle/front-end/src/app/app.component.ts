@@ -12,6 +12,7 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'app';
 
+
   pictures = [
     {
       id: 1,
@@ -44,6 +45,15 @@ export class AppComponent {
       img: 'static/images/soba.png'
     },
   ];
+
+  tiles = [
+    {text: 'Snacks', cols: 2, rows: 1, color: '#91B2FF'},
+    {text: 'Gluten-Free', cols: 1, rows: 1, color: '#B7A0E8'},
+    {text: 'Lunch', cols: 1, rows: 2, color: '#FF9191'},
+    {text: 'Vegan', cols: 3, rows: 1, color: '#D9EDD9'},
+  ];
+
+
 }
 
 
