@@ -1,11 +1,11 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import SubmitModel
+from .models import DealModel
 
 class SubmitForm(forms.ModelForm):
     class Meta:
-        model = SubmitModel
+        model = DealModel
         fields = ('info', 'picture', 'category')
 
 class registerForm(UserCreationForm):

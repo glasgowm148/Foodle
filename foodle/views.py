@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
-from .models import BlogPost, SubmitModel
+from .models import DealModel, BlogPost
 from . import serializers
 from .permissions import ReadOnly
 from django.views.generic import TemplateView
@@ -11,8 +11,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
 from .forms import registerForm, SubmitForm
-
-
+from .serializers import DealSerializer
 
 def index(request, path=''):
     """
@@ -32,12 +31,30 @@ def faq(request):
     """
     return render(request, 'faq.html')
 
+@login_required
+def like(request):
+    print("\n"*209)
+    deal_id = None
+    if request.method == 'GET':
+        deal_id = request.GET.get('deal_id')
+        likes = 0
+
+    if deal_id:
+        deal = DealModel.objects.get(id=int(deal_id))
+        if deal:
+            print("yes")
+            deal.likes += 1
+            likes = deal.likes
+            deal.save()
+
+    return HttpResponse(likes)
+
 def deal_page(request):
     """
-    The deal page. This renders the container for the single-page app.
+    The about page. This renders the container for the single-page app.
     """
     return render(request, 'deal_page.html', {
-        'deals':  SubmitModel.objects.all()
+        'deals':  DealModel.objects.all()
     })
 
 def submit(request):
@@ -114,17 +131,6 @@ def register(request):
 
     return render(request, 'register.html', {'form': form})
 
-
-# class AboutPageView(TemplateView):
-class AboutPageViewSet(viewsets.ModelViewSet):
-    """
-    Provides basic CRUD functions for the User model
-    """
-    queryset = User.objects.all()
-    serializer_class = serializers.UserSerializer
-    permission_classes = (ReadOnly, )
-
-
 class UserViewSet(viewsets.ModelViewSet):
     """
     Provides basic CRUD functions for the User model
@@ -135,14 +141,11 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class DealViewSet(viewsets.ModelViewSet):
     """
-    Provides basic CRUD functions for the Deal model
+    Provides basic CRUD functions for the User model
     """
-    queryset = SubmitModel.objects.all()
+    queryset = DealModel.objects.all()
     serializer_class = serializers.DealSerializer
     permission_classes = (ReadOnly, )
-
-
-
 
 
 class BlogPostViewSet(viewsets.ModelViewSet):

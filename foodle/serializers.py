@@ -2,16 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 
 from .models import BlogPost
-from .models import AboutPage
-from .models import SubmitModel
-
-
-class AboutPageSerializer(serializers.ModelSerializer):
-    user = serializers.StringRelatedField(many=False)
-
-    class Meta:
-        model = AboutPage
-        fields = ('id', 'user', 'date', 'body')
+from .models import DealModel
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -29,5 +20,5 @@ class BlogPostSerializer(serializers.ModelSerializer):
 class DealSerializer(serializers.ModelSerializer):
     deal = serializers.StringRelatedField(many=False)
     class Meta:
-        model = SubmitModel
+        model = DealModel
         fields = ('info', 'pictures', 'likes', 'category')
