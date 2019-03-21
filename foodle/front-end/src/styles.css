@@ -58,6 +58,7 @@ html, body {
 .vegan {
   font-family: 'vegan-style', cursive; /* apply your font by name and provide fallback fonts using coma separation */
 
+/* test commit */
 
 @font-face {
     font-family: 'vegan-style';
