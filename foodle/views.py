@@ -51,10 +51,9 @@ def deal_page(request):
     """
     The about page. This renders the container for the single-page app.
     """
-    if request.method != 'POST':
-        return render(request, 'deal_page.html', {
-            'deals':  SubmitModel.objects.all()
-        })
+    return render(request, 'deal_page.html', {
+        'deals':  SubmitModel.objects.all()
+    })
 
 def submit(request):
 
