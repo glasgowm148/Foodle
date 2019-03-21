@@ -1,12 +1,34 @@
-.example-card {
-  max-width: 100px;
+.card1 {
+  display: flex;
+  margin-bottom: 10px;
+  flex: 2 1 5em;
+  margin-left: 10px;
+  height:50px;
+}
+.card20 {
+  max-width: 20%;
+  display: flex;
+  margin-bottom: 10px;
+  flex: 1 1 5em;
+  margin-left: 10px;
+  height:50px;
+}
+.card40 {
+  max-width: 40%;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+.card60 {
+  max-width: 60%;
+}
+
+.card1-bg {
+  background-image: url('static/images/soba.png');
   background-size: cover;
 }
 
+.mat-checkbox-layout {
+  padding-right: 20px !important;
+}
 
 .img {
   width: 100%;
@@ -22,6 +44,7 @@
 }
 .search-form {
   width: 90%;
+  align-self: right;
 }
 
 

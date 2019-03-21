@@ -18,6 +18,8 @@
         <mat-icon>people</mat-icon> Most <em> Popular </em>
       </ng-template>
       <!-- FIRST TAB TITLE END : Most Popular-->
+
+
       <!-- CARD COLUMNS : Most Popular BootStrap Implementation-->
       <div class="card-columns">
         <div class="card">
@@ -147,45 +149,51 @@
         <button button="submit" mat-raised-button color="primary">Search</button>
         <br>
 
-        <!-- Checboxers  -->
+        <!-- Checboxers
+        https://github.com/angular/material2/blob/master/src/dev-app/checkbox/checkbox-demo.html
+       -->
 
         <mat-checkbox> Vegan </mat-checkbox>
         <mat-checkbox> Vegetarian </mat-checkbox>
         <mat-checkbox> Gluten-Free </mat-checkbox>
 
-        <!-- Flex Start-->
+        <!-- Flexbox Start
+
+          Resources:
+          https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+        -->
         <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center start">
 
           <!--- Card number 1 start-->
 
-          <div fxFlex="20%">
-            <mat-card class="example-card">
+            <mat-card class="card40">
+                <img mat-card-image src="static/images/soba.png"
+                alt="Photo of a soba">
               <mat-card-header>
-
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>BAR SOBA</mat-card-title>
-                <mat-card-subtitle>50% OFF FOR STUDENTS</mat-card-subtitle>
-                <mat-icon fxFlex="15%">save_alt</mat-icon>
-                <mat-icon fxFlex="15%">favorite_border</mat-icon>
+                <div mat-card-image class="card1-bg"></div>
               </mat-card-header>
-              <img mat-card-image src="static/images/soba.png"
-                alt="Photo of a Shiba Inu">
               <mat-card-content>
+                  <div class="mat-card-title">BAR SOBA</div>
+
                 <p>
-                 Soba is lit yo
+                  50% OFF FOR STUDENTS
                 </p>
               </mat-card-content>
               <mat-card-actions>
                 <button mat-button>claim deal</button>
                 <button mat-button>more info</button>
               </mat-card-actions>
+              <mat-card-footer>
+                  <mat-icon fxFlex="15%">save_alt</mat-icon>
+                  <mat-icon fxFlex="15%">favorite_border</mat-icon>
+              </mat-card-footer>
             </mat-card>
-          </div>
           <!--- Card number 2 start-->
           <div fxFlex="50%">
-            <mat-card class="example-card">
+            <mat-card class="card20">
               <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
+                <div mat-card-avatar class="card1-bg"></div>
                 <mat-card-title>Dominos</mat-card-title>
                 <mat-card-subtitle>35% discount</mat-card-subtitle>
               </mat-card-header>
@@ -205,9 +213,9 @@
           <!--- Card number 2 end-->
           <!--- Card number 3 start-->
           <div fxFlex="30%">
-            <mat-card class="example-card">
+            <mat-card class="card20">
               <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
+                <div mat-card-avatar class="card1-bg"></div>
                 <mat-card-title>Oneup</mat-card-title>
                 <mat-card-subtitle>Deal details</mat-card-subtitle>
               </mat-card-header>
@@ -227,9 +235,9 @@
           <!--- Card number 3 end-->
            <!--- Card number 4 start-->
            <div fxFlex="30%">
-              <mat-card class="example-card">
+              <mat-card class="card20">
                 <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
+                  <div mat-card-avatar class="card1-bg"></div>
                   <mat-card-title>Oneup</mat-card-title>
                   <mat-card-subtitle>Deal details</mat-card-subtitle>
                 </mat-card-header>
@@ -250,7 +258,7 @@
 
               <!--- Card number 5 start-->
           <div fxFlex="50%">
-              <mat-card class="example-card">
+              <mat-card class="card20">
                 <mat-card-header>
                   <div mat-card-avatar class="example-header-image"></div>
                   <mat-card-title>Dominos</mat-card-title>
