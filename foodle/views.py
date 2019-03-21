@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
-from .models import BlogPost, DealModel
+from .models import DealModel
 from . import serializers
 from .permissions import ReadOnly
 from django.views.generic import TemplateView
