@@ -10,7 +10,7 @@ Template for FAQ:
 {% block title_block %}
 FAQ
 {% endblock %}
-<link rel="stylesheet" href="static/css/faq.css">
+<link rel="stylesheet" href="{% static '/css/faq.css' %}">
 {% endblock %}
 
 
@@ -34,59 +34,6 @@ FAQ
             <div class="col-md-3">
                 <img style="mx-auto; margin-top: 10px" class="img-fluid" src="{% static '/images/FAQdonut.jpg' %}" alt="Picture of Donut" class="rounded" />
             </div>
-		</div>
-
-
-	    <div class="row">
-	        <div class="col-md-12 my-auto">
-			<!--<div style="text-align:center">-->
-				<div id="faqQ"><a href="faq#Q1">Q. DO I NEED TO BE A STUDENT TO USE THIS SITE?</a></div>
-				<div id="faqQ"><a href="faq#Q2">Q. MUST ALL DEALS BE EXCLUSIVELY FOR STUDENTS?</a></div>
-				<div id="faqQ"><a href="faq#Q3">Q. DO I NEED TO BE A MEMEBER TO USE THIS SITE?</a></div>
-				<div id="faqQ"><a href="faq#Q4">Q. HOW DO I UPLOAD A DEAL?</a></div>
-				<div id="faqQ"><a href="faq#Q5">Q. DO MY FRIENDS NEED TO BE LOGGED IN TO SEE MY DEALS?</a></div>
-				<div id="faqQ"><a href="faq#Q6">Q. WHAT HAPPENS WHEN A DEAL EXPIRES?</a></div>
-				<div id="faqQ"><a href="faq#Q7">Q. DO FOODLE RECEIVE ANY KIND OF MONETARY BENEFITS FROM THE VENDORS?</a></div>
-			<!--</div>-->
-	        </div>
-	    </div>
-
-
-        <div class="row">
-            <div class="col-md-12 my-auto">
-			<div style="text-align:center">
-
-			    <div style="margin-top:100px"><a id="Q1" class="text-primary" >Q. DO I NEED TO BE A STUDENT TO USE THIS SITE?</a></div>
-				<p>A. YOU DO NOT HAVE TO BE A STUDENT TO BROWSE THE SITE AND SEE WHAT DEALS ARE ON OFFER.
-                HOWEVER, SOME DEALS WILL BE AIMED SPECIFICALLY AT STUDENTS SO RECIPIENTS MAY NEED TO PRODUCE A VALID UNIVERSITY OF GLASGOW MYCAMPUS CARD,
-				OR SIGN UP WITH A UNIVERSITY EMAIL ADDRESS, TO REDEEM THE OFFER.</p>
-
-                <a class="text-primary" id="Q2">Q. MUST ALL DEALS BE EXCLUSIVELY FOR STUDENTS?</a>
-				<p>A. WHILE THE SITE AIMS TO HELP STUDENTS FIND WAYS TO SAVE MONEY ON MEALS AND SNACKS WE ARE
-				INTERESTED IN BRINGING ANY OFFER AT ALL TO THEIR ATTENTION THAT MIGHT PROVE USEFUL.</p>
-				<a class="text-primary" id="Q3">Q. DO I NEED TO BE A MEMEBER TO USE THIS SITE?</a>
-				<p>A. YOU NEED NOT BE A MEMBER TO BROWSE THE SITE AND TAKE ADVANTAGE OF THE DEALS ON DISPLAY. YOU DO, HOWEVER, NEED TO SIGN UP TO A
-				FREE ACCOUNT IF YOU WISH TO POST DEALS YOU SEE ON YOUR TRAVELS THAT YOU MAY FEEL YOUR FELLOW STUDENTS MIGHT ENJOY.
-				ONCE SIGNED UP YOU CAN BOOKMARK TASTY DEALS FOR EASY REACH LATER AND RANK DEALS YOU THINK NEED MORE ATTENTION
-				BY HITTING THE 'LIKE' BUTTON.</p>
-				<a class="text-primary" id="Q4">Q. HOW DO I UPLOAD A DEAL?</a>
-				<p>A. UPLOADING A DEAL COULDN'T BE SIMPLER. ONCE YOU ARE LOGGED IN LOOK FOR THE 'SUBMIT' BUTTON IN THE TOP RIGHT.
-				HITTING THIS WILL BRING UP A CARD WHICH ALLOWS YOU TO FILL IN THE DETAILS OF THE OFFER AND UPLOAD A PICTURE OF YOUR CHOICE. HIT 'SUBMIT DEAL'
-                AND THE DETAILS WILL BE SENT TO OUR ADMIN STAFF TO POST ON THE HOMEPAGE. PROVIDING A PICTURE OF THE PLACE YOU FOUND THE OFFER,
-				OR PERHAPS THE OFFER IN THE WINDOW, HELPS GIVE THE SITE A BIT OF COLOUR.</p>
-				<a class="text-primary" id="Q5">Q. DO MY FRIENDS NEED TO BE LOGGED IN TO SEE MY DEALS?</a>
-				<p>A. BROWSING THE SITE CAN BE DONE WITHOUT BEING A MEMBER, SO ANYONE CAN SEE A DEAL WHEN IT IS POSTED. IF YOU
-				WANT TO ALERT YOUR FRIENDS TO A NEW DEAL RIGHT AWAY SO THEY DON'T MISS OUT, WHY NOT HIT ONE OF THE 'SHARE' BUTTONS AND
-				POST THE DETAILS TO YOU AND YOUR FRIENDS' FAVOURITE SOCIAL MEDIA PLATFORM.</p>
-				<a class="text-primary" id="Q6">Q. WHAT HAPPENS WHEN A DEAL EXPIRES?</a>
-				<p>A. WE WOULD ASK THE GENEROUS PERSON WHO POSTED THE OFFER TO REPORT BACK WHEN THEY SEE THE DEAL HAS EXIPRED.
-				IF, HOWEVER, YOU TRY TO TAKE ADVANTAGE OF A DEAL ON OUR SITE ONLY TO FIND IT IS NOW UNAVAILABLE, IT WOULD BE APPRECIATED
-				IF YOU WOULD REPORT IT US USING THE FLAG ICON ON THE DEAL PAGE SO WE CAN TAKE IT OFF DISPLAY.</p>
-				<a class="text-primary" id="Q7">Q. DO FOODLE RECEIVE ANY KIND OF MONETARY BENEFITS FROM THE VENDORS?</a>
-				<p>A. NONE OF YOUR GODDAMN BUSINESS!!!.</p>
-
-            </div>
-			</div>
 		</div>
 
 
@@ -156,9 +103,11 @@ https://github.com/CodyHouse/faq-template
 			</li>
 
 			<li>
-				<a class="cd-faq-trigger" href="#0"></a>
+				<a class="cd-faq-trigger" href="#0">What happens when a deal expires?</a>
 				<div class="cd-faq-content">
-					<p></p>
+					<p>We would ask the generous person who posted the offer to report back when they see the deal has exipred.
+				If, however, you try to take advantage of a deal on our site only to find it is now unavailable, it would be appreciated
+				if you would report it us using the flag icon on the deal page so we can take it off display.</p>
 				</div> <!-- cd-faq-content -->
 			</li>
 		</ul> <!-- cd-faq-group -->
@@ -166,9 +115,9 @@ https://github.com/CodyHouse/faq-template
 		<ul id="other" class="cd-faq-group">
 			<li class="cd-faq-title"><h2>Other</h2></li>
 			<li>
-				<a class="cd-faq-trigger" href="#0">How do I change my password?</a>
+				<a class="cd-faq-trigger" href="#0">Do foodle receive any kind of monetary benefits from the vendors?</a>
 				<div class="cd-faq-content">
-					<p>vitae repellat nostrum odio perspiciatis dolores recusandae necessitatibus, unde, deserunt voluptas possimus veniam magni soluta deleniti! Architecto, quidem, totam. Fugit minus odit unde ea cupiditate ab aperiam sed dolore facere nihil laboriosam dolorum repellat deleniti aliquam fugiat laudantium delectus sint iure odio, necessitatibus rem quisquam! Ipsum praesentium quam nisi sint, impedit sapiente facilis laudantium mollitia quae fugiat similique. Dolor maiores aliquid incidunt commodi doloremque rem! Quaerat, debitis voluptatem vero qui enim, sunt reiciendis tempore inventore maxime quasi fugiat accusamus beatae modi voluptates iste officia esse soluta tempora labore quisquam fuga, cum. Sint nemo iste nulla accusamus quam qui quos, vero, minus id. Eius mollitia consequatur fugit nam consequuntur nesciunt illo id quis reprehenderit obcaecati voluptates corrupti, minus! Possimus, perspiciatis!</p>
+					<p>We are not at liberty to disclose that information</p>
 				</div> <!-- cd-faq-content -->
 			</li>
 		</ul> <!-- cd-faq-group -->
