@@ -1,12 +1,8 @@
-$(document).ready( function() {
-
-    $('#likes').click(function(event){
-        var dealid;
-        dealid = $(this).attr("data-dealid");
-        $.get('/rango/like/', {deal_id: dealid }, function(data){
-            $('#like_count').html(data);
-                $('#likes').hide();
+$(document).ready(function () {
+    $(".btn-like").on("click", function (event) {
+        let dealid = $(this).attr("data-dealid");
+        $.get("/like/", {"deal_id": dealid}, function (data, status) {
+            $(this).hide();
         });
-    });
-
+     });
 });
