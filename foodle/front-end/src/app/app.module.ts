@@ -1,23 +1,23 @@
-import {HttpClientModule} from '@angular/common/http';
-import {MatNativeDateModule} from '@angular/material';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './material-module';
+import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './material-module';
 
-import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 // Grid List for aligning angular cards
 import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <----- HERE
 
 // Cards + bar at top
-import { AppComponent }         from './app.component';
-import { TabComponent }   from './tab/tab.component';
+import { AppComponent } from './app.component';
+import { TabComponent } from './tab/tab.component';
 
 
-import { AppRoutingModule }     from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -38,9 +38,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatNativeDateModule,
     ReactiveFormsModule
   ],
-  entryComponents: [AppComponent, TabComponent ],
-  declarations: [AppComponent, TabComponent ],
-  bootstrap: [ AppComponent, TabComponent ]
+  entryComponents: [AppComponent, TabComponent],
+  declarations: [AppComponent, TabComponent],
+  bootstrap: [AppComponent, TabComponent]
 })
 export class AppModule { }
 

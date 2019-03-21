@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -47,10 +47,10 @@ export class AppComponent {
   ];
 
   tiles = [
-    {text: 'Snacks', cols: 2, rows: 1, color: '#91B2FF', img: 'static/images/soba.png'},
-    {text: 'Under £5', cols: 1, rows: 1, color: '#B7A0E8'},
-    {text: 'Lunch', cols: 1, rows: 2, color: '#FF9191', img: 'static/images/soba.png'},
-    {text: 'under 5minutes away', cols: 3, rows: 1, color: '#D9EDD9'},
+    { text: 'Snacks', cols: 2, rows: 1, color: '#91B2FF', img: 'static/images/soba.png' },
+    { text: 'Under £5', cols: 1, rows: 1, color: '#B7A0E8' },
+    { text: 'Lunch', cols: 1, rows: 2, color: '#FF9191', img: 'static/images/soba.png' },
+    { text: 'under 5minutes away', cols: 3, rows: 1, color: '#D9EDD9' },
   ];
 
 
