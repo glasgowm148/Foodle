@@ -300,15 +300,6 @@
         <ng-template mat-tab-label>
           <mat-icon>map</mat-icon> Closest
         </ng-template>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
-          <mat-card class="card-picture" *ngFor="let picture of pictures">
-            <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-              <span fxFlex="80%">{{picture.title}}</span>
-              <mat-icon fxFlex="10%">save_alt</mat-icon>
-              <mat-icon fxFlex="10%">favorite_border</mat-icon>
-            </mat-card-title>
-            <img mat-card-image [src]="picture.img">
-          </mat-card>
-        </div>
+
       </mat-tab>
     </mat-tab-group>

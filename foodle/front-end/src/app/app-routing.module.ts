@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { TabComponent } from './tab/tab.component';
 import { MaterialNavComponent } from './material-nav/material-nav.component';
-import {SlideshowModule} from 'ng-simple-slideshow';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 
 
