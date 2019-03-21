@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block head %}
 {% block title_block %}
 FAQ
 {% endblock %}
+<link rel="stylesheet" href="/static/css/faq.css">
+{% endblock %}
+
+
 
 {% block content %}
+<link rel="stylesheet" href="static/css/faq.css">
 
 
 
@@ -308,10 +314,10 @@ https://github.com/CodyHouse/faq-template
 	</div> <!-- cd-faq-items -->
 	<a href="#0" class="cd-close-panel">Close</a>
 </section> <!-- cd-faq -->
-<script src="{% static 'front-end/main.js' %}"></script>
-<script src="{% static 'front-end/jquery-2.1.1.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
 
-<script src="{% static 'front-end/jquery.mobile.custom.min.js' %}"></script>
+<script src="{% static 'js/jquery.mobile.custom.min.js' %}"></script>
 
  <!-- Resource jQuery -->
 {% endblock %}
