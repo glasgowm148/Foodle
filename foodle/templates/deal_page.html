@@ -50,18 +50,32 @@
 </div>
 <!--container end-->
 
+<div>
+    <input id="address" value="soba, byres road"> <!-- TEMP ADDRESS. WILL BE PULLED FROM DATABASE -->
+  </div>
+
 <script>
       function initMap() {
-        var myLatLng = {lat: 55.872158, lng: -4.287869};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
-          center: myLatLng
+          center: {lat: 55.872158, lng: -4.287869}
         });
+        var geocoder = new google.maps.Geocoder();
+          geocodeAddress(geocoder, map);
+      }
 
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'University of Glasgow'
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
         });
       }
     </script>
@@ -69,12 +83,13 @@
 <script>
 
  if (navigator.geolocation) { 
-   navigator.geolocation.getCurrentPosition(function (position) {      
+   navigator.geolocation.getCurrentPosition(function (position) {        
      var lat = position.coords.latitude;                   
      var lng = position.coords.longitude;                
      var curLoc = new google.maps.LatLng(lat, lng); 
      var directionsService = new google.maps.DirectionsService();
      var directionsDisplay = new google.maps.DirectionsRenderer();
+	 var whereTo = document.getElementById('address').value;   <!-- THIS IS A STATIC LOCATION. IDEA IS TO PARSE IN ADDRESS FROM DATABASE OF DEAL VENDOR
      var mapOptions = { 
        zoom: 15,  
        center: curLoc, 
@@ -84,8 +99,8 @@
      directionsDisplay.setMap(map);
 	 var request = { 
        origin: curLoc,
-       destination: 'soba, byres road',   <!-- THIS IS A STATIC LOCATION. IDEA IS TO PARSE IN ADDRESS FROM DATABASE OF DEAL VENDOR
-       travelMode: google.maps.DirectionsTravelMode.DRIVING
+       destination: whereTo,   
+       travelMode: google.maps.DirectionsTravelMode.WALKING
      }; 
      directionsService.route(request, function (response, status) { 
        if (status == google.maps.DirectionsStatus.OK) { 
