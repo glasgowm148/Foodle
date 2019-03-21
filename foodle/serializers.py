@@ -20,5 +20,5 @@ class BlogPostSerializer(serializers.ModelSerializer):
 class DealSerializer(serializers.ModelSerializer):
     deal = serializers.StringRelatedField(many=False)
     class Meta:
-        model = SubmitModel
+        model = DealModel
         fields = ('info', 'pictures', 'likes', 'category')
