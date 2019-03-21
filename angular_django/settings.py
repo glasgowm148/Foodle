@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework', # REST framework connects python with angular. 
     'foodle' # Main Application
+    
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,11 @@ JWT_AUTH = {
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+#Email Gubbins
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = ''
+EMAIL_HOST_PASSWORD='Spengs Unite'
+EMAIL_HOST_USER='Jeff@Jeffmail.com'
