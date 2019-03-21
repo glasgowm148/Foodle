@@ -5,7 +5,8 @@ from django.utils import timezone
 class DealModel(models.Model):
     info = models.CharField(default='', max_length=200, unique=True)
     picture = models.ImageField(upload_to='deals/', blank=True)
-    likes = models.ManyToManyField(User, related_name='likes')
+    likes = models.ManyToManyField(User)
+    url = models.URLField(required=False)
     category = models.CharField(default='', max_length=50)
     
     @property

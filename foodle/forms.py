@@ -6,7 +6,7 @@ from .models import DealModel
 class SubmitForm(forms.ModelForm):
     class Meta:
         model = DealModel
-        fields = ('info', 'picture', 'category')
+        fields = ('info', 'picture', 'category', 'url')
 
 class registerForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False, help_text='Optional')

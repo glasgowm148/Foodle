@@ -32,10 +32,10 @@
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
-          <strong id="like_count"> {{ deal.likes }} </strong> likes <br />
+          <ul class="nav">
             {% if user.is_authenticated %}
-            <button id="likes-{{forloop.counter0}}" data-dealid="{{deal.id}}" class="btn btn-warning btn-sm btn-like" type="button">
-              like | <strong id="like_count">{{ deal.likes }}</strong>
+            <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-sm" type="button">
+              Like | <strong id="like_count"> {{ deal.count_likes }} </strong>
             </button>
             {% endif %}
           <ul class="nav">
@@ -59,18 +59,17 @@
 {% endfor %}
 
 <script>
-    $(document).ready( function() {
+  $(document).ready( function() {
     
     $('#likes').click(function(event){
         var dealid;
         dealid = $(this).attr("data-dealid");
         $.get('/like/', {deal_id: dealid }, function(data){
             $('#like_count').html(data);
-                $('#likes').hide();
         });
     });
     
-    });
+  });
 </script>
 
 <script>
