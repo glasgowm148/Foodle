@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-class Deal(models.Model):
+class DealModel(models.Model):
     info = models.CharField(default='', max_length=200, unique=True)
     picture = models.ImageField(upload_to='deals/', blank=True)
     likes = models.ManyToManyField(User, related_name='likes')

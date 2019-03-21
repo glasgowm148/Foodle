@@ -4,7 +4,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 
 import django
 django.setup()
-from rango.models import Category, Deal
+from foodle.models import Category, DealModel
 
 def populate():
     vegan_deals = [
@@ -133,7 +133,7 @@ def populate():
             add_deal(c, p["info"], p["picture"], p["likes"])
 
     for c in Category.objects.all():
-        for d in Deal.objects.filter(category=c):
+        for d in DealModel.objects.filter(category=c):
             print("- {0} - {1}".format(str(c), str(p)))
 
 def add_cat(name):
@@ -143,7 +143,7 @@ def add_cat(name):
     return c
 
 def add_page(cat, info, picture, likes):
-    d = Deal.objects.get_or_create(category=cat, info=info)[0]
+    d = DealModel.objects.get_or_create(category=cat, info=info)[0]
     
     d.picture=picture
     d.likes=likes
