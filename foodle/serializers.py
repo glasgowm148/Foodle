@@ -19,15 +19,15 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'username', 'first_name', 'last_name')
 
-class DealSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Deal
-        fields = ('name', 'description', 'views', 'likes')
-
 class BlogPostSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(many=False)
 
     class Meta:
         model = BlogPost
         fields = ('id', 'user', 'date', 'body')
+
+class DealSerializer(serializers.ModelSerializer):
+    deal = serializers.StringRelatedField(many=False)
+    class Meta:
+        model = Deal
+        fields = ('name', 'description', 'views', 'likes')
