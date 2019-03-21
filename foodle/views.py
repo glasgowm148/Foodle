@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
-from .models import DealModel
+from .models import DealModel, BlogPost
 from . import serializers
 from .permissions import ReadOnly
 from django.views.generic import TemplateView
@@ -131,9 +131,6 @@ def register(request):
 
     return render(request, 'register.html', {'form': form})
 
-
-
-
 class UserViewSet(viewsets.ModelViewSet):
     """
     Provides basic CRUD functions for the User model
@@ -151,5 +148,16 @@ class DealViewSet(viewsets.ModelViewSet):
     permission_classes = (ReadOnly, )
 
 
+class BlogPostViewSet(viewsets.ModelViewSet):
+    """
+    Provides basic CRUD functions for the Blog Post model
+    """
+
+    queryset = BlogPost.objects.all()
+    serializer_class = serializers.BlogPostSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
 
