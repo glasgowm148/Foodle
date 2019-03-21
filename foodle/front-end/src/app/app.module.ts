@@ -20,6 +20,8 @@ import { TabComponent } from './tab/tab.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
+import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 
 
 
@@ -36,10 +38,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   entryComponents: [AppComponent, TabComponent],
-  declarations: [AppComponent, TabComponent],
+  declarations: [AppComponent, TabComponent, ExampleNavbarComponent, CardsAngularComponent],
   bootstrap: [AppComponent, TabComponent]
 })
 export class AppModule { }
@@ -130,4 +133,3 @@ export class AppModule {}
 platformBrowserDynamic().bootstrapModule(AppModule);
 
 */
-

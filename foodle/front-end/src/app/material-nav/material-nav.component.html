@@ -1,4 +1,33 @@
-<!-- Start of tabs
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="register.html">Register!</a>
+      <a mat-list-item href="login.html">Log In!</a>
+      <a mat-list-item href="submit.html">Submit a Deal</a>
+      <a mat-list-item href="contact.html">Contact Us</a>
+      <a mat-list-item href="faq.html">FAQ</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Foodle</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+
+     <!-- Start of tabs
 
   https://material.angular.io/components/tabs/examples
 
@@ -303,3 +332,6 @@
 
       </mat-tab>
     </mat-tab-group>
+    <!-- End of tabs-->
+  </mat-sidenav-content>
+</mat-sidenav-container>

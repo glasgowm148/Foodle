@@ -1,27 +1,73 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">About</a>
+      <a mat-list-item href="#">FAQ</a>
+      <a mat-list-item href="#">Account</a>
+      <a mat-list-item href="#">Bookmarks</a>
+      <a mat-list-item href="#">Saved Deals</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>front-end</span>
+      <span>Foodle</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+
+    <mat-tab-group>
+      <!-- FIRST TAB START : Most Popular-->
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>people</mat-icon> Most <em> Popular </em>
+        </ng-template>
+      </mat-tab>
+      <mat-tab>
+        <div class='md-padding' layout="row" layout-wrap>
+          <ng-template mat-tab-label>
+            <mat-icon>thumb_up</mat-icon> Most Liked
+          </ng-template>
+          <!-- Search Bar -->
+
+          <mat-form-field class="search-form">
+            <input matInput placeholder="Search Deals.." type="text">
+          </mat-form-field>
+          <button button="submit" mat-raised-button color="primary">Search</button>
+          <br>
+
+          <!-- Checboxers
+                Resources:
+                  https://github.com/angular/material2/blob/master/src/dev-app/checkbox/checkbox-demo.html
+                  https://www.concretepage.com/angular-2/angular-material/angular-material-checkbox-example
+
+                Demo:
+                  https://stackblitz.com/edit/angular-material-flex-layout-seed?file=app%2Fmaterial.module.ts
+            -->
+
+          <mat-checkbox> Vegan </mat-checkbox>
+          <mat-checkbox> Vegetarian </mat-checkbox>
+          <mat-checkbox> Gluten-Free </mat-checkbox>
+        </div>
+      </mat-tab>
+
+
+
+
+
+    </mat-tab-group>
+
+
+
+
+
+
+    <app-cards-angular></app-cards-angular>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
