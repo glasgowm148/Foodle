@@ -6,6 +6,10 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+# https://stackoverflow.com/questions/53739868/register-your-django-router
+#https://www.django-rest-framework.org/api-guide/routers/
+# https://stackoverflow.com/questions/46141375/deploying-an-angular-4-frontend-with-a-django-rest-framework-backend-on-heroku
+# https://codeburst.io/create-a-django-api-in-under-20-minutes-2a082a60f6f3
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'posts', views.BlogPostViewSet)
 router.register(r'users', views.UserViewSet)

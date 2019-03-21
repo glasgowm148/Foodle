@@ -38,8 +38,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatNativeDateModule,
     ReactiveFormsModule
   ],
-  entryComponents: [AppComponent,TabComponent],
-  declarations: [AppComponent,TabComponent],
+  entryComponents: [AppComponent, TabComponent ],
+  declarations: [AppComponent, TabComponent ],
   bootstrap: [ AppComponent, TabComponent ]
 })
 export class AppModule { }
