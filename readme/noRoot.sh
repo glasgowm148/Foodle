@@ -49,12 +49,28 @@ cd foodle/front-end || exit
 
 rm -f package-lock.json
 
+# clean
+npm cache verify
+echo "npm :: removing node_modules"
+
+rm -rf node_modules
+#cd ../..
+
+
+
+# install globablly (within the environment)
+# npm cache verify
+# if npm version is < 5 then use `npm cache clean`
+
+# rm -f package-lock.json && npm install
+
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
-#install dev dependencies
+npm install --save-dev @angular-devkit/build-angular
+npm update
+ng update @angular/cli @angular/core
 npm install --dev
 
-npm install --save @angular/compiler-cli@latest
 # unmet dependencies 
 echo "Installing unmet dependencies"
 # npm install --save @angular/cdk@latest
@@ -88,8 +104,10 @@ echo "Installing unmet dependencies"
 
 
 # npm install --save-dev @angular-devkit/build-angular
+npm install --save-dev @angular-devkit/build-angular
 
 # update the node package to be on the same cli as the core
+
 npm update
 ng update @angular/cli @angular/core
 ng audit fix --force
