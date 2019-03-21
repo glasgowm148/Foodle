@@ -32,10 +32,11 @@
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
           <ul class="nav">
-
+              <strong id="like_count"> {{ deal.likes }} </strong> likes <br />
             {% if user.is_authenticated %}
-            <button id="likes-{{forloop.counter0}}" data-dealid="{{deal.id}}" class="btn btn-warning btn-sm btn-like" type="button">
-              like | <strong id="like_count">{{ deal.likes }}</strong>
+            <button id="likes" data-dealid="{{deal.id}}" 
+    	        class="btn btn-primary btn-sm" type="button"> <span data-feather="thumbs-up"></span>
+              Like 
             </button>
             {% endif %}
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
