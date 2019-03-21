@@ -42,6 +42,11 @@ echo "$(pwd)"
 cd foodle/front-end || exit
 
 
+# npm i -f
+# npm --production=false install
+# npm install --legacy-bundling=false
+# npm set --legacy-bundling=false
+
 rm -f package-lock.json
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
@@ -119,5 +124,3 @@ npm ls --depth 0
 
 echo " ~~~~~~ Git Stauts :: ~~~~~~ "
 git status
-
-echo "~~~~~~ manage.py runserver ~~~~~~"
