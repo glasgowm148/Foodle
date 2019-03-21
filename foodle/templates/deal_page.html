@@ -4,11 +4,13 @@
 {% block head %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="/static/css/img.css">
-<script src="{% static "js/like-ajax.js" %}"></script>
+
 
 {% endblock %}
 
 {% block content %}
+{% for deal in deals %}
+
 <!-- greg's deal_page details (start) -->
 <div id="map"></div>
 
@@ -16,7 +18,6 @@
     <br />
     <br />
     <br />
-  {% for deal in deals %}
   <div class="card-columns">
 
     <br />
@@ -31,14 +32,14 @@
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
-          <ul class="nav">
-              <strong id="like_count"> {{ deal.likes }} </strong> likes <br />
+          <strong id="like_count"> {{ deal.likes }} </strong> likes <br />
             {% if user.is_authenticated %}
             <button id="likes" data-dealid="{{deal.id}}" 
     	        class="btn btn-primary btn-sm" type="button"> <span data-feather="thumbs-up"></span>
               Like 
             </button>
             {% endif %}
+          <ul class="nav">
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
@@ -57,6 +58,21 @@
 <!--container end-->
 
 {% endfor %}
+
+<script>
+    $(document).ready( function() {
+    
+    $('#likes').click(function(event){
+        var dealid;
+        dealid = $(this).attr("data-dealid");
+        $.get('/like/', {deal_id: dealid }, function(data){
+            $('#like_count').html(data);
+                $('#likes').hide();
+        });
+    });
+    
+    });
+</script>
 
 <script>
 

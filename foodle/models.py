@@ -5,12 +5,12 @@ from django.utils import timezone
 class DealModel(models.Model):
     info = models.CharField(default='', max_length=200)
     picture = models.ImageField(upload_to='deals/', blank=True)
-    likes = models.IntegerField(default=0)
+    likes = models.ManyToManyField(User, related_name='likes')
     category = models.CharField(default='', max_length=50)
 
     @property
-    def add_like(self):
-       self.likes += 1
+    def count_likes(self):
+       return self.likes.count()
 
 class BlogPost(models.Model):
     """

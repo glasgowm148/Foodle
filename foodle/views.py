@@ -33,21 +33,22 @@ def faq(request):
 
 @login_required
 def like(request):
-    print("\n"*209)
     deal_id = None
     if request.method == 'GET':
+        user = request.user
         deal_id = request.GET.get('deal_id')
-        likes = 0
 
-    if deal_id:
-        deal = DealModel.objects.get(id=int(deal_id))
-        if deal:
-            print("yes")
-            deal.likes += 1
-            likes = deal.likes
+        if deal_id:
+            deal = DealModel.objects.get(id=int(deal_id))
+            if deal:
+                if deal.likes.filter(id=user.id).exists():
+                    deal.likes.remove(user)
+                else:
+                    deal.likes.add(user)
+                    
             deal.save()
-
-    return HttpResponse(likes)
+            
+    return HttpResponse(deal.count_likes())
 
 def deal_page(request):
     """
