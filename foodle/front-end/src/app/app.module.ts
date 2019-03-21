@@ -14,7 +14,6 @@ import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <--
 
 // Cards + bar at top
 import { AppComponent } from './app.component';
-import { TabComponent } from './tab/tab.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,9 +40,9 @@ import { CardsAngularComponent } from './cards-angular/cards-angular.component';
     ReactiveFormsModule,
 
   ],
-  entryComponents: [AppComponent, TabComponent],
-  declarations: [AppComponent, TabComponent, ExampleNavbarComponent, CardsAngularComponent],
-  bootstrap: [AppComponent, TabComponent]
+  entryComponents: [AppComponent],
+  declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 
