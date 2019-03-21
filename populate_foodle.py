@@ -4,36 +4,108 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 
 import django
 django.setup()
-from rango.models import Category, DealModel
+from rango.models import Category, Deal
 
 def populate():
-    python_pages = [
-        {"title": "Official Python Tutorial",
-         "url": "http://docs.python.org/2/tutorial/",
-         "views": 25},
-        {"title":"How to Think like a Computer Scientist",
-         "url":"http://www.greenteapress.com/thinkpython/",
-         "views": 30},
-        {"title":"Learn Python in 10 Minutes",
-         "url":"http://www.korokithakis.net/tutorials/python/",
-         "views": 35}]
-
-    django_pages = [
-        {"title":"Official Django Tutorial",
-         "url":"https://docs.djangoproject.com/en/1.9/intro/tutorial01/",
-         "views": 45},
-        {"title":"Django Rocks",
-         "url":"http://www.djangorocks.com/",
-         "views": 50},
-        {"title":"How to Tango with Django",
-         "url":"http://www.tangowithdjango.com/",
-         "views": 55}]
-
-    other_pages = [
+    vegan_deals = [
         {
-
+            "info": "Up to £5 off vegan items with a student card.",
+            "picture": ,
+            "likes": 12
+        },
+        {
+            "info": "A quarter off all purchases with a student card.",
+            "picture": ,
+            "likes": 5
+        },
+        {
+            "info": "Free soy milk (not oat) on purchases over £20",
+            "picture": ,
+            "likes": 47
         }
     ]
+
+
+
+    chinese_deals = [
+        {
+            "info": "One free drink with each meal if you have your student card.",
+            "picture": ,
+            "likes": 12
+        },
+        {
+            "info": "temp deal",
+            "picture": ,
+            "likes": 5
+        },
+        {
+            "info": "filler words",
+            "picture": ,
+            "likes": 47
+        }
+    ]
+
+
+
+    indian_deals = [
+        {
+            "info": "indian temp deal",
+            "picture": ,
+            "likes": 12
+        },
+        {
+            "info": "just filling up with test data",
+            "picture": ,
+            "likes": 5
+        },
+        {
+            "info": "bunch of fake indian deals",
+            "picture": ,
+            "likes": 47
+        }
+    ]
+
+
+
+    fastfood_deals = [
+        {
+            "info": "fake food made fast £10 off",
+            "picture": ,
+            "likes": 12
+        },
+        {
+            "info": "still populating this db with test data",
+            "picture": ,
+            "likes": 5
+        },
+        {
+            "info": "this is just tedius at this point",
+            "picture": ,
+            "likes": 47
+        }
+    ]
+
+
+
+    other_deals = [
+        {
+            "info": "this is an other deal £2 I guess?",
+            "picture": ,
+            "likes": 12
+        },
+        {
+            "info": "just polluting the pond",
+            "picture": ,
+            "likes": 5
+        },
+        {
+            "info": "there we go last one",
+            "picture": ,
+            "likes": 47
+        }
+    ]
+
+
 
     category = {
         "vegan": {
@@ -45,35 +117,39 @@ def populate():
         "indian": {
             "deals": indian_deals
         }
+        "fast food": {
+            "deals": fastfood_deals
+        }
         "other": {
             "deals": other_deals
         }
     }
 
-    for category, category_data in category.items():
-        c = add_category(cat,cat_data)
+
+
+    for cat, cat_data in category.items():
+        c = add_cat(cat)
         for p in cat_data["deals"]:
-            add_deal(c, p["title"], p["url"], p["views"])
+            add_deal(c, p["info"], p["picture"], p["likes"])
 
     for c in Category.objects.all():
-        for p in Page.objects.filter(category=c):
+        for d in Deal.objects.filter(category=c):
             print("- {0} - {1}".format(str(c), str(p)))
 
-def add_cat(name, cat_data):
+def add_cat(name):
     c = Category.objects.get_or_create(name=name)[0]
-
-    c.likes=cat_data["likes"]
+    
     c.save()
     return c
 
-def add_page(cat, title, url, views=0):
-    dm = DealModel.objects.get_or_create(category=cat, title=title)[0]
+def add_page(cat, info, picture, likes):
+    d = Deal.objects.get_or_create(category=cat, info=info)[0]
     
-    dm.url=url
-    dm.views=views
-    dm.save()
-    return dm
+    d.picture=picture
+    d.likes=likes
+    d.save()
+    return d
 
 if __name__ == '__main__':
-    print("Starting Rango population script...")
+    print("Starting Foodle population script...")
     populate()
