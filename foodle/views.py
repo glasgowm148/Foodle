@@ -34,20 +34,20 @@ def faq(request):
 def like(request):
     deal_id = None
     if request.method == 'GET':
-        user = request.user
         deal_id = request.GET.get('deal_id')
 
-        if deal_id:
+        if deal_id: 
             deal = DealModel.objects.get(id=int(deal_id))
             if deal:
-                if deal.likes.filter(id=user.id).exists():
-                    deal.likes.remove(user)
+                if deal.likes.filter(id=request.user.id).exists():
+                    deal.likes.remove(request.user)
+
                 else:
-                    deal.likes.add(user)
-                    
-            deal.save()
+                    deal.likes.add(request.user)
+                
+                deal.save()
             
-    return HttpResponse(deal.count_likes())
+    return HttpResponse(deal.count_likes)
 
 def deal_page(request):
     """
@@ -68,7 +68,6 @@ def submit(request):
 
             if 'picture' in request.FILES:
                 submit.picture = request.FILES['picture']
-
             submit.save()
             return HttpResponseRedirect(reverse('index'))
 
