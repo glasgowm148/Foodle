@@ -58,6 +58,25 @@ npm install --save @ng-bootstrap/ng-bootstrap
 # Angular Material
 npm install --save @angular/material
 
+# unmet dependencies 
+echo "Installing unmet dependencies"
+npm install --save @angular/cdk@latest
+npm install --save @angular/animations@latest
+npm install --save @angular/common@latest
+npm install --save @angular/core@latest
+npm install --save @angular/forms@latest
+npm install --save @angular/rxjs@latest
+
+
+
+# unmet dependencies
+#@angular/animations@^7.2.10
+#├── UNMET DEPENDENCY @angular/cdk@^7.3.5
+#├── UNMET DEPENDENCY @angular/common@^7.2.10
+#├── UNMET DEPENDENCY @angular/core@^7.2.10
+#├── UNMET DEPENDENCY @angular/forms@^7.2.10
+#└── UNMET DEPENDENCY rxjs@^6.4.0
+
 # https://www.techiediaries.com/django-angular-tutorial/#Fixing_Hot_Code_Reloadnp
 #npm install webpack-bundle-tracker --save
 
