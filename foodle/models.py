@@ -11,3 +11,14 @@ class DealModel(models.Model):
     @property
     def add_like(self):
        self.likes += 1
+
+class BlogPost(models.Model):
+    """
+    The "BlogPost" model for the foodle  app
+    """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateTimeField(default=timezone.now)
+    body = models.CharField(default='', max_length=200)
+
+    def __str__(self):
+        return self.body

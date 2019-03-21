@@ -132,8 +132,6 @@ def register(request):
     return render(request, 'register.html', {'form': form})
 
 
-
-
 class UserViewSet(viewsets.ModelViewSet):
     """
     Provides basic CRUD functions for the User model
