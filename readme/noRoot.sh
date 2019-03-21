@@ -25,7 +25,7 @@ pip3.6 install virtualenv
 virtualenv -p python3.6 venv
 . venv/bin/activate
 echo "~~~~~~ venv activated - installing project requirements.txt ~~~~~~"
-pip3.6 install -r requirements.txt
+pip3.6 install -r readme/requirements.txt
 
 
 # install globablly (within the environment)
@@ -61,6 +61,7 @@ npm install --save @angular/cdk@latest
 npm install --save @angular/animations@latest
 npm install --save @angular/common@latest
 npm install --save @angular/core@latest
+# forms breaks it? 
 npm install --save @angular/forms@latest
 npm install --save @angular/rxjs@latest
 npm install --save @angular/flex-layout@latest
