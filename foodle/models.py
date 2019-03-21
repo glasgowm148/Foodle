@@ -25,7 +25,7 @@ class AboutPage(models.Model):
 
     def __str__(self):
         return self.body
-        
+
 class BlogPost(models.Model):
     """
     The "BlogPost" model for the foodle  app
@@ -48,3 +48,6 @@ class Deal(models.Model):
 
     def __str__(self):
         return self.name
+
+class DealResult(models.Model):
+    Result = models.ManyToManyField(Deal, related_name='fullresult')

@@ -31,10 +31,10 @@ def faq(request):
     The faq page. This renders the container for the single-page app.
     """
     return render(request, 'faq.html')
-    
+
 def deal_page(request):
     """
-    The about page. This renders the container for the single-page app.
+    The deal page. This renders the container for the single-page app.
     """
     return render(request, 'deal_page.html', {
         'deals':  SubmitModel.objects.all()
@@ -132,6 +132,17 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
     permission_classes = (ReadOnly, )
+
+class DealViewSet(viewsets.ModelViewSet):
+    """
+    Provides basic CRUD functions for the User model
+    """
+    queryset = SubmitModel.objects.all()
+    serializer_class = serializers.UserSerializer
+    permission_classes = (ReadOnly, )
+
+
+
 
 
 class BlogPostViewSet(viewsets.ModelViewSet):

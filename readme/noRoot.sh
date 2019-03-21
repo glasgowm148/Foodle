@@ -32,7 +32,6 @@ pip3.6 install -r requirements.txt
 # npm cache verify
 # if npm version is < 5 then use `npm cache clean`
 
-# rm -f package-lock.json && npm install
 
 
 
@@ -42,17 +41,69 @@ echo "$(pwd)"
 # foodle - An app within the project, containing the Django Rest Framework views and URL routing
 cd foodle/front-end || exit
 
+
+# npm i -f
+# npm --production=false install
+# npm install --legacy-bundling=false
+# npm set --legacy-bundling=false
+
+rm -f package-lock.json
+
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
+#install dev dependencies
+npm install --dev
+
+npm install --save @angular/compiler-cli@latest
+# unmet dependencies 
+echo "Installing unmet dependencies"
+npm install --save @angular/cdk@latest
+npm install --save @angular/animations@latest
+npm install --save @angular/common@latest
+npm install --save @angular/core@latest
+# forms breaks it? 
+npm install --save @angular/forms@latest
+npm install --save @angular/rxjs@latest
+npm install --save @angular/flex-layout@latest
+npm install --save @angular-devkit/schematics/tasks@latest
+# ng-bootstrap
+npm install --save @ng-bootstrap/ng-bootstrap
+# Angular Material
+npm install --save @angular/material
+
+
 npm install --save-dev @angular-devkit/build-angular
 
 # update the node package to be on the same cli as the core
 npm update
 ng update @angular/cli @angular/core
-# ng-bootstrap
-npm install --save @ng-bootstrap/ng-bootstrap
-# Angular Material
-npm install --save @angular/material
+ng audit fix --force
+
+#verify dependencies are without error
+ng --version
+
+
+
+
+
+
+
+
+# unmet dependencies
+#@angular/animations@^7.2.10
+#├── UNMET DEPENDENCY @angular/cdk@^7.3.5
+#├── UNMET DEPENDENCY @angular/common@^7.2.10
+#├── UNMET DEPENDENCY @angular/core@^7.2.10
+#├── UNMET DEPENDENCY @angular/forms@^7.2.10
+#└── UNMET DEPENDENCY rxjs@^6.4.0
+
+# https://www.techiediaries.com/django-angular-tutorial/#Fixing_Hot_Code_Reloadnp
+#npm install webpack-bundle-tracker --save
+
+
+# Slightly different than the above statement - not sure why, gives you theme options, etc.
+ng add @angular/material
+
 
 echo " ~~~~~~   ng build... ~~~~~~"
 
@@ -74,5 +125,3 @@ npm ls --depth 0
 
 echo " ~~~~~~ Git Stauts :: ~~~~~~ "
 git status
-
-echo "~~~~~~ manage.py runserver ~~~~~~"

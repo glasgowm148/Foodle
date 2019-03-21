@@ -22,8 +22,23 @@ pip3.6 install -r requirements.txt
 # Custom bash/sh script to enter into the correct directory. 
 echo ""Moving into the foodle/front-end directory""
 echo "$(pwd)"
+
 # foodle - An app within the project, containing the Django Rest Framework views and URL routing
 cd foodle/front-end || exit
+echo "$(pwd)"
+
+
+#rm -f package-lock.json
+
+
+# clean
+npm cache verify
+echo "npm :: removing node_modules"
+
+rm -rf node_modules
+#cd ../..
+
+
 
 # install globablly (within the environment)
 # npm cache verify
@@ -33,19 +48,36 @@ cd foodle/front-end || exit
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
+
+#
+npm install bootstrap
 npm install --save-dev @angular-devkit/build-angular
 
 # update the node package to be on the same cli as the core
 npm update
 ng update @angular/cli @angular/core
 # ng-bootstrap
-npm install --save @ng-bootstrap/ng-bootstrap
+#npm install --save @ng-bootstrap/ng-bootstrap
+#npm install --save angular-in-memory-web-api
+
+echo "change selectors here?"
+
 # Angular Material
-npm install --save @angular/material
+#npm install --save @angular/material
+#npm install --save @angular/flex-layout@latest 
+
+
+You can use npm-install-peers to find and install required peer dependencies.
+
+
+# npm install --save-dev jquery@1.9.1 - 3@latest
+# npm install npm -g
+# npm install --save-dev @angular/cli@latest
+# npm install --save-dev @angular-in-memory-web-api@0.5.4@latest
+
 
 # https://www.techiediaries.com/django-angular-tutorial/#Fixing_Hot_Code_Reloadnp
 #npm install webpack-bundle-tracker --save
-
 
 # Slightly different than the above statement - not sure why, gives you theme options, etc.
 ng add @angular/material
@@ -58,7 +90,6 @@ ng add @angular/material
 
 echo " ~~~~~~   ng build... ~~~~~~"
 
-# ng build command writes generated build artifacts to the output folder (/dist)
 ng build
 echo "~~~~~~ npm installed successfully. ~~~~~~"
 
@@ -78,8 +109,6 @@ echo " ~~~~~~ Git Status :: ~~~~~~ "
 git status
 
 echo "~~~~~~ manage.py runserver ~~~~~~"
-
-
 
 # Run the python server - which is linked with angular via the REST framework. 
 python manage.py runserver

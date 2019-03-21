@@ -1,0 +1,79 @@
+.card1 {
+  display: flex;
+  margin-bottom: 10px;
+  flex: 2 1 5em;
+  margin-left: 10px;
+  height:50px;
+}
+.card20 {
+  max-width: 20%;
+  display: flex;
+  margin-bottom: 10px;
+  flex: 1 1 5em;
+  margin-left: 10px;
+  height:50px;
+}
+.card40 {
+  max-width: 40%;
+}
+
+.card60 {
+  max-width: 60%;
+}
+
+.card1-bg {
+  background-image: url('static/images/soba.png');
+  background-size: cover;
+}
+
+.mat-checkbox-layout {
+  padding-right: 20px !important;
+}
+
+.img {
+  width: 100%;
+  margin-bottom: 18%;
+}
+.card-picture {
+  width: 23%;
+  margin-bottom: 2%;
+}
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+.search-form {
+  width: 90%;
+  align-self: right;
+}
+
+
+/** http://jsfiddle.net/tndgvkfq/ **/
+div.container
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+div.container > div
+{
+    flex: 1 1 5em;
+    margin-left: 10px;
+    height:50px;
+    background-color: blue;
+}
+
+div.container > div:first-child
+{
+    margin-left: 0;
+}
+
+div.container > div.two
+{
+    flex:2 2 calc(10em + 10px); /** 10px is the missing margin of the missing box */
+}
+
+div.container > div.three
+{
+    flex:3 3 calc(15em + 20px); /** 20px is the missing margin of the two missing boxes */
+}

@@ -1,33 +1,46 @@
-import {HttpClientModule} from '@angular/common/http';
-import {MatNativeDateModule} from '@angular/material';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './material-module';
+import { HttpClientModule } from '@angular/common/http';
+import { MatNativeDateModule } from '@angular/material';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemoMaterialModule } from './material-module';
 
-import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-import { AppComponent }         from './app.component';
-import { TabComponent }   from './tab/tab.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-import { AppRoutingModule }     from './app-routing.module';
+// Grid List for aligning angular cards
+import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <----- HERE
+
+// Cards + bar at top
+import { AppComponent } from './app.component';
+import { TabComponent } from './tab/tab.component';
+
+
+import { AppRoutingModule } from './app-routing.module';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 
 
 @NgModule({
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatToolbarModule,
+    MatGridListModule,
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule
   ],
-  entryComponents: [AppComponent,TabComponent],
-  declarations: [AppComponent,TabComponent],
-  bootstrap: [ AppComponent, TabComponent ]
+  entryComponents: [AppComponent, TabComponent],
+  declarations: [AppComponent, TabComponent],
+  bootstrap: [AppComponent, TabComponent]
 })
 export class AppModule { }
 
@@ -62,7 +75,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MatTabsModule } from '@angular/material';
 
 
-import {MatNativeDateModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule} from '@angular/material';
+import {MatNativeDateModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
+  MatGridListModule, MatCardModule, MatMenuModule} from '@angular/material';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';

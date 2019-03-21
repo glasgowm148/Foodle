@@ -250,8 +250,8 @@ footer {
   padding-top: 2rem;
 }
 footer img {
-  width: 170px;
-  height: 50px;
+  width: 187px;
+  height: 55px;
 }
 footer hr.light {
   border-top: 1px solid #d5d5d5;
@@ -575,3 +575,5 @@ margin-bottom:10px;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
