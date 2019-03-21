@@ -1,8 +1,8 @@
 <!--
 This is the file called by <app-root>. Current this displays the following
 
-  : Tab menu bar
-  : Search box
+  : APP : Material Nav    --- /material-nav
+  : APP : App tav         --- /tab
   : CheckBoxes
   : Cards
 
@@ -14,17 +14,23 @@ This is the file called by <app-root>. Current this displays the following
 -->
 <app-material-nav></app-material-nav>
 
+<app-tab></app-tab>
 
+
+<div class="container">
 
 
 
   <!-- Category selection boxes at the top
-<div class="container">
-<app-tab></app-tab>
 
   https://filipmolcik.com/angular-2-and-material-grid-example/
 -->
-
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
 
 
 
