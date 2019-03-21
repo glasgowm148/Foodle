@@ -12,25 +12,23 @@ This is the file called by <app-root>. Current this displays the following
   https://www.techiediaries.com/angular-tutorial/
 
 -->
-<app-material-nav></app-material-nav>
+<app-example-navbar></app-example-navbar>
 
-<app-tab></app-tab>
-
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+    [style.background]="tile.color">
+    {{tile.text}}
+  </mat-grid-tile>
+</mat-grid-list>
 
 <div class="container">
-
 
 
   <!-- Category selection boxes at the top
 
   https://filipmolcik.com/angular-2-and-material-grid-example/
 -->
-  <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
-      [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list>
+
 
 
 

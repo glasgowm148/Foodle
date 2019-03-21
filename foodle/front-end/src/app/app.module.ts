@@ -9,37 +9,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-// APP ROOT
+// Grid List for aligning angular cards
+import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <----- HERE
+
+// Cards + bar at top
 import { AppComponent } from './app.component';
-
-/* Angular Routing */
-import { AppRoutingModule } from './app-routing.module';
-
-import { LayoutModule } from '@angular/cdk/layout';
-
-/* Slideshow */
-import {SlideshowModule} from 'ng-simple-slideshow';
-
-/***** CARDS ******/
-/* Tabs */
 import { TabComponent } from './tab/tab.component';
 
-/* Flex layout */
+
+import { AppRoutingModule } from './app-routing.module';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
+import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 
-// Grid List for aligning angular cards
-import { MatGridListModule, MatToolbarModule, MatButtonModule,
-  MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
-/* Material Nav */
-import { MaterialNavComponent } from './material-nav/material-nav.component';
+
 
 
 @NgModule({
   imports: [
-    TabComponent,
-    AppRoutingModule,
-    SlideshowModule,
     BrowserModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
@@ -50,14 +39,10 @@ import { MaterialNavComponent } from './material-nav/material-nav.component';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    LayoutModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+
   ],
   entryComponents: [AppComponent, TabComponent],
-  declarations: [AppComponent, TabComponent, MaterialNavComponent],
+  declarations: [AppComponent, TabComponent, ExampleNavbarComponent, CardsAngularComponent],
   bootstrap: [AppComponent, TabComponent]
 })
 export class AppModule { }
@@ -148,4 +133,3 @@ export class AppModule {}
 platformBrowserDynamic().bootstrapModule(AppModule);
 
 */
-

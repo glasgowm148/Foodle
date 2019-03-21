@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { IImage } from './material-nav/modules/slideshow/IImage';
 
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
