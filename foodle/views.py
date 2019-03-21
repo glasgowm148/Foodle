@@ -13,6 +13,8 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import registerForm, SubmitForm
 from .serializers import DealSerializer
 
+
+
 def index(request, path=''):
     """
     The home page. This renders the container for the single-page app.
