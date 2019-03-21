@@ -50,6 +50,21 @@
 </div>
 <!--container end-->
 
+<script>
+      function initMap() {
+        var myLatLng = {lat: 55.872158, lng: -4.287869};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'University of Glasgow'
+        });
+      }
+    </script>
 
 <script>
 
