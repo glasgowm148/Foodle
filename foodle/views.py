@@ -11,8 +11,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
 from .forms import registerForm, SubmitForm
-
-
+from .serializers import DealSerializer
 
 def index(request, path=''):
     """
@@ -32,13 +31,30 @@ def faq(request):
     """
     return render(request, 'faq.html')
 
+def like(request):
+
+    deal_id = None
+    if request.method == 'GET':
+        deal_id = request.GET.get('deal_id')
+
+    likes = 0
+    if deal_id:
+        deal = SubmitModel.objects.get(id=int(deal_id))
+        if deal:
+            likes = deal.likes + 1
+            deal.likes =  likes
+            deal.save()
+
+    return HttpResponse(likes)
+
 def deal_page(request):
     """
-    The deal page. This renders the container for the single-page app.
+    The about page. This renders the container for the single-page app.
     """
-    return render(request, 'deal_page.html', {
-        'deals':  SubmitModel.objects.all()
-    })
+    if request.method != 'POST':
+        return render(request, 'deal_page.html', {
+            'deals':  SubmitModel.objects.all()
+        })
 
 def submit(request):
 
@@ -135,14 +151,11 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class DealViewSet(viewsets.ModelViewSet):
     """
-    Provides basic CRUD functions for the Deal model
+    Provides basic CRUD functions for the User model
     """
     queryset = SubmitModel.objects.all()
     serializer_class = serializers.DealSerializer
     permission_classes = (ReadOnly, )
-
-
-
 
 
 class BlogPostViewSet(viewsets.ModelViewSet):

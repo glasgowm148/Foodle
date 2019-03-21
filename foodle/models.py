@@ -9,9 +9,6 @@ class SubmitModel(models.Model):
     category = models.CharField(default='', max_length=50)
 
     @property
-    def likes_count(self):
-        return self.likes
-    @property
     def add_like(self):
        self.likes += 1
 
@@ -36,3 +33,18 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.body
+
+class Deal(models.Model):
+    """
+    possible model for holding deals in the database (will change)
+    """
+    name = models.CharField(max_length=128, unique=True)
+    description = models.CharField(max_length=300, default='')
+    views = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name
+
+class DealResult(models.Model):
+    Result = models.ManyToManyField(Deal, related_name='fullresult')
