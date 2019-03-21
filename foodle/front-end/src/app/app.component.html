@@ -1,23 +1,24 @@
-
 <div class="container">
 
-    <mat-grid-list cols="4" rowHeight="100px">
-        <mat-grid-tile
-            *ngFor="let tile of tiles"
-            [colspan]="tile.cols"
-            [rowspan]="tile.rows"
-            [style.background]="tile.color">
-          {{tile.text}}
-        </mat-grid-tile>
-      </mat-grid-list>
+  <!-- Category selection boxes at the top-->
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
 
 
 
+  <!-- Start of tabs-->
   <mat-tab-group>
+    <!-- FIRST TAB START : Most Popular-->
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon>people</mat-icon> Most <em> Popular </em>
       </ng-template>
+      <!-- FIRST TAB TITLE END : Most Popular-->
+      <!-- CARD COLUMNS : Most Popular BootStrap Implementation-->
       <div class="card-columns">
         <div class="card">
           <img class="card-img-top" href="{% url 'deal_page' %}" src="static/images/soba.png" alt="Card image cap">
@@ -129,84 +130,159 @@
 
       </div>
     </mat-tab>
+
+
+
+    <!-- Tab Bar Menu Item :: MOST LIKED-->
     <mat-tab>
+      <div class='md-padding' layout="row" layout-wrap>
+        <ng-template mat-tab-label>
+          <mat-icon>thumb_up</mat-icon> Most Liked
+        </ng-template>
+        <!-- Search Bar -->
 
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Search Deals.." type="text">
+        </mat-form-field>
+        <button button="submit" mat-raised-button color="primary">Search</button>
+        <br>
 
-        <div class='md-padding' layout="row" layout-wrap>
-      <ng-template mat-tab-label>
-        <mat-icon>thumb_up</mat-icon> Most Liked
-      </ng-template>
+        <!-- Checboxers  -->
 
-      <mat-grid-tile colspan="2" rowspan="2">
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu">
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
-        </mat-card>
-      </mat-grid-tile>
+        <mat-checkbox> Vegan </mat-checkbox>
+        <mat-checkbox> Vegetarian </mat-checkbox>
+        <mat-checkbox> Gluten-Free </mat-checkbox>
+
+        <!-- Flex Start-->
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+
+          <!--- Card number 1 start-->
+
+          <div fxFlex="20%">
+            <mat-card class="example-card">
+              <mat-card-header>
+
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>BAR SOBA</mat-card-title>
+                <mat-card-subtitle>50% OFF FOR STUDENTS</mat-card-subtitle>
+                <mat-icon fxFlex="15%">save_alt</mat-icon>
+                <mat-icon fxFlex="15%">favorite_border</mat-icon>
+              </mat-card-header>
+              <img mat-card-image src="static/images/soba.png"
+                alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                 Soba is lit yo
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>claim deal</button>
+                <button mat-button>more info</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <!--- Card number 2 start-->
+          <div fxFlex="50%">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Dominos</mat-card-title>
+                <mat-card-subtitle>35% discount</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="static/images/dominos.png"
+                alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                 Dominos is alright too...
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>like</button>
+                <button mat-button>share</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <!--- Card number 2 end-->
+          <!--- Card number 3 start-->
+          <div fxFlex="30%">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Oneup</mat-card-title>
+                <mat-card-subtitle>Deal details</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="static/images/oneup.png"
+                alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  OneWho?
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>like</button>
+                <button mat-button>share</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <!--- Card number 3 end-->
+           <!--- Card number 4 start-->
+           <div fxFlex="30%">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Oneup</mat-card-title>
+                  <mat-card-subtitle>Deal details</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="static/images/oneup.png"
+                  alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    OneWho?
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>like</button>
+                  <button mat-button>share</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!--- Card number 4 end-->
+
+              <!--- Card number 5 start-->
+          <div fxFlex="50%">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Dominos</mat-card-title>
+                  <mat-card-subtitle>35% discount</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="static/images/dominos.png"
+                  alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                   Dominos is alright too...
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>like</button>
+                  <button mat-button>share</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!--- Card number 5 end-->
+
+        </div>
       </div>
-
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-
     </mat-tab>
+    <!--- Tab end-->
+
+
+    <!--- Tab :: Most Saved-->
 
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon>folder</mat-icon> Most Saved
       </ng-template>
-
     </mat-tab>
 
 
@@ -214,15 +290,21 @@
       <ng-template mat-tab-label>
         <mat-icon>alarm</mat-icon> Latest
       </ng-template>
-      <h1>Load the most liked cards here</h1>
-      <p>...</p>
     </mat-tab>
 
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon>map</mat-icon> Closest
       </ng-template>
-      <h1>Load the most liked cards here</h1>
-      <p>...</p>
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start start">
+        <mat-card class="card-picture" *ngFor="let picture of pictures">
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <span fxFlex="80%">{{picture.title}}</span>
+            <mat-icon fxFlex="10%">save_alt</mat-icon>
+            <mat-icon fxFlex="10%">favorite_border</mat-icon>
+          </mat-card-title>
+          <img mat-card-image [src]="picture.img">
+        </mat-card>
+      </div>
     </mat-tab>
   </mat-tab-group>

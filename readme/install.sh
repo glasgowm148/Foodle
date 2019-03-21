@@ -48,6 +48,8 @@ echo "change selectors here?"
 
 # Angular Material
 npm install --save @angular/material
+npm install --save @angular/flex-layout@latest 
+
 
 You can use npm-install-peers to find and install required peer dependencies.
 

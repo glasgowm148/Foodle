@@ -10,11 +10,39 @@ import {Component} from '@angular/core';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  tiles = [
-    {text: 'Snacks', cols: 2, rows: 1, color: '#91B2FF'},
-    {text: 'Gluten-Free', cols: 1, rows: 1, color: '#B7A0E8'},
-    {text: 'Lunch', cols: 1, rows: 2, color: '#FF9191'},
-    {text: 'Vegan', cols: 3, rows: 1, color: '#D9EDD9'},
+  title = 'app';
+
+  pictures = [
+    {
+      id: 1,
+      title: 'SOBAAA',
+      img: 'static/images/soba.png'
+    },
+    {
+      id: 2,
+      title: 'dom',
+      img: 'static/images/dominos.png'
+    },
+    {
+      id: 3,
+      title: 'dom',
+      img: 'static/images/dominos.png'
+    },
+    {
+      id: 4,
+      title: 'SOBAAA',
+      img: 'static/images/soba.png'
+    },
+    {
+      id: 5,
+      title: 'oneup',
+      img: 'static/images/oneup.png'
+    },
+    {
+      id: 6,
+      title: 'SOBAAA',
+      img: 'static/images/soba.png'
+    },
   ];
 }
 
