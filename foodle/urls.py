@@ -9,6 +9,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'posts', views.BlogPostViewSet)
 router.register(r'users', views.UserViewSet)
+router.register(r'deals', views.DealViewSet, basename='deal')
+
 
 urlpatterns = [
 
