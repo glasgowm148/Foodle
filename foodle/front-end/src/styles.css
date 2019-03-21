@@ -508,17 +508,6 @@ margin-bottom:10px;
 /* ----- Nathan CSS For Responsiveness ----- */
 
 @media (max-width: 992px) {
-  .carousel-caption {
-    top: 45%;
-  }
-  .carousel-caption h1 {
-    font-size: 350%;
-  }
-  .carousel-caption h3, .carousel-caption h2 {
-    font-size: 140%;
-    font-weight: 400;
-    padding-bottom: .2rem;
-  }
   .social a {
     font-size: 4em;
     padding: 2rem;
@@ -531,7 +520,7 @@ margin-bottom:10px;
   .carousel-caption h1 {
     font-size: 350%;
   }
-  .carousel-caption h3 {
+  .carousel-caption h3, .carousel-caption h2 {
     font-size: 140%;
     font-weight: 400;
     padding-bottom: .2rem;
@@ -551,7 +540,7 @@ margin-bottom:10px;
   .carousel-caption h1 {
     font-size: 250%;
   }
-  .carousel-caption h3 {
+  .carousel-caption h3, .carousel-caption h2 {
     font-size: 110%;
   }
   .carousel-indicators {
