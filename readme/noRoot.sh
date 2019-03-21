@@ -57,26 +57,26 @@ npm install --dev
 npm install --save @angular/compiler-cli@latest
 # unmet dependencies 
 echo "Installing unmet dependencies"
-npm install --save @angular/cdk@latest
-npm install --save @angular/animations@latest
-npm install --save @angular/common@latest
-npm install --save @angular/core@latest
+# npm install --save @angular/cdk@latest
+# npm install --save @angular/animations@latest
+# npm install --save @angular/common@latest
+# npm install --save @angular/core@latest
 # forms breaks it? 
-npm install --save @angular/forms@latest
-npm install --save @angular/rxjs@latest
-npm install --save @angular/flex-layout@latest
-npm install --save @angular-devkit/schematics/tasks@latest
+# npm install --save @angular/forms@latest
+# npm install --save @angular/rxjs@latest
+# npm install --save @angular/flex-layout@latest
+# npm install --save @angular-devkit/schematics/tasks@latest
 # ng-bootstrap
-npm install --save @ng-bootstrap/ng-bootstrap
+# npm install --save @ng-bootstrap/ng-bootstrap
 # Angular Material
-npm install --save @angular/material
+# npm install --save @angular/material
 
-npm install --save
-npm install --save @angular/core@
-npm install --save @angular/http@
-npm install --save rxjs@latest
-npm install --save jquery@latest
-npm install --save popper@latest
+# npm install --save
+# npm install --save @angular/core@
+# npm install --save @angular/http@
+# npm install --save rxjs@latest
+# npm install --save jquery@latest
+# npm install --save popper@latest
 
 # npm ERR! peer dep missing: @angular/common@>=2.0.0 <6.0.0, required by angular-in-memory-web-api@0.5.4
 # npm ERR! peer dep missing: @angular/core@>=2.0.0 <6.0.0, required by angular-in-memory-web-api@0.5.4
@@ -87,7 +87,7 @@ npm install --save popper@latest
 # npm ERR! peer dep missing: rxjs@^5.1.0, required by angular-in-memory-web-api@0.5.4
 
 
-npm install --save-dev @angular-devkit/build-angular
+# npm install --save-dev @angular-devkit/build-angular
 
 # update the node package to be on the same cli as the core
 npm update
