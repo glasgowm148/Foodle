@@ -14,15 +14,17 @@ This is the file called by <app-root>. Current this displays the following
 -->
 <app-example-navbar></app-example-navbar>
 
+<div class="container">
+
+  <app-cards-angular></app-cards-angular>
+
+
 <mat-grid-list cols="4" rowHeight="100px">
   <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
     [style.background]="tile.color">
     {{tile.text}}
   </mat-grid-tile>
 </mat-grid-list>
-
-<div class="container">
-
 
   <!-- Category selection boxes at the top
 
