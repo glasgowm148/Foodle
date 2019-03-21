@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
-from .models import DealModel, BlogPost
+from .models import BlogPost, DealModel
 from . import serializers
 from .permissions import ReadOnly
 from django.views.generic import TemplateView
@@ -31,7 +31,6 @@ def faq(request):
     """
     return render(request, 'faq.html')
 
-@login_required
 def like(request):
     deal_id = None
     if request.method == 'GET':
@@ -55,7 +54,7 @@ def deal_page(request):
     The about page. This renders the container for the single-page app.
     """
     return render(request, 'deal_page.html', {
-        'deals':  DealModel.objects.all()
+        'deals':  SubmitModel.objects.all()
     })
 
 def submit(request):

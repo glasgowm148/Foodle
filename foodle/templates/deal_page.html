@@ -32,11 +32,15 @@
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
+<<<<<<< HEAD
           <strong id="like_count"> {{ deal.likes }} </strong> likes <br />
+=======
+          <ul class="nav">
+
+>>>>>>> parent of e1954b32... clean up useless models
             {% if user.is_authenticated %}
-            <button id="likes" data-dealid="{{deal.id}}" 
-    	        class="btn btn-primary btn-sm" type="button"> <span data-feather="thumbs-up"></span>
-              Like 
+            <button id="likes-{{forloop.counter0}}" data-dealid="{{deal.id}}" class="btn btn-warning btn-sm btn-like" type="button">
+              like | <strong id="like_count">{{ deal.likes }}</strong>
             </button>
             {% endif %}
           <ul class="nav">
