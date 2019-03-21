@@ -101,9 +101,7 @@ echo "$(pwd)"
 echo " ~~~~~~ Current working directory :: ~~~~~~ "
 echo "$(pwd)"
 
-echo " ~~~~~~ Dependecy Check ::  ~~~~~~ "
 
-npm ls --depth 0
 
 echo " ~~~~~~ Git Status :: ~~~~~~ "
 git status

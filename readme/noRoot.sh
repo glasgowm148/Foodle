@@ -71,6 +71,21 @@ npm install --save @ng-bootstrap/ng-bootstrap
 # Angular Material
 npm install --save @angular/material
 
+npm install --save
+npm install --save @angular/core@
+npm install --save @angular/http@
+npm install --save rxjs@latest
+npm install --save jquery@latest
+npm install --save popper@latest
+
+# npm ERR! peer dep missing: @angular/common@>=2.0.0 <6.0.0, required by angular-in-memory-web-api@0.5.4
+# npm ERR! peer dep missing: @angular/core@>=2.0.0 <6.0.0, required by angular-in-memory-web-api@0.5.4
+# npm ERR! peer dep missing: @angular/http@>=2.0.0 <6.0.0, required by angular-in-memory-web-api@0.5.4
+# npm ERR! peer dep missing: rxjs@^5.1.0, required by angular-in-memory-web-api@0.5.4
+# npm ERR! peer dep missing: jquery@1.9.1 - 3, required by bootstrap@4.3.1
+# npm ERR! peer dep missing: popper.js@^1.14.7, required by bootstrap@4.3.1
+# npm ERR! peer dep missing: rxjs@^5.1.0, required by angular-in-memory-web-api@0.5.4
+
 
 npm install --save-dev @angular-devkit/build-angular
 
