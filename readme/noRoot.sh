@@ -104,7 +104,7 @@ echo "Installing unmet dependencies"
 
 
 # npm install --save-dev @angular-devkit/build-angular
-npm install --save-dev @angular-devkit/build-angular
+## npm install --save-dev @angular-devkit/build-angular
 
 # update the node package to be on the same cli as the core
 
@@ -135,13 +135,13 @@ ng --version
 
 
 # Slightly different than the above statement - not sure why, gives you theme options, etc.
-ng add @angular/material
+### ng add @angular/material
 
 
 echo " ~~~~~~   ng build... ~~~~~~"
 
 # ng build command writes generated build artifacts to the output folder (/dist)
-ng build
+## ng build
 echo "~~~~~~ npm installed successfully. ~~~~~~"
 
 
