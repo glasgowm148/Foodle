@@ -23,3 +23,34 @@
 .search-form {
   width: 90%;
 }
+
+
+/** http://jsfiddle.net/tndgvkfq/ **/
+div.container
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+div.container > div
+{
+    flex: 1 1 5em;
+    margin-left: 10px;
+    height:50px;
+    background-color: blue;
+}
+
+div.container > div:first-child
+{
+    margin-left: 0;
+}
+
+div.container > div.two
+{
+    flex:2 2 calc(10em + 10px); /** 10px is the missing margin of the missing box */
+}
+
+div.container > div.three
+{
+    flex:3 3 calc(15em + 20px); /** 20px is the missing margin of the two missing boxes */
+}

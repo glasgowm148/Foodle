@@ -34,7 +34,7 @@ def faq(request):
 
 def deal_page(request):
     """
-    The about page. This renders the container for the single-page app.
+    The deal page. This renders the container for the single-page app.
     """
     return render(request, 'deal_page.html', {
         'deals':  SubmitModel.objects.all()
