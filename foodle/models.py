@@ -6,7 +6,7 @@ class DealModel(models.Model):
     info = models.CharField(default='', max_length=200, unique=True)
     picture = models.ImageField(upload_to='deals/', blank=True)
     likes = models.ManyToManyField(User)
-    url = models.URLField(required=False)
+    url = models.URLField()
     category = models.CharField(default='', max_length=50)
     
     @property
