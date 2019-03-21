@@ -182,7 +182,7 @@ html, body {
 .carousel-caption h1 {
   font-family: 'vegan-style' !important;
   margin-bottom: -.2em !important;
-  font-size: 17rem;
+  font-size: 600%;
   text-shadow: 1px 1px 15px #000;
 }
 
@@ -190,8 +190,7 @@ html, body {
 
 .carousel-caption h2, .carousel-caption h3 {
   font-family: 'vegan-style' !important;
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 200%;
   text-shadow: 1px 1px 10px #000;
   padding-top: 0.5rem !important;
   padding-bottom: 0rem !important;
@@ -506,20 +505,9 @@ text-align:center;
 margin-bottom:10px;
 }
 
-/* ----- Nathan CSS For Carousel Responsiveness ----- */
+/* ----- Nathan CSS For Responsiveness ----- */
 
 @media (max-width: 992px) {
-  .carousel-caption {
-    top: 45%;
-  }
-  .carousel-caption h1 {
-    font-size: 350%;
-  }
-  .carousel-caption h3 {
-    font-size: 140%;
-    font-weight: 400;
-    padding-bottom: .2rem;
-  }
   .social a {
     font-size: 4em;
     padding: 2rem;
@@ -532,7 +520,7 @@ margin-bottom:10px;
   .carousel-caption h1 {
     font-size: 350%;
   }
-  .carousel-caption h3 {
+  .carousel-caption h3, .carousel-caption h2 {
     font-size: 140%;
     font-weight: 400;
     padding-bottom: .2rem;
@@ -552,7 +540,7 @@ margin-bottom:10px;
   .carousel-caption h1 {
     font-size: 250%;
   }
-  .carousel-caption h3 {
+  .carousel-caption h3, .carousel-caption h2 {
     font-size: 110%;
   }
   .carousel-indicators {
