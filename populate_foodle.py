@@ -1,44 +1,79 @@
 import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'angular_django.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                      'tango_with_django_project.settings')
 
 import django
 django.setup()
-from f.models import Deal
+from rango.models import Category, DealModel
 
 def populate():
-    deals = [
-        {
-            "name": "Fake Deal",
-            "info":"Description for fake deal.",
-            "category": 34,
-            "likes": 5,
-        },
-        {
-            "name": "Bar Soba - half off students!",
-            "info":"At Bar Soba you can get half the price of your order deducted by linking your student email and showing the staff.",
-            "views": 78,
-            "likes": 31,
-        },
-        {
-            "name": "Yet another fake deal",
-            "info":"This fake deal is still fake.",
-            "views": 44,
-            "likes": 15,
-        }]
+    python_pages = [
+        {"title": "Official Python Tutorial",
+         "url": "http://docs.python.org/2/tutorial/",
+         "views": 25},
+        {"title":"How to Think like a Computer Scientist",
+         "url":"http://www.greenteapress.com/thinkpython/",
+         "views": 30},
+        {"title":"Learn Python in 10 Minutes",
+         "url":"http://www.korokithakis.net/tutorials/python/",
+         "views": 35}]
 
-    for cat, cat_data in cats.items():
-        add_deal(cat,cat_data)
-        for p in cat_data["pages"]:
-            add_page(c, p["title"], p["url"], p["views"])
+    django_pages = [
+        {"title":"Official Django Tutorial",
+         "url":"https://docs.djangoproject.com/en/1.9/intro/tutorial01/",
+         "views": 45},
+        {"title":"Django Rocks",
+         "url":"http://www.djangorocks.com/",
+         "views": 50},
+        {"title":"How to Tango with Django",
+         "url":"http://www.tangowithdjango.com/",
+         "views": 55}]
 
-def add_deal(cat, title, url, views=0):
-    p = Page.objects.get_or_create(category=cat, title=title)[0]
+    other_pages = [
+        {
+
+        }
+    ]
+
+    category = {
+        "vegan": {
+            "deals": vegan_deals
+        }
+        "chinese": {
+            "deals": chinese_deals
+        }
+        "indian": {
+            "deals": indian_deals
+        }
+        "other": {
+            "deals": other_deals
+        }
+    }
+
+    for category, category_data in category.items():
+        c = add_category(cat,cat_data)
+        for p in cat_data["deals"]:
+            add_deal(c, p["title"], p["url"], p["views"])
+
+    for c in Category.objects.all():
+        for p in Page.objects.filter(category=c):
+            print("- {0} - {1}".format(str(c), str(p)))
+
+def add_cat(name, cat_data):
+    c = Category.objects.get_or_create(name=name)[0]
+
+    c.likes=cat_data["likes"]
+    c.save()
+    return c
+
+def add_page(cat, title, url, views=0):
+    dm = DealModel.objects.get_or_create(category=cat, title=title)[0]
     
-    p.url=url
-    p.views=views
-    p.save()
-    return p
+    dm.url=url
+    dm.views=views
+    dm.save()
+    return dm
 
 if __name__ == '__main__':
-    print("Starting Foodle population script...")
+    print("Starting Rango population script...")
     populate()
