@@ -8,18 +8,30 @@ import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+
+// Grid List for aligning angular cards
+import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <----- HERE
+
+// Cards + bar at top
 import { AppComponent }         from './app.component';
 import { TabComponent }   from './tab/tab.component';
 
 
 import { AppRoutingModule }     from './app-routing.module';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
+
 
 @NgModule({
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatGridListModule,
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,

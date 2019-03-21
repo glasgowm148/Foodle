@@ -49,6 +49,15 @@ echo "change selectors here?"
 # Angular Material
 npm install --save @angular/material
 
+You can use npm-install-peers to find and install required peer dependencies.
+
+
+# npm install --save-dev jquery@1.9.1 - 3@latest
+# npm install npm -g
+# npm install --save-dev @angular/cli@latest
+# npm install --save-dev @angular-in-memory-web-api@0.5.4@latest
+
+
 # https://www.techiediaries.com/django-angular-tutorial/#Fixing_Hot_Code_Reloadnp
 #npm install webpack-bundle-tracker --save
 
