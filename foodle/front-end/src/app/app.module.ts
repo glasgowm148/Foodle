@@ -9,24 +9,37 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-// Grid List for aligning angular cards
-import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <----- HERE
-
-// Cards + bar at top
+// APP ROOT
 import { AppComponent } from './app.component';
-import { TabComponent } from './tab/tab.component';
 
-
+/* Angular Routing */
 import { AppRoutingModule } from './app-routing.module';
 
+import { LayoutModule } from '@angular/cdk/layout';
+
+/* Slideshow */
+import {SlideshowModule} from 'ng-simple-slideshow';
+
+/***** CARDS ******/
+/* Tabs */
+import { TabComponent } from './tab/tab.component';
+
+/* Flex layout */
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+// Grid List for aligning angular cards
+import { MatGridListModule, MatToolbarModule, MatButtonModule,
+  MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
-
+/* Material Nav */
+import { MaterialNavComponent } from './material-nav/material-nav.component';
 
 
 @NgModule({
   imports: [
+    TabComponent,
+    AppRoutingModule,
+    SlideshowModule,
     BrowserModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
@@ -36,10 +49,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   entryComponents: [AppComponent, TabComponent],
-  declarations: [AppComponent, TabComponent],
+  declarations: [AppComponent, TabComponent, MaterialNavComponent],
   bootstrap: [AppComponent, TabComponent]
 })
 export class AppModule { }

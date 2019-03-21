@@ -16,7 +16,9 @@
 	<meta charset="utf-8">
 	<title>
 		{% block title_block %}Home{% endblock %} | Foodle
-	</title>
+  </title>
+  <app-root>Loading...</app-root>
+
 	<base href="/">
 
 	<meta name="google-signin-scope" content="profile email">
@@ -49,7 +51,10 @@
 </head>
 
 <body>
-	<!-- Navigation -->
+
+
+  <!-- Navigation
+
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">
@@ -78,7 +83,7 @@
 
 					<li class="nav-item"></li>
 
-					<!-- blank one for dirty spacing fix-->
+					<!-- blank one for dirty spacing fix
 
 					{% if user.is_authenticated %}
 
@@ -104,7 +109,7 @@
 		</div>
 	</nav>
 
-	<!--- Image Slider -->
+	<!--- Image Slider
 	<div id="slides" class="carousel slide" data-ride="carousel">
 		<ul class="carousel-indicators">
 			<li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -120,9 +125,9 @@
 		</div>
 	</div>
 
-	{% block content %}{% endblock %}
+	{% block content %}{% endblock %} -->
 
-	<!-- Footer -->
+	<!-- Footer
 	<footer>
 		<div class="container-fluid padding">
 			<div class="row text-center">
@@ -153,7 +158,8 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+  </footer>
+-->
 
 	<script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
 	<script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
