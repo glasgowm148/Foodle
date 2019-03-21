@@ -46,18 +46,10 @@ rm -f package-lock.json
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
-npm install --save-dev @angular-devkit/build-angular
+#install dev dependencies
+npm install --dev
 
-# update the node package to be on the same cli as the core
-npm update
-ng update @angular/cli @angular/core
-ng audit fix --force
-
-# ng-bootstrap
-npm install --save @ng-bootstrap/ng-bootstrap
-# Angular Material
-npm install --save @angular/material
-
+npm install --save @angular/compiler-cli@latest
 # unmet dependencies 
 echo "Installing unmet dependencies"
 npm install --save @angular/cdk@latest
@@ -66,6 +58,28 @@ npm install --save @angular/common@latest
 npm install --save @angular/core@latest
 npm install --save @angular/forms@latest
 npm install --save @angular/rxjs@latest
+npm install --save @angular/flex-layout@latest
+npm install --save @angular-devkit/schematics/tasks@latest
+# ng-bootstrap
+npm install --save @ng-bootstrap/ng-bootstrap
+# Angular Material
+npm install --save @angular/material
+
+
+npm install --save-dev @angular-devkit/build-angular
+
+# update the node package to be on the same cli as the core
+npm update
+ng update @angular/cli @angular/core
+ng audit fix --force
+
+#verify dependencies are without error
+ng --version
+
+
+
+
+
 
 
 

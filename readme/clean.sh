@@ -8,4 +8,5 @@ python manage.py migrate --run-syncdb
 cd foodle/front-end || exit
 echo "npm :: verifying cache..."
 npm cache verify
+rm -rf * node_modules
 cd ../..
