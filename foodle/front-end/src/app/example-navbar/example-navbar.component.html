@@ -20,8 +20,10 @@
       <span>Foodle</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+<!--
 
-    <img src="images/sliders/donut_cut.png" alt="donut">
+  ***********OLD SLIDERS *******
+    <img src="static/images/sliders/donut_cut.png" alt="donut">
     <div class="carousel-caption">
       <h1 class="display-2">Foodle</h1>
       <h3 class="vegan-style">Where deals become meals!</h3>
@@ -31,7 +33,7 @@
       <h1 class="display-2">Takeout</h1>
       <h3 class="vegan-style">Browse Local Offers</h3>
     </div>
-
+-->
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -41,7 +43,6 @@
       <!-- FIRST TAB START : Most Popular-->
       <!-- start of card-->
       <mat-tab>
-        <div class='md-padding' layout="row" layout-wrap>
           <ng-template mat-tab-label>
             <mat-icon>thumb_up</mat-icon> Most Liked
           </ng-template>
@@ -65,7 +66,6 @@
           <mat-checkbox> Vegan </mat-checkbox>
           <mat-checkbox> Vegetarian </mat-checkbox>
           <mat-checkbox> Gluten-Free </mat-checkbox>
-        </div>
 
       </mat-tab>
 
@@ -219,8 +219,9 @@
           <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center start">
 
               <!--- Card number 1 start-->
+              <div fxFlex="30%">
 
-              <mat-card class="card40">
+              <mat-card class="card20">
                 <img mat-card-image src="static/images/soba.png" alt="Photo of a soba">
                 <mat-card-header>
                   <div mat-card-image class="card1-bg"></div>
@@ -241,6 +242,7 @@
                   <mat-icon fxFlex="15%">favorite_border</mat-icon>
                 </mat-card-footer>
               </mat-card>
+              </div>
               <!--- Card number 2 start-->
               <div fxFlex="50%">
                 <mat-card class="card20">
