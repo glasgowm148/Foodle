@@ -141,7 +141,7 @@
     transform: scale(0.95);
   }
 
-  input[type=text],input[type=password], input[type=email] {
+  input[type=text],input[type=password], input[type=email], input[type=URL]{
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -162,7 +162,7 @@
     border-radius: 5px 5px 5px 5px;
   }
 
-  input[type=text]:focus,  input[type=password]:focus, input[type=email]:focus, input[type=url]:focus{
+  input[type=text]:focus,  input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=URL]:focus{
     background-color: #fff;
     border-bottom: 2px solid #6648b1;
   }
