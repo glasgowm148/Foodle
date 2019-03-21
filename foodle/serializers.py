@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 from .models import BlogPost
 from .models import AboutPage
-from .models import Deal
+from .models import SubmitModel
 
 
 class AboutPageSerializer(serializers.ModelSerializer):
@@ -29,5 +29,5 @@ class BlogPostSerializer(serializers.ModelSerializer):
 class DealSerializer(serializers.ModelSerializer):
     deal = serializers.StringRelatedField(many=False)
     class Meta:
-        model = Deal
-        fields = ('name', 'description', 'views', 'likes')
+        model = SubmitModel
+        fields = ('info', 'pictures', 'likes', 'category')

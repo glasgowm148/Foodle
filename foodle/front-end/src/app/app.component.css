@@ -14,7 +14,7 @@
   height:50px;
 }
 .card40 {
-  max-width: 40%;
+  max-width: 40% !important;
 }
 
 .card60 {
