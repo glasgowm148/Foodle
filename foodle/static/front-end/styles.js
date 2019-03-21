@@ -314,7 +314,7 @@ function addStyle (obj, options) {
 	// If a transform function was defined, run it on the css
 	if (options.transform && obj.css) {
 	    result = typeof options.transform === 'function'
-		 ? options.transform(obj.css) 
+		 ? options.transform(obj.css)
 		 : options.transform.default(obj.css);
 
 	    if (result) {
@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/markglasgow/Documents/Foodle/foodle/front-end/node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css */"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css");
-module.exports = __webpack_require__(/*! /Users/markglasgow/Documents/Foodle/foodle/front-end/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\1secu\foodle_dev\foodle\front-end\node_modules\@angular\material\prebuilt-themes\deeppurple-amber.css */"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css");
+module.exports = __webpack_require__(/*! C:\Users\1secu\foodle_dev\foodle\front-end\src\styles.css */"./src/styles.css");
 
 
 /***/ })
