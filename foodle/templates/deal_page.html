@@ -34,8 +34,8 @@
           <p class="card-text">{{deal.info}}</p>
           <ul class="nav">
             {% if user.is_authenticated %}
-            <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-sm" type="button">
-              Like | <strong id="like_count"> {{ deal.count_likes }} </strong>
+              <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-sm" type="button">
+              Like
             </button>
             {% endif %}
           <ul class="nav">
