@@ -14,12 +14,13 @@ import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <--
 
 // Cards + bar at top
 import { AppComponent } from './app.component';
-import { TabComponent } from './tab/tab.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
+import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 
 
 
@@ -36,11 +37,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
-  entryComponents: [AppComponent, TabComponent],
-  declarations: [AppComponent, TabComponent],
-  bootstrap: [AppComponent, TabComponent]
+  entryComponents: [AppComponent],
+  declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 
@@ -130,4 +132,3 @@ export class AppModule {}
 platformBrowserDynamic().bootstrapModule(AppModule);
 
 */
-

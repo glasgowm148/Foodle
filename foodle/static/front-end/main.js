@@ -2681,7 +2681,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\r\nThis is the file called by <app-root>. Current this displays the following\r\n\r\n  : Tab menu bar\r\n  : Search box\r\n  : CheckBoxes\r\n  : Cards\r\n\r\n  CSS is loaded from app.component.css\r\n  app.component.ts is where you pass through your data\r\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\r\n  https://www.techiediaries.com/angular-tutorial/\r\n\r\n-->\r\n<div class=\"container\">\r\n\r\n  <!-- Category selection boxes at the top\r\n\r\n  https://filipmolcik.com/angular-2-and-material-grid-example/\r\n-->\r\n  <mat-grid-list cols=\"4\" rowHeight=\"100px\">\r\n    <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\r\n      [style.background]=\"tile.color\">\r\n      {{tile.text}}\r\n    </mat-grid-tile>\r\n  </mat-grid-list>\r\n\r\n\r\n\r\n  <!-- Start of tabs\r\n\r\n  https://material.angular.io/components/tabs/examples\r\n\r\n  -->\r\n  <mat-tab-group>\r\n    <!-- FIRST TAB START : Most Popular-->\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        <mat-icon>people</mat-icon> Most <em> Popular </em>\r\n      </ng-template>\r\n      <!-- FIRST TAB TITLE END : Most Popular-->\r\n\r\n\r\n      <!-- CARD COLUMNS : Most Popular BootStrap Implementation-->\r\n      <div class=\"card-columns\">\r\n        <div class=\"card\">\r\n          <img class=\"card-img-top\" href=\"{% url 'deal_page' %}\" src=\"static/images/soba.png\" alt=\"Card image cap\">\r\n          <div class=\"card-body\">\r\n            <h5 class=\"card-title\">BAR SOBA :: 50% OFF FOR STUDENTS</h5>\r\n            <p class=\"card-text\">Bar Soba offers a 50% discount card for all students. Available Mon-Thur and Fri until\r\n              12.\r\n            </p>\r\n            <ul class=\"nav\">\r\n              <a class=\"btn btn-primary\" href=\"https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35\"\r\n                role=\"button\">Claim Deal</a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-heart\"></i></a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-bookmark\"></i></a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-flag\"></i></a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"fas fa-share-alt\"></i></a>\r\n              <a class=\"btn btn-primary\"\r\n                href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\r\n                role=\"button\">Info</a>\r\n            </ul>\r\n          </div>\r\n        </div>\r\n        <div class=\"card p-3\">\r\n          <a class=\"twitter-timeline\" href=\"https://twitter.com/FoodleGlasgow\">Tweets by TwitterDev</a>\r\n          <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\r\n        </div>\r\n\r\n        <div class=\"card\" href=\"https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35\">\r\n          <img class=\"card-img-top\" src=\"static/images/dominos.png\" alt=\"Card image cap\">\r\n          <div class=\"card-body\">\r\n            <h5 class=\"card-title\">DOMINOS :: 35% OFF</h5>\r\n            <p class=\"card-text\">Unlock 35% online student discount at Domino's Pizza when you spend £25 with Student\r\n              Beans\r\n              iD.\r\n\r\n              Use our Dominos Pizza student discount code at the checkout to enjoy 35% off your order.</p>\r\n            <ul class=\"nav\">\r\n\r\n              <a class=\"btn btn-primary\" href=\"https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35\"\r\n                role=\"button\">Claim\r\n                Deal</a>\r\n\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-heart\"></i></a><a\r\n                class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-bookmark\"></i></a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-flag\"></i></a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"fas fa-share-alt\"></i></a>\r\n              <a class=\"btn btn-primary\"\r\n                href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\r\n                role=\"button\">Info</a>\r\n            </ul>\r\n          </div>\r\n        </div>\r\n        <div class=\"card bg-primary text-white text-center p-3\">\r\n          <blockquote class=\"blockquote mb-0\">\r\n            <p>Join today to save, like and submit deals!</p>\r\n          </blockquote>\r\n          <div id=\"btn-white\">\r\n            <a class=\"white-text\" href=\"{% url 'register' %}\">Register!</a>\r\n          </div>\r\n        </div>\r\n        <div class=\"card text-center\">\r\n          <div class=\"card-body\">\r\n            <h5 class=\"card-title\">Not seeing anything you fancy?</h5>\r\n            <p class=\"card-text\">Check out our resource page for links to relevent sites</p>\r\n            <p class=\"card-text\"><small class=\"text-muted\">\r\n                <div id=\"formFooter\">\r\n                  <a class=\"underlineHover\" href=\"{% url 'register' %}\">Resources</a>\r\n                </div>\r\n              </small></p>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"card\">\r\n          <div class=\"card-body\">\r\n            <h5 class=\"card-title\">About</h5>\r\n            <p class=\"card-text\">Foodle aims to provide you with up-to-date deals on food around campus\r\n              Create an account to save, like or submit deals</p>\r\n            <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"card\">\r\n          <img class=\"card-img\" href=\"{% url 'deal_page' %}\" src=\"static/images/internal_button.png\" alt=\"Card image\">\r\n        </div>\r\n        <div class=\"card p-3\">\r\n\r\n          <img class=\"card-img-top\" href=\"{% url 'deal_page' %}\" src=\"static/images/oneup.png\" alt=\"Card image cap\">\r\n\r\n          <div class=\"card-body\">\r\n            <h5 class=\"card-title\">One Up burgers, Royal Exchange Sq</h5>\r\n            <p class=\"card-text\">Burgers and fries for two or four with an optional glass of wine or bottled beer each -\r\n              £8\r\n            </p>\r\n            <ul class=\"nav\">\r\n              <a class=\"btn btn-primary\"\r\n                href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\r\n                role=\"button\">Claim Deal</a>\r\n\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-heart\"></i></a><a\r\n                class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-bookmark\"></i></a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-flag\"></i></a>\r\n              <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"fas fa-share-alt\"></i></a>\r\n              <a class=\"btn btn-primary\"\r\n                href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\r\n                role=\"button\">Info</a>\r\n            </ul>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n    </mat-tab>\r\n\r\n\r\n\r\n    <!-- Tab Bar Menu Item :: MOST LIKED-->\r\n    <mat-tab>\r\n      <div class='md-padding' layout=\"row\" layout-wrap>\r\n        <ng-template mat-tab-label>\r\n          <mat-icon>thumb_up</mat-icon> Most Liked\r\n        </ng-template>\r\n        <!-- Search Bar -->\r\n\r\n        <mat-form-field class=\"search-form\">\r\n          <input matInput placeholder=\"Search Deals..\" type=\"text\">\r\n        </mat-form-field>\r\n        <button button=\"submit\" mat-raised-button color=\"primary\">Search</button>\r\n        <br>\r\n\r\n        <!-- Checboxers\r\n            Resources:\r\n              https://github.com/angular/material2/blob/master/src/dev-app/checkbox/checkbox-demo.html\r\n              https://www.concretepage.com/angular-2/angular-material/angular-material-checkbox-example\r\n\r\n            Demo:\r\n              https://stackblitz.com/edit/angular-material-flex-layout-seed?file=app%2Fmaterial.module.ts\r\n        -->\r\n\r\n        <mat-checkbox> Vegan </mat-checkbox>\r\n        <mat-checkbox> Vegetarian </mat-checkbox>\r\n        <mat-checkbox> Gluten-Free </mat-checkbox>\r\n\r\n        <!--\r\n          Flexbox Start\r\n\r\n          Resources:\r\n          https://css-tricks.com/snippets/css/a-guide-to-flexbox/\r\n          Demos:\r\n          https://tburleson-layouts-demos.firebaseapp.com/#/stackoverflow\r\n          https://github.com/flavens/material-flexlayout\r\n          https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c\r\n        -->\r\n        <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0.5%\" fxLayoutAlign=\"center start\">\r\n\r\n          <!--- Card number 1 start-->\r\n\r\n          <mat-card class=\"card40\">\r\n            <img mat-card-image src=\"static/images/soba.png\" alt=\"Photo of a soba\">\r\n            <mat-card-header>\r\n              <div mat-card-image class=\"card1-bg\"></div>\r\n            </mat-card-header>\r\n            <mat-card-content>\r\n              <div class=\"mat-card-title\">BAR SOBA</div>\r\n\r\n              <p>\r\n                50% OFF FOR STUDENTS\r\n              </p>\r\n            </mat-card-content>\r\n            <mat-card-actions>\r\n              <button mat-button>claim deal</button>\r\n              <button mat-button>more info</button>\r\n            </mat-card-actions>\r\n            <mat-card-footer>\r\n              <mat-icon fxFlex=\"15%\">save_alt</mat-icon>\r\n              <mat-icon fxFlex=\"15%\">favorite_border</mat-icon>\r\n            </mat-card-footer>\r\n          </mat-card>\r\n          <!--- Card number 2 start-->\r\n          <div fxFlex=\"50%\">\r\n            <mat-card class=\"card20\">\r\n              <mat-card-header>\r\n                <div mat-card-avatar class=\"card1-bg\"></div>\r\n                <mat-card-title>Dominos</mat-card-title>\r\n                <mat-card-subtitle>35% discount</mat-card-subtitle>\r\n              </mat-card-header>\r\n              <img mat-card-image src=\"static/images/dominos.png\" alt=\"Photo of a Shiba Inu\">\r\n              <mat-card-content>\r\n                <p>\r\n                  Dominos is alright too...\r\n                </p>\r\n              </mat-card-content>\r\n              <mat-card-actions>\r\n                <button mat-button>like</button>\r\n                <button mat-button>share</button>\r\n              </mat-card-actions>\r\n            </mat-card>\r\n          </div>\r\n          <!--- Card number 2 end-->\r\n          <!--- Card number 3 start-->\r\n          <div fxFlex=\"30%\">\r\n            <mat-card class=\"card20\">\r\n              <mat-card-header>\r\n                <div mat-card-avatar class=\"card1-bg\"></div>\r\n                <mat-card-title>Oneup</mat-card-title>\r\n                <mat-card-subtitle>Deal details</mat-card-subtitle>\r\n              </mat-card-header>\r\n              <img mat-card-image src=\"static/images/oneup.png\" alt=\"Photo of a Shiba Inu\">\r\n              <mat-card-content>\r\n                <p>\r\n                  OneWho?\r\n                </p>\r\n              </mat-card-content>\r\n              <mat-card-actions>\r\n                <button mat-button>like</button>\r\n                <button mat-button>share</button>\r\n              </mat-card-actions>\r\n            </mat-card>\r\n          </div>\r\n          <!--- Card number 3 end-->\r\n          <!--- Card number 4 start-->\r\n          <div fxFlex=\"30%\">\r\n            <mat-card class=\"card20\">\r\n              <mat-card-header>\r\n                <div mat-card-avatar class=\"card1-bg\"></div>\r\n                <mat-card-title>Oneup</mat-card-title>\r\n                <mat-card-subtitle>Deal details</mat-card-subtitle>\r\n              </mat-card-header>\r\n              <img mat-card-image src=\"static/images/oneup.png\" alt=\"Photo of a Shiba Inu\">\r\n              <mat-card-content>\r\n                <p>\r\n                  OneWho?\r\n                </p>\r\n              </mat-card-content>\r\n              <mat-card-actions>\r\n                <button mat-button>like</button>\r\n                <button mat-button>share</button>\r\n              </mat-card-actions>\r\n            </mat-card>\r\n          </div>\r\n          <!--- Card number 4 end-->\r\n\r\n          <!--- Card number 5 start-->\r\n          <div fxFlex=\"50%\">\r\n            <mat-card class=\"card20\">\r\n              <mat-card-header>\r\n                <div mat-card-avatar class=\"example-header-image\"></div>\r\n                <mat-card-title>Dominos</mat-card-title>\r\n                <mat-card-subtitle>35% discount</mat-card-subtitle>\r\n              </mat-card-header>\r\n              <img mat-card-image src=\"static/images/dominos.png\" alt=\"Photo of a Shiba Inu\">\r\n              <mat-card-content>\r\n                <p>\r\n                  Dominos is alright too...\r\n                </p>\r\n              </mat-card-content>\r\n              <mat-card-actions>\r\n                <button mat-button>like</button>\r\n                <button mat-button>share</button>\r\n              </mat-card-actions>\r\n            </mat-card>\r\n          </div>\r\n          <!--- Card number 5 end-->\r\n\r\n        </div>\r\n      </div>\r\n    </mat-tab>\r\n    <!--- Tab end-->\r\n\r\n\r\n    <!--- Tab :: Most Saved-->\r\n\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        <mat-icon>folder</mat-icon> Most Saved\r\n      </ng-template>\r\n    </mat-tab>\r\n\r\n\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        <mat-icon>alarm</mat-icon> Latest\r\n      </ng-template>\r\n    </mat-tab>\r\n\r\n    <mat-tab>\r\n      <ng-template mat-tab-label>\r\n        <mat-icon>map</mat-icon> Closest\r\n      </ng-template>\r\n      <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0.5%\" fxLayoutAlign=\"start start\">\r\n        <mat-card class=\"card-picture\" *ngFor=\"let picture of pictures\">\r\n          <mat-card-title fxLayout.gt-xs=\"row\" fxLayout.xs=\"column\">\r\n            <span fxFlex=\"80%\">{{picture.title}}</span>\r\n            <mat-icon fxFlex=\"10%\">save_alt</mat-icon>\r\n            <mat-icon fxFlex=\"10%\">favorite_border</mat-icon>\r\n          </mat-card-title>\r\n          <img mat-card-image [src]=\"picture.img\">\r\n        </mat-card>\r\n      </div>\r\n    </mat-tab>\r\n  </mat-tab-group>\r\n"
+module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n<app-example-navbar></app-example-navbar>\n\n<div class=\"container\">\n\n\n\n<mat-grid-list cols=\"4\" rowHeight=\"100px\">\n  <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n    [style.background]=\"tile.color\">\n    {{tile.text}}\n  </mat-grid-tile>\n</mat-grid-list>\n\n  <!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n\n\n\n\n\n"
 
 /***/ }),
 
@@ -2740,14 +2740,48 @@ var AppComponent = /** @class */ (function () {
             { text: 'Lunch', cols: 1, rows: 2, color: '#FF9191', img: 'static/images/soba.png' },
             { text: 'under 5minutes away', cols: 3, rows: 1, color: '#D9EDD9' },
         ];
+        this.imageUrls = [
+            { url: 'static/images/soba.png',
+                caption: 'The first slide', href: '#config' },
+            { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg',
+                clickAction: function () { return alert('custom click function'); } },
+            { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56789263/akrales_170919_1976_0104.0.jpg',
+                caption: 'Apple TV', href: 'https://www.apple.com/' },
+            { url: 'assets/kitties.jpg', backgroundSize: 'contain', backgroundPosition: 'center' }
+        ];
+        this.height = '400px';
+        this.arrowSize = '30px';
+        this.showArrows = true;
+        this.disableSwiping = false;
+        this.autoPlay = true;
+        this.autoPlayInterval = 3333;
+        this.stopAutoPlayOnSlide = true;
+        this.debug = false;
+        this.backgroundSize = 'cover';
+        this.backgroundPosition = 'center center';
+        this.backgroundRepeat = 'no-repeat';
+        this.showDots = true;
+        this.dotColor = '#FFF';
+        this.showCaptions = true;
+        this.captionColor = '#FFF';
+        this.captionBackground = 'rgba(0, 0, 0, .35)';
+        this.lazyLoad = false;
+        this.hideOnNoSlides = false;
+        this.width = '100%';
+        this.fullscreen = false;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // adding an image url dynamically.
+        setTimeout(function () {
+            console.log('adding an image url dynamically.');
+            _this.imageUrls.push('https://cdn-images-1.medium.com/max/2000/1*Nccd2ofdArlXF7v58UK94Q.jpeg');
+        }, 2000);
+        console.log("\n                                  /   \\\n _                        )      ((   ))     (\n(@)                      /|\\      ))_((     /|\\\n|-|                     / | \\    (/\\|/\\)   / | \\                      (@)\n| | -------------------/--|-voV---`|'/---Vov-|--\\---------------------|-|\n|-|                         '^`   (o o)  '^`                          | |\n| |                               `\\Y/'                               |-|\n|-|                                                                   | |\n| |                                Hey                                |-|\n|-|                                                                   | |\n| |                                                                   |-|\n|_|___________________________________________________________________| |\n(@)              l   /\\ /         ( (       \\ /\\   l                `\\|-|\n                 l /   V           \\ \\       V   \\ l                  (@)\n                 l/                _) )_          \\I\n                                   `\\ /'\n\t\t\t\t                     `\n    ");
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html")
-        }),
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'material-app',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html")
         })
     ], AppComponent);
@@ -2781,8 +2815,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _tab_tab_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./tab/tab.component */ "./src/app/tab/tab.component.ts");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./example-navbar/example-navbar.component */ "./src/app/example-navbar/example-navbar.component.ts");
+/* harmony import */ var _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cards-angular/cards-angular.component */ "./src/app/cards-angular/cards-angular.component.ts");
 
 
 
@@ -2798,6 +2833,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -2805,7 +2841,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["NgModule"])({
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_7__["BrowserModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_11__["FlexLayoutModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__["FlexLayoutModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
@@ -2813,11 +2849,11 @@ var AppModule = /** @class */ (function () {
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClientModule"],
                 _material_module__WEBPACK_IMPORTED_MODULE_5__["DemoMaterialModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatNativeDateModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"],
             ],
-            entryComponents: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _tab_tab_component__WEBPACK_IMPORTED_MODULE_10__["TabComponent"]],
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _tab_tab_component__WEBPACK_IMPORTED_MODULE_10__["TabComponent"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _tab_tab_component__WEBPACK_IMPORTED_MODULE_10__["TabComponent"]]
+            entryComponents: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__["ExampleNavbarComponent"], _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__["CardsAngularComponent"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -2896,6 +2932,144 @@ export class AppModule {}
 platformBrowserDynamic().bootstrapModule(AppModule);
 
 */
+
+
+/***/ }),
+
+/***/ "./src/app/cards-angular/cards-angular.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/cards-angular/cards-angular.component.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".grid-container {\n  margin: 20px;\n}\n\n.dashboard-card {\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  right: 15px;\n  bottom: 15px;\n}\n\n.more-button {\n  position: absolute;\n  top: 5px;\n  right: 10px;\n}\n\n.dashboard-card-content {\n  text-align: center;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2FyZHMtYW5ndWxhci9jYXJkcy1hbmd1bGFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULFVBQVU7RUFDVixXQUFXO0VBQ1gsWUFBWTtBQUNkOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFFBQVE7RUFDUixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jYXJkcy1hbmd1bGFyL2NhcmRzLWFuZ3VsYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ncmlkLWNvbnRhaW5lciB7XG4gIG1hcmdpbjogMjBweDtcbn1cblxuLmRhc2hib2FyZC1jYXJkIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDE1cHg7XG4gIGxlZnQ6IDE1cHg7XG4gIHJpZ2h0OiAxNXB4O1xuICBib3R0b206IDE1cHg7XG59XG5cbi5tb3JlLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA1cHg7XG4gIHJpZ2h0OiAxMHB4O1xufVxuXG4uZGFzaGJvYXJkLWNhcmQtY29udGVudCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/cards-angular/cards-angular.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/cards-angular/cards-angular.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"grid-container\">\n  <h1 class=\"mat-h1\">Dashboard</h1>\n  <mat-grid-list cols=\"2\" rowHeight=\"350px\">\n    <mat-grid-tile *ngFor=\"let card of cards | async\" [colspan]=\"card.cols\" [rowspan]=\"card.rows\">\n      <mat-card class=\"dashboard-card\">\n        <mat-card-header>\n          <mat-card-title>\n            {{card.title}}\n            <button mat-icon-button class=\"more-button\" [matMenuTriggerFor]=\"menu\" aria-label=\"Toggle menu\">\n              <mat-icon>more_vert</mat-icon>\n            </button>\n            <mat-menu #menu=\"matMenu\" xPosition=\"before\">\n              <button mat-menu-item>Expand</button>\n              <button mat-menu-item>Remove</button>\n            </mat-menu>\n          </mat-card-title>\n        </mat-card-header>\n        <mat-card-content class=\"dashboard-card-content\">\n          <div>Card Content Here</div>\n        </mat-card-content>\n      </mat-card>\n    </mat-grid-tile>\n  </mat-grid-list>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/cards-angular/cards-angular.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/cards-angular/cards-angular.component.ts ***!
+  \**********************************************************/
+/*! exports provided: CardsAngularComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardsAngularComponent", function() { return CardsAngularComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+
+
+
+
+var CardsAngularComponent = /** @class */ (function () {
+    function CardsAngularComponent(breakpointObserver) {
+        this.breakpointObserver = breakpointObserver;
+        /** Based on the screen size, switch from standard to one column per row */
+        this.cards = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["Breakpoints"].Handset).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (_a) {
+            var matches = _a.matches;
+            if (matches) {
+                return [
+                    { title: 'Card 1', cols: 1, rows: 1 },
+                    { title: 'Card 2', cols: 1, rows: 1 },
+                    { title: 'Card 3', cols: 1, rows: 1 },
+                    { title: 'Card 4', cols: 1, rows: 1 }
+                ];
+            }
+            return [
+                { title: 'Card 1', cols: 2, rows: 1 },
+                { title: 'Card 2', cols: 1, rows: 1 },
+                { title: 'Card 3', cols: 1, rows: 2 },
+                { title: 'Card 4', cols: 1, rows: 1 }
+            ];
+        }));
+    }
+    CardsAngularComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-cards-angular',
+            template: __webpack_require__(/*! ./cards-angular.component.html */ "./src/app/cards-angular/cards-angular.component.html"),
+            styles: [__webpack_require__(/*! ./cards-angular.component.css */ "./src/app/cards-angular/cards-angular.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["BreakpointObserver"]])
+    ], CardsAngularComponent);
+    return CardsAngularComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/example-navbar/example-navbar.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/example-navbar/example-navbar.component.css ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  width: 200px;\n}\n\n.sidenav .mat-toolbar {\n  background: inherit;\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXhhbXBsZS1uYXZiYXIvZXhhbXBsZS1uYXZiYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLHdCQUFnQjtFQUFoQixnQkFBZ0I7RUFDaEIsTUFBTTtFQUNOLFVBQVU7QUFDWiIsImZpbGUiOiJzcmMvYXBwL2V4YW1wbGUtbmF2YmFyL2V4YW1wbGUtbmF2YmFyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZW5hdi1jb250YWluZXIge1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5zaWRlbmF2IHtcbiAgd2lkdGg6IDIwMHB4O1xufVxuXG4uc2lkZW5hdiAubWF0LXRvb2xiYXIge1xuICBiYWNrZ3JvdW5kOiBpbmhlcml0O1xufVxuXG4ubWF0LXRvb2xiYXIubWF0LXByaW1hcnkge1xuICBwb3NpdGlvbjogc3RpY2t5O1xuICB0b3A6IDA7XG4gIHotaW5kZXg6IDE7XG59XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/example-navbar/example-navbar.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/example-navbar/example-navbar.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\" [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <mat-toolbar>Menu</mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item href=\"#\">About</a>\n      <a mat-list-item href=\"#\">FAQ</a>\n      <a mat-list-item href=\"#\">Account</a>\n      <a mat-list-item href=\"#\">Bookmarks</a>\n      <a mat-list-item href=\"#\">Saved Deals</a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n      <span>Foodle</span>\n    </mat-toolbar>\n    <!-- Add Content Here -->\n<!--\n\n  ***********OLD SLIDERS *******\n    <img src=\"static/images/sliders/donut_cut.png\" alt=\"donut\">\n    <div class=\"carousel-caption\">\n      <h1 class=\"display-2\">Foodle</h1>\n      <h3 class=\"vegan-style\">Where deals become meals!</h3>\n    </div>\n    <img src=\"static/images/sliders/donut_cut.png alt=\"donut\">\n    <div class=\"carousel-caption\">\n      <h1 class=\"display-2\">Takeout</h1>\n      <h3 class=\"vegan-style\">Browse Local Offers</h3>\n    </div>\n-->\n\n    <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n\n    <div class=\"mat-app-background basic-container\">\n\n    <mat-tab-group>\n      <!-- FIRST TAB START : Most Popular-->\n      <!-- start of card-->\n      <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>thumb_up</mat-icon> Most Liked\n          </ng-template>\n\n\n          <!-- Search Bar -->\n          <mat-form-field class=\"search-form\">\n            <input matInput placeholder=\"Search Deals..\" type=\"text\">\n          </mat-form-field>\n          <button button=\"submit\" mat-raised-button color=\"primary\">Search</button>\n          <br>\n\n          <!-- Checboxers\n                Resources:\n                  https://github.com/angular/material2/blob/master/src/dev-app/checkbox/checkbox-demo.html\n                  https://www.concretepage.com/angular-2/angular-material/angular-material-checkbox-example\n\n                Demo:\n                  https://stackblitz.com/edit/angular-material-flex-layout-seed?file=app%2Fmaterial.module.ts\n            -->\n          <mat-checkbox> Vegan </mat-checkbox>\n          <mat-checkbox> Vegetarian </mat-checkbox>\n          <mat-checkbox> Gluten-Free </mat-checkbox>\n\n      </mat-tab>\n\n        <!-- start of card-->\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>people</mat-icon> Most <em> Popular </em>\n          </ng-template>\n      </mat-tab>\n      <!-- end of card-->\n\n\n      <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>folder</mat-icon> Bootstrap\n          </ng-template>\n          <div class=\"card-columns\">\n              <div class=\"card\">\n                <img class=\"card-img-top\" href=\"{% url 'deal_page' %}\" src=\"static/images/soba.png\" alt=\"Card image cap\">\n                <div class=\"card-body\">\n                  <h5 class=\"card-title\">BAR SOBA :: 50% OFF FOR STUDENTS</h5>\n                  <p class=\"card-text\">Bar Soba offers a 50% discount card for all students. Available Mon-Thur and Fri until\n                    12.\n                  </p>\n                  <ul class=\"nav\">\n                    <a class=\"btn btn-primary\" href=\"https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35\"\n                      role=\"button\">Claim Deal</a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-heart\"></i></a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-bookmark\"></i></a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-flag\"></i></a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"fas fa-share-alt\"></i></a>\n                    <a class=\"btn btn-primary\"\n                      href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\n                      role=\"button\">Info</a>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"card p-3\">\n                <a class=\"twitter-timeline\" href=\"https://twitter.com/FoodleGlasgow\">Tweets by TwitterDev</a>\n                <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n              </div>\n\n              <div class=\"card\" href=\"https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35\">\n                <img class=\"card-img-top\" src=\"static/images/dominos.png\" alt=\"Card image cap\">\n                <div class=\"card-body\">\n                  <h5 class=\"card-title\">DOMINOS :: 35% OFF</h5>\n                  <p class=\"card-text\">Unlock 35% online student discount at Domino's Pizza when you spend £25 with Student\n                    Beans\n                    iD.\n\n                    Use our Dominos Pizza student discount code at the checkout to enjoy 35% off your order.</p>\n                  <ul class=\"nav\">\n\n                    <a class=\"btn btn-primary\" href=\"https://www.studentbeans.com/student-discount/uk/domino-s-pizza/code-35\"\n                      role=\"button\">Claim\n                      Deal</a>\n\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-heart\"></i></a><a\n                      class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-bookmark\"></i></a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-flag\"></i></a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"fas fa-share-alt\"></i></a>\n                    <a class=\"btn btn-primary\"\n                      href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\n                      role=\"button\">Info</a>\n                  </ul>\n                </div>\n              </div>\n              <div class=\"card bg-primary text-white text-center p-3\">\n                <blockquote class=\"blockquote mb-0\">\n                  <p>Join today to save, like and submit deals!</p>\n                </blockquote>\n                <div id=\"btn-white\">\n                  <a class=\"white-text\" href=\"{% url 'register' %}\">Register!</a>\n                </div>\n              </div>\n              <div class=\"card text-center\">\n                <div class=\"card-body\">\n                  <h5 class=\"card-title\">Not seeing anything you fancy?</h5>\n                  <p class=\"card-text\">Check out our resource page for links to relevent sites</p>\n                  <p class=\"card-text\"><small class=\"text-muted\">\n                      <div id=\"formFooter\">\n                        <a class=\"underlineHover\" href=\"{% url 'register' %}\">Resources</a>\n                      </div>\n                    </small></p>\n                </div>\n              </div>\n\n              <div class=\"card\">\n                <div class=\"card-body\">\n                  <h5 class=\"card-title\">About</h5>\n                  <p class=\"card-text\">Foodle aims to provide you with up-to-date deals on food around campus\n                    Create an account to save, like or submit deals</p>\n                  <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n                </div>\n              </div>\n\n\n              <div class=\"card\">\n                <img class=\"card-img\" href=\"{% url 'deal_page' %}\" src=\"static/images/internal_button.png\" alt=\"Card image\">\n              </div>\n              <div class=\"card p-3\">\n\n                <img class=\"card-img-top\" href=\"{% url 'deal_page' %}\" src=\"static/images/oneup.png\" alt=\"Card image cap\">\n\n                <div class=\"card-body\">\n                  <h5 class=\"card-title\">One Up burgers, Royal Exchange Sq</h5>\n                  <p class=\"card-text\">Burgers and fries for two or four with an optional glass of wine or bottled beer each -\n                    £8\n                  </p>\n                  <ul class=\"nav\">\n                    <a class=\"btn btn-primary\"\n                      href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\n                      role=\"button\">Claim Deal</a>\n\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-heart\"></i></a><a\n                      class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-bookmark\"></i></a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"far fa-flag\"></i></a>\n                    <a class=\"nav-link\" href=\"https://github.com/glasgowm148/foodle_dev\"><i class=\"fas fa-share-alt\"></i></a>\n                    <a class=\"btn btn-primary\"\n                      href=\"https://www.itison.com/Glasgow/deals/one-up-burgers-cocktails-royal-exchange-sq\"\n                      role=\"button\">Info</a>\n                  </ul>\n                </div>\n              </div>\n\n            </div>\n        </mat-tab>\n\n\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>alarm</mat-icon> Latest\n          </ng-template>\n        </mat-tab>\n\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>map</mat-icon> FlexBox\n          </ng-template>\n\n          <!--\n            Flexbox Start\n\n            Resources:\n            https://css-tricks.com/snippets/css/a-guide-to-flexbox/\n            Demos:\n            https://tburleson-layouts-demos.firebaseapp.com/#/stackoverflow\n            https://github.com/flavens/material-flexlayout\n            https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c\n          -->\n          <div fxLayout=\"row\" fxLayout.xs=\"column\" fxLayoutWrap fxLayoutGap=\"0.5%\" fxLayoutAlign=\"center start\">\n\n              <!--- Card number 1 start-->\n              <div fxFlex=\"30%\">\n\n              <mat-card class=\"card20\">\n                <img mat-card-image src=\"static/images/soba.png\" alt=\"Photo of a soba\">\n                <mat-card-header>\n                  <div mat-card-image class=\"card1-bg\"></div>\n                </mat-card-header>\n                <mat-card-content>\n                  <div class=\"mat-card-title\">BAR SOBA</div>\n\n                  <p>\n                    50% OFF FOR STUDENTS\n                  </p>\n                </mat-card-content>\n                <mat-card-actions>\n                  <button mat-button>claim deal</button>\n                  <button mat-button>more info</button>\n                </mat-card-actions>\n                <mat-card-footer>\n                  <mat-icon fxFlex=\"15%\">save_alt</mat-icon>\n                  <mat-icon fxFlex=\"15%\">favorite_border</mat-icon>\n                </mat-card-footer>\n              </mat-card>\n              </div>\n              <!--- Card number 2 start-->\n              <div fxFlex=\"50%\">\n                <mat-card class=\"card20\">\n                  <mat-card-header>\n                    <div mat-card-avatar class=\"card1-bg\"></div>\n                    <mat-card-title>Dominos</mat-card-title>\n                    <mat-card-subtitle>35% discount</mat-card-subtitle>\n                  </mat-card-header>\n                  <img mat-card-image src=\"static/images/dominos.png\" alt=\"Photo of a Shiba Inu\">\n                  <mat-card-content>\n                    <p>\n                      Dominos is alright too...\n                    </p>\n                  </mat-card-content>\n                  <mat-card-actions>\n                    <button mat-button>like</button>\n                    <button mat-button>share</button>\n                  </mat-card-actions>\n                </mat-card>\n              </div>\n              <!--- Card number 2 end-->\n              <!--- Card number 3 start-->\n              <div fxFlex=\"30%\">\n                <mat-card class=\"card20\">\n                  <mat-card-header>\n                    <div mat-card-avatar class=\"card1-bg\"></div>\n                    <mat-card-title>Oneup</mat-card-title>\n                    <mat-card-subtitle>Deal details</mat-card-subtitle>\n                  </mat-card-header>\n                  <img mat-card-image src=\"static/images/oneup.png\" alt=\"Photo of a Shiba Inu\">\n                  <mat-card-content>\n                    <p>\n                      OneWho?\n                    </p>\n                  </mat-card-content>\n                  <mat-card-actions>\n                    <button mat-button>like</button>\n                    <button mat-button>share</button>\n                  </mat-card-actions>\n                </mat-card>\n              </div>\n              <!--- Card number 3 end-->\n              <!--- Card number 4 start-->\n              <div fxFlex=\"30%\">\n                <mat-card class=\"card20\">\n                  <mat-card-header>\n                    <div mat-card-avatar class=\"card1-bg\"></div>\n                    <mat-card-title>Oneup</mat-card-title>\n                    <mat-card-subtitle>Deal details</mat-card-subtitle>\n                  </mat-card-header>\n                  <img mat-card-image src=\"static/images/oneup.png\" alt=\"Photo of a Shiba Inu\">\n                  <mat-card-content>\n                    <p>\n                      OneWho?\n                    </p>\n                  </mat-card-content>\n                  <mat-card-actions>\n                    <button mat-button>like</button>\n                    <button mat-button>share</button>\n                  </mat-card-actions>\n                </mat-card>\n              </div>\n              <!--- Card number 4 end-->\n\n              <!--- Card number 5 start-->\n              <div fxFlex=\"50%\">\n                <mat-card class=\"card20\">\n                  <mat-card-header>\n                    <div mat-card-avatar class=\"example-header-image\"></div>\n                    <mat-card-title>Dominos</mat-card-title>\n                    <mat-card-subtitle>35% discount</mat-card-subtitle>\n                  </mat-card-header>\n                  <img mat-card-image src=\"static/images/dominos.png\" alt=\"Photo of a Shiba Inu\">\n                  <mat-card-content>\n                    <p>\n                      Dominos is alright too...\n                    </p>\n                  </mat-card-content>\n                  <mat-card-actions>\n                    <button mat-button>like</button>\n                    <button mat-button>share</button>\n                  </mat-card-actions>\n                </mat-card>\n              </div>\n              <!--- Card number 5 end-->\n\n            </div>\n        </mat-tab>\n\n\n\n    </mat-tab-group>\n    <app-cards-angular></app-cards-angular>\n    <!-- End of angular cards -->      </div>\n\n\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+
+/***/ }),
+
+/***/ "./src/app/example-navbar/example-navbar.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/example-navbar/example-navbar.component.ts ***!
+  \************************************************************/
+/*! exports provided: ExampleNavbarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExampleNavbarComponent", function() { return ExampleNavbarComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/cdk/layout */ "./node_modules/@angular/cdk/esm5/layout.es5.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+var ExampleNavbarComponent = /** @class */ (function () {
+    function ExampleNavbarComponent(breakpointObserver) {
+        this.breakpointObserver = breakpointObserver;
+        this.isHandset$ = this.breakpointObserver.observe(_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["Breakpoints"].Handset)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (result) { return result.matches; }));
+    }
+    ExampleNavbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-example-navbar',
+            template: __webpack_require__(/*! ./example-navbar.component.html */ "./src/app/example-navbar/example-navbar.component.html"),
+            styles: [__webpack_require__(/*! ./example-navbar.component.css */ "./src/app/example-navbar/example-navbar.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_2__["BreakpointObserver"]])
+    ], ExampleNavbarComponent);
+    return ExampleNavbarComponent;
+}());
+
 
 
 /***/ }),
@@ -2991,50 +3165,6 @@ var DemoMaterialModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/tab/tab.component.html":
-/*!****************************************!*\
-  !*** ./src/app/tab/tab.component.html ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<mat-tab-group>\r\n  <mat-tab label=\"First\">  Latest Deals </mat-tab>\r\n  <mat-tab label=\"Second\"> Most Popular </mat-tab>\r\n  <mat-tab label=\"Third\">  Biggest Discount </mat-tab>\r\n</mat-tab-group>\r\n\r\n\r\n<!-- Copyright 2019 Google Inc. All Rights Reserved.\r\n    Use of this source code is governed by an MIT-style license that\r\n    can be found in the LICENSE file at http://angular.io/license -->\r\n"
-
-/***/ }),
-
-/***/ "./src/app/tab/tab.component.ts":
-/*!**************************************!*\
-  !*** ./src/app/tab/tab.component.ts ***!
-  \**************************************/
-/*! exports provided: TabComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabComponent", function() { return TabComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var TabComponent = /** @class */ (function () {
-    function TabComponent() {
-    }
-    TabComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-tab',
-            template: __webpack_require__(/*! ./tab.component.html */ "./src/app/tab/tab.component.html"),
-        })
-    ], TabComponent);
-    return TabComponent;
-}());
-
-/**  Copyright 2019 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
-
-
-/***/ }),
-
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -3113,7 +3243,7 @@ platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\overl\Downloads\workspace\Foodle_dev\foodle\front-end\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/markglasgow/Documents/Foodle/foodle/front-end/src/main.ts */"./src/main.ts");
 
 
 /***/ })

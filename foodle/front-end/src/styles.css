@@ -34,7 +34,7 @@ html, body {
 
 @font-face {
     font-family: 'vegan-style';
-    src: url('/static/font/vveganfont-webfont.svg') format('svg'),
+    src: url('/static/font/veganfont-webfont.woff2') format('woff2'),
          url('/static/font/veganfont-webfont.woff') format('woff'),
          url('/static/font/veganfont-webfont.ttf') format('truetype');
     font-weight: normal;
@@ -44,6 +44,7 @@ html, body {
 
 
 /*
+url('/static/font/veganfont-webfont.svg') format('svg'),
 @font-face {
   font-family: 'vegan';
   src: url(http://client.assets.woof.sh/glasgow/vegan.ttf);
