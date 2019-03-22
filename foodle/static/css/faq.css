@@ -45,7 +45,7 @@ body.cd-overlay::after {
 }
 
 a {
-  color: #a9c056;
+  color: #38458f;
   text-decoration: none;
 }
 
@@ -152,7 +152,7 @@ header h1 {
     display: none;
   }
   .no-touch .cd-faq-categories a:hover {
-    background: #555b61;
+    background: #4d5e70;
   }
   .no-js .cd-faq-categories {
     width: 100%;
@@ -175,14 +175,14 @@ header h1 {
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: #a9c056;
+    background-color: #4c6fbb;
     opacity: 0;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
   .cd-faq-categories .selected {
-    background: #42464b !important;
+    background: #445263 !important;
   }
   .cd-faq-categories .selected::before {
     opacity: 1;

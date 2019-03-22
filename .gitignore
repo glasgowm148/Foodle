@@ -3,7 +3,7 @@ __pycache__
 venv
 .DS_Store
 .vscode/
-db.sqlite3
+# db.sqlite3 - turn this off so we can get users?
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
