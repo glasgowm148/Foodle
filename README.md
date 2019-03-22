@@ -4,7 +4,9 @@
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
-[![PythonAnywhere](https://img.shields.io/badge/demo-blue.svg)](markglasgow148@pythonanywhere.com)
+
+
+[![PythonAnywhere][https://img.shields.io/badge/demo-blue.svg]](markglasgow148@pythonanywhere.com)
 
 
 "Where Deals Become Meals"™️
