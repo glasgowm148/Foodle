@@ -25,7 +25,8 @@ urlpatterns = [
     path(r'contact/', views.contact, name='contact'),
     path(r'submit/', views.submit, name='submit'),
     path(r'faq/', views.faq, name='faq'),
-    path(r'like/', views.like, name='faq'),
+    path(r'like/', views.like, name='like'),
+    path(r'dislike/', views.dislike, name='dislike'),
 
 
 
