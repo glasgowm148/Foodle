@@ -100,3 +100,6 @@ https://docs.djangoproject.com/en/2.1/topics/email/
 
 Adapted to create FAQ page:
 https://github.com/CodyHouse/faq-template
+
+SMTP email client:
+https://app.mailjet.com/
