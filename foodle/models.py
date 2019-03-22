@@ -8,7 +8,7 @@ class DealModel(models.Model):
     picture = models.ImageField(upload_to='deals/', blank=True)
     been_liked = models.ManyToManyField(User, related_name="liked-by+")
     been_disliked = models.ManyToManyField(User, related_name="disliked-by+")
-    likes = models.IntegerField(default=0)
+    likes = models.IntegerField(default=1)
     url = models.URLField(blank=True)
     category = models.CharField(default='', max_length=50)
     slug = models.SlugField(unique=True)
