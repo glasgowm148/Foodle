@@ -245,10 +245,17 @@ hr.light-100 {
 /* container for slides  */
 
 .container {
+  max-width: 100% !important;
+ /* background: lightblue;
+  padding: 20px;*/
+}
+
+.deal_container {
   max-width: 90% !important;
   background: lightblue;
   padding: 20px;
 }
+
 
 
 /* Datepicker popup icon */

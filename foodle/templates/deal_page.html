@@ -16,7 +16,7 @@
 <br />
 <br />
 <br />
-<div class="container">
+<div class="deal_container">
 
     <div class="card" style="width: 21.5em;margin:0 auto;">
 
@@ -33,7 +33,7 @@
               <input type="hidden" id="address" value="{{deal.info}}">
            </div>
           <div class="row">
-          <p id="like_count{{forloop.counter0}}" class="col-md-6">likes: {{ deal.likes }}</p>
+          <p id="like_count{{forloop.counter0}}" class="col-md-6">Likes :: {{ deal.likes }}</p>
           </div>
           <ul class="nav center">
             {% if user.is_authenticated %}
