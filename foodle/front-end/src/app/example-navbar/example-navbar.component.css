@@ -1,5 +1,5 @@
 .sidenav-container {
-  height: 80%;
+  height: 100%;
   /*position: absolute;
   top: 60px;
   bottom: 60px;
@@ -9,7 +9,7 @@
 }
 
 .sidenav {
-  width: 150px;
+  width: 250px;
 }
 
 .sidenav .mat-toolbar {
