@@ -7,8 +7,6 @@
 {% block first_item %}
 <img src="{% static 'images/sliders/donut_cut.png' %}" alt="donut">
 <div class="carousel-caption">
-  <h1 class="display-2">Foodle</h1>
-  <h3 class="vegan-style">Where deals become meals!</h3>
 </div>
 {% endblock %}
 
@@ -24,7 +22,6 @@
 {% block content %}
 
 <div>
-  <h1>Deals</h1>
   {% if deals %}
   <ul>
     {% for deal in deals %}
