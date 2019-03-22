@@ -1,15 +1,41 @@
 ﻿## Running locally
 
+### Deploy only
 
-# Requirements
+With each commit a compiled version of the app is available, this can be served without needing to install npm and all it's dependencies. 
+
+Execute the following commands to deploy a local version of Foodle
+
+Windows
+```sh
+git clone https://github.com/glasgowm148/Foodle_dev.git
+cd Foodle_dev
+pip install virtualenv
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py runserver
+```
+
+Unix
+```sh
+git clone https://github.com/glasgowm148/Foodle_dev.git
+cd Foodle_dev
+pip3.6 install virtualenv
+virtualenv -p python3.6 venv
+. venv/bin/activate
+pip3.6 install -r requirements.txt
+pip install -r requirements.txt
+python manage.py runserver
+```
+
+### Full-Install
+
+#### Requirements
 
 * Python 3+ !!
-* NPM (Javascript package manager)
+* root 
 
-```
-python -V
-ngm help ngm
-```
 
 ### Clone the directory to your local drive
 
@@ -23,14 +49,20 @@ cd Foodle_dev
 
 #### Mac OSX / Linux 
 ```sh
-./sh/config.sh          // config venv + npm +
-                        // check dependencies + git status +
-                        // runserver
+./readme/install.sh         // config venv + npm +
+                            // check dependencies + git status +
+                            // runserver
 
-./sh/run.sh             // runs venv + git status + runserver
+./readme/build.sh           // build/deploy
 
-code .                  // "vscode command pallet > 
-                        // Shell - install 'code' in command PATH"
+./readme/test.sh            // ng test, lint, etc
+
+./readme/clean.sh           // deletes pycache/db. 
+                            Run install.sh after to 
+                            clean/reinstall NPM.
+
+
+code .                      // "vscode command pallet > Shell - install                     // 'code' in command PATH"
 ```
 
 #### Windows
@@ -68,8 +100,7 @@ git status                  // Check the status of the branch
 
 http://127.0.0.1:8000
 
-- admin / admin123
-- user1 / example123
+
 
 #### VSCode Tips
 
