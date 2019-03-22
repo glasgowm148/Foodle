@@ -32,6 +32,9 @@
           <p id="like_count{{forloop.counter0}}" class="card-text">likes: {{ deal.likes }}</p>
           <p id="dislike_count{{forloop.counter0}}" class="card-text">dislikes: {{ deal.likes }}</p>
           <ul class="nav">
+		       <div>
+                  <input id="address" value="{{deal.info}}">
+               </div>
             {% if user.is_authenticated %}
             <button data-dealid="{{deal.id}}" class="btn btn-primary btn-like" type="button" onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}')"> like </button>
             {% endif %}
