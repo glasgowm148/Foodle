@@ -32,9 +32,12 @@
         {% endif %}
         <div class="card-body">
           <h4 class="card-title">{{ deal.info }}</h4>
-          <a href="#" class="btn btn-outline-primary">
-            Deal Page
-          </a>
+          {% if deal.address %}
+          <p>{{ deal.address }}</p>
+          {% if endif %}
+          {% if deal.url %}
+          <p>{{ deal.url }}</p>
+          {% if endif %}
         </div>
       </div>
     </div>
