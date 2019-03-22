@@ -91,7 +91,7 @@ def submit(request):
             if 'picture' in request.FILES:
                 submit.picture = request.FILES['picture']
             submit.save()
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('deal_page'))
 
         else:
             print(submit_form.errors)

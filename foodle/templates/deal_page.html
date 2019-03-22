@@ -20,9 +20,6 @@
     <br />
   <div class="card-columns">
 
-    <br />
-    <br />
-    <br />
     <div class="card">
 
         {% if deal.picture %}
@@ -32,16 +29,16 @@
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
-          <p class="card-text">Likes: {{ deal.likes }}</p>
+          <p class="card-text like_count">Likes: {{ deal.likes }}</p>
           <ul class="nav">
             {% if user.is_authenticated %}
-            <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> like </button>
+            <button data-dealid="{{deal.id}}" class="btn btn-primary btn-like" type="button"> like </button>
             {% endif %}
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
             {% if user.is_authenticated %}
-            <button id="dislikes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> dislike </button>
+            <button data-dealid="{{deal.id}}" class="btn btn-primary btn-dislike" type="button"> dislike </button>
             {% endif %}
           </ul>
         </div>
@@ -53,29 +50,28 @@
 
     </div>
 
-  </div> <!-- row end -->
+  </div> 
 </div>
-<!--container end-->
 
 {% endfor %}
 
 <script>
   $(document).ready( function() {
     
-    $('#likes').click(function(event){
+    $(".btn-like").click(function(event){
         var dealid;
         dealid = $(this).attr("data-dealid");
         $.get('/like/', {deal_id: dealid }, function(data){
-            $('#like_count').html(data);
+            $('.like_count').html(data);
         });
     });
     
 
-  $('#dislikes').click(function(event){
+  $(".btn-dislike").click(function(event){
         var dealid;
         dealid = $(this).attr("data-dealid");
         $.get('/dislike/', {deal_id: dealid }, function(data){
-            $('#like_count').html(data);
+            $('.like_count').html(data);
         });
     });
     
