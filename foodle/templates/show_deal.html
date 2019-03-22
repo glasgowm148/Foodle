@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+  {{ deal.name }}
+{% endblock %}
+
+{% block body_block %}
+  {% if category %}
+    <h1>{{ deal.info }}</h1>
+    <h2>Likes: {{ deal.likes }}</h2>
+    <h2>category: {{ deal.category }}</h2>
+  {% else %}
+    The specified deal does not exist!
+  {% endif %}
+{% endblock %}

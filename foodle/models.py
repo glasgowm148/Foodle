@@ -1,3 +1,4 @@
+from django.template.defaultfilters import slugify
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
@@ -8,7 +9,18 @@ class DealModel(models.Model):
     likes = models.ManyToManyField(User)
     url = models.URLField(blank=True)
     category = models.CharField(default='', max_length=50)
+    slug = models.SlugField(unique=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.info)
+        super(DealModel, self).save(*args, **kwargs)
+
+    class Meta:
+        verbose_name_plural = 'deals'
     
+    def __str__(self):
+        return self.name
+
     @property
     def count_likes(self):
        return self.likes.count()

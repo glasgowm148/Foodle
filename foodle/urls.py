@@ -1,6 +1,7 @@
 from django.urls import path, include
 from rest_framework import routers
 from . import views
+from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import static
@@ -26,6 +27,7 @@ urlpatterns = [
     path(r'submit/', views.submit, name='submit'),
     path(r'faq/', views.faq, name='faq'),
     path(r'like/', views.like, name='faq'),
+    url(r'^show_deal/(?P<deal_name_slug>[\w\-]+)/$', views.show_deal, name='show_deal'),
 
 
 
