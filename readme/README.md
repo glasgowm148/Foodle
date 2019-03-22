@@ -145,3 +145,31 @@ git checkout -b myfeature dev
 ```
 
 Several people can work on the same project - push/pull often when working in teams to avoid merge conflicts 
+
+References:
+
+Nathan:
+For a number of the bootstrap elements, this tutorial was used to understand and start implementing the basics of them
+https://www.youtube.com/watch?v=9cKsq14Kfsw
+
+
+Hassan:
+Used to assist in implementing the dropdown on the submit form
+https://stackovverflow.com/questions/31130706/dropdown-in-django-model
+
+Used in implementing the sign in with google elements
+https://developers.google.com/identity/sign-in/web/sign-in
+
+Used as a base for styling the submit/login/register pages
+https://bootsnipp.com/snippets/dldxB
+
+
+Greg:
+
+
+
+Mark:
+
+
+
+Finn:
