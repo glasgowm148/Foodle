@@ -8,7 +8,6 @@ Template for FAQ:
 
 {% block head %}
 {% block title_block %}
-FAQ
 {% endblock %}
 <link rel="stylesheet" href="{% static '/css/faq.css' %}">
 {% endblock %}
@@ -18,25 +17,22 @@ FAQ
 {% block content %}
 
 
-<div class="container">
-
-
-        <div class="row">
-            <div class="col-md-3">
-                <img style="mx-auto; margin-top: 10px" class="img-fluid" src="{% static '/images/FAQdonut.jpg' %}" alt="Picture of Donut" class="rounded" />
-            </div>
-
-            <div class="col-md-6">
-                <div style="text-align:center; font-size:50px; font-family:Times New Roman; margin-top:15px">HOW CAN WE HELP YOU?</div>
-            </div>
-
-            <div class="col-md-3">
-                <img style="mx-auto; margin-top: 10px" class="img-fluid" src="{% static '/images/FAQdonut.jpg' %}" alt="Picture of Donut" class="rounded" />
-            </div>
-		</div>
-
-
-</div>
+ <!-- Image Slider
+  <div id="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1" class="active"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        {% block first_item %}{% endblock %}
+      </div>
+      <div class="carousel-item">
+        {% block second_item %}{% endblock %}
+      </div>
+    </div>
+  </div>
+    <!-- Image Slider -->
 
 <!-- FAQ Template
 https://github.com/CodyHouse/faq-template
