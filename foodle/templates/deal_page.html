@@ -17,9 +17,8 @@
 <br />
 <br />
 <div class="container">
-  <div class="card-columns">
 
-    <div class="card">
+    <div class="card" style="width: 21.5em;margin:0 auto;">
 
         {% if deal.picture %}
         <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap"> 
@@ -27,34 +26,45 @@
 
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
+
           <strong class="card-text">{{deal.info}}</strong>
           <p class="card-text">{{deal.address}}</p>
-          <p id="like_count{{forloop.counter0}}" class="card-text">likes: {{ deal.likes }}</p>
-          <p id="dislike_count{{forloop.counter0}}" class="card-text">dislikes: {{ deal.likes }}</p>
-          <ul class="nav">
+          <div class="row">
+          <p id="like_count{{forloop.counter0}}" class="col-md-6">likes: {{ deal.likes }}</p>
+          </div>
+          <ul class="nav center">
             {% if user.is_authenticated %}
-            <button class="btn btn-primary" type="button" onclick="$.get('/like/', {deal_id: '{{deal.id}}' }, function(data){$('#like_count{{forloop.counter0}}').html('likes: '+data);});"> like </button>
+            <button id="btn{{forloop.counter0}}" class="btn btn-primary" type="button" onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn{{forloop.counter0}}', 'like')"> like </button>
             {% endif %}
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
             {% if user.is_authenticated %}
-            <button class="btn btn-primary" type="button" onclick="$.get('/dislike/', {deal_id: '{{deal.id}}' }, function(data){$('#dislike_count{{forloop.counter0}}').html('dislikes: '+data);});"> dislike </button>
+            <button id="btn2{{forloop.counter0}}" class="btn btn-primary" type="button" onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn2{{forloop.counter0}}', 'dislike')"> dislike </button>
             {% endif %}
           </ul>
         </div>
       </div>
-  </div>
-
     </div>
 
   </div> 
 </div>
-
-<br />
-<br />
-<br />
 {% endfor %}
+
+<script>
+function like(dealid, id, id2, pref) {
+  $.get('/like/', {deal_id: dealid }, function(data){ 
+
+    $(id).html('likes: '+data); 
+    if($(id2).value=="like") {
+    $(id2).html('remove '+pref);
+    }
+    else {
+      $(id2).html(pref);
+    }
+  });
+}
+</script>
 
 <script>
     function initMap() {
