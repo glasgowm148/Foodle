@@ -7,8 +7,11 @@
 {% block first_item %}
 <img src="{% static 'images/sliders/donut_cut.png' %}" alt="donut">
 <div class="carousel-caption">
+<<<<<<< HEAD
 	<h1 class="display-2">Foodle</h1>
 	<h3 class="vegan-style">Where deals become meals!</h3>
+=======
+>>>>>>> 044744d5f239cb8deb15a2dcfc457e491af885bf
 </div>
 {% endblock %}
 
@@ -23,6 +26,7 @@
 
 {% block content %}
 
+<<<<<<< HEAD
 <div class="container-fluid padding">
 	<div class="row padding">
 		{% if deals %}
@@ -43,6 +47,18 @@
 		{% endfor %}
 		{% endif %}
 	</div>
+=======
+<div>
+  {% if deals %}
+  <ul>
+    {% for deal in deals %}
+    <li>
+      <a href="/show_deal/{{ deal.slug }}">{{ deal.info }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+>>>>>>> 044744d5f239cb8deb15a2dcfc457e491af885bf
 </div>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

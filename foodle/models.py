@@ -4,14 +4,16 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 class DealModel(models.Model):
-    info = models.CharField(default='', max_length=200, unique=True)
-    picture = models.ImageField(upload_to='deals/', blank=True)
-    been_liked = models.ManyToManyField(User, related_name="liked-by+")
-    been_disliked = models.ManyToManyField(User, related_name="disliked-by+")
-    likes = models.IntegerField(default=0)
-    url = models.URLField(blank=True)
-    category = models.CharField(default='', max_length=50)
-    slug = models.SlugField(unique=True)
+    info =             models.CharField(default='', max_length=200, unique=True)
+    picture =          models.ImageField(upload_to='deals/', blank=True)
+    been_liked =       models.ManyToManyField(User, related_name="liked-by+")
+    been_disliked =    models.ManyToManyField(User, related_name="disliked-by+")
+    likes =            models.IntegerField(default=1)
+    url =              models.URLField(blank=True)
+    category =         models.CharField(default='', max_length=50)
+    slug =             models.SlugField(unique=True)
+    address =          models.CharField(default='', max_length=100, blank=True)
+
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.info)
@@ -19,13 +21,6 @@ class DealModel(models.Model):
 
     class Meta:
         verbose_name_plural = 'deals'
-    
-    def __str__(self):
-        return self.name
-
-    @property
-    def count_likes(self):
-       return self.likes.count()
 
 
 class Category(models.Model):
