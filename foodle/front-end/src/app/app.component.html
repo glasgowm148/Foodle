@@ -12,25 +12,25 @@ This is the file called by <app-root>. Current this displays the following
   https://www.techiediaries.com/angular-tutorial/
 
 -->
-<app-example-navbar></app-example-navbar>
-
 <div class="container">
 
+  <!-- Category Boxes under slider-->
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+
+    <!-- This loads the card box / tab-->
+
+  <app-example-navbar></app-example-navbar>
 
 
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
-    [style.background]="tile.color">
-    {{tile.text}}
-  </mat-grid-tile>
-</mat-grid-list>
+</div>
 
-  <!-- Category selection boxes at the top
+
+<!-- Category selection boxes at the top
 
   https://filipmolcik.com/angular-2-and-material-grid-example/
 -->
-
-
-
-
-
