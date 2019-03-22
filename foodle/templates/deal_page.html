@@ -27,21 +27,19 @@
 
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
-          <p class="card-text">{{deal.info}}</p>
+          <strong class="card-text">{{deal.info}}</strong>
+          <p class="card-text">{{deal.address}}</p>
           <p id="like_count{{forloop.counter0}}" class="card-text">likes: {{ deal.likes }}</p>
           <p id="dislike_count{{forloop.counter0}}" class="card-text">dislikes: {{ deal.likes }}</p>
           <ul class="nav">
-		       <div>
-                  <input type="hidden" id="address" value="{{deal.info}}">
-               </div>
             {% if user.is_authenticated %}
-            <button class="btn btn-primary" type="button" onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}')"> like </button>
+            <button class="btn btn-primary" type="button" onclick="$.get('/like/', {deal_id: '{{deal.id}}' }, function(data){$('#like_count{{forloop.counter0}}').html('likes: '+data);});"> like </button>
             {% endif %}
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
             {% if user.is_authenticated %}
-            <button class="btn btn-primary" type="button" onclick="dislike('{{deal.id}}', '#dislike_count{{forloop.counter0}}')"> dislike </button>
+            <button class="btn btn-primary" type="button" onclick="$.get('/dislike/', {deal_id: '{{deal.id}}' }, function(data){$('#dislike_count{{forloop.counter0}}').html('dislikes: '+data);});"> dislike </button>
             {% endif %}
           </ul>
         </div>
@@ -57,26 +55,6 @@
 <br />
 <br />
 {% endfor %}
-
-
-<script>
-    
-function like(dealid, id) {
-  $.get('/like/', {"deal_id": dealid }, function(data){
-          $(id).html("likes: "+data);
-      });
-}
-
-function dislike(dealid, id) {
-  $.get('/dislike/', {"deal_id": dealid }, function(data){
-          $(id).html("dislikes: "+data);
-      });
-}
-
-    
-</script>
-
-
 
 <script>
     function initMap() {
