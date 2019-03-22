@@ -108,7 +108,23 @@ def submit(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method== 'GET':
+      form = contactForm()
+    else:
+      form = contactForm(request.POST)
+      if form.is_valid():
+        email_subject = form.cleaned_data['email_subject']
+        user_email = form.cleaned_data['user_email']
+        user_msg = form.cleaned_data['user_msg']
+        try:
+          send_mail(email_subject,user_msg,user_email,['FoodleAdmin@protonmail.com'])
+        except BadHeaderError:
+          return HttpResponse('Invalid header')
+        return redirect('success')
+    return render(request, "contact.html", {'form': form})
+
+def contactHandle(request):
+    return HttpResponse('Message Sent to the admin')
 
 # Handle Login and register
 @login_required
