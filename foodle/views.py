@@ -121,7 +121,7 @@ def contact(request):
           send_mail(email_subject,user_msg,user_email,['FoodleAdmin@protonmail.com'])
         except BadHeaderError:
           return HttpResponse('Invalid header')
-        return redirect('success')
+        return redirect('contactHandle')
     return render(request, "contact.html", {'form': form})
 
 def contactHandle(request):
