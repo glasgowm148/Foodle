@@ -32,22 +32,18 @@
           <p class="card-text like_count">Likes: {{ deal.likes }}</p>
           <ul class="nav">
             {% if user.is_authenticated %}
-            <button data-dealid="{{deal.id}}" class="btn btn-primary btn-like" type="button"> like </button>
+            <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-like" type="button"> like </button>
             {% endif %}
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
             {% if user.is_authenticated %}
-<<<<<<< HEAD
             <button id="dislikes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> dislike </button>
 						
 			<div>
                 <input id="address" value="{{deal.info}}">
             </div>
-			
-=======
-            <button data-dealid="{{deal.id}}" class="btn btn-primary btn-dislike" type="button"> dislike </button>
->>>>>>> a7488a25aca01cbb584bde7bd848c5c04b28adb8
+
             {% endif %}
           </ul>
         </div>
