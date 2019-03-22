@@ -33,10 +33,12 @@
         <div class="card-body">
           <h4 class="card-title">{{ deal.info }}</h4>
           {% if deal.address %}
-          <p>{{ deal.address }}</p>
+          <p>Address: {{ deal.address }}</p>
+          {% else %}
+          Submission has no address
           {% endif %}
           {% if deal.url %}
-          <p>{{ deal.url }}</p>
+          <p>Url: {{ deal.url }}</p>
           {% endif %}
           <a class="btn btn-outline-primary" href="/deal_page/{{ deal.slug }}" role="button">Deal Info</a>
         </div>

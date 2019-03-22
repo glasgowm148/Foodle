@@ -19,40 +19,45 @@
 {% if deal %}
 <div class="deal_container">
 
-    <div class="card" style="width: 21.5em;margin:0 auto;">
+  <div class="card" style="width: 21.5em;margin:0 auto;">
 
-        {% if deal.picture %}
-        <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
+    {% if deal.picture %}
+    <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
+    {% endif %}
+
+    <div class="card-body">
+      <h5 class="card-title">Deal</h5>
+
+      <strong class="card-text">{{deal.info}}</strong>
+      <strong class="card-text">{{deal.category}}</strong>
+      {% if deal.address %}<p class="card-text">{{deal.address}}</p>{% endif %}
+      <div>
+        {% if deal.address %}
+        <input type="hidden" id="address" value="{{deal.address}}">
         {% endif %}
-
-        <div class="card-body">
-          <h5 class="card-title">Deal</h5>
-
-          <strong class="card-text">{{deal.info}}</strong>
-          {% if deal.address %}<p class="card-text">{{deal.address}}</p>{% endif %}
-          <div>
-            {% if deal.address %}
-              <input type="hidden" id="address" value="{{deal.address}}">
-            {% endif %}
-           </div>
-          <div class="row">
-          <p id="like_count{{forloop.counter0}}" class="col-md-6">Likes :: {{ deal.likes }}</p>
-          </div>
-          <ul class="nav center">
-            {% if user.is_authenticated %}
-            <button id="btn{{forloop.counter0}}" class="btn btn-primary" type="button" onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn{{forloop.counter0}}', 'like')"> like </button>
-            {% endif %}
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-            {% if user.is_authenticated %}
-            <button id="btn2{{forloop.counter0}}" class="btn btn-primary" type="button" onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn2{{forloop.counter0}}', 'dislike')"> dislike </button>
-            {% endif %}
-          </ul>
-        </div>
       </div>
+      <div class="row">
+        <p id="like_count{{forloop.counter0}}" class="col-md-6">Likes :: {{ deal.likes }}</p>
+      </div>
+      <ul class="nav center">
+        {% if user.is_authenticated %}
+        <button id="btn{{forloop.counter0}}" class="btn btn-primary" type="button"
+          onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn{{forloop.counter0}}', 'like')"> like
+        </button>
+        {% endif %}
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+        {% if user.is_authenticated %}
+        <button id="btn2{{forloop.counter0}}" class="btn btn-primary" type="button"
+          onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn2{{forloop.counter0}}', 'dislike')">
+          dislike </button>
+        {% endif %}
+      </ul>
     </div>
   </div>
+</div>
+</div>
 </div>
 {% endif %}
 
@@ -61,7 +66,8 @@
 <script src="{% static 'js/map.js' %}"></script>
 <script src="{% static 'js/map2.js' %}"></script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
-</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
+  </script>
 <!-- greg deal_page details (end)	-->
 {% endblock %}
