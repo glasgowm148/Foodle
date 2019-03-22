@@ -20,13 +20,15 @@
 
 {% block content %}
 
-<div>
+<div fxFlex="value%" fxFlexAlign="right">
+  <p>Your uploaded deals :: </p>
   {% if deals %}
   <ul>
     {% for deal in deals %}
-    <li>
-      <a href="/show_deal/{{ deal.slug }}">{{ deal.info }}</a>
-    </li>
+
+    <a href="/show_deal/{{ deal.slug }}">{{ deal.info }}</a>,
+
+
     {% endfor %}
   </ul>
   {% endif %}
