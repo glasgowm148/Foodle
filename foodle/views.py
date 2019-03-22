@@ -39,15 +39,37 @@ def like(request):
         if deal_id: 
             deal = DealModel.objects.get(id=int(deal_id))
             if deal:
-                if deal.likes.filter(id=request.user.id).exists():
-                    deal.likes.remove(request.user)
+                if deal.been_liked.filter(id=request.user.id).exists():
+                    deal.likes -= 1
+                    deal.been_liked.remove(request.user)
 
                 else:
-                    deal.likes.add(request.user)
+                    deal.likes += 1
+                    deal.been_liked.add(request.user)
                 
                 deal.save()
             
-    return HttpResponse(deal.count_likes)
+    return HttpResponse(deal.likes)
+
+def dislike(request):
+    deal_id = None
+    if request.method == 'GET':
+        deal_id = request.GET.get('deal_id')
+
+        if deal_id: 
+            deal = DealModel.objects.get(id=int(deal_id))
+            if deal:
+                if deal.been_disliked.filter(id=request.user.id).exists():
+                    deal.likes += 1
+                    deal.been_disliked.remove(request.user)
+
+                else:
+                    deal.likes -= 1
+                    deal.been_disliked.add(request.user)
+                
+                deal.save()
+            
+    return HttpResponse(deal.likes)
 
 def deal_page(request):
     """

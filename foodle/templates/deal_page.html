@@ -3,6 +3,7 @@
 
 {% block head %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/img.css">
 
 
 {% endblock %}
@@ -32,7 +33,9 @@
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
           <ul class="nav">
+              Likes: <strong id="like_count"> {{ deal.likes }}      </strong>
             {% if user.is_authenticated %}
+<<<<<<< HEAD
               <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-sm" type="button">
               Like
             </button>
@@ -41,6 +44,12 @@
                 <input id="address" value="{{deal.info}}">
              </div>
 			 
+=======
+
+            <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> like </button>
+            <button id="dislikes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> dislike </button>
+
+>>>>>>> b65ad934aa36f06cdd53807fa70cd2dc3fb1160f
             {% endif %}
           <ul class="nav">
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
@@ -74,14 +83,19 @@
         });
     });
     
+
+  $('#dislikes').click(function(event){
+        var dealid;
+        dealid = $(this).attr("data-dealid");
+        $.get('/dislike/', {deal_id: dealid }, function(data){
+            $('#like_count').html(data);
+        });
+    });
+    
   });
 </script>
 
 
-
-<div>
-                <input id="address" value="eusebi gibson street">
-             </div>
 
 <script>
     function initMap() {
