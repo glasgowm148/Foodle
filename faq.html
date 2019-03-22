@@ -1,0 +1,128 @@
+<!--
+Template for FAQ:
+  https://github.com/CodyHouse/faq-template
+-->
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+{% block title_block %}
+FAQ
+{% endblock %}
+<link rel="stylesheet" href="{% static '/css/faq.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<div class="container">
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <img style="mx-auto; margin-top: 10px" class="img-fluid" src="{% static '/images/FAQdonut.jpg' %}" alt="Picture of Donut" class="rounded" />
+            </div>
+
+            <div class="col-md-6">
+                <div style="text-align:center; font-size:50px; font-family:Times New Roman; margin-top:15px">HOW CAN WE HELP YOU?</div>
+            </div>
+
+            <div class="col-md-3">
+                <img style="mx-auto; margin-top: 10px" class="img-fluid" src="{% static '/images/FAQdonut.jpg' %}" alt="Picture of Donut" class="rounded" />
+            </div>
+		</div>
+
+
+</div>
+
+<!-- FAQ Template
+https://github.com/CodyHouse/faq-template
+-->
+
+<section class="cd-faq">
+
+	<div class="cd-faq-items">
+		<ul id="basics" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Basics</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">Do I need to be a student to use this site?</a>
+				<div class="cd-faq-content">
+					<p>You do not have to be a student to browse the site and see what deals are on offer.
+                however, some deals will be aimed specifically at students so recipients may need to produce a valid University of Glasgow MyCampus card,
+				or sign up with a university email address, to redeem the offer.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">Must all deals be exclusively for students?</a>
+				<div class="cd-faq-content">
+					<p>While the site aims to help students find ways to save money on meals and snacks we are
+				interested in bringing any offer at all to their attention that might prove useful.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">Do I need to be a memeber to use this site?</a>
+				<div class="cd-faq-content">
+					<p>You need not be a member to browse the site and take advantage of the deals on display. You do, however, need to sign up to a
+				free account if you wish to post deals you see on your travels that you may feel your fellow students might enjoy.
+				Once signed up you can bookmark tasty deals for easy reach later and rank deals you think need more attention
+				by hitting the 'Like' button.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="deals" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Deals</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">How do I upload a deal?</a>
+				<div class="cd-faq-content">
+					<p>Uploading a deal couldn't be simpler. Once you are logged in look for the 'submit' button in the top right.
+				hitting this will bring up a card which allows you to fill in the details of the offer and upload a picture of your choice. Hit 'submit deal'
+                and the details will be sent to our admin staff to post on the homepage. Providing a picture of the place you found the offer,
+				or perhaps the offer in the window, helps give the site a bit of colour.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">Do my friends need to be logged in to see my deals?</a>
+				<div class="cd-faq-content">
+					<p>Browsing the site can be done without being a member, so anyone can see a deal when it is posted. If you
+				want to alert your friends to a new deal right away so they don't miss out, why not hit one of the 'share' buttons and
+				post the details to you and your friends' favourite social media platform.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+
+			<li>
+				<a class="cd-faq-trigger" href="#0">What happens when a deal expires?</a>
+				<div class="cd-faq-content">
+					<p>We would ask the generous person who posted the offer to report back when they see the deal has exipred.
+				If, however, you try to take advantage of a deal on our site only to find it is now unavailable, it would be appreciated
+				if you would report it us using the flag icon on the deal page so we can take it off display.</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+
+		<ul id="other" class="cd-faq-group">
+			<li class="cd-faq-title"><h2>Other</h2></li>
+			<li>
+				<a class="cd-faq-trigger" href="#0">Do foodle receive any kind of monetary benefits from the vendors?</a>
+				<div class="cd-faq-content">
+					<p>We are not at liberty to disclose that information</p>
+				</div> <!-- cd-faq-content -->
+			</li>
+		</ul> <!-- cd-faq-group -->
+	</div> <!-- cd-faq-items -->
+	<a href="#0" class="cd-close-panel">Close</a>
+</section> <!-- cd-faq -->
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/jquery-2.1.1.js' %}"></script>
+
+<script src="{% static 'js/jquery.mobile.custom.min.js' %}"></script>
+
+ <!-- Resource jQuery -->
+{% endblock %}

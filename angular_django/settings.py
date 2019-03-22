@@ -32,7 +32,9 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',     # To run locally
     '212.71.237.14',  # Linode VPS
-    'markglasgow148.pythonanywhere.com'
+    'markglasgow148.pythonanywhere.com',
+    'www.foodle.cc' # :o
+    'foodle.cc' # :o
 ]
 
 

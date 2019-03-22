@@ -26,8 +26,9 @@ urlpatterns = [
     path(r'contact/', views.contact, name='contact'),
     path(r'submit/', views.submit, name='submit'),
     path(r'faq/', views.faq, name='faq'),
-    path(r'like/', views.like, name='faq'),
     url(r'^show_deal/(?P<deal_name_slug>[\w\-]+)/$', views.show_deal, name='show_deal'),
+    path(r'like/', views.like, name='like'),
+    path(r'dislike/', views.dislike, name='dislike'),
 
 
 
