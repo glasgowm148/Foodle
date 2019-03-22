@@ -5,8 +5,8 @@
   {{ deal.name }}
 {% endblock %}
 
-{% block body_block %}
-  {% if category %}
+{% block content %}
+  {% if deal %}
     <h1>{{ deal.info }}</h1>
     <h2>Likes: {{ deal.likes }}</h2>
     <h2>category: {{ deal.category }}</h2>
