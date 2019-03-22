@@ -21,7 +21,7 @@
     <div class="card" style="width: 21.5em;margin:0 auto;">
 
         {% if deal.picture %}
-        <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap"> 
+        <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
         {% endif %}
 
         <div class="card-body">
@@ -29,6 +29,9 @@
 
           <strong class="card-text">{{deal.info}}</strong>
           <p class="card-text">{{deal.address}}</p>
+          <div>
+              <input type="hidden" id="address" value="{{deal.info}}">
+           </div>
           <div class="row">
           <p id="like_count{{forloop.counter0}}" class="col-md-6">likes: {{ deal.likes }}</p>
           </div>
@@ -47,15 +50,15 @@
       </div>
     </div>
 
-  </div> 
+  </div>
 </div>
 {% endfor %}
 
 <script>
 function like(dealid, id, id2, pref) {
-  $.get('/like/', {deal_id: dealid }, function(data){ 
+  $.get('/like/', {deal_id: dealid }, function(data){
 
-    $(id).html('likes: '+data); 
+    $(id).html('likes: '+data);
     if($(id2).value=="like") {
     $(id2).html('remove '+pref);
     }
@@ -95,33 +98,33 @@ function like(dealid, id, id2, pref) {
 
 <script>
 
-      if (navigator.geolocation) { 
-   navigator.geolocation.getCurrentPosition(function (position) {        
-     var lat = position.coords.latitude;                   
-     var lng = position.coords.longitude;                
-     var curLoc = new google.maps.LatLng(lat, lng); 
+      if (navigator.geolocation) {
+   navigator.geolocation.getCurrentPosition(function (position) {
+     var lat = position.coords.latitude;
+     var lng = position.coords.longitude;
+     var curLoc = new google.maps.LatLng(lat, lng);
      var directionsService = new google.maps.DirectionsService();
      var directionsDisplay = new google.maps.DirectionsRenderer();
-	 var whereTo = document.getElementById('address').value;   
-     var mapOptions = { 
-       zoom: 15,  
-       center: curLoc, 
-       mapTypeControl: true, 
-     }; 
+	 var whereTo = document.getElementById('address').value;
+     var mapOptions = {
+       zoom: 15,
+       center: curLoc,
+       mapTypeControl: true,
+     };
      map = new google.maps.Map(document.getElementById("map"), mapOptions);
      directionsDisplay.setMap(map);
-	 var request = { 
+	 var request = {
        origin: curLoc,
-       destination: whereTo,   
+       destination: whereTo,
        travelMode: google.maps.DirectionsTravelMode.WALKING
-     }; 
-     directionsService.route(request, function (response, status) { 
-       if (status == google.maps.DirectionsStatus.OK) { 
+     };
+     directionsService.route(request, function (response, status) {
+       if (status == google.maps.DirectionsStatus.OK) {
          directionsDisplay.setDirections(response);
-       } 
-     }); 
+       }
+     });
    });
- } 
+ }
 
     </script>
 
