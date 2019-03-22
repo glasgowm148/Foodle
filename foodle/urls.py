@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'deal_page/(?P<deal_name_slug>[\w\-]+)/$', views.deal_page, name='deal_page'),
     path(r'like/', views.like, name='like'),
     path(r'dislike/', views.dislike, name='dislike'),
-    path('contactHandle/', views.contactHandle, name='contactHandle'),
+    
 
 
 
