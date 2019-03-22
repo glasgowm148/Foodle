@@ -30,7 +30,7 @@ def populate():
             "info": "Bar Soba : 50% off for students.",
             "likes": 73,
             "url": "https://www.barsoba.com",
-            "catgegory": "asian"
+            "category": "asian"
         },
         {
             "info": "Free cow with every extra saucy burger!",

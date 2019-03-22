@@ -2,14 +2,25 @@ from django.test import TestCase
 from .forms import SubmitForm
 
 class tests(TestCase):
-    def if_info_only(self):
+    def test_info_and_category(self):
         form = SubmitForm({
             'info': "deal",
-        }, entry=self.entry)
-        self.assertTrue(form.is_valid())
+            'category': "miss me wit dat weeb shit"
+        })
+        self.assertEquals(True, form.is_valid())
 
-    def if_url_only(self):
+    # check if 
+    def test_if_no_info(self):
         form = SubmitForm({
+            'category': "miss me wit dat weeb shit"
+        })
+        self.assertEquals(False, form.is_valid())
+
+    # if url is not a valid url, this should return False, so the test should pass
+    def test_url(self):
+        form = SubmitForm({
+            'info': "deal",
             'url': "deal",
-        }, entry=self.entry)
-        self.assertTrue(form.is_valid())
+            'category': "miss me wit dat weeb shit"
+        })
+        self.assertEquals(False, form.is_valid())
