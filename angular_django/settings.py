@@ -160,8 +160,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 #Email Gubbins
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'in-v3.mailjet.com'
+EMAIL_PORT=587
 EMAIL_HOST_PASSWORD='e0cadee2be293b483df16cbd112dcca7'
 EMAIL_HOST_USER='da4b0710145095bd81d834bd1de94f02'
