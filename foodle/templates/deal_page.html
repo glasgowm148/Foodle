@@ -29,7 +29,7 @@
           <h5 class="card-title">Deal</h5>
 
           <strong class="card-text">{{deal.info}}</strong>
-          <p class="card-text">{{deal.address}}</p>
+          {% deal.address %}<p class="card-text">{{deal.address}}</p>{% endif %}
           <div>
               <input type="hidden" id="address" value="{{deal.info}}">
            </div>
