@@ -8,6 +8,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { RouterModule, Routes } from '@angular/router';
+
 
 // Grid List for aligning angular cards
 import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <----- HERE
@@ -16,32 +18,57 @@ import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <--
 import { AppComponent } from './app.component';
 
 
-import { AppRoutingModule } from './app-routing.module';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
 import { CardsAngularComponent } from './cards-angular/cards-angular.component';
+import { ServiceComponent } from './service/service.component';
+import { DealComponent } from './deal/deal.component';
+import { DealAddComponent } from './deal-add/deal-add.component';
+import { DealDetailComponent } from './deal-detail/deal-detail.component';
+import { DealEditComponent } from './deal-edit/deal-edit.component';
 
-
-
+const appRoutes: Routes = [
+  {
+    path: 'deals',
+    component: DealComponent,
+    data: { title: 'Deal List' }
+  },
+  {
+    path: 'deals/:id',
+    component: DealDetailComponent,
+    data: { title: 'Deal Details' }
+  },
+  {
+    path: 'submit',
+    component: DealAddComponent,
+    data: { title: 'Deal Add' }
+  },
+  { path: '',
+    redirectTo: '/submit',
+    pathMatch: 'full'
+  }
+];
 
 
 @NgModule({
   imports: [
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
     BrowserModule,
+    HttpClientModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     FormsModule,
     MatToolbarModule,
     MatGridListModule,
-    HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
 
   ],
   entryComponents: [AppComponent],
-  declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent],
+  declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent, ServiceComponent,
+    DealComponent, DealAddComponent, DealEditComponent, DealDetailComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

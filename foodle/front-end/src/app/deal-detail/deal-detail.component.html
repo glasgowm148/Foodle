@@ -1,0 +1,11 @@
+<div *ngIf="deal" class="deals">
+  <h2>{{Deal.prod_name | uppercase}} Details</h2>
+  <div><span>Description: </span>{{Deal.prod_desc}}</div>
+  <div><span>Price: </span>{{Deal.prod_price}}</div>
+  <div><span>Update Date: </span>{{Deal.updated_at | date}}</div>
+  <div>
+    <button routerLink="/deal-edit/{{Deal._id}}">
+      Edit
+    </button>
+  </div>
+</div>

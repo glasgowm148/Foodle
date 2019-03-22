@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { IImage } from './material-nav/modules/slideshow/IImage';
+import { Http, Response } from '@angular/http';
+import { ServiceComponent } from './service/service.component';
+
+import { ActivatedRoute, Router } from '@angular/router';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {UserService} from './user.service';
 
 
 @Component({
@@ -7,12 +14,38 @@ import { IImage } from './material-nav/modules/slideshow/IImage';
   templateUrl: './app.component.html'
 })
 
-
+@Injectable()
 export class AppComponent implements OnInit {
+ /**
+   * An array of all the BlogPost objects from the API
+   */
+  public posts;
+
+  deals:any = [];
+
+
+  /**
+   * An object representing the data in the "add" form
+   */
+  public new_post: any;
+
+  constructor(public rest: ServiceComponent, private route: ActivatedRoute, private router: Router) { }
+
+  ngOnInit() {
+    this.getDeals();
+  }
+
+  getDeals() {
+    this.deals = [];
+    this.rest.getDeals().subscribe((data: {}) => { console.log(data); this.deals = data; });
+  }
+
+  /**
   title = 'app';
 
 
-  pictures = [
+
+ pictures = [
     {
       id: 1,
       title: 'SOBAAA',
@@ -119,3 +152,5 @@ export class AppComponent implements OnInit {
 /**  Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license */
+
+}

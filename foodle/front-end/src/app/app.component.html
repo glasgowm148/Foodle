@@ -12,16 +12,35 @@ This is the file called by <app-root>. Current this displays the following
   https://www.techiediaries.com/angular-tutorial/
 
 -->
-<div class="container">
 
 <div class="container">
+    <app-example-navbar></app-example-navbar>
+</div>
+  <!--<h2>Product List</h2>
+
+<div>
+  <button (click)="add()">
+
+    </button>
+  </div>
+
+  <ul class="products">
+    <li *ngFor="let p of deals; let i=index;">
+      <a this.[routerLink]="['/routePath']" routerLinkActive="router-link-active" ="/product-details/{{p._id}}">
+        <span class="badge">{{i+1}}</span> {{p.prod_name}}
+      <button class="delete" title="delete deal"
+        (click)="delete(p._id)">x</button>
+    </li>
+  </ul>
+
+<app-deal>testing...</app-deal>
+    <!-- This loads the card box / tab
 
 
-    <!-- This loads the card box / tab-->
-
-  <app-example-navbar></app-example-navbar>
-
-    <!-- Category Boxes under slider-->
+  <li *ngFor="let key of deals.keys(y)">
+      {{ key }} : {{ deals[key] }}
+    </li>
+    <!-- Category Boxes under slider
     <mat-grid-list cols="4" rowHeight="100px">
       <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
         [style.background]="tile.color">
@@ -29,9 +48,10 @@ This is the file called by <app-root>. Current this displays the following
       </mat-grid-tile>
     </mat-grid-list>
 
+    <router-outlet></router-outlet>
 
 </div>
-
+-->
 
 <!-- Category selection boxes at the top
 

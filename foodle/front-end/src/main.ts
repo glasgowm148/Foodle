@@ -14,7 +14,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
 
- /* import './polyfills';
+ import './polyfills';
 
 
 platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
@@ -26,6 +26,6 @@ platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
 
   // Otherwise, log the boot error
 }).catch(err => console.error(err));
-*/
+
 
 

@@ -1,0 +1,15 @@
+<div>
+  <h2>Deal Edit</h2>
+  <div>
+    <label>Deal Name:
+      <input [(ngModel)]="DealData.prod_name" placeholder="Deal Name"/>
+    </label><br>
+    <label>Deal Desc:
+      <input [(ngModel)]="DealData.prod_desc" placeholder="Deal Description"/>
+    </label><br>
+    <label>Deal Price:
+      <input [(ngModel)]="DealData.prod_price" placeholder="Deal Price"/>
+    </label><br>
+  </div>
+  <button (click)="updateDeal()">Update</button>
+</div>
