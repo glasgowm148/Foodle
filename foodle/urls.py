@@ -29,7 +29,6 @@ urlpatterns = [
     url(r'^deal_page/<slug:deal_name_slug>/', views.deal_page, name='deal_page'),
     path(r'like/', views.like, name='like'),
     path(r'dislike/', views.dislike, name='dislike'),
-    path('contactHandle/', contactHandle, name='contactHandle'),
 
 
 
