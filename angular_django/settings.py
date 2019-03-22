@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     '212.71.237.14',  # Linode VPS
     'markglasgow148.pythonanywhere.com',
     'www.foodle.cc' # :o
+    'foodle.cc' # :o
 ]
 
 
