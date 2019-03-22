@@ -92,11 +92,7 @@ url('/static/font/veganfont-webfont.svg') format('svg'),
   height: 100%;
 }
 
-/* side - menu */
 
-.mat-list-base {
-  padding-top: 80px !important;
-}
 
 
 

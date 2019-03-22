@@ -1,5 +1,11 @@
 .sidenav-container {
   height: 80%;
+  /*position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;*/
+
 }
 
 .sidenav {
@@ -16,6 +22,9 @@
   z-index: 1;
 }
 
+.mat-drawer-inner-container{
+  z-index: 0;
+}
 /* side - menu */
 
 
