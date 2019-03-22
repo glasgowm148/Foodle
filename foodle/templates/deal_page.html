@@ -32,7 +32,7 @@
           <p class="card-text like_count">Likes: {{ deal.likes }}</p>
           <ul class="nav">
 		       <div>
-                  <input id="address" value="{{deal.info}}">
+                  <input type="hidden" id="address" value="{{deal.info}}">
                </div>
             {% if user.is_authenticated %}
             <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-like" type="button"> like </button>
