@@ -31,6 +31,9 @@
           <p class="card-text">{{deal.info}}</p>
           <p class="card-text like_count">Likes: {{ deal.likes }}</p>
           <ul class="nav">
+		       <div>
+                  <input id="address" value="{{deal.info}}">
+               </div>
             {% if user.is_authenticated %}
             <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-like" type="button"> like </button>
             {% endif %}
@@ -39,11 +42,6 @@
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
             {% if user.is_authenticated %}
             <button id="dislikes" data-dealid="{{deal.id}}" class="btn btn-primary btn-dislike" type="button"> dislike </button>
-			
-			<div>
-                <input id="address" value="{{deal.info}}">
-            </div>
-			
             {% endif %}
           </ul>
         </div>
