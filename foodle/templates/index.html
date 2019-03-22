@@ -22,6 +22,20 @@
 {% endblock %}
 
 {% block content %}
+
+<div>
+  <h1>Deals</h1>
+  {% if deals %}
+  <ul>
+    {% for deal in deals %}
+    <li>
+      <a href="/show_deal/{{ deal.slug }}">{{ deal.info }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="mat-app-background basic-container">
 

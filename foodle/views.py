@@ -13,11 +13,16 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import registerForm, SubmitForm
 from .serializers import DealSerializer
 
+
 def index(request, path=''):
     """
     The home page. This renders the container for the single-page app.
     """
-    return render(request, 'index.html')
+    context_dict = {
+        'deals': DealModel.objects.all()
+    }
+
+    return render(request, 'index.html', context_dict)
 
 def about(request):
     """
@@ -30,6 +35,18 @@ def faq(request):
     The faq page. This renders the container for the single-page app.
     """
     return render(request, 'faq.html')
+
+def show_deal(request, deal_name_slug):
+    context_dict = {}
+
+    try:
+        deal = DealModel.objects.get(slug=deal_name_slug)
+        context_dict['deal'] = deal
+    except DealModel.DoesNotExist:
+        context_dict['deal'] = None
+    
+    return render(request, 'show_deal.html', context_dict)
+
 
 def like(request):
     deal_id = None
