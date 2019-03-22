@@ -9,13 +9,14 @@
 {% endblock %}
 
 {% block content %}
-{% for deal in deals %}
 
 <!-- greg's deal_page details (start) -->
 <div id="map"></div>
 <br />
 <br />
 <br />
+
+{% if deal %}
 <div class="deal_container">
 
     <div class="card" style="width: 21.5em;margin:0 auto;">
@@ -49,84 +50,14 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
-{% endfor %}
+{% endif %}
 
-<script>
-function like(dealid, id, id2, pref) {
-  $.get('/like/', {deal_id: dealid }, function(data){
+<script src="{% static 'js/like-ajax.js' %}"></script>
 
-    $(id).html('likes: '+data);
-    if($(id2).value=="like") {
-    $(id2).html('remove '+pref);
-    }
-    else {
-      $(id2).html(pref);
-    }
-  });
-}
-</script>
-
-<script>
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: {lat: 55.872158, lng: -4.287869}
-        });
-        var geocoder = new google.maps.Geocoder();
-          geocodeAddress(geocoder, map);
-      }
-
-      function geocodeAddress(geocoder, resultsMap) {
-        var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === 'OK') {
-            resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-              map: resultsMap,
-              position: results[0].geometry.location
-            });
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-          }
-        });
-      }
-   </script>
-
-
-<script>
-
-      if (navigator.geolocation) {
-   navigator.geolocation.getCurrentPosition(function (position) {
-     var lat = position.coords.latitude;
-     var lng = position.coords.longitude;
-     var curLoc = new google.maps.LatLng(lat, lng);
-     var directionsService = new google.maps.DirectionsService();
-     var directionsDisplay = new google.maps.DirectionsRenderer();
-	 var whereTo = document.getElementById('address').value;
-     var mapOptions = {
-       zoom: 15,
-       center: curLoc,
-       mapTypeControl: true,
-     };
-     map = new google.maps.Map(document.getElementById("map"), mapOptions);
-     directionsDisplay.setMap(map);
-	 var request = {
-       origin: curLoc,
-       destination: whereTo,
-       travelMode: google.maps.DirectionsTravelMode.WALKING
-     };
-     directionsService.route(request, function (response, status) {
-       if (status == google.maps.DirectionsStatus.OK) {
-         directionsDisplay.setDirections(response);
-       }
-     });
-   });
- }
-
-    </script>
+<script src="{% static 'js/map.js' %}"></script>
+<script src="{% static 'js/map2.js' %}"></script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDye3jFXoyb4arMeb6ea6w1c_gTyS8RE5Y&callback=initMap">
 </script>

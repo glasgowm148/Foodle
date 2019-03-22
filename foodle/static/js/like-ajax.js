@@ -1,8 +1,11 @@
-$(document).ready(function () {
-    $(".btn-like").on("click", function (event) {
-        let dealid = $(this).attr("data-dealid");
-        $.get("/like/", {"deal_id": dealid}, function (data, status) {
-            $(this).hide();
-        });
-     });
-});
+function like(dealid, id, id2, pref) {
+    $.get('/'+pref+'/', {deal_id: dealid }, function(data){
+  
+      if($(id2).value=="like") {
+      $(id2).html('remove '+pref);
+      }
+      else {
+        $(id2).html(pref);
+      }
+    });
+  }

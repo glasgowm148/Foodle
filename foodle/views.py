@@ -36,18 +36,6 @@ def faq(request):
     """
     return render(request, 'faq.html')
 
-def show_deal(request, deal_name_slug):
-    context_dict = {}
-
-    try:
-        deal = DealModel.objects.get(slug=deal_name_slug)
-        context_dict['deal'] = deal
-    except DealModel.DoesNotExist:
-        context_dict['deal'] = None
-    
-    return render(request, 'show_deal.html', context_dict)
-
-
 def like(request):
     deal_id = None
     if request.method == 'GET':
@@ -88,12 +76,12 @@ def dislike(request):
             
     return HttpResponse(deal.likes)
 
-def deal_page(request):
+def deal_page(request, deal_name_slug):
     """
-    The about page. This renders the container for the single-page app.
+    The deal page. This renders the details of a given deal on the page
     """
     return render(request, 'deal_page.html', {
-        'deals':  DealModel.objects.all()
+        'deal':  DealModel.objects.get(slug=deal_name_slug)
     })
 
 def submit(request):
