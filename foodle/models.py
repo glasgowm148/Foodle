@@ -3,6 +3,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
+CATEGORY_CHOICES = (
+    ('indian', 'INDIAN'),
+    ('hassan\'s pizzaria', 'HASSAN\'S PIZZARIA'),
+    ('vegan', 'VEGAN'),
+    ('asian', 'ASIAN'),
+    ('other', 'OTHER'),
+)
+
 class DealModel(models.Model):
     info =             models.CharField(default='', max_length=200, unique=True)
     picture =          models.ImageField(upload_to='deals/', blank=True)
@@ -10,7 +18,7 @@ class DealModel(models.Model):
     been_disliked =    models.ManyToManyField(User, related_name="disliked-by+")
     likes =            models.IntegerField(default=1)
     url =              models.URLField(blank=True)
-    category =         models.CharField(default='', max_length=50)
+    category =         models.CharField(default='', choices=CATEGORY_CHOICES, max_length=50)
     slug =             models.SlugField(unique=True)
     address =          models.CharField(default='', max_length=100, blank=True)
 

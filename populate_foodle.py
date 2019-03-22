@@ -36,7 +36,7 @@ def populate():
             "info": "Free cow with every extra saucy burger!",
             "likes": 322,
             "url": "https://www.saucyburger.com",
-            "category": "fast food"
+            "category": "indian"
         },
         {
             "info": "Free soy milk (not oat) on purchases over £20.",

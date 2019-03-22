@@ -5,14 +5,14 @@ class tests(TestCase):
     def test_info_and_category(self):
         form = SubmitForm({
             'info': "deal",
-            'category': "miss me wit dat weeb shit"
+            'category': "other"
         })
         self.assertEquals(True, form.is_valid())
 
     # check if 
     def test_if_no_info(self):
         form = SubmitForm({
-            'category': "miss me wit dat weeb shit"
+            'category': "indian"
         })
         self.assertEquals(False, form.is_valid())
 
@@ -21,6 +21,6 @@ class tests(TestCase):
         form = SubmitForm({
             'info': "deal",
             'url': "deal",
-            'category': "miss me wit dat weeb shit"
+            'category': "indian"
         })
         self.assertEquals(False, form.is_valid())
