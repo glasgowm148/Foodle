@@ -10,8 +10,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
-from .forms import registerForm, SubmitForm
+from .forms import registerForm, SubmitForm, contactForm
 from .serializers import DealSerializer
+from django.core.mail import send_mail, BadHeaderError
 
 
 def index(request, path=''):
