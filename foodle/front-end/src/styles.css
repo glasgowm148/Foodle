@@ -246,6 +246,8 @@ hr.light-100 {
 
 .container {
   max-width: 90% !important;
+  background: lightblue;
+  padding: 20px;
 }
 
 
