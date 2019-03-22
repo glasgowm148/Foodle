@@ -23,3 +23,8 @@ class registerForm(UserCreationForm):
             'password1', 
             'password2', 
         )
+#The following code was adapted from https://wsvincent.com/django-contact-form/        
+class contactForm(forms.Form):
+  user_email = forms.EmailField(required=True)
+  email_subject = forms.CharField(required=True)
+  user_msg = forms.CharField(widget=forms.Textarea, required=True)
