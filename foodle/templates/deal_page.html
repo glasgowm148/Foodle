@@ -32,29 +32,22 @@
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
+          <p class="card-text">Likes: {{ deal.likes }}</p>
           <ul class="nav">
-              Likes: <strong id="like_count"> {{ deal.likes }}      </strong>
             {% if user.is_authenticated %}
-<<<<<<< HEAD
-              <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-sm" type="button">
-              Like
-            </button>
-			
-			<div>
-                <input id="address" value="{{deal.info}}">
-             </div>
-			 
-=======
-
             <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> like </button>
-            <button id="dislikes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> dislike </button>
-
->>>>>>> b65ad934aa36f06cdd53807fa70cd2dc3fb1160f
             {% endif %}
-          <ul class="nav">
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+            {% if user.is_authenticated %}
+            <button id="dislikes" data-dealid="{{deal.id}}" class="btn btn-primary" type="button"> dislike </button>
+						
+			<div>
+                <input id="address" value="{{deal.info}}">
+            </div>
+			
+            {% endif %}
           </ul>
         </div>
       </div>
