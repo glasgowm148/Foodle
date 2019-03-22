@@ -13,11 +13,10 @@
 
 <!-- greg's deal_page details (start) -->
 <div id="map"></div>
-
+<br />
+<br />
+<br />
 <div class="container">
-    <br />
-    <br />
-    <br />
   <div class="card-columns">
 
     <div class="card">
@@ -29,57 +28,52 @@
         <div class="card-body">
           <h5 class="card-title">Deal</h5>
           <p class="card-text">{{deal.info}}</p>
-          <p class="card-text like_count">Likes: {{ deal.likes }}</p>
+          <p id="like_count{{forloop.counter0}}" class="card-text">likes: {{ deal.likes }}</p>
+          <p id="dislike_count{{forloop.counter0}}" class="card-text">dislikes: {{ deal.likes }}</p>
           <ul class="nav">
 		       <div>
                   <input type="hidden" id="address" value="{{deal.info}}">
                </div>
             {% if user.is_authenticated %}
-            <button id="likes" data-dealid="{{deal.id}}" class="btn btn-primary btn-like" type="button"> like </button>
+            <button class="btn btn-primary" type="button" onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}')"> like </button>
             {% endif %}
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
             <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
             {% if user.is_authenticated %}
-            <button id="dislikes" data-dealid="{{deal.id}}" class="btn btn-primary btn-dislike" type="button"> dislike </button>
+            <button class="btn btn-primary" type="button" onclick="dislike('{{deal.id}}', '#dislike_count{{forloop.counter0}}')"> dislike </button>
             {% endif %}
           </ul>
         </div>
       </div>
   </div>
-    <br />
-    <br />
-    <br />
 
     </div>
 
   </div> 
 </div>
 
+<br />
+<br />
+<br />
 {% endfor %}
 
 
 <script>
-  $(document).ready( function() {
     
-    $(".btn-like").click(function(event){
-        var dealid;
-        dealid = $(this).attr("data-dealid");
-        $.get('/like/', {deal_id: dealid }, function(data){
-            $('.like_count').html(data);
-        });
-    });
-    
+function like(dealid, id) {
+  $.get('/like/', {"deal_id": dealid }, function(data){
+          $(id).html("likes: "+data);
+      });
+}
 
-  $(".btn-dislike").click(function(event){
-        var dealid;
-        dealid = $(this).attr("data-dealid");
-        $.get('/dislike/', {deal_id: dealid }, function(data){
-            $('.like_count').html(data);
-        });
-    });
+function dislike(dealid, id) {
+  $.get('/dislike/', {"deal_id": dealid }, function(data){
+          $(id).html("dislikes: "+data);
+      });
+}
+
     
-  });
 </script>
 
 
