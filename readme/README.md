@@ -1,4 +1,4 @@
-## Running locally
+﻿## Running locally
 
 
 # Requirements
@@ -165,7 +165,11 @@ https://bootsnipp.com/snippets/dldxB
 
 
 Greg:
-
+When researching how to use Google Maps API the following tutorials were very informative
+https://developers.google.com/maps/documentation/javascript/tutorial
+https://developers.google.com/maps/documentation/geocoding/intro
+https://developers.google.com/maps/documentation/geolocation/intro
+https://developers.google.com/maps/documentation/javascript/directions
 
 
 Mark:
