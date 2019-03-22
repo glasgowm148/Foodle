@@ -7,11 +7,6 @@
 {% block first_item %}
 <img src="{% static 'images/sliders/donut_cut.png' %}" alt="donut">
 <div class="carousel-caption">
-<<<<<<< HEAD
-	<h1 class="display-2">Foodle</h1>
-	<h3 class="vegan-style">Where deals become meals!</h3>
-=======
->>>>>>> 044744d5f239cb8deb15a2dcfc457e491af885bf
 </div>
 {% endblock %}
 
@@ -26,28 +21,6 @@
 
 {% block content %}
 
-<<<<<<< HEAD
-<div class="container-fluid padding">
-	<div class="row padding">
-		{% if deals %}
-		{% for deal in deals %}
-		<div class="col-lg-3 col-md-6">
-			<div class="card">
-				<img class="card-img-top" src="{{ deal.picture.url }}">
-				<div class="card-body">
-					<p class="card-text">
-						{{ deal.info }}
-					</p>
-					<a href="/show_deal/{{ deal.slug }}" class="btn btn-outline-primary">
-						{{ deal.info }}
-					</a>
-				</div>
-			</div>
-		</div>
-		{% endfor %}
-		{% endif %}
-	</div>
-=======
 <div>
   {% if deals %}
   <ul>
@@ -58,7 +31,6 @@
     {% endfor %}
   </ul>
   {% endif %}
->>>>>>> 044744d5f239cb8deb15a2dcfc457e491af885bf
 </div>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
