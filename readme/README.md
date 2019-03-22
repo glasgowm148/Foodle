@@ -173,3 +173,8 @@ Mark:
 
 
 Finn:
+Adapted for use:
+https://wsvincent.com/django-contact-form/
+
+Also this:
+https://docs.djangoproject.com/en/2.1/topics/email/
