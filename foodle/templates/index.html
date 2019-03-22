@@ -20,6 +20,29 @@
 
 {% block content %}
 
+{% if deals %}
+<div class="container-fluid padding">
+  <div class="row padding">
+    {% for deal in deals %}
+    <div class="col-lg-3 col-md-6">
+      <!-- Start of card -->
+      <div class="card">
+        {% if deal.picture %}
+        <img class="card-img-top" src="{{ deal.picture.url }}" alt="deal_image">
+        {% endif %}
+        <div class="card-body">
+          <h4 class="card-title">{{ deal.info }}</h4>
+          <a href="/deal_page/{{ deal.slug }}" class="btn btn-outline-primary">
+            Deal Page
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 <!---<div fxFlex="value%" fxFlexAlign="right">
   <p>Your uploaded deals :: </p>
   {% if deals %}
@@ -38,13 +61,13 @@
 <div class="mat-app-background basic-container">
 
   <!-- This loads the Angular Tab App via foodle/front-end/src/app/app.component.ts-->
-  <app-root>Loading...</app-root>
+<app-root>Loading...</app-root>
 
-  <script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
-  <script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
+<script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
 
 
 </div>

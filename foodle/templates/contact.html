@@ -2,39 +2,18 @@
 {% load staticfiles %}
 
 {% block title_block %}
-Contact
 {% endblock %}
 
 
 
 {% block content %}
-
-<!-- HTML form to send emails adapted from: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_mail -->
- <div class="formContent">
-  <form action="mailto:FoodleAdmin@protonmail.com" method="post" enctype="text/plain">
-
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    <br>
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    <br>
-
-    <label for="country">Email</label>
-    <input type="text" id="email" name="email" placeholder="Enter your email address">
-
-    <br>
-
-
-    <label for="subject">Details</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <br>
-
-
-    <input type="submit" value="Submit">
-
-  </form>
-</div>
+<!-- contact.html -->
+<h1>Contact Us</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
 {% endblock %}
