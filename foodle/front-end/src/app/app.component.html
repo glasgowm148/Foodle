@@ -12,16 +12,24 @@ This is the file called by <app-root>. Current this displays the following
   https://www.techiediaries.com/angular-tutorial/
 
 -->
-<div class="container">
 
 <div class="container">
+  <app-example-navbar></app-example-navbar>
+</div>
 
+
+<h2 class="mt-3">Deal Service Attempt. Django++rest++Angular</h2>
+
+
+<li *ngFor="let deal of deal">
+  {{ deal.info }}
+</li>
 
     <!-- This loads the card box / tab-->
 
-  <app-example-navbar></app-example-navbar>
 
-    <!-- Category Boxes under slider-->
+
+    <!-- Category Boxes under slider=
     <mat-grid-list cols="4" rowHeight="100px">
       <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
         [style.background]="tile.color">
@@ -30,7 +38,6 @@ This is the file called by <app-root>. Current this displays the following
     </mat-grid-list>
 
 
-</div>
 
 
 <!-- Category selection boxes at the top
