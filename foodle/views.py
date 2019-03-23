@@ -38,6 +38,7 @@ def faq(request):
     return render(request, 'faq.html')
 
 def like(request):
+    # Like view: updates a like counter based on whether the user has already liked
     deal_id = None
     if request.method == 'GET':
         deal_id = request.GET.get('deal_id')
@@ -58,6 +59,7 @@ def like(request):
     return HttpResponse(deal.likes)
 
 def dislike(request):
+    # Like view: updates a like counter based on whether the user has already disliked
     deal_id = None
     if request.method == 'GET':
         deal_id = request.GET.get('deal_id')
@@ -124,14 +126,15 @@ def contact(request):
         return HttpResponse('Sent!')
     return render(request, "contact.html", {'form': form})
 
-# Handle Login and register
+'''' Handle Login and register '''
+
 @login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
 
 def user_login(request):
-
+    # If the user is registered with a correct registerForm
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -157,6 +160,7 @@ def user_login(request):
 
 def register(request):
 
+    # Register form for the users. Redirects to login straight after a successful login
     if request.method == 'POST':
         form = registerForm(request.POST)
         if form.is_valid():
