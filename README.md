@@ -1,13 +1,13 @@
 ![](foodle/static/images/sliders/slide1.png)
 
 # Foodle
-> A responsive web application for finding deals within walking distance built using Django and Angular. 
-
 "Where Deals Become Meals"™️
 
+> A responsive web application for finding deals within walking distance built using Django and Angular. 
 
 
 [![NPM Version][npm-image]][npm-url]
+
 
 [![Build Status] [travis-image]][travis-url]
 
@@ -45,17 +45,31 @@ Detailed instructions, full descriptions and commands used available in [readme/
 python manage.py test
 ```
 
+#### Structure
 
-
-
-
-### Resources Used / References:
-
-#### Our Work
-
-* [HTML Templates](foodle/templates)
+* [HTML Templates](foodle/templates) - html files served 
 * [Angular /app](foodle/front-end/src/app) - where the angular html/css/ts lives
 * [foodle](foodle) - Django home. foodle python files are located here
+* [media](media) - databased images stored here
+* [static](foodle/static) - custom css, file storage, font, images
+* CSS
+  * [style.css](foodle/front-end/src/styles.css) - main style.css used
+  * [faq.css](foodle/static/css/faq.css) - main style.css used
+  * [input.css](foodle/front-end/src/styles.css) - main style.css used
+  * [style.css](foodle/front-end/src/styles.css) - main style.css used
+
+
+## Release History
+
+* 0.0.9
+    * RELEASE : First draft for submission
+    * Site builds and serves as expected, currently using bootstrap cards placed above the angular code until we have the angular cards formatted. 
+        * To Fix
+          * Angular cards on home
+          * Google sign-in
+        
+
+### Acknowledgements
 
 ##### Nathan: 
 For a number of the bootstrap elements, this tutorial was used to understand and start implementing the basics of them https://www.youtube.com/watch?v=9cKsq14Kfsw
