@@ -2681,7 +2681,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<div *ngFor=\"let deal of deal\">\n    <div class=\"col-md-2 mb-1\">{{ this.deal }}</div>\n</div>\n\n    <!-- This loads the card box / tab-->\n\n\n\n    <!-- Category Boxes under slider=\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n        [style.background]=\"tile.color\">\n        {{tile.text}}\n      </mat-grid-tile>\n    </mat-grid-list>\n\n\n\n\n<!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n"
+module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n\n\n<li *ngFor=\"let deal of deal\">\n  {{ deal.info }}\n</li>\n\n    <!-- This loads the card box / tab-->\n\n\n\n    <!-- Category Boxes under slider=\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n        [style.background]=\"tile.color\">\n        {{tile.text}}\n      </mat-grid-tile>\n    </mat-grid-list>\n\n\n\n\n<!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n"
 
 /***/ }),
 
@@ -2704,29 +2704,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(_dealService, _userService) {
-        this._dealService = _dealService;
-        this._userService = _userService;
+    function AppComponent(dataService, userService) {
+        this.dataService = dataService;
+        this.userService = userService;
+        this.message = 'Hello from HomeComponent constructor';
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.getDeals();
-    };
-    AppComponent.prototype.getDeals = function () {
         var _this = this;
-        this._dealService.list().subscribe(function (data) {
-            _this.deals = data;
-        });
+        this.dataService
+            .list()
+            .subscribe(function (data) { return _this.values = data; });
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html")
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_deal_service__WEBPACK_IMPORTED_MODULE_2__["DealService"], _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_deal_service__WEBPACK_IMPORTED_MODULE_2__["DealService"],
+            _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
     ], AppComponent);
     return AppComponent;
 }());
 
+/**
+ * An array of all the Deal objects from the API
+
+public deals;
+info: any;
+
+
+
+
+constructor(private _dealService: DealService, private _userService: UserService) { }
+
+ngOnInit() {
+  this.getDeals();
+
+}
+
+
+ */
 
 
 /***/ }),
