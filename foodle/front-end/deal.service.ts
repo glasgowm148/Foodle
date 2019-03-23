@@ -1,12 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {UserService} from './user.service';
+import {UserService} from './src/app/user.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+
+@Injectable()
 export class BlogPostService {
 
   constructor(private http: HttpClient, private _userService: UserService) { }
@@ -15,5 +12,6 @@ export class BlogPostService {
   list() {
     return this.http.get('/api/deals');
   }
+
 
 }

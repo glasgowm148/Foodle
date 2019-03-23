@@ -21,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
 import { CardsAngularComponent } from './cards-angular/cards-angular.component';
+import { BlogPostService } from 'deal.service';
 
 
 
@@ -42,6 +43,7 @@ import { CardsAngularComponent } from './cards-angular/cards-angular.component';
   ],
   entryComponents: [AppComponent],
   declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent],
+  providers: [ BlogPostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,43 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "./deal.service.ts":
+/*!*************************!*\
+  !*** ./deal.service.ts ***!
+  \*************************/
+/*! exports provided: BlogPostService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogPostService", function() { return BlogPostService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _src_app_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/app/user.service */ "./src/app/user.service.ts");
+
+
+
+
+var BlogPostService = /** @class */ (function () {
+    function BlogPostService(http, _userService) {
+        this.http = http;
+        this._userService = _userService;
+    }
+    // Uses http.get() to load data from a single API endpoint
+    BlogPostService.prototype.list = function () {
+        return this.http.get('/api/deals');
+    };
+    BlogPostService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _src_app_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
+    ], BlogPostService);
+    return BlogPostService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./node_modules/hammerjs/hammer.js":
 /*!*****************************************!*\
   !*** ./node_modules/hammerjs/hammer.js ***!
@@ -2681,7 +2719,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n<div class=\"container\">\n\n<div class=\"container\">\n\n\n    <!-- This loads the card box / tab-->\n\n  <app-example-navbar></app-example-navbar>\n\n    <!-- Category Boxes under slider-->\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n        [style.background]=\"tile.color\">\n        {{tile.text}}\n      </mat-grid-tile>\n    </mat-grid-list>\n\n\n</div>\n\n\n<!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n"
+module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Micro Blog Posts</h2>\n<div *ngFor=\"let deal of deal\">\n  <div class=\"row mb-3\">\n    <div class=\"col-md-2 mb-1\">{{ this.deal }}</div>\n  </div>\n</div>\n\n    <!-- This loads the card box / tab-->\n\n\n\n    <!-- Category Boxes under slider=\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n        [style.background]=\"tile.color\">\n        {{tile.text}}\n      </mat-grid-tile>\n    </mat-grid-list>\n\n\n\n\n<!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n"
 
 /***/ }),
 
@@ -2697,100 +2735,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _blog_post_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blog_post.service */ "./src/app/blog_post.service.ts");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
+
+
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'app';
-        this.pictures = [
-            {
-                id: 1,
-                title: 'SOBAAA',
-                img: 'static/images/soba.png'
-            },
-            {
-                id: 2,
-                title: 'dom',
-                img: 'static/images/dominos.png'
-            },
-            {
-                id: 3,
-                title: 'dom',
-                img: 'static/images/dominos.png'
-            },
-            {
-                id: 4,
-                title: 'SOBAAA',
-                img: 'static/images/soba.png'
-            },
-            {
-                id: 5,
-                title: 'oneup',
-                img: 'static/images/oneup.png'
-            },
-            {
-                id: 6,
-                title: 'SOBAAA',
-                img: 'static/images/soba.png'
-            },
-        ];
-        this.tiles = [
-            { text: 'Snacks', cols: 2, rows: 1, color: '#91B2FF', img: 'static/images/soba.png' },
-            { text: 'Under £5', cols: 1, rows: 1, color: '#B7A0E8' },
-            { text: 'Lunch', cols: 1, rows: 2, color: '#FF9191', img: 'static/images/soba.png' },
-            { text: 'under 5minutes away', cols: 3, rows: 1, color: '#D9EDD9' },
-        ];
-        this.imageUrls = [
-            { url: 'static/images/soba.png',
-                caption: 'The first slide', href: '#config' },
-            { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg',
-                clickAction: function () { return alert('custom click function'); } },
-            { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56789263/akrales_170919_1976_0104.0.jpg',
-                caption: 'Apple TV', href: 'https://www.apple.com/' },
-            { url: 'assets/kitties.jpg', backgroundSize: 'contain', backgroundPosition: 'center' }
-        ];
-        this.height = '400px';
-        this.arrowSize = '30px';
-        this.showArrows = true;
-        this.disableSwiping = false;
-        this.autoPlay = true;
-        this.autoPlayInterval = 3333;
-        this.stopAutoPlayOnSlide = true;
-        this.debug = false;
-        this.backgroundSize = 'cover';
-        this.backgroundPosition = 'center center';
-        this.backgroundRepeat = 'no-repeat';
-        this.showDots = true;
-        this.dotColor = '#FFF';
-        this.showCaptions = true;
-        this.captionColor = '#FFF';
-        this.captionBackground = 'rgba(0, 0, 0, .35)';
-        this.lazyLoad = false;
-        this.hideOnNoSlides = false;
-        this.width = '100%';
-        this.fullscreen = false;
+    function AppComponent(_blogPostService, _userService) {
+        this._blogPostService = _blogPostService;
+        this._userService = _userService;
     }
     AppComponent.prototype.ngOnInit = function () {
+        this.getDeals();
+    };
+    AppComponent.prototype.getDeals = function () {
         var _this = this;
-        // adding an image url dynamically.
-        setTimeout(function () {
-            console.log('adding an image url dynamically.');
-            _this.imageUrls.push('https://cdn-images-1.medium.com/max/2000/1*Nccd2ofdArlXF7v58UK94Q.jpeg');
-        }, 2000);
-        console.log("\n                                  /   \\\n _                        )      ((   ))     (\n(@)                      /|\\      ))_((     /|\\\n|-|                     / | \\    (/\\|/\\)   / | \\                      (@)\n| | -------------------/--|-voV---`|'/---Vov-|--\\---------------------|-|\n|-|                         '^`   (o o)  '^`                          | |\n| |                               `\\Y/'                               |-|\n|-|                                                                   | |\n| |                                Hey                                |-|\n|-|                                                                   | |\n| |                                                                   |-|\n|_|___________________________________________________________________| |\n(@)              l   /\\ /         ( (       \\ /\\   l                `\\|-|\n                 l /   V           \\ \\       V   \\ l                  (@)\n                 l/                _) )_          \\I\n                                   `\\ /'\n\t\t\t\t                     `\n    ");
+        this._blogPostService.list().subscribe(function (data) {
+            _this.deals = data;
+        });
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html")
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_blog_post_service__WEBPACK_IMPORTED_MODULE_2__["BlogPostService"], _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
     ], AppComponent);
     return AppComponent;
 }());
 
-/**  Copyright 2019 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
 
 
 /***/ }),
@@ -2818,6 +2792,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 /* harmony import */ var _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./example-navbar/example-navbar.component */ "./src/app/example-navbar/example-navbar.component.ts");
 /* harmony import */ var _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cards-angular/cards-angular.component */ "./src/app/cards-angular/cards-angular.component.ts");
+/* harmony import */ var deal_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! deal.service */ "./deal.service.ts");
 
 
 
@@ -2830,6 +2805,7 @@ __webpack_require__.r(__webpack_exports__);
 // Grid List for aligning angular cards
  // <----- HERE
 // Cards + bar at top
+
 
 
 
@@ -2853,6 +2829,7 @@ var AppModule = /** @class */ (function () {
             ],
             entryComponents: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__["ExampleNavbarComponent"], _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__["CardsAngularComponent"]],
+            providers: [deal_service__WEBPACK_IMPORTED_MODULE_13__["BlogPostService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
@@ -2932,6 +2909,46 @@ export class AppModule {}
 platformBrowserDynamic().bootstrapModule(AppModule);
 
 */
+
+
+/***/ }),
+
+/***/ "./src/app/blog_post.service.ts":
+/*!**************************************!*\
+  !*** ./src/app/blog_post.service.ts ***!
+  \**************************************/
+/*! exports provided: BlogPostService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogPostService", function() { return BlogPostService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
+
+
+
+
+var BlogPostService = /** @class */ (function () {
+    function BlogPostService(http, _userService) {
+        this.http = http;
+        this._userService = _userService;
+    }
+    // Uses http.get() to load data from a single API endpoint
+    BlogPostService.prototype.list = function () {
+        return this.http.get('/api/deals');
+    };
+    BlogPostService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
+    ], BlogPostService);
+    return BlogPostService;
+}());
+
 
 
 /***/ }),
@@ -3161,6 +3178,82 @@ var DemoMaterialModule = /** @class */ (function () {
 /**  Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license */
+
+
+/***/ }),
+
+/***/ "./src/app/user.service.ts":
+/*!*********************************!*\
+  !*** ./src/app/user.service.ts ***!
+  \*********************************/
+/*! exports provided: UserService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var UserService = /** @class */ (function () {
+    function UserService(http) {
+        this.http = http;
+        // error messages received from the login attempt
+        this.errors = [];
+        this.httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+        };
+    }
+    // Uses http.post() to get an auth token from djangorestframework-jwt endpoint
+    UserService.prototype.login = function (user) {
+        var _this = this;
+        this.http.post('/api-token-auth/', JSON.stringify(user), this.httpOptions).subscribe(function (data) {
+            console.log('login success', data);
+            _this.updateData(data['token']);
+        }, function (err) {
+            console.error('login error', err);
+            _this.errors = err['error'];
+        });
+    };
+    /**
+     * Refreshes the JWT token, to extend the time the user is logged in
+     */
+    UserService.prototype.refreshToken = function () {
+        var _this = this;
+        this.http.post('/api-token-refresh/', JSON.stringify({ token: this.token }), this.httpOptions).subscribe(function (data) {
+            console.log('refresh success', data);
+            _this.updateData(data['token']);
+        }, function (err) {
+            console.error('refresh error', err);
+            _this.errors = err['error'];
+        });
+    };
+    UserService.prototype.logout = function () {
+        this.token = null;
+        this.token_expires = null;
+        this.username = null;
+    };
+    UserService.prototype.updateData = function (token) {
+        this.token = token;
+        this.errors = [];
+        // decode the token to read the username and expiration timestamp
+        var token_parts = this.token.split(/\./);
+        var token_decoded = JSON.parse(window.atob(token_parts[1]));
+        this.token_expires = new Date(token_decoded.exp * 1000);
+        this.username = token_decoded.username;
+    };
+    UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], UserService);
+    return UserService;
+}());
+
 
 
 /***/ }),

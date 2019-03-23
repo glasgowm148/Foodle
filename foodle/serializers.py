@@ -21,4 +21,6 @@ class DealSerializer(serializers.ModelSerializer):
     deal = serializers.StringRelatedField(many=False)
     class Meta:
         model = DealModel
-        fields = ('info', 'pictures', 'likes', 'category')
+        fields = ('deal', 'info', 'picture', 'likes', 'category', 'url', 'slug', 'address', 'been_liked', 'been_disliked')
+
+
