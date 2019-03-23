@@ -1,5 +1,10 @@
+![](foodle/static/images/sliders/slide1.png)
+
 # Foodle
 > A responsive web application for finding deals within walking distance built using Django and Angular. 
+
+"Where Deals Become Meals"™️
+
 
 
 [![NPM Version][npm-image]][npm-url]
@@ -8,11 +13,10 @@
 
 [![Downloads Stats] [npm-downloads]][npm-url]
 
-[![PythonAnywhere] [https://img.shields.io/badge/demo-blue.svg]](markglasgow148@pythonanywhere.com)
+[![PythonAnywhere] [https://img.shields.io/badge/demo-blue.svg]](https://www.foodle.cc)
 
 
-"Where Deals Become Meals"™️
-![](NOTES/header.png)
+
 
 # Running Locally
 
