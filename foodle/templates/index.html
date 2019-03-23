@@ -19,35 +19,51 @@
 {% endblock %}
 
 {% block content %}
-
+<br />
+<br />
+<br />
 {% if deals %}
 <div class="container-fluid padding">
   <div class="row padding">
     {% for deal in deals %}
     <div class="col-lg-3 col-md-6">
       <!-- Start of card -->
+
       <div class="card">
         {% if deal.picture %}
         <img class="card-img-top" src="{{ deal.picture.url }}" alt="deal_image">
         {% endif %}
         <div class="card-body">
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center">{{ deal.category }}</div>
+            </div>
+            <br/>
+
           <h4 class="card-title">{{ deal.info }}</h4>
           {% if deal.address %}
-          <p>Address: {{ deal.address }}</p>
+          <p class="card-text">Address: {{ deal.address }}</p>
           {% else %}
-          Submission has no address
+          <p class="card-text">Submission has no address </p>
           {% endif %}
+
+          <a class="align-self-end btn btn-block btn-outline-primary" href="/deal_page/{{ deal.slug }}" role="button">Deal Info</a> <br />
           {% if deal.url %}
-          <p>Url: {{ deal.url }}</p>
+          <a class="align-self-end btn btn-block btn-outline-primary" href="{{ deal.url }}" role="button">Deal link</a>
           {% endif %}
-          <a class="btn btn-outline-primary" href="/deal_page/{{ deal.slug }}" role="button">Deal Info</a>
         </div>
+
       </div>
+      <br/>
+
     </div>
     {% endfor %}
   </div>
+
 </div>
 {% endif %}
+<br />
+<br />
+<br />
 
 <!---<div fxFlex="value%" fxFlexAlign="right">
   <p>Your uploaded deals :: </p>
@@ -65,7 +81,7 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="mat-app-background basic-container">
-
+-->
   <!-- This loads the Angular Tab App via foodle/front-end/src/app/app.component.ts-->
 <app-root>Loading...</app-root>
 

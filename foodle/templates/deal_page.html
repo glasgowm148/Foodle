@@ -19,7 +19,7 @@
 {% if deal %}
 <div class="deal_container">
 
-  <div class="card" style="width: 21.5em;margin:0 auto;">
+  <div class="card-header text-center">
 
     {% if deal.picture %}
     <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
@@ -31,14 +31,10 @@
       <strong class="card-text">{{deal.info}}</strong>
       <strong class="card-text">{{deal.category}}</strong>
       {% if deal.address %}<p class="card-text">{{deal.address}}</p>{% endif %}
-      <div>
         {% if deal.address %}
         <input type="hidden" id="address" value="{{deal.address}}">
         {% endif %}
-      </div>
-      <div class="row">
-        <p id="like_count{{forloop.counter0}}" class="col-md-6">Likes :: {{ deal.likes }}</p>
-      </div>
+        <p id="like_count{{forloop.counter0}}" class="col-md-6">Likes : {{ deal.likes }}</p>
       <ul class="nav center">
         {% if user.is_authenticated %}
         <button id="btn{{forloop.counter0}}" class="btn btn-primary" type="button"
