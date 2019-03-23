@@ -1,4 +1,9 @@
-
+.deal {
+  width: auto; 
+  margin: 25px;
+  background-color: #efe;
+  display: inline-block;
+}
 /* BASIC */
 
   body {
@@ -7,7 +12,7 @@
   }
 
   a {
-    color: #92badd;
+    color: #8f1c8b;
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
