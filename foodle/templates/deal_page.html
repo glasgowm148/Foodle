@@ -17,25 +17,34 @@
 <br />
 
 {% if deal %}
-<div class="deal_container">
+<div class="container-fluid padding col-lg-3 centre">
+  <div class="card text-center">
 
-  <div class="card-header text-center">
+    <div class="card-header">
 
-    {% if deal.picture %}
-    <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
-    {% endif %}
+      {% if deal.picture %}
+      <img class="card-img-top" src="{{ deal.picture.url }}" alt="Card image cap">
+      {% endif %}
+
+      <h3 class="card-text">{{deal.category}}</h3>
+
+    </div>
 
     <div class="card-body">
-      <h5 class="card-title">Deal</h5>
 
-      <strong class="card-text">{{deal.info}}</strong>
-      <strong class="card-text">{{deal.category}}</strong>
-      {% if deal.address %}<p class="card-text">{{deal.address}}</p>{% endif %}
+        <strong class="card-text">{{deal.name}}</strong>
+        <p class="card-text" >{{deal.info}} </p>
+
         {% if deal.address %}
-        <input type="hidden" id="address" value="{{deal.address}}">
+        <p id="like_count{{forloop.counter0}}" >Address : {{deal.address}} </p>
         {% endif %}
-        <p id="like_count{{forloop.counter0}}" class="col-md-6">Likes : {{ deal.likes }}</p>
-      <ul class="nav center">
+
+        <p id="like_count{{forloop.counter0}}">Likes : {{ deal.likes }}</p>
+
+      </div>
+
+      <div class="card-footer row justify-content-center padding">
+
         {% if user.is_authenticated %}
         <button id="btn{{forloop.counter0}}" class="btn btn-primary" type="button"
           onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn{{forloop.counter0}}', 'like')"> like
@@ -49,13 +58,16 @@
           onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn2{{forloop.counter0}}', 'dislike')">
           dislike </button>
         {% endif %}
-      </ul>
-    </div>
+
+      </div>
+      
   </div>
 </div>
-</div>
-</div>
 {% endif %}
+
+<br />
+<br />
+<br />
 
 <script src="{% static 'js/like-ajax.js' %}"></script>
 

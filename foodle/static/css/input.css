@@ -1,4 +1,6 @@
-
+.centre {
+  width: auto; 
+}
 /* BASIC */
 
   body {
@@ -7,7 +9,7 @@
   }
 
   a {
-    color: #92badd;
+    color: #8f1c8b;
     display:inline-block;
     text-decoration: none;
     font-weight: 400;

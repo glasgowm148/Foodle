@@ -97,15 +97,17 @@
           <li class="nav-item">
             <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Sign out</a>
           </li>
-
+          
+          <!--
           <li class="nav-item">
               <a class="btn btn-primary" href="{% url 'login' %}" role="button">Your Account</a>
             </li>
+          -->
 
           {% else %}
 
           <li class="nav-item">
-            <a class="btn btn-primary" href="{% url 'login' %}" role="button">Register</a>
+            <a class="btn btn-primary" href="{% url 'login' %}" role="button">Login</a>
           </li>
 
           {% endif %}

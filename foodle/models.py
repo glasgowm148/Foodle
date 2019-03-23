@@ -12,7 +12,8 @@ CATEGORY_CHOICES = (
 )
 
 class DealModel(models.Model):
-    info =             models.CharField(default='', max_length=200, unique=True)
+    name=              models.CharField(default='', max_length=200)
+    info =             models.CharField(default='', max_length=200)
     picture =          models.ImageField(upload_to='deals/', blank=True)
     been_liked =       models.ManyToManyField(User, related_name="liked-by+")
     been_disliked =    models.ManyToManyField(User, related_name="disliked-by+")
