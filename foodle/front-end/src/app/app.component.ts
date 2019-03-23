@@ -12,23 +12,14 @@ import {throwError} from 'rxjs';
 
 
 export class AppComponent implements OnInit {
-  public message: string;
-    public values: any[];
+  values: number[];
 
-    constructor(
-        private dataService: DealService,
-        private userService: UserService) {
-        this.message = 'Hello from HomeComponent constructor';
-    }
 
-    ngOnInit() {
+    constructor(private dealService: DealService) {
+      this.dealService.list().subscribe(z => {
+        this.values = this.values;
+      });}
 
-        this.dataService
-            .list()
-            .subscribe((data: any[]) => this.values = data,
-
-            );
-    }
 }
 
 
