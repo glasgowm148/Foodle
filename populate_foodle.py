@@ -9,6 +9,7 @@ from foodle.models import DealModel
 def populate():
     deals = [
         {
+            'picture': '/deals/foodle.png',
             "name": "Vegan offer",
             "info": "Up to £5 off vegan items with a student card.",
             "likes": 12,
@@ -16,6 +17,7 @@ def populate():
             "category": "vegan"
         },
         {
+            'picture': '/deals/foodle.png',
             "name": "Student card offer",
             "info": "A quarter off all purchases with a student card.",
             "likes": 38,
@@ -23,6 +25,7 @@ def populate():
             "category": "other"
         },
         {
+            'picture': '/deals/foodle.png',
             "name": "Chinese offer",
             "info": "Save money on Chinese takeaway.",
             "likes": 22,
@@ -30,6 +33,7 @@ def populate():
             "category": "asian"
         },
         {
+            'picture': '/deals/foodle.png',
             "name": "Bar Soba offer",
             "info": "Bar Soba : 50% off for students.",
             "likes": 73,
@@ -37,6 +41,7 @@ def populate():
             "category": "asian"
         },
         {
+            'picture': '/deals/foodle.png',
             "name": "Saucy Burger offer",
             "info": "Free cow with every extra saucy burger!",
             "likes": 322,
@@ -44,6 +49,7 @@ def populate():
             "category": "indian"
         },
         {
+            'picture': '/deals/foodle.png',
             "name": "Soy milk offer",
             "info": "Free soy milk (not oat) on purchases over £20.",
             "likes": 47,
@@ -54,20 +60,21 @@ def populate():
 
 
     for deal in deals:
-        add_deal(deal["name"], deal["info"], deal["likes"], deal["url"], deal["category"])
+        add_deal(deal["picture"], deal["name"], deal["info"], deal["likes"], deal["url"], deal["category"])
 
     for d in DealModel.objects.all():
         print("- {0}".format(str(d)))
 
-def add_deal(name, info, likes, url, category):
+def add_deal(picture, name, info, likes, url, category):
     d = DealModel.objects.get_or_create(info=info)[0]
     
-    d.name=name
-    d.info=info
-    d.likes=likes
-    d.url=url
-    d.category=category
-    
+    d.picture = picture
+    d.name = name
+    d.info = info
+    d.likes = likes
+    d.url = url
+    d.category = category
+
     d.save()
 
     return d

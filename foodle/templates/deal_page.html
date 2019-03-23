@@ -17,7 +17,7 @@
 <br />
 
 {% if deal %}
-<div class="container-fluid">
+<div class="container-fluid padding col-lg-3 centre">
   <div class="card text-center">
 
     <div class="card-header">
@@ -43,23 +43,24 @@
 
       </div>
 
-          <div class="card-footer row justify-content-center">
+      <div class="card-footer row justify-content-center padding">
 
-            {% if user.is_authenticated %}
-            <button id="btn{{forloop.counter0}}" class="btn btn-primary" type="button"
-              onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn{{forloop.counter0}}', 'like')"> like
-            </button>
-            {% endif %}
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
-            <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
-            {% if user.is_authenticated %}
-            <button id="btn2{{forloop.counter0}}" class="btn btn-primary" type="button"
-              onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn2{{forloop.counter0}}', 'dislike')">
-              dislike </button>
-            {% endif %}
+        {% if user.is_authenticated %}
+        <button id="btn{{forloop.counter0}}" class="btn btn-primary" type="button"
+          onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn{{forloop.counter0}}', 'like')"> like
+        </button>
+        {% endif %}
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-bookmark"></i></a>
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="far fa-flag"></i></a>
+        <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fas fa-share-alt"></i></a>
+        {% if user.is_authenticated %}
+        <button id="btn2{{forloop.counter0}}" class="btn btn-primary" type="button"
+          onclick="like('{{deal.id}}', '#like_count{{forloop.counter0}}', '#btn2{{forloop.counter0}}', 'dislike')">
+          dislike </button>
+        {% endif %}
 
-          </div>
+      </div>
+      
   </div>
 </div>
 {% endif %}
