@@ -1,10 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {UserService} from './src/app/user.service';
+import {UserService} from './user.service';
 
 
-@Injectable()
-export class BlogPostService {
+@Injectable({
+  providedIn: 'root'
+})
+export class DealService {
 
   constructor(private http: HttpClient, private _userService: UserService) { }
 

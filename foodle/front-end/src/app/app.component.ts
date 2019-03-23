@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {BlogPostService} from './blog_post.service';
+import {DealService } from './deal.service';
 import {UserService} from './user.service';
 import {throwError} from 'rxjs';
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   public deals;
 
 
-  constructor(private _blogPostService: BlogPostService, private _userService: UserService) { }
+  constructor(private _dealService: DealService, private _userService: UserService) { }
 
   ngOnInit() {
     this.getDeals();
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   }
 
   getDeals() {
-    this._blogPostService.list().subscribe(
+    this._dealService.list().subscribe(
       data => { this.deals = data;
 
 
