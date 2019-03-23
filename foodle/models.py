@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-CATEGORY_CHOICES = (
+CATEGORY_CHOICES = ( # For the categories that can be submitted 
     ('indian', 'INDIAN'),
     ('hassan\'s pizzaria', 'HASSAN\'S PIZZARIA'),
     ('vegan', 'VEGAN'),
@@ -12,6 +12,7 @@ CATEGORY_CHOICES = (
 )
 
 class DealModel(models.Model):
+    # Deal attributes 
     name=              models.CharField(default='', max_length=200)
     info =             models.CharField(default='', max_length=200)
     picture =          models.ImageField(upload_to='deals/', blank=True)
@@ -23,7 +24,7 @@ class DealModel(models.Model):
     slug =             models.SlugField(unique=True)
     address =          models.CharField(default='', max_length=100, blank=True)
 
-
+    # For the slug
     def save(self, *args, **kwargs):
         self.slug = slugify(self.info)
         super(DealModel, self).save(*args, **kwargs)

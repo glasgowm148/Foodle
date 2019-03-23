@@ -28,6 +28,7 @@ class tests(TestCase):
         })
         self.assertEquals(False, form.is_valid())
     
+    # if no name is specified which is required for a form
     def test_no_name(self) :
         form = SubmitForm({
             'info': "deal",
@@ -36,6 +37,7 @@ class tests(TestCase):
         })
         self.assertEquals(False, form.is_valid())
     
+    # if the picture path is not valid
     def test_bad_picture_url(self) :
         form = SubmitForm({
             'info': "deal",
