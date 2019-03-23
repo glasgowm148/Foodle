@@ -19,11 +19,39 @@ This is the file called by <app-root>. Current this displays the following
 
 
 <h2 class="mt-3">Deal Service Attempt. Django++rest++Angular</h2>
+<ul>
+    <li *ngFor="let deal of observableValues | async">{{deal}}</li>
+  </ul>
+
+  <!--- Card  start-
+    <li *ngFor="let deal of values">
+
+  <div fxFlex="20%">
+      <mat-card class="card20">
+        <mat-card-header>
+          <div mat-card-avatar class="card1-bg"></div>
+          <mat-card-title>  {{ deal }}        </mat-card-title>
+          <mat-card-subtitle>35% discount</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="static/images/dominos.png" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            Dominos is alright too...
+            <mat-icon fxFlex="15%">save_alt</mat-icon>
+            <mat-icon fxFlex="15%">favorite_border</mat-icon>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>like</button>
+          <button mat-button>share</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </li>
+  <!--- Card end-->
 
 
-<li *ngFor="let deal of values">
-  {{ deal.info }}
-</li>
+
 
     <!-- This loads the card box / tab-->
 
