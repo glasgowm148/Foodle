@@ -32,7 +32,25 @@
     <div class="mat-app-background basic-container">
 
 
+      <!--  Angular cards START-->
+      <div style="display: flex; align-content: space-between;">
+        <mat-card *ngFor="let deal of values" style="margin: auto;">
+          <mat-card-header>
+            <mat-card-title>{{ deal.info }}</mat-card-title>
+            <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="deal.picture" [alt]="deal.info">
+          <mat-card-actions>
+            <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
+            <a mat-raised-button href="{{deal.url}}">Claim</a>
+            <a mat-raised-button href="https://www.foodle.cc/deal_page/{{deal.slug}}">Info</a>
 
+            <!---  <button mat-button (click)="deal.url">Claim</button>
+                <button mat-button (click)="deal.info">Info</button>-->
+          </mat-card-actions>
+        </mat-card>
+      </div>
+       <!--  Angular cards END-->
       <!-- Search Bar -->
       <mat-form-field class="search-form">
         <input matInput placeholder="Search Deals.." type="text">
@@ -74,25 +92,117 @@
             https://github.com/flavens/material-flexlayout
             https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c
           -->
-               <!--  Angular cards START-->
-      <div style="display: flex; align-content: space-between;">
-          <mat-card *ngFor="let deal of values" style="margin: auto;">
-            <mat-card-header>
-              <mat-card-title>{{ deal.info }}</mat-card-title>
-              <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image [src]="deal.picture" [alt]="deal.info">
-            <mat-card-actions>
-              <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
-              <a mat-raised-button href="{{deal.url}}">Claim</a>
-              <a mat-raised-button href="https://www.foodle.cc/deal_page/{{deal.slug}}">Info</a>
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center start">
 
-              <!---  <button mat-button (click)="deal.url">Claim</button>
-                  <button mat-button (click)="deal.info">Info</button>-->
-            </mat-card-actions>
-          </mat-card>
-        </div>
-         <!--  Angular cards END-->
+            <!--- Card number 1 start-->
+            <div fxFlex="20%">
+              <mat-card class="card20">
+                <mat-card-header>
+                  <div mat-card-avatar class="card1-bg"></div>
+                  <mat-card-title>Dominos</mat-card-title>
+                  <mat-card-subtitle>35% discount</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="static/images/dominos.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Dominos is alright too...
+                    <mat-icon fxFlex="15%">save_alt</mat-icon>
+                    <mat-icon fxFlex="15%">favorite_border</mat-icon>
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>like</button>
+                  <button mat-button>share</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!--- Card number 2 start-->
+            <div fxFlex="20%">
+              <mat-card class="card20">
+                <mat-card-header>
+                  <div mat-card-avatar class="card1-bg"></div>
+                  <mat-card-title>Pizza Hut</mat-card-title>
+                  <mat-card-subtitle>15% discount</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="static/images/dominos.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Dominos is alright too...
+                    <mat-icon fxFlex="15%">save_alt</mat-icon>
+                    <mat-icon fxFlex="15%">favorite_border</mat-icon>
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>like</button>
+                  <button mat-button>share</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!--- Card number 2 end-->
+            <!--- Card number 3 start-->
+            <div fxFlex="20%">
+              <mat-card class="card20">
+                <mat-card-header>
+                  <div mat-card-avatar class="card1-bg"></div>
+                  <mat-card-title>Oneup</mat-card-title>
+                  <mat-card-subtitle>Deal details</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="static/images/oneup.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    OneWho?
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>like</button>
+                  <button mat-button>share</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!--- Card number 3 end-->
+            <!--- Card number 4 start-->
+            <div fxFlex="20%">
+              <mat-card class="card20">
+                <mat-card-header>
+                  <div mat-card-avatar class="card1-bg"></div>
+                  <mat-card-title>Five Guys</mat-card-title>
+                  <mat-card-subtitle>Deal details</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="static/images/oneup.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    OneWho?
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>like</button>
+                  <button mat-button>share</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!--- Card number 4 end-->
+
+            <!--- Card number 5 start-->
+            <div fxFlex="20%">
+              <mat-card class="card20">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>Greggs</mat-card-title>
+                  <mat-card-subtitle>offer details</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="static/images/dominos.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Greggs text...
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>like</button>
+                  <button mat-button>share</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!--- Card number 5 end-->
 
           </div>
           <div class="card-columns">
