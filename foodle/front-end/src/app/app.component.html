@@ -22,7 +22,7 @@ This is the file called by <app-root>. Current this displays the following
 <div style="display: flex; align-content: space-between;">
     <mat-card *ngFor="let deal of values" style="margin: auto;">
       <mat-card-header>
-        <mat-card-title>{{ deal.name }}</mat-card-title>
+        <mat-card-title>{{ deal.info }}</mat-card-title>
         <mat-card-subtitle>€{{ deal.price }}</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image [src]="deal.picture" [alt]="deal.info">
