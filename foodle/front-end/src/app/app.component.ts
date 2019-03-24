@@ -20,8 +20,9 @@ export class AppComponent  {
       this.valueSub = this.dealService.list().subscribe(z => {
         this.values = z;
       });
+      this.values = this.dealService.list();
 
-      this.observableValues = this.dealService.list();
+     // this.observableValues = this.dealService.list();
 
   }
 

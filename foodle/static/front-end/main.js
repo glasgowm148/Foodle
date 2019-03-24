@@ -8925,7 +8925,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<ul>\n    <li *ngFor=\"let deal of observableValues | async\">{{deal}}</li>\n  </ul>\n\n<table width=\"100%\">\n  <tr>\n    <th>Id</th>\n    <th>Name</th>\n    <th>Status</th>\n  </tr>\n  <tr *ngFor=\"let deal of observableValues\">\n    <td>{{deal.Category}}</td>\n    <td>{{deal.slug}}</td>\n    <td>{{deal.info}}</td>\n  </tr>\n</table>\n\n  <!--- Card  start-\n    <li *ngFor=\"let deal of values\">\n\n  <div fxFlex=\"20%\">\n      <mat-card class=\"card20\">\n        <mat-card-header>\n          <div mat-card-avatar class=\"card1-bg\"></div>\n          <mat-card-title>  {{ deal }}        </mat-card-title>\n          <mat-card-subtitle>35% discount</mat-card-subtitle>\n        </mat-card-header>\n        <img mat-card-image src=\"static/images/dominos.png\" alt=\"Photo of a Shiba Inu\">\n        <mat-card-content>\n          <p>\n            Dominos is alright too...\n            <mat-icon fxFlex=\"15%\">save_alt</mat-icon>\n            <mat-icon fxFlex=\"15%\">favorite_border</mat-icon>\n          </p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-button>like</button>\n          <button mat-button>share</button>\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </li>\n  <!--- Card end-->\n\n\n\n\n    <!-- This loads the card box / tab-->\n\n\n\n    <!-- Category Boxes under slider=\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n        [style.background]=\"tile.color\">\n        {{tile.text}}\n      </mat-grid-tile>\n    </mat-grid-list>\n\n\n\n\n<!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n"
+module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<ul>\n    <li *ngFor=\"let deal of values | async\">{{deal}}</li>\n  </ul>\n\n<table width=\"100%\">\n  <tr>\n    <th>name</th>\n    <th>info</th>\n    <th>picture</th>\n    <th>been_liked</th>\n    <th>been_disliked</th>\n    <th>likes</th>\n    <th>url</th>\n    <th>category</th>\n    <th>slug</th>\n    <th>address</th>\n  </tr>\n  <tr *ngFor=\"let deal of values\">\n    <td>{{deal.name}}</td>\n    <td>{{deal.info}}</td>\n    <td>{{deal.picture}}</td>\n    <td>{{deal.been_liked}}</td>\n    <td>{{deal.been_disliked}}</td>\n    <td>{{deal.likes}}</td>\n    <td>{{deal.url}}</td>\n    <td>{{deal.category}}</td>\n    <td>{{deal.slug}}</td>\n    <td>{{deal.address}}</td>\n  </tr>\n</table>\n"
 
 /***/ }),
 
@@ -8953,7 +8953,8 @@ var AppComponent = /** @class */ (function () {
         this.valueSub = this.dealService.list().subscribe(function (z) {
             _this.values = z;
         });
-        this.observableValues = this.dealService.list();
+        this.values = this.dealService.list();
+        // this.observableValues = this.dealService.list();
     }
     AppComponent.prototype.ngOnDestroy = function () {
         this.valueSub.unsubscribe();
@@ -9283,10 +9284,9 @@ var DealService = /** @class */ (function () {
     function DealService(http, _userService) {
         this.http = http;
         this._userService = _userService;
-        this.url = 'api/deals';
     }
     DealService.prototype.list = function () {
-        return this.http.get(this.url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (data) { return data.map(function (item) {
+        return this.http.get('/api/deals').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (data) { return data.map(function (item) {
             return new _functions_modelMapper__WEBPACK_IMPORTED_MODULE_5__["ModelMapper"](_deal_model__WEBPACK_IMPORTED_MODULE_4__["DealModel"]).map(item);
         }); }));
     };

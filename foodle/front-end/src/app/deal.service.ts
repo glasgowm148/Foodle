@@ -13,11 +13,10 @@ import { map } from 'rxjs/operators';
 })
 export class DealService {
 
-  url = 'api/deals';
 
   constructor(private http: HttpClient, private _userService: UserService) { }
   list(): Observable<DealModel[]> {
-    return this.http.get<DealModel[]>(this.url).pipe(
+    return this.http.get<DealModel[]>('/api/deals').pipe(
       map(data => data.map((item: any) => {
         return new ModelMapper(DealModel).map(item);
       }
