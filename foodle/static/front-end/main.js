@@ -8925,7 +8925,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<ul>\n    <li *ngFor=\"let deal of observableValues | async\">{{deal}}</li>\n  </ul>\n\n  <!--- Card  start-\n    <li *ngFor=\"let deal of values\">\n\n  <div fxFlex=\"20%\">\n      <mat-card class=\"card20\">\n        <mat-card-header>\n          <div mat-card-avatar class=\"card1-bg\"></div>\n          <mat-card-title>  {{ deal }}        </mat-card-title>\n          <mat-card-subtitle>35% discount</mat-card-subtitle>\n        </mat-card-header>\n        <img mat-card-image src=\"static/images/dominos.png\" alt=\"Photo of a Shiba Inu\">\n        <mat-card-content>\n          <p>\n            Dominos is alright too...\n            <mat-icon fxFlex=\"15%\">save_alt</mat-icon>\n            <mat-icon fxFlex=\"15%\">favorite_border</mat-icon>\n          </p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-button>like</button>\n          <button mat-button>share</button>\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </li>\n  <!--- Card end-->\n\n\n\n\n    <!-- This loads the card box / tab-->\n\n\n\n    <!-- Category Boxes under slider=\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n        [style.background]=\"tile.color\">\n        {{tile.text}}\n      </mat-grid-tile>\n    </mat-grid-list>\n\n\n\n\n<!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n"
+module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<ul>\n    <li *ngFor=\"let deal of observableValues | async\">{{deal}}</li>\n  </ul>\n\n<table width=\"100%\">\n  <tr>\n    <th>Id</th>\n    <th>Name</th>\n    <th>Status</th>\n  </tr>\n  <tr *ngFor=\"let deal of observableValues\">\n    <td>{{deal.Category}}</td>\n    <td>{{deal.slug}}</td>\n    <td>{{deal.info}}</td>\n  </tr>\n</table>\n\n  <!--- Card  start-\n    <li *ngFor=\"let deal of values\">\n\n  <div fxFlex=\"20%\">\n      <mat-card class=\"card20\">\n        <mat-card-header>\n          <div mat-card-avatar class=\"card1-bg\"></div>\n          <mat-card-title>  {{ deal }}        </mat-card-title>\n          <mat-card-subtitle>35% discount</mat-card-subtitle>\n        </mat-card-header>\n        <img mat-card-image src=\"static/images/dominos.png\" alt=\"Photo of a Shiba Inu\">\n        <mat-card-content>\n          <p>\n            Dominos is alright too...\n            <mat-icon fxFlex=\"15%\">save_alt</mat-icon>\n            <mat-icon fxFlex=\"15%\">favorite_border</mat-icon>\n          </p>\n        </mat-card-content>\n        <mat-card-actions>\n          <button mat-button>like</button>\n          <button mat-button>share</button>\n        </mat-card-actions>\n      </mat-card>\n    </div>\n  </li>\n  <!--- Card end-->\n\n\n\n\n    <!-- This loads the card box / tab-->\n\n\n\n    <!-- Category Boxes under slider=\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n      <mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\"\n        [style.background]=\"tile.color\">\n        {{tile.text}}\n      </mat-grid-tile>\n    </mat-grid-list>\n\n\n\n\n<!-- Category selection boxes at the top\n\n  https://filipmolcik.com/angular-2-and-material-grid-example/\n-->\n"
 
 /***/ }),
 
@@ -9211,6 +9211,50 @@ var CardsAngularComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/deal-model.ts":
+/*!*******************************!*\
+  !*** ./src/app/deal-model.ts ***!
+  \*******************************/
+/*! exports provided: DealModel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DealModel", function() { return DealModel; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _functions_propertyMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/propertyMap */ "./src/app/functions/propertyMap.ts");
+/* harmony import */ var _functions_statusConverter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/statusConverter */ "./src/app/functions/statusConverter.ts");
+
+
+
+var DealModel = /** @class */ (function () {
+    function DealModel() {
+        this.name = null;
+        this.info = null;
+        this.picture = null;
+        this.been_liked = null;
+        this.been_disliked = null;
+        this.likes = null;
+        this.url = null;
+        this.category = null;
+        this.slug = null;
+        this.address = null;
+    }
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_functions_propertyMap__WEBPACK_IMPORTED_MODULE_1__["propertyMap"])('title'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], DealModel.prototype, "name", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        _functions_statusConverter__WEBPACK_IMPORTED_MODULE_2__["statusConverter"],
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], DealModel.prototype, "completed", void 0);
+    return DealModel;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/deal.service.ts":
 /*!*********************************!*\
   !*** ./src/app/deal.service.ts ***!
@@ -9225,6 +9269,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
+/* harmony import */ var _deal_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./deal-model */ "./src/app/deal-model.ts");
+/* harmony import */ var _functions_modelMapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/modelMapper */ "./src/app/functions/modelMapper.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
 
 
 
@@ -9233,10 +9283,12 @@ var DealService = /** @class */ (function () {
     function DealService(http, _userService) {
         this.http = http;
         this._userService = _userService;
+        this.url = 'api/deals';
     }
-    // Uses http.get() to load data from a single API endpoint
     DealService.prototype.list = function () {
-        return this.http.get('/api/deals');
+        return this.http.get(this.url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (data) { return data.map(function (item) {
+            return new _functions_modelMapper__WEBPACK_IMPORTED_MODULE_5__["ModelMapper"](_deal_model__WEBPACK_IMPORTED_MODULE_4__["DealModel"]).map(item);
+        }); }));
     };
     DealService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -9308,6 +9360,101 @@ var ExampleNavbarComponent = /** @class */ (function () {
     return ExampleNavbarComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/functions/modelMapper.ts":
+/*!******************************************!*\
+  !*** ./src/app/functions/modelMapper.ts ***!
+  \******************************************/
+/*! exports provided: ModelMapper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModelMapper", function() { return ModelMapper; });
+var ModelMapper = /** @class */ (function () {
+    function ModelMapper(type) {
+        this._target = new type();
+        this._propertyMapping = this._target.constructor._propertyMap;
+    }
+    ModelMapper.prototype.map = function (source) {
+        var _this = this;
+        Object.keys(this._target).forEach(function (key) {
+            var mappedKey = _this._propertyMapping[key];
+            if (mappedKey) {
+                _this._target[key] = source[mappedKey];
+            }
+            else {
+                _this._target[key] = source[key];
+            }
+        });
+        Object.keys(source).forEach(function (key) {
+            var targetKeys = Object.keys(_this._target);
+            if (targetKeys.indexOf(key) === -1) {
+                _this._target[key] = source[key];
+            }
+        });
+        return this._target;
+    };
+    return ModelMapper;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/functions/propertyMap.ts":
+/*!******************************************!*\
+  !*** ./src/app/functions/propertyMap.ts ***!
+  \******************************************/
+/*! exports provided: propertyMap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "propertyMap", function() { return propertyMap; });
+function propertyMap(sourceProperty) {
+    return function (target, propertyKey) {
+        if (!target.constructor._propertyMap) {
+            target.constructor._propertyMap = {};
+        }
+        target.constructor._propertyMap[propertyKey] = sourceProperty;
+    };
+}
+
+
+/***/ }),
+
+/***/ "./src/app/functions/statusConverter.ts":
+/*!**********************************************!*\
+  !*** ./src/app/functions/statusConverter.ts ***!
+  \**********************************************/
+/*! exports provided: statusConverter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "statusConverter", function() { return statusConverter; });
+function statusConverter(target, key) {
+    var value;
+    if (delete target[key]) {
+        Object.defineProperty(target, key, {
+            get: function () {
+                if (this.value) {
+                    return 'Completed';
+                }
+                else {
+                    return 'Pending';
+                }
+            },
+            set: function (v) { this.value = v; },
+            enumerable: true,
+            configurable: true
+        });
+    }
+}
 
 
 /***/ }),
