@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import {DealService } from '../app-deal/deal.service';
+import { Observable, Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-example-navbar',
@@ -9,12 +11,22 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./example-navbar.component.css']
 })
 export class ExampleNavbarComponent {
+  name = 'Angular';
+  values: any;
+  observableValues: Observable<any>;
+  valueSub: Subscription;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+  constructor(private dealService: DealService) {
+      this.valueSub = this.dealService.list().subscribe(z => {
+        this.values = z;
+      });
+      this.values = this.dealService.list();
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+    //  this.observableValues = this.dealService.list();
 
-}
+  }
+
+
+  ngOnDestroy() {
+      this.valueSub.unsubscribe();
+  }}
