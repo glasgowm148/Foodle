@@ -44,9 +44,11 @@
               <img mat-card-image [src]="deal.picture" [alt]="deal.info">
               <mat-card-actions>
             <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
+                <a mat-raised-button href="https://stackoverflow.com/{{deal.slug}}">Claim</a>
+                <a mat-raised-button href="https://www.foodle.cc/deal_page/{{deal.slug}}">>Info</a>
 
-                <button mat-button (click)="deal.url">Claim Deal</button>
-                <button mat-button (click)="deal.info">More Information</button>
+                <!---  <button mat-button (click)="deal.url">Claim</button>
+                <button mat-button (click)="deal.info">Info</button>-->
               </mat-card-actions>
             </mat-card>
           </div>
