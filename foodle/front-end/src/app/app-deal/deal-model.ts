@@ -1,7 +1,7 @@
 
 
-import {propertyMap}  from './functions/propertyMap';
-import { statusConverter} from './functions/statusConverter';
+import {propertyMap}  from '../functions/propertyMap';
+import { statusConverter} from '../functions/statusConverter';
 
 export class DealModel {
 

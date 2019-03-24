@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserService} from './user.service';
 import { DealModel } from './deal-model';
 import { Observable } from 'rxjs';
-import { ModelMapper } from './functions/modelMapper';
+import { ModelMapper } from '../functions/modelMapper';
 import { map } from 'rxjs/operators';
 
 

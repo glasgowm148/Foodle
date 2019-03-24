@@ -8918,6 +8918,173 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/app-deal/deal-model.ts":
+/*!****************************************!*\
+  !*** ./src/app/app-deal/deal-model.ts ***!
+  \****************************************/
+/*! exports provided: DealModel */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DealModel", function() { return DealModel; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _functions_propertyMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/propertyMap */ "./src/app/functions/propertyMap.ts");
+/* harmony import */ var _functions_statusConverter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/statusConverter */ "./src/app/functions/statusConverter.ts");
+
+
+
+var DealModel = /** @class */ (function () {
+    function DealModel() {
+        this.name = null;
+        this.info = null;
+        this.picture = null;
+        this.been_liked = null;
+        this.been_disliked = null;
+        this.likes = null;
+        this.url = null;
+        this.category = null;
+        this.slug = null;
+        this.address = null;
+    }
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_functions_propertyMap__WEBPACK_IMPORTED_MODULE_1__["propertyMap"])('title'),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], DealModel.prototype, "name", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        _functions_statusConverter__WEBPACK_IMPORTED_MODULE_2__["statusConverter"],
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], DealModel.prototype, "completed", void 0);
+    return DealModel;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app-deal/deal.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/app-deal/deal.service.ts ***!
+  \******************************************/
+/*! exports provided: DealService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DealService", function() { return DealService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user.service */ "./src/app/app-deal/user.service.ts");
+/* harmony import */ var _deal_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./deal-model */ "./src/app/app-deal/deal-model.ts");
+/* harmony import */ var _functions_modelMapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../functions/modelMapper */ "./src/app/functions/modelMapper.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+
+
+var DealService = /** @class */ (function () {
+    function DealService(http, _userService) {
+        this.http = http;
+        this._userService = _userService;
+    }
+    DealService.prototype.list = function () {
+        return this.http.get('/api/deals').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (data) { return data.map(function (item) {
+            return new _functions_modelMapper__WEBPACK_IMPORTED_MODULE_5__["ModelMapper"](_deal_model__WEBPACK_IMPORTED_MODULE_4__["DealModel"]).map(item);
+        }); }));
+    };
+    DealService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
+    ], DealService);
+    return DealService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app-deal/user.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/app-deal/user.service.ts ***!
+  \******************************************/
+/*! exports provided: UserService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var UserService = /** @class */ (function () {
+    function UserService(http) {
+        this.http = http;
+        // error messages received from the login attempt
+        this.errors = [];
+        this.httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
+        };
+    }
+    // Uses http.post() to get an auth token from djangorestframework-jwt endpoint
+    UserService.prototype.login = function (user) {
+        var _this = this;
+        this.http.post('/api-token-auth/', JSON.stringify(user), this.httpOptions).subscribe(function (data) {
+            console.log('login success', data);
+            _this.updateData(data['token']);
+        }, function (err) {
+            console.error('login error', err);
+            _this.errors = err['error'];
+        });
+    };
+    /**
+     * Refreshes the JWT token, to extend the time the user is logged in
+     */
+    UserService.prototype.refreshToken = function () {
+        var _this = this;
+        this.http.post('/api-token-refresh/', JSON.stringify({ token: this.token }), this.httpOptions).subscribe(function (data) {
+            console.log('refresh success', data);
+            _this.updateData(data['token']);
+        }, function (err) {
+            console.error('refresh error', err);
+            _this.errors = err['error'];
+        });
+    };
+    UserService.prototype.logout = function () {
+        this.token = null;
+        this.token_expires = null;
+        this.username = null;
+    };
+    UserService.prototype.updateData = function (token) {
+        this.token = token;
+        this.errors = [];
+        // decode the token to read the username and expiration timestamp
+        var token_parts = this.token.split(/\./);
+        var token_decoded = JSON.parse(window.atob(token_parts[1]));
+        this.token_expires = new Date(token_decoded.exp * 1000);
+        this.username = token_decoded.username;
+    };
+    UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], UserService);
+    return UserService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.html":
 /*!************************************!*\
   !*** ./src/app/app.component.html ***!
@@ -8925,7 +9092,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<ul>\n    <li *ngFor=\"let deal of values | async\">{{deal}}</li>\n  </ul>\n\n<table width=\"100%\">\n  <tr>\n    <th>name</th>\n    <th>info</th>\n    <th>picture</th>\n    <th>been_liked</th>\n    <th>been_disliked</th>\n    <th>likes</th>\n    <th>url</th>\n    <th>category</th>\n    <th>slug</th>\n    <th>address</th>\n  </tr>\n  <tr *ngFor=\"let deal of values\">\n    <td>{{deal.name}}</td>\n    <td>{{deal.info}}</td>\n    <td>{{deal.picture}}</td>\n    <td>{{deal.been_liked}}</td>\n    <td>{{deal.been_disliked}}</td>\n    <td>{{deal.likes}}</td>\n    <td>{{deal.url}}</td>\n    <td>{{deal.category}}</td>\n    <td>{{deal.slug}}</td>\n    <td>{{deal.address}}</td>\n  </tr>\n</table>\n"
+module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<div style=\"display: flex; align-content: space-between;\">\n    <mat-card *ngFor=\"let deal of values\" style=\"margin: auto;\">\n      <mat-card-header>\n        <mat-card-title>{{ deal.name }}</mat-card-title>\n        <mat-card-subtitle>€{{ deal.price }}</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image [src]=\"deal.picture\" [alt]=\"deal.info\">\n      <mat-card-actions>\n        <button mat-button (click)=\"deal.url\">Claim Deal</button>\n        <button mat-button (click)=\"deal.slug\">deal.info</button>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n\n<ul>\n    <li *ngFor=\"let deal of values\">{{deal}}</li>\n  </ul>\n\n<table width=\"100%\">\n  <tr>\n    <th>name</th>\n    <th>info</th>\n    <th>picture</th>\n    <th>been_liked</th>\n    <th>been_disliked</th>\n    <th>likes</th>\n    <th>url</th>\n    <th>category</th>\n    <th>slug</th>\n    <th>address</th>\n  </tr>\n  <tr *ngFor=\"let deal of values\">\n    <td>{{deal.name}}</td>\n    <td>{{deal.info}}</td>\n    <td>{{deal.picture}}</td>\n    <td>{{deal.been_liked}}</td>\n    <td>{{deal.been_disliked}}</td>\n    <td>{{deal.likes}}</td>\n    <td>{{deal.url}}</td>\n    <td>{{deal.category}}</td>\n    <td>{{deal.slug}}</td>\n    <td>{{deal.address}}</td>\n  </tr>\n</table>\n\n"
 
 /***/ }),
 
@@ -8941,7 +9108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _deal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deal.service */ "./src/app/deal.service.ts");
+/* harmony import */ var _app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-deal/deal.service */ "./src/app/app-deal/deal.service.ts");
 
 
 
@@ -8954,7 +9121,7 @@ var AppComponent = /** @class */ (function () {
             _this.values = z;
         });
         this.values = this.dealService.list();
-        // this.observableValues = this.dealService.list();
+        //  this.observableValues = this.dealService.list();
     }
     AppComponent.prototype.ngOnDestroy = function () {
         this.valueSub.unsubscribe();
@@ -8964,7 +9131,7 @@ var AppComponent = /** @class */ (function () {
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html")
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_deal_service__WEBPACK_IMPORTED_MODULE_2__["DealService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__["DealService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -9014,7 +9181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 /* harmony import */ var _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./example-navbar/example-navbar.component */ "./src/app/example-navbar/example-navbar.component.ts");
 /* harmony import */ var _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cards-angular/cards-angular.component */ "./src/app/cards-angular/cards-angular.component.ts");
-/* harmony import */ var _deal_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./deal.service */ "./src/app/deal.service.ts");
+/* harmony import */ var _app_deal_deal_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app-deal/deal.service */ "./src/app/app-deal/deal.service.ts");
 
 
 
@@ -9051,7 +9218,7 @@ var AppModule = /** @class */ (function () {
             ],
             entryComponents: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__["ExampleNavbarComponent"], _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__["CardsAngularComponent"]],
-            providers: [_deal_service__WEBPACK_IMPORTED_MODULE_13__["DealService"]],
+            providers: [_app_deal_deal_service__WEBPACK_IMPORTED_MODULE_13__["DealService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
@@ -9206,97 +9373,6 @@ var CardsAngularComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["BreakpointObserver"]])
     ], CardsAngularComponent);
     return CardsAngularComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/deal-model.ts":
-/*!*******************************!*\
-  !*** ./src/app/deal-model.ts ***!
-  \*******************************/
-/*! exports provided: DealModel */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DealModel", function() { return DealModel; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _functions_propertyMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/propertyMap */ "./src/app/functions/propertyMap.ts");
-/* harmony import */ var _functions_statusConverter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/statusConverter */ "./src/app/functions/statusConverter.ts");
-
-
-
-var DealModel = /** @class */ (function () {
-    function DealModel() {
-        this.name = null;
-        this.info = null;
-        this.picture = null;
-        this.been_liked = null;
-        this.been_disliked = null;
-        this.likes = null;
-        this.url = null;
-        this.category = null;
-        this.slug = null;
-        this.address = null;
-    }
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_functions_propertyMap__WEBPACK_IMPORTED_MODULE_1__["propertyMap"])('title'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], DealModel.prototype, "name", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        _functions_statusConverter__WEBPACK_IMPORTED_MODULE_2__["statusConverter"],
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
-    ], DealModel.prototype, "completed", void 0);
-    return DealModel;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/deal.service.ts":
-/*!*********************************!*\
-  !*** ./src/app/deal.service.ts ***!
-  \*********************************/
-/*! exports provided: DealService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DealService", function() { return DealService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./user.service */ "./src/app/user.service.ts");
-/* harmony import */ var _deal_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./deal-model */ "./src/app/deal-model.ts");
-/* harmony import */ var _functions_modelMapper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/modelMapper */ "./src/app/functions/modelMapper.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-
-
-
-
-
-
-
-var DealService = /** @class */ (function () {
-    function DealService(http, _userService) {
-        this.http = http;
-        this._userService = _userService;
-    }
-    DealService.prototype.list = function () {
-        return this.http.get('/api/deals').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (data) { return data.map(function (item) {
-            return new _functions_modelMapper__WEBPACK_IMPORTED_MODULE_5__["ModelMapper"](_deal_model__WEBPACK_IMPORTED_MODULE_4__["DealModel"]).map(item);
-        }); }));
-    };
-    DealService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]])
-    ], DealService);
-    return DealService;
 }());
 
 
@@ -9546,82 +9622,6 @@ var DemoMaterialModule = /** @class */ (function () {
 /**  Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license */
-
-
-/***/ }),
-
-/***/ "./src/app/user.service.ts":
-/*!*********************************!*\
-  !*** ./src/app/user.service.ts ***!
-  \*********************************/
-/*! exports provided: UserService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserService", function() { return UserService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-
-
-
-var UserService = /** @class */ (function () {
-    function UserService(http) {
-        this.http = http;
-        // error messages received from the login attempt
-        this.errors = [];
-        this.httpOptions = {
-            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({ 'Content-Type': 'application/json' })
-        };
-    }
-    // Uses http.post() to get an auth token from djangorestframework-jwt endpoint
-    UserService.prototype.login = function (user) {
-        var _this = this;
-        this.http.post('/api-token-auth/', JSON.stringify(user), this.httpOptions).subscribe(function (data) {
-            console.log('login success', data);
-            _this.updateData(data['token']);
-        }, function (err) {
-            console.error('login error', err);
-            _this.errors = err['error'];
-        });
-    };
-    /**
-     * Refreshes the JWT token, to extend the time the user is logged in
-     */
-    UserService.prototype.refreshToken = function () {
-        var _this = this;
-        this.http.post('/api-token-refresh/', JSON.stringify({ token: this.token }), this.httpOptions).subscribe(function (data) {
-            console.log('refresh success', data);
-            _this.updateData(data['token']);
-        }, function (err) {
-            console.error('refresh error', err);
-            _this.errors = err['error'];
-        });
-    };
-    UserService.prototype.logout = function () {
-        this.token = null;
-        this.token_expires = null;
-        this.username = null;
-    };
-    UserService.prototype.updateData = function (token) {
-        this.token = token;
-        this.errors = [];
-        // decode the token to read the username and expiration timestamp
-        var token_parts = this.token.split(/\./);
-        var token_decoded = JSON.parse(window.atob(token_parts[1]));
-        this.token_expires = new Date(token_decoded.exp * 1000);
-        this.username = token_decoded.username;
-    };
-    UserService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], UserService);
-    return UserService;
-}());
-
 
 
 /***/ }),

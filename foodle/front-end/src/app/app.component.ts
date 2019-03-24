@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DealService } from './deal.service';
-import {UserService} from './user.service';
+import {DealService } from './app-deal/deal.service';
+import {UserService} from './app-deal/user.service';
 import {throwError} from 'rxjs';
 
 import { Observable, Subscription } from 'rxjs'
@@ -22,7 +22,7 @@ export class AppComponent  {
       });
       this.values = this.dealService.list();
 
-     // this.observableValues = this.dealService.list();
+    //  this.observableValues = this.dealService.list();
 
   }
 

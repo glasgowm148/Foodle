@@ -21,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
 import { CardsAngularComponent } from './cards-angular/cards-angular.component';
-import { DealService } from './deal.service';
+import { DealService } from './app-deal/deal.service';
 
 @NgModule({
   imports: [
