@@ -27,4 +27,7 @@
 }
 /* side - menu */
 
+.mat-slide-toggle {
+  padding-right: 15px !important;
+}
 

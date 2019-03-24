@@ -11,6 +11,52 @@ import { Observable, Subscription } from 'rxjs';
   styleUrls: ['./example-navbar.component.css']
 })
 export class ExampleNavbarComponent {
+
+  public sliderVE = {
+    'autoTicks': false,
+    'disabled': false,
+    'invert': false,
+    'max': 100,
+    'min': 0,
+    'showTicks': false,
+    'step': 1,
+    'thumbLabel': false,
+    'value': 0,
+    'vertical': false,
+    'tickInterval': 1,
+    'checked': false
+  };
+
+  public sliderVEG = {
+    'autoTicks': false,
+    'disabled': false,
+    'invert': false,
+    'max': 100,
+    'min': 0,
+    'showTicks': false,
+    'step': 1,
+    'thumbLabel': false,
+    'value': 0,
+    'vertical': false,
+    'tickInterval': 1,
+    'checked': false
+  };
+
+  public sliderG = {
+    'autoTicks': false,
+    'disabled': false,
+    'invert': false,
+    'max': 100,
+    'min': 0,
+    'showTicks': false,
+    'step': 1,
+    'thumbLabel': false,
+    'value': 0,
+    'vertical': false,
+    'tickInterval': 1,
+    'checked': false
+  };
+
   name = 'Angular';
   values: any;
   observableValues: Observable<any>;
