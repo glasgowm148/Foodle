@@ -1,19 +1,40 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block title_block %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/input.css">
 {% endblock %}
 
 
 
 {% block content %}
 <!-- contact.html -->
-<h1>Contact Us</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="form-actions">
-      <button type="submit">Send</button>
-    </div>
-</form>
+<br class="space"/>
+<br class="space"/>
+  <div class="wrapper fadeInDown space">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+    <div class="fadeIn first"></div>
+    <br />
+    <h1>Contact Us</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for contact in form %}
+          {{ contact.label_tag }}
+          <br class="space"/>
+
+          {{ contact }}
+          <br class="space"/>
+        {% endfor %}
+        
+        <div class="form-actions">
+          <button type="submit">Send</button>
+        </div>
+    </form>
+  </div>
+  </div>
+<br class="space"/>
+<br class="space"/>
 {% endblock %}
