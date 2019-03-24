@@ -6,26 +6,56 @@
 {% endblock %}
 
 {% block content %}
-<br class="space"/>
-<br class="space"/>
+<br class="space">
   <div class="wrapper fadeInDown space">
     <div id="formContent">
       <!-- Tabs Titles -->
 
       <!-- Icon -->
     <div class="fadeIn first"></div>
-    <br />
+    <br>
     <h1>Submit A Deal</h1>
-    <br />
-        <form id="user_form" method="post" action="{% url 'submit' %}" enctype="multipart/form-data">
+    <br>
+        <form id="user_form" method="post" action="/submit/" enctype="multipart/form-data">
 
-                {% csrf_token %}
+                <input type="hidden" name="csrfmiddlewaretoken" value="XuFoLqsQfb9YU0uipr2X1oNAm84ZPKhKrFPsWOo8KiXT2dQI2TKBdIsVrtW0j5Tp">
 
                 <!-- Display form  -->
-                {% for submit in submit_form %}
 
-                <input type="{{ submit.field.widget.input_type }}" id="{{ submit.auto_id }}" placeholder="{{ submit.name}}" name="{{ submit.name}}" maxlength="{{submit.max_length}}" required="{{submit.required}}"/>
-                {% endfor %}
+                    <input type="text" name="name" maxlength="200" required="" id="id_name" placeholder="Deal name" />
+                    <br class="space">
+              
+                    <input type="text" name="info" maxlength="200" required="" id="id_info" placeholder="Deal info">
+                    <br class="space">
+
+                    <br /><label for="id_picture">Picture</label> <br />
+
+                    <input type="file" name="picture" accept="image/*" id="id_picture">
+                    <br class="space">
+                
+
+                    <br /> <label for="id_category">Category</label> <br />
+
+                    <select name="category" id="id_category">
+  <option value="indian" selected="selected">INDIAN</option>
+
+  <option value="hassan's pizzaria">HASSAN'S PIZZARIA</option>
+
+  <option value="vegan">VEGAN</option>
+
+  <option value="asian">ASIAN</option>
+
+  <option value="other">OTHER</option>
+
+</select>
+                    <br class="space">
+
+                    <input type="url" name="url" maxlength="200" id="id_url" placeholder="URL address" />
+                    <br class="space">
+
+                    <input type="text" name="address" maxlength="100" id="id_address" placeholder="Address" />
+                    <br class="space">
+                
 
                 <!-- Provide a button to click to submit the form. -->
                 <button type="submit"> Submit Deal </button>
@@ -33,6 +63,5 @@
     </div>
 </div>
 
-<br class="space"/>
-<br class="space"/>
+<br class="space">
 {% endblock %}
