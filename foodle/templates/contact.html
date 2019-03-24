@@ -21,13 +21,10 @@
     <h1>Contact Us</h1>
     <form method="post">
         {% csrf_token %}
-        {% for contact in form %}
-          {{ contact.label_tag }}
-          <br class="space"/>
-
-          {{ contact }}
-          <br class="space"/>
-        {% endfor %}
+        <br class="space"/>
+        <input type="email" name="user_email" required="" id="id_user_email" placeholder="email address"/> <br class="space"/>
+        <input type="text" name="email_subject" required="" id="id_email_subject" placeholder="email subject"/> <br class="space"/>
+        <textarea name="user_msg" cols="40" rows="10" required="" id="id_user_msg"></textarea> <br class="space"/>
         
         <div class="form-actions">
           <button type="submit">Send</button>

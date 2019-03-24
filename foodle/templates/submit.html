@@ -24,11 +24,7 @@
                 <!-- Display form  -->
                 {% for submit in submit_form %}
 
-                    {{ submit.label_tag }}
-                    <br class="space"/>
-
-                    {{ submit }}
-                    <br class="space"/>
+                <input type="{{ submit.field.widget.input_type }}" id="{{ submit.auto_id }}" placeholder="{{ submit.name}}" name="{{ submit.name}}" maxlength="{{submit.max_length}}" required="{{submit.required}}"/>
                 {% endfor %}
 
                 <!-- Provide a button to click to submit the form. -->

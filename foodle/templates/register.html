@@ -17,10 +17,14 @@
   <br />
     <form method="post">
       {% csrf_token %}
-      {% for field in form %}
+      {% for register in form %}
         <p class="fadeIn second">
-          {{ field.label_tag }}<br/>
-          {{ field }}
+          <br/>
+          {% if register.field.required %}
+          <input type="{{ register.field.widget.input_type }}" id="{{ register.auto_id }}" placeholder="{{ register.name}}" name="{{ register.name}}" maxlength="{{register.max_length}}" required/>
+          {% else %}
+          <input type="{{ register.field.widget.input_type }}" id="{{ register.auto_id }}" placeholder="{{ register.name}}" name="{{ register.name}}" maxlength="{{register.max_length}}"/>
+          {% endif %}
           <!-- For toasts, whenever they get implemented
           {% if field.help_text %}
             <small class="fadeIn second">{{ field.help_text }}</small>
