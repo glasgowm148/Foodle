@@ -5,13 +5,12 @@ import { statusConverter} from '../functions/statusConverter';
 
 export class DealModel {
 
-  public id: string;
+  public id: Int16Array;
   @propertyMap('title')
-  public name: string;
+  public info: string;
 
   @statusConverter
   public completed: string;
-  public info: string;
   public picture: ImageBitmap;
   public been_liked: boolean;
   public been_disliked: boolean;
@@ -22,7 +21,7 @@ export class DealModel {
   public address: string;
 
   constructor() {
-    this.name = null;
+    this.id = null;
     this.info = null;
     this.picture = null;
     this.been_liked = null;

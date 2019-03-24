@@ -5,6 +5,7 @@ import { DealModel } from './deal-model';
 import { Observable } from 'rxjs';
 import { ModelMapper } from '../functions/modelMapper';
 import { map } from 'rxjs/operators';
+import { SaveDeal } from '../functions/saveDeal';
 
 
 
@@ -23,6 +24,8 @@ export class DealService {
       ))
     );
   }
+
+
 
 
   /* Uses http.get() to load data from a single API endpoint

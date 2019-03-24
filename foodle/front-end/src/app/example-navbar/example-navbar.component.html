@@ -38,6 +38,8 @@
         <div style="display: flex; align-content: space-between;">
             <mat-card *ngFor="let deal of values" style="margin: auto;">
               <mat-card-header>
+                  <button mat-button (click)="addDeal(deal.info)">Claim Deal</button>
+
                 <mat-card-title>{{ deal.info }}</mat-card-title>
                 <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>
               </mat-card-header>

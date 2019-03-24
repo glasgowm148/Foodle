@@ -3,7 +3,7 @@ import {DealService } from './app-deal/deal.service';
 import {UserService} from './app-deal/user.service';
 import {throwError} from 'rxjs';
 
-import { Observable, Subscription } from 'rxjs'
+import { Observable, Subscription } from 'rxjs';
 
 
 @Component({
@@ -21,6 +21,10 @@ export class AppComponent  {
         this.values = z;
       });
       this.values = this.dealService.list();
+
+  /*    addDeal(id: Int16Array) {
+        UserService.dispatch(new SaveDeal({ id }));
+      } */
 
     //  this.observableValues = this.dealService.list();
 

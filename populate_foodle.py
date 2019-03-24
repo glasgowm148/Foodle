@@ -10,7 +10,7 @@ def populate():
     deals = [
         {
             'picture': '/deals/foodle.png',
-            "name": "Vegan offer",
+            "id": "0",
             "info": "Up to £5 off vegan items with a student card.",
             "likes": 12,
             "url": "https://www.fiveroffvegan.com",
@@ -18,7 +18,7 @@ def populate():
         },
         {
             'picture': '/deals/foodle.png',
-            "name": "Student card offer",
+            "id": "1",
             "info": "A quarter off all purchases with a student card.",
             "likes": 38,
             "url": "https://www.quarteroffstudents.com",
@@ -26,7 +26,7 @@ def populate():
         },
         {
             'picture': '/deals/foodle.png',
-            "name": "Chinese offer",
+            "id": "2",
             "info": "Save money on Chinese takeaway.",
             "likes": 22,
             "url": "https://www.chinesemoneyoff.com",
@@ -34,7 +34,7 @@ def populate():
         },
         {
             'picture': '/deals/foodle.png',
-            "name": "Bar Soba offer",
+            "id": "3",
             "info": "Bar Soba : 50% off for students.",
             "likes": 73,
             "url": "https://www.barsoba.com",
@@ -42,7 +42,7 @@ def populate():
         },
         {
             'picture': '/deals/foodle.png',
-            "name": "Saucy Burger offer",
+            "id": "4",
             "info": "Free cow with every extra saucy burger!",
             "likes": 322,
             "url": "https://www.saucyburger.com",
@@ -50,7 +50,7 @@ def populate():
         },
         {
             'picture': '/deals/foodle.png',
-            "name": "Soy milk offer",
+            "id": "5",
             "info": "Free soy milk (not oat) on purchases over £20.",
             "likes": 47,
             "url": "https://www.stopbuyingoats.com",
@@ -60,16 +60,16 @@ def populate():
 
 
     for deal in deals:
-        add_deal(deal["picture"], deal["name"], deal["info"], deal["likes"], deal["url"], deal["category"])
+        add_deal(deal["picture"], deal["id"], deal["info"], deal["likes"], deal["url"], deal["category"])
 
     for d in DealModel.objects.all():
         print("- {0}".format(str(d)))
 
-def add_deal(picture, name, info, likes, url, category):
+def add_deal(picture, id, info, likes, url, category):
     d = DealModel.objects.get_or_create(info=info)[0]
     
     d.picture = picture
-    d.name = name
+    d.id = id
     d.info = info
     d.likes = likes
     d.url = url
@@ -79,6 +79,6 @@ def add_deal(picture, name, info, likes, url, category):
 
     return d
 
-if __name__ == '__main__':
+if __id__ == '__main__':
     print("Starting Foodle population script...")
     populate()
