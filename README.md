@@ -20,17 +20,22 @@ A responsive web application for finding nearby deals built with Django and Angu
 [![npm package](https://img.shields.io/npm/v/ng-zorro-antd.svg?style=flat-square)](https://www.npmjs.org/package/ng-zorro-antd)
 
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE)
-[![Discord](https://img.shields.io/gitter/room/ng-zorro/ng-zorro-antd.svg?style=flat-square)](https://gitter.im/ng-zorro/ng-zorro-antd)
-[![extension-for-VSCode](https://img.shields.io/badge/extension%20for-VSCode-blue.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode)
 
 </div>
 
-## 🖥 Quick Deploy
+## 🖥 Demo
+
+> [foodle.cc](https://www.foodle.cc)
+
+## 🚀 Quick Deploy
 
 To deploy a local instance of foodle simply clone into a python 3+ virtual environment and run 
 ```sh
 python manage.py runserver
 ```
+Foodle should now be accessible via:
+127.0.0.1:8000
+
 
 ## 🔨 Installation
 
@@ -64,15 +69,12 @@ Detailed instructions, full descriptions and commands used available in
     * ng-zoro
     * google sign-in
     * switch email to django or alt
+    * switch sqblite to postgreSQL
 
 
 ## 🤝 Contributing
 
-Fork and commit any suggest amendments
-
-## ❓ Help
-
-Open an issue
+We welcome all contributions. Please read our CONTRIBUTING.md first. You can submit any ideas as pull requests or as a [GitHub issue](https://github.com/glasgowm148/Foodle/issues)).
 
 
 ## 🗂 Directory Structure
@@ -126,8 +128,9 @@ Adapted to create FAQ page: https://github.com/CodyHouse/faq-template
 
 SMTP email client: https://app.mailjet.com/
 
+## ❓ Help
 
-
+Submit any [issues to our github](https://github.com/glasgowm148/Foodle/issues)
 
 ## Running the tests
 

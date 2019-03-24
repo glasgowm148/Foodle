@@ -17,7 +17,7 @@ export class AppComponent  {
   valueSub: Subscription;
 
   constructor(private dealService: DealService) {
-      this.valueSub = this.dealService.list().subscribe(z=> {
+      this.valueSub = this.dealService.list().subscribe(z => {
         this.values = z;
       });
 
