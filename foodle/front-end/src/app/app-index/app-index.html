@@ -48,7 +48,7 @@
       <button button="submit" mat-raised-button color="primary">Search</button>
       <br>
       <mat-tab-group>
-      <!-- Search Bar -->
+        <!-- Search Bar -->
 
 
 
@@ -68,101 +68,119 @@
             https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c
           -->
           <div class="row">
-              <div *ngFor="let deal of values" class="col-4 card">
-                <mat-card>
-                    <mat-card-header>
-                      <mat-card-title>{{ deal.info }}</mat-card-title>
-                      <mat-card-subtitle>{{ deal.category }}, Likes: {{deal.likes}}</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image [src]="deal.picture" [alt]="deal.info">
-                    <mat-card-actions>
-                      <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
-                      <a mat-raised-button href="{{deal.url}}">Claim</a>
-                      <a mat-raised-button href="/deal_page/{{deal.slug}}">Info</a>
-                      <button mat-button (click)="deal.url">Claim</button>
-                      <!--- <button mat-button (click)="deal.info">Info</button>-->
-                    </mat-card-actions>
-                  </mat-card>
+            <div *ngFor="let deal of values" class="col-4 card">
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>{{ deal.info }}</mat-card-title>
+                  <mat-card-subtitle>{{ deal.category }}, Likes: {{deal.likes}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="deal.picture" [alt]="deal.info">
+                <mat-card-actions>
+                  <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
+                  <a mat-raised-button href="{{deal.url}}">Claim</a>
+                  <a mat-raised-button href="/deal_page/{{deal.slug}}">Info</a>
+                  <button mat-button (click)="deal.url">Claim</button>
+                  <!--- <button mat-button (click)="deal.info">Info</button>-->
+                </mat-card-actions>
+              </mat-card>
             </div>
           </div>
-            <!--- Card  END-->
+          <!--- Card  END-->
 
-            <!--- Card  START-->
+          <!--- Card  START-->
 
-            <!--- Card  END-->
+          <!--- Card  END-->
 
 
-            <!--- Card  start-->
+          <!--- Card  start-->
+          <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%"
+            fxLayoutAlign="center">
+            <div fxFlex="20%">
+              <div class="card bg-primary text-white text-center p-3">
+                <blockquote class="blockquote mb-0">
+                  <p>Join today to save, like and submit deals!</p>
+                </blockquote>
+                <div id="btn-white">
+                  <a class="white-text" href="{% url 'register' %}">Register!</a>
+                </div>
+              </div>
 
-            <div class="col-3 card">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-                      <p>Join today to save, like and submit deals!</p>
-                    </blockquote>
-                    <div id="btn-white">
-                      <a class="white-text" href="{% url 'register' %}">Register!</a>
-                    </div>
-                  </div>
-                  <div class="card text-center">
-                    <div class="card-body">
-                      <h5 class="card-title">Not seeing anything you fancy?</h5>
-                      <p class="card-text">Check out our resource page for links to relevent sites</p>
-                      <p class="card-text"><small class="text-muted">
-                          <div id="formFooter">
-                            <a class="underlineHover" href="{% url 'register' %}">Resources</a>
-                          </div>
-                        </small></p>
-                    </div>
-                  </div>
-                  <div class="col-3 card">
+            </div>
+            <div fxFlex="20%">
               <div class="card-body">
                 <h5 class="card-title">About</h5>
                 <p class="card-text">Foodle aims to provide you with up-to-date deals on food around campus
                   Create an account to save, like or submit deals</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               </div>
-              </div>
-
-            <img class="card-img" href="{% url 'deal_page' %}" src="static/images/internal_button.png"
-            alt="Card image">
-          </div>
-
-             <!--- Card  END-->
-
-
-            <!--- Card  start-->
-            <div class="row">
-                <div *ngFor="let deal of values" class="col-3 card">
-                  <mat-card>
-                    <mat-card-header>
-                      <mat-card-title>{{ deal.info }}</mat-card-title>
-                      <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image [src]="deal.picture" [alt]="deal.info">
-                    <mat-card-actions>
-                      <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
-                      <a mat-raised-button href="{{deal.url}}">Claim</a>
-                      <a mat-raised-button href="/deal_page/{{deal.slug}}">Info</a>
-                      <button mat-button (click)="deal.url">Claim</button>
-                      <!--- <button mat-button (click)="deal.info">Info</button>-->
-                    </mat-card-actions>
-                  </mat-card>
             </div>
+
+          <div fxFlex="20%">
+            <a class="twitter-timeline" href="https://twitter.com/FoodleGlasgow">Tweets by TwitterDev</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
-            <!--- Card number 2 end-->
 
-
-
+          <div fxFlex="20%">
             <div class="card p-3">
-              <a class="twitter-timeline" href="https://twitter.com/FoodleGlasgow">Tweets by TwitterDev</a>
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-
-
-
-            <div class="card">
+              <img class="card-img" href="{% url 'deal_page' %}" src="static/images/internal_button.png"
+                alt="Card image">
 
             </div>
+          </div>
+
+          <div fxFlex="20%">
+
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">Not seeing anything you fancy?</h5>
+                <p class="card-text">Check out our resource page for links to relevent sites</p>
+                <p class="card-text"><small class="text-muted">
+                    <div id="formFooter">
+                      <a class="underlineHover" href="{% url 'register' %}">Resources</a>
+                    </div>
+                  </small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+          <!--- Card  END-->
+
+
+          <!--- Card  start-->
+          <div class="row">
+            <div *ngFor="let deal of values" class="col-3 card">
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>{{ deal.info }}</mat-card-title>
+                  <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="deal.picture" [alt]="deal.info">
+                <mat-card-actions>
+                  <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
+                  <a mat-raised-button href="{{deal.url}}">Claim</a>
+                  <a mat-raised-button href="/deal_page/{{deal.slug}}">Info</a>
+                  <button mat-button (click)="deal.url">Claim</button>
+                  <!--- <button mat-button (click)="deal.info">Info</button>-->
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+          <!--- Card number 2 end-->
+
+
+
+
+
+
+
 
 
         </mat-tab>
@@ -197,7 +215,7 @@
 
 
       </mat-tab-group>
-    <!-- Disabled Angular Dashboard for now
+      <!-- Disabled Angular Dashboard for now
 <app-cards-angular></app-cards-angular>
     -->
       <!-- End of angular cards -->
