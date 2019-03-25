@@ -9085,6 +9085,115 @@ var UserService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/app-index/app-index.css":
+/*!*****************************************!*\
+  !*** ./src/app/app-index/app-index.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".sidenav-container {\n  height: 100%;\n  /*position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;*/\n\n}\n\n.sidenav {\n  width: 250px;\n}\n\n.sidenav .mat-toolbar {\n  background: lightblue;\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n.mat-drawer-inner-container{\n  z-index: 0;\n}\n\n/* side - menu */\n\n.mat-slide-toggle {\n  padding-right: 15px !important;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLWluZGV4L2FwcC1pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1o7Ozs7WUFJVTs7QUFFWjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLHdCQUFnQjtFQUFoQixnQkFBZ0I7RUFDaEIsTUFBTTtFQUNOLFVBQVU7QUFDWjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFDQSxnQkFBZ0I7O0FBRWhCO0VBQ0UsOEJBQThCO0FBQ2hDIiwiZmlsZSI6InNyYy9hcHAvYXBwLWluZGV4L2FwcC1pbmRleC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZW5hdi1jb250YWluZXIge1xuICBoZWlnaHQ6IDEwMCU7XG4gIC8qcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDYwcHg7XG4gIGJvdHRvbTogNjBweDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7Ki9cblxufVxuXG4uc2lkZW5hdiB7XG4gIHdpZHRoOiAyNTBweDtcbn1cblxuLnNpZGVuYXYgLm1hdC10b29sYmFyIHtcbiAgYmFja2dyb3VuZDogbGlnaHRibHVlO1xufVxuXG4ubWF0LXRvb2xiYXIubWF0LXByaW1hcnkge1xuICBwb3NpdGlvbjogc3RpY2t5O1xuICB0b3A6IDA7XG4gIHotaW5kZXg6IDE7XG59XG5cbi5tYXQtZHJhd2VyLWlubmVyLWNvbnRhaW5lcntcbiAgei1pbmRleDogMDtcbn1cbi8qIHNpZGUgLSBtZW51ICovXG5cbi5tYXQtc2xpZGUtdG9nZ2xlIHtcbiAgcGFkZGluZy1yaWdodDogMTVweCAhaW1wb3J0YW50O1xufVxuXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/app-index/app-index.html":
+/*!******************************************!*\
+  !*** ./src/app/app-index/app-index.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- SideNav start-->\n<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\">\n    <mat-toolbar>Menu</mat-toolbar>\n    <mat-nav-list>\n      <mat-icon>info<a mat-list-item href=\"/about\">About Us</a></mat-icon>\n      < <a mat-list-item href=\"/faq\">FAQ</a>\n        <a mat-list-item href=\"/submit\">Account</a>\n        <!-- <mat-icon></mat-icon>-->\n        <a mat-list-item href=\"/submit\">Submit</a>\n        <a mat-list-item href=\"/login\">Login</a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <!-- SideNav end-->\n\n    <!-- -->\n    <mat-toolbar color=\"primary\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n\n      <mat-card-content>\n        <mat-slide-toggle [disabled]=\"sliderVE.disabled\" [checked]=\"sliderVE.checked\"\n          (change)=\"sliderVE.checked = !sliderVE.checked\">Vegan</mat-slide-toggle>\n      </mat-card-content>\n      <mat-card-content>\n        <mat-slide-toggle [disabled]=\"sliderVEG.disabled\" [checked]=\"sliderVEG.checked\"\n          (change)=\"sliderVEG.checked = !sliderVEG.checked\">Vegetarian</mat-slide-toggle>\n      </mat-card-content>\n      <mat-card-content>\n        <mat-slide-toggle [disabled]=\"sliderG.disabled\" [checked]=\"sliderG.checked\"\n          (change)=\"sliderG.checked = !sliderG.checked\">Gluten-Free</mat-slide-toggle>\n      </mat-card-content>\n      <!--<img src=\"/static/images/logo.png\" alt=\"logo\">  <mat-icon>thumb_up</mat-icon> Most Liked-->\n    </mat-toolbar>\n    <!-- Add Content Here -->\n\n\n    <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n\n    <div class=\"mat-app-background basic-container\">\n\n\n\n      <!-- Search Bar -->\n      <mat-form-field class=\"search-form\">\n        <input matInput placeholder=\"Search Deals..\" type=\"text\">\n      </mat-form-field>\n      <button button=\"submit\" mat-raised-button color=\"primary\">Search</button>\n      <br>\n      <mat-tab-group>\n      <!-- Search Bar -->\n\n\n\n        <!-- FIRST TAB START : Most Popular-->\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>folder</mat-icon> Latest Deals\n          </ng-template>\n          <!--\n            Flexbox Start\n\n            Resources:\n            https://css-tricks.com/snippets/css/a-guide-to-flexbox/\n            Demos:\n            https://tburleson-layouts-demos.firebaseapp.com/#/stackoverflow\n            https://github.com/flavens/material-flexlayout\n            https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c\n          -->\n          <div class=\"row\">\n              <div *ngFor=\"let deal of values\" class=\"col-4 card\">\n                <mat-card>\n                    <mat-card-header>\n                      <mat-card-title>{{ deal.info }}</mat-card-title>\n                      <mat-card-subtitle>{{ deal.category }}, Likes: {{deal.likes}}</mat-card-subtitle>\n                    </mat-card-header>\n                    <img mat-card-image [src]=\"deal.picture\" [alt]=\"deal.info\">\n                    <mat-card-actions>\n                      <!---  <button mat-button [routerLink]=\"['/deal.slug']\">Home</button> -->\n                      <a mat-raised-button href=\"{{deal.url}}\">Claim</a>\n                      <a mat-raised-button href=\"/deal_page/{{deal.slug}}\">Info</a>\n                      <button mat-button (click)=\"deal.url\">Claim</button>\n                      <!--- <button mat-button (click)=\"deal.info\">Info</button>-->\n                    </mat-card-actions>\n                  </mat-card>\n            </div>\n          </div>\n            <!--- Card  END-->\n\n            <!--- Card  START-->\n          <div class=\"card bg-primary text-white text-center p-3\">\n              <blockquote class=\"blockquote mb-0\">\n                <p>Join today to save, like and submit deals!</p>\n              </blockquote>\n              <div id=\"btn-white\">\n                <a class=\"white-text\" href=\"{% url 'register' %}\">Register!</a>\n              </div>\n            </div>\n            <div class=\"card text-center\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">Not seeing anything you fancy?</h5>\n                <p class=\"card-text\">Check out our resource page for links to relevent sites</p>\n                <p class=\"card-text\"><small class=\"text-muted\">\n                    <div id=\"formFooter\">\n                      <a class=\"underlineHover\" href=\"{% url 'register' %}\">Resources</a>\n                    </div>\n                  </small></p>\n              </div>\n            </div>\n            <!--- Card  END-->\n\n\n            <!--- Card  start-->\n\n            <div class=\"card\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">About</h5>\n                <p class=\"card-text\">Foodle aims to provide you with up-to-date deals on food around campus\n                  Create an account to save, like or submit deals</p>\n                <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n              </div>\n            </div>\n             <!--- Card  END-->\n\n\n            <!--- Card  start-->\n            <div class=\"row\">\n                <div *ngFor=\"let deal of values\" class=\"col-3 card\">\n                  <mat-card>\n                    <mat-card-header>\n                      <mat-card-title>{{ deal.info }}</mat-card-title>\n                      <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>\n                    </mat-card-header>\n                    <img mat-card-image [src]=\"deal.picture\" [alt]=\"deal.info\">\n                    <mat-card-actions>\n                      <!---  <button mat-button [routerLink]=\"['/deal.slug']\">Home</button> -->\n                      <a mat-raised-button href=\"{{deal.url}}\">Claim</a>\n                      <a mat-raised-button href=\"/deal_page/{{deal.slug}}\">Info</a>\n                      <button mat-button (click)=\"deal.url\">Claim</button>\n                      <!--- <button mat-button (click)=\"deal.info\">Info</button>-->\n                    </mat-card-actions>\n                  </mat-card>\n            </div>\n          </div>\n            <!--- Card number 2 end-->\n\n\n\n            <div class=\"card p-3\">\n              <a class=\"twitter-timeline\" href=\"https://twitter.com/FoodleGlasgow\">Tweets by TwitterDev</a>\n              <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n            </div>\n\n\n\n            <div class=\"card\">\n              <img class=\"card-img\" href=\"{% url 'deal_page' %}\" src=\"static/images/internal_button.png\"\n                alt=\"Card image\">\n            </div>\n\n\n        </mat-tab>\n\n\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>alarm</mat-icon> Saved\n          </ng-template>\n\n        </mat-tab>\n\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>map</mat-icon> Liked\n          </ng-template>\n\n\n        </mat-tab>\n\n\n        <!-- start of card-->\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>people</mat-icon> Most Liked\n          </ng-template>\n        </mat-tab>\n        <!-- end of card-->\n\n\n\n\n\n      </mat-tab-group>\n      <app-cards-angular></app-cards-angular>\n      <!-- End of angular cards -->\n    </div>\n\n\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+
+/***/ }),
+
+/***/ "./src/app/app-index/app-index.ts":
+/*!****************************************!*\
+  !*** ./src/app/app-index/app-index.ts ***!
+  \****************************************/
+/*! exports provided: AppIndex */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppIndex", function() { return AppIndex; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app-deal/deal.service */ "./src/app/app-deal/deal.service.ts");
+
+
+
+var AppIndex = /** @class */ (function () {
+    function AppIndex(dealService) {
+        var _this = this;
+        this.dealService = dealService;
+        this.sliderVE = {
+            'autoTicks': false,
+            'disabled': false,
+            'invert': false,
+            'max': 100,
+            'min': 0,
+            'showTicks': false,
+            'step': 1,
+            'thumbLabel': false,
+            'value': 0,
+            'vertical': false,
+            'tickInterval': 1,
+            'checked': false
+        };
+        this.sliderVEG = {
+            'autoTicks': false,
+            'disabled': false,
+            'invert': false,
+            'max': 100,
+            'min': 0,
+            'showTicks': false,
+            'step': 1,
+            'thumbLabel': false,
+            'value': 0,
+            'vertical': false,
+            'tickInterval': 1,
+            'checked': false
+        };
+        this.sliderG = {
+            'autoTicks': false,
+            'disabled': false,
+            'invert': false,
+            'max': 100,
+            'min': 0,
+            'showTicks': false,
+            'step': 1,
+            'thumbLabel': false,
+            'value': 0,
+            'vertical': false,
+            'tickInterval': 1,
+            'checked': false
+        };
+        this.name = 'Angular';
+        this.valueSub = this.dealService.list().subscribe(function (z) {
+            _this.values = z;
+        });
+        this.values = this.dealService.list();
+        //  this.observableValues = this.dealService.list();
+    }
+    AppIndex.prototype.ngOnDestroy = function () {
+        this.valueSub.unsubscribe();
+    };
+    AppIndex = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-index',
+            template: __webpack_require__(/*! ./app-index.html */ "./src/app/app-index/app-index.html"),
+            styles: [__webpack_require__(/*! ./app-index.css */ "./src/app/app-index/app-index.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__["DealService"]])
+    ], AppIndex);
+    return AppIndex;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.html":
 /*!************************************!*\
   !*** ./src/app/app.component.html ***!
@@ -9092,7 +9201,7 @@ var UserService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-example-navbar></app-example-navbar>\n</div>\n\n<!-- Moved to example-navbar\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<div style=\"display: flex; align-content: space-between;\">\n    <mat-card *ngFor=\"let deal of values\" style=\"margin: auto;\">\n      <mat-card-header>\n        <mat-card-title>{{ deal.info }}</mat-card-title>\n        <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image [src]=\"deal.picture\" [alt]=\"deal.info\">\n      <mat-card-actions>\n    <!---  <button mat-button [routerLink]=\"['/deal.slug']\">Home</button>\n\n        <button mat-button (click)=\"deal.url\">Claim Deal</button>\n        <button mat-button (click)=\"deal.info\">More Information</button>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n\n<ul>\n    <li *ngFor=\"let deal of values\">{{deal}}</li>\n  </ul>\n-->\n<!---\n<table width=\"100%\">\n  <tr>\n    <th>name</th>\n    <th>info</th>\n    <th>picture</th>\n    <th>been_liked</th>\n    <th>been_disliked</th>\n    <th>likes</th>\n    <th>url</th>\n    <th>category</th>\n    <th>slug</th>\n    <th>address</th>\n  </tr>\n  <tr *ngFor=\"let deal of values\">\n    <td>{{deal.name}}</td>\n    <td>{{deal.info}}</td>\n    <td>{{deal.picture}}</td>\n    <td>{{deal.been_liked}}</td>\n    <td>{{deal.been_disliked}}</td>\n    <td>{{deal.likes}}</td>\n    <td>{{deal.url}}</td>\n    <td>{{deal.category}}</td>\n    <td>{{deal.slug}}</td>\n    <td>{{deal.address}}</td>\n  </tr>\n</table>\n-->\n"
+module.exports = "<!--\nThis is the file called by <app-root>. Current this displays the following\n\n  : APP : Material Nav    --- /material-nav\n  : APP : App tav         --- /tab\n  : CheckBoxes\n  : Cards\n\n  CSS is loaded from app.component.css\n  app.component.ts is where you pass through your data\n  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end\n  https://www.techiediaries.com/angular-tutorial/\n\n-->\n\n<div class=\"container\">\n  <app-index></app-index>\n</div>\n\n<!-- Moved to example-navbar\n<h2 class=\"mt-3\">Deal Service Attempt. Django++rest++Angular</h2>\n<div style=\"display: flex; align-content: space-between;\">\n    <mat-card *ngFor=\"let deal of values\" style=\"margin: auto;\">\n      <mat-card-header>\n        <mat-card-title>{{ deal.info }}</mat-card-title>\n        <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>\n      </mat-card-header>\n      <img mat-card-image [src]=\"deal.picture\" [alt]=\"deal.info\">\n      <mat-card-actions>\n    <!---  <button mat-button [routerLink]=\"['/deal.slug']\">Home</button>\n\n        <button mat-button (click)=\"deal.url\">Claim Deal</button>\n        <button mat-button (click)=\"deal.info\">More Information</button>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n\n<ul>\n    <li *ngFor=\"let deal of values\">{{deal}}</li>\n  </ul>\n-->\n<!---\n<table width=\"100%\">\n  <tr>\n    <th>name</th>\n    <th>info</th>\n    <th>picture</th>\n    <th>been_liked</th>\n    <th>been_disliked</th>\n    <th>likes</th>\n    <th>url</th>\n    <th>category</th>\n    <th>slug</th>\n    <th>address</th>\n  </tr>\n  <tr *ngFor=\"let deal of values\">\n    <td>{{deal.name}}</td>\n    <td>{{deal.info}}</td>\n    <td>{{deal.picture}}</td>\n    <td>{{deal.been_liked}}</td>\n    <td>{{deal.been_disliked}}</td>\n    <td>{{deal.likes}}</td>\n    <td>{{deal.url}}</td>\n    <td>{{deal.category}}</td>\n    <td>{{deal.slug}}</td>\n    <td>{{deal.address}}</td>\n  </tr>\n</table>\n-->\n"
 
 /***/ }),
 
@@ -9179,7 +9288,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./example-navbar/example-navbar.component */ "./src/app/example-navbar/example-navbar.component.ts");
+/* harmony import */ var _app_index_app_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-index/app-index */ "./src/app/app-index/app-index.ts");
 /* harmony import */ var _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cards-angular/cards-angular.component */ "./src/app/cards-angular/cards-angular.component.ts");
 /* harmony import */ var _app_deal_deal_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app-deal/deal.service */ "./src/app/app-deal/deal.service.ts");
 
@@ -9217,7 +9326,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"],
             ],
             entryComponents: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _example_navbar_example_navbar_component__WEBPACK_IMPORTED_MODULE_11__["ExampleNavbarComponent"], _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__["CardsAngularComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _app_index_app_index__WEBPACK_IMPORTED_MODULE_11__["AppIndex"], _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_12__["CardsAngularComponent"]],
             providers: [_app_deal_deal_service__WEBPACK_IMPORTED_MODULE_13__["DealService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
@@ -9301,115 +9410,6 @@ var CardsAngularComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_cdk_layout__WEBPACK_IMPORTED_MODULE_3__["BreakpointObserver"]])
     ], CardsAngularComponent);
     return CardsAngularComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/example-navbar/example-navbar.component.css":
-/*!*************************************************************!*\
-  !*** ./src/app/example-navbar/example-navbar.component.css ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".sidenav-container {\n  height: 100%;\n  /*position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;*/\n\n}\n\n.sidenav {\n  width: 250px;\n}\n\n.sidenav .mat-toolbar {\n  background: lightblue;\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n\n.mat-drawer-inner-container{\n  z-index: 0;\n}\n\n/* side - menu */\n\n.mat-slide-toggle {\n  padding-right: 15px !important;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXhhbXBsZS1uYXZiYXIvZXhhbXBsZS1uYXZiYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7RUFDWjs7OztZQUlVOztBQUVaOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0Usd0JBQWdCO0VBQWhCLGdCQUFnQjtFQUNoQixNQUFNO0VBQ04sVUFBVTtBQUNaOztBQUVBO0VBQ0UsVUFBVTtBQUNaOztBQUNBLGdCQUFnQjs7QUFFaEI7RUFDRSw4QkFBOEI7QUFDaEMiLCJmaWxlIjoic3JjL2FwcC9leGFtcGxlLW5hdmJhci9leGFtcGxlLW5hdmJhci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpZGVuYXYtY29udGFpbmVyIHtcbiAgaGVpZ2h0OiAxMDAlO1xuICAvKnBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA2MHB4O1xuICBib3R0b206IDYwcHg7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwOyovXG5cbn1cblxuLnNpZGVuYXYge1xuICB3aWR0aDogMjUwcHg7XG59XG5cbi5zaWRlbmF2IC5tYXQtdG9vbGJhciB7XG4gIGJhY2tncm91bmQ6IGxpZ2h0Ymx1ZTtcbn1cblxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAwO1xuICB6LWluZGV4OiAxO1xufVxuXG4ubWF0LWRyYXdlci1pbm5lci1jb250YWluZXJ7XG4gIHotaW5kZXg6IDA7XG59XG4vKiBzaWRlIC0gbWVudSAqL1xuXG4ubWF0LXNsaWRlLXRvZ2dsZSB7XG4gIHBhZGRpbmctcmlnaHQ6IDE1cHggIWltcG9ydGFudDtcbn1cblxuIl19 */"
-
-/***/ }),
-
-/***/ "./src/app/example-navbar/example-navbar.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/example-navbar/example-navbar.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- SideNav start-->\n<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #drawer class=\"sidenav\" [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\" [opened]=\"!(isHandset$ | async)\">\n    <mat-toolbar>Menu</mat-toolbar>\n    <mat-nav-list>\n      <mat-icon>info<a mat-list-item href=\"/about\">About Us</a></mat-icon>\n      < <a mat-list-item href=\"/faq\">FAQ</a>\n        <a mat-list-item href=\"/submit\">Account</a>\n        <!-- <mat-icon></mat-icon>-->\n        <a mat-list-item href=\"/submit\">Submit</a>\n        <a mat-list-item href=\"/login\">Login</a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <!-- SideNav end-->\n\n    <!-- -->\n    <mat-toolbar color=\"primary\">\n      <button type=\"button\" aria-label=\"Toggle sidenav\" mat-icon-button (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n\n      <mat-card-content>\n        <mat-slide-toggle [disabled]=\"sliderVE.disabled\" [checked]=\"sliderVE.checked\"\n          (change)=\"sliderVE.checked = !sliderVE.checked\">Vegan</mat-slide-toggle>\n      </mat-card-content>\n      <mat-card-content>\n        <mat-slide-toggle [disabled]=\"sliderVEG.disabled\" [checked]=\"sliderVEG.checked\"\n          (change)=\"sliderVEG.checked = !sliderVEG.checked\">Vegetarian</mat-slide-toggle>\n      </mat-card-content>\n      <mat-card-content>\n        <mat-slide-toggle [disabled]=\"sliderG.disabled\" [checked]=\"sliderG.checked\"\n          (change)=\"sliderG.checked = !sliderG.checked\">Gluten-Free</mat-slide-toggle>\n      </mat-card-content>\n      <!--<img src=\"/static/images/logo.png\" alt=\"logo\">  <mat-icon>thumb_up</mat-icon> Most Liked-->\n    </mat-toolbar>\n    <!-- Add Content Here -->\n\n\n    <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n\n    <div class=\"mat-app-background basic-container\">\n\n\n\n      <!-- Search Bar -->\n      <mat-form-field class=\"search-form\">\n        <input matInput placeholder=\"Search Deals..\" type=\"text\">\n      </mat-form-field>\n      <button button=\"submit\" mat-raised-button color=\"primary\">Search</button>\n      <br>\n      <mat-tab-group>\n      <!-- Search Bar -->\n\n\n\n        <!-- FIRST TAB START : Most Popular-->\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>folder</mat-icon> Latest Deals\n          </ng-template>\n          <!--\n            Flexbox Start\n\n            Resources:\n            https://css-tricks.com/snippets/css/a-guide-to-flexbox/\n            Demos:\n            https://tburleson-layouts-demos.firebaseapp.com/#/stackoverflow\n            https://github.com/flavens/material-flexlayout\n            https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c\n          -->\n          <div class=\"row\">\n              <div *ngFor=\"let deal of values\" class=\"col-4 card\">\n                <mat-card>\n                    <mat-card-header>\n                      <mat-card-title>{{ deal.info }}</mat-card-title>\n                      <mat-card-subtitle>{{ deal.category }}, Likes: {{deal.likes}}</mat-card-subtitle>\n                    </mat-card-header>\n                    <img mat-card-image [src]=\"deal.picture\" [alt]=\"deal.info\">\n                    <mat-card-actions>\n                      <!---  <button mat-button [routerLink]=\"['/deal.slug']\">Home</button> -->\n                      <a mat-raised-button href=\"{{deal.url}}\">Claim</a>\n                      <a mat-raised-button href=\"/deal_page/{{deal.slug}}\">Info</a>\n                      <button mat-button (click)=\"deal.url\">Claim</button>\n                      <!--- <button mat-button (click)=\"deal.info\">Info</button>-->\n                    </mat-card-actions>\n                  </mat-card>\n            </div>\n          </div>\n            <!--- Card  END-->\n\n            <!--- Card  START-->\n          <div class=\"card bg-primary text-white text-center p-3\">\n              <blockquote class=\"blockquote mb-0\">\n                <p>Join today to save, like and submit deals!</p>\n              </blockquote>\n              <div id=\"btn-white\">\n                <a class=\"white-text\" href=\"{% url 'register' %}\">Register!</a>\n              </div>\n            </div>\n            <div class=\"card text-center\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">Not seeing anything you fancy?</h5>\n                <p class=\"card-text\">Check out our resource page for links to relevent sites</p>\n                <p class=\"card-text\"><small class=\"text-muted\">\n                    <div id=\"formFooter\">\n                      <a class=\"underlineHover\" href=\"{% url 'register' %}\">Resources</a>\n                    </div>\n                  </small></p>\n              </div>\n            </div>\n            <!--- Card  END-->\n\n\n            <!--- Card  start-->\n\n            <div class=\"card\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">About</h5>\n                <p class=\"card-text\">Foodle aims to provide you with up-to-date deals on food around campus\n                  Create an account to save, like or submit deals</p>\n                <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n              </div>\n            </div>\n             <!--- Card  END-->\n\n\n            <!--- Card  start-->\n            <div class=\"row\">\n                <div *ngFor=\"let deal of values\" class=\"col-3 card\">\n                  <mat-card>\n                    <mat-card-header>\n                      <mat-card-title>{{ deal.info }}</mat-card-title>\n                      <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>\n                    </mat-card-header>\n                    <img mat-card-image [src]=\"deal.picture\" [alt]=\"deal.info\">\n                    <mat-card-actions>\n                      <!---  <button mat-button [routerLink]=\"['/deal.slug']\">Home</button> -->\n                      <a mat-raised-button href=\"{{deal.url}}\">Claim</a>\n                      <a mat-raised-button href=\"/deal_page/{{deal.slug}}\">Info</a>\n                      <button mat-button (click)=\"deal.url\">Claim</button>\n                      <!--- <button mat-button (click)=\"deal.info\">Info</button>-->\n                    </mat-card-actions>\n                  </mat-card>\n            </div>\n          </div>\n            <!--- Card number 2 end-->\n\n\n\n            <div class=\"card p-3\">\n              <a class=\"twitter-timeline\" href=\"https://twitter.com/FoodleGlasgow\">Tweets by TwitterDev</a>\n              <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n            </div>\n\n\n\n            <div class=\"card\">\n              <img class=\"card-img\" href=\"{% url 'deal_page' %}\" src=\"static/images/internal_button.png\"\n                alt=\"Card image\">\n            </div>\n\n\n        </mat-tab>\n\n\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>alarm</mat-icon> Saved\n          </ng-template>\n\n        </mat-tab>\n\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>map</mat-icon> Liked\n          </ng-template>\n\n\n        </mat-tab>\n\n\n        <!-- start of card-->\n        <mat-tab>\n          <ng-template mat-tab-label>\n            <mat-icon>people</mat-icon> Most Liked\n          </ng-template>\n        </mat-tab>\n        <!-- end of card-->\n\n\n\n\n\n      </mat-tab-group>\n      <app-cards-angular></app-cards-angular>\n      <!-- End of angular cards -->\n    </div>\n\n\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
-
-/***/ }),
-
-/***/ "./src/app/example-navbar/example-navbar.component.ts":
-/*!************************************************************!*\
-  !*** ./src/app/example-navbar/example-navbar.component.ts ***!
-  \************************************************************/
-/*! exports provided: ExampleNavbarComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExampleNavbarComponent", function() { return ExampleNavbarComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app-deal/deal.service */ "./src/app/app-deal/deal.service.ts");
-
-
-
-var ExampleNavbarComponent = /** @class */ (function () {
-    function ExampleNavbarComponent(dealService) {
-        var _this = this;
-        this.dealService = dealService;
-        this.sliderVE = {
-            'autoTicks': false,
-            'disabled': false,
-            'invert': false,
-            'max': 100,
-            'min': 0,
-            'showTicks': false,
-            'step': 1,
-            'thumbLabel': false,
-            'value': 0,
-            'vertical': false,
-            'tickInterval': 1,
-            'checked': false
-        };
-        this.sliderVEG = {
-            'autoTicks': false,
-            'disabled': false,
-            'invert': false,
-            'max': 100,
-            'min': 0,
-            'showTicks': false,
-            'step': 1,
-            'thumbLabel': false,
-            'value': 0,
-            'vertical': false,
-            'tickInterval': 1,
-            'checked': false
-        };
-        this.sliderG = {
-            'autoTicks': false,
-            'disabled': false,
-            'invert': false,
-            'max': 100,
-            'min': 0,
-            'showTicks': false,
-            'step': 1,
-            'thumbLabel': false,
-            'value': 0,
-            'vertical': false,
-            'tickInterval': 1,
-            'checked': false
-        };
-        this.name = 'Angular';
-        this.valueSub = this.dealService.list().subscribe(function (z) {
-            _this.values = z;
-        });
-        this.values = this.dealService.list();
-        //  this.observableValues = this.dealService.list();
-    }
-    ExampleNavbarComponent.prototype.ngOnDestroy = function () {
-        this.valueSub.unsubscribe();
-    };
-    ExampleNavbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-example-navbar',
-            template: __webpack_require__(/*! ./example-navbar.component.html */ "./src/app/example-navbar/example-navbar.component.html"),
-            styles: [__webpack_require__(/*! ./example-navbar.component.css */ "./src/app/example-navbar/example-navbar.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__["DealService"]])
-    ], ExampleNavbarComponent);
-    return ExampleNavbarComponent;
 }());
 
 

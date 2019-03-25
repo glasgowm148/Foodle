@@ -9,15 +9,15 @@ import {
   MatToolbarModule,
 } from '@angular/material';
 
-import { ExampleNavbarComponent } from './example-navbar.component';
+import { AppIndex } from './app-index';
 
-describe('ExampleNavbarComponent', () => {
-  let component: ExampleNavbarComponent;
-  let fixture: ComponentFixture<ExampleNavbarComponent>;
+describe('AppIndex', () => {
+  let component: AppIndex;
+  let fixture: ComponentFixture<AppIndex>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ExampleNavbarComponent],
+      declarations: [AppIndex],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -31,7 +31,7 @@ describe('ExampleNavbarComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExampleNavbarComponent);
+    fixture = TestBed.createComponent(AppIndex);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

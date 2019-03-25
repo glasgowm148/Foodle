@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
+import { AppIndex } from './app-index/app-index'
 import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 import { DealService } from './app-deal/deal.service';
 
@@ -37,7 +37,7 @@ import { DealService } from './app-deal/deal.service';
     ReactiveFormsModule,
   ],
   entryComponents: [AppComponent],
-  declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent],
+  declarations: [AppComponent, AppIndex, CardsAngularComponent],
   providers: [ DealService ],
   bootstrap: [AppComponent]
 })

@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { map } from 'rxjs/operators';
-import {DealService } from '../app-deal/deal.service';
+import { DealService } from '../app-deal/deal.service';
 import { Observable, Subscription } from 'rxjs';
 
 
 @Component({
-  selector: 'app-example-navbar',
-  templateUrl: './example-navbar.component.html',
-  styleUrls: ['./example-navbar.component.css']
+  selector: 'app-index',
+  templateUrl: './app-index.html',
+  styleUrls: ['./app-index.css']
 })
-export class ExampleNavbarComponent {
+export class AppIndex {
 
 
   public sliderVE = {
@@ -64,10 +62,10 @@ export class ExampleNavbarComponent {
   valueSub: Subscription;
 
   constructor(private dealService: DealService) {
-      this.valueSub = this.dealService.list().subscribe(z => {
-        this.values = z;
-      });
-      this.values = this.dealService.list();
+    this.valueSub = this.dealService.list().subscribe(z => {
+      this.values = z;
+    });
+    this.values = this.dealService.list();
 
     //  this.observableValues = this.dealService.list();
 
@@ -75,5 +73,6 @@ export class ExampleNavbarComponent {
 
 
   ngOnDestroy() {
-      this.valueSub.unsubscribe();
-  }}
+    this.valueSub.unsubscribe();
+  }
+}
