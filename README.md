@@ -23,7 +23,7 @@ A responsive web application for finding nearby deals built with Django and Angu
 
 </div>
 
-## 🖥 Demo
+## 🖥  Demo
 
 > [foodle.cc](https://www.foodle.cc)
 
