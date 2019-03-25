@@ -13,10 +13,6 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import registerForm, SubmitForm, contactForm
 from .serializers import DealSerializer
 from django.core.mail import send_mail, BadHeaderError
-from django.template import RequestContext
-from django.utils.decorators import method_decorator
-
-
 
 
 def index(request, path=''):
@@ -161,7 +157,7 @@ def user_login(request):
 
     else:
         return render(request, 'login.html', {})
-        
+
 def register(request):
 
     # Register form for the users. Redirects to login straight after a successful login
