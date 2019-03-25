@@ -15,8 +15,6 @@ from .serializers import DealSerializer
 from django.core.mail import send_mail, BadHeaderError
 from django.template import RequestContext
 from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_protect
-from django.shortcuts import render_to_response
 
 
 
@@ -163,8 +161,7 @@ def user_login(request):
 
     else:
         return render(request, 'login.html', {})
-
-@csrf_protect
+        
 def register(request):
 
     # Register form for the users. Redirects to login straight after a successful login
@@ -180,7 +177,7 @@ def register(request):
     else:
         form = registerForm()
 
-    return render_to_response(request, 'register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 class UserViewSet(viewsets.ModelViewSet):
     """
