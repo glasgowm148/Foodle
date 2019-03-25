@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<br class="space"> 
+<br class="space">
 <div class="wrapper fadeInDown">
 <div id="formContent">
 <!-- Tabs Titles -->
@@ -18,37 +18,37 @@
   <form method="post">
     {% csrf_token %}
     <input type="hidden" name="csrfmiddlewaretoken" value="EgTy68b7g5lRuOaBGWVtif4Gj08ikTz08r3Chw7pLc9MC1w1joD7uzJ1ol0jOebF">
-    
+
       <p class="fadeIn second">
         <br>
-        <input type="text" id="id_username" placeholder="username" name="username" maxlength="" required="">     
+        <input type="text" id="id_username" placeholder="username" name="username" maxlength="" required="">
       </p>
-    
+
       <p class="fadeIn second">
         <br>
         <input type="text" id="id_first_name" placeholder="first name" name="first_name" maxlength="">
       </p>
-    
+
       <p class="fadeIn second">
         <br>
         <input type="text" id="id_last_name" placeholder="last name" name="last_name" maxlength="">
       </p>
-    
+
       <p class="fadeIn second">
         <br>
         <input type="email" id="id_email" placeholder="email" name="email" maxlength="" required="">
       </p>
-    
+
       <p class="fadeIn second">
         <br>
         <input type="password" id="id_password1" placeholder="password" name="password1" maxlength="" required="">
       </p>
-    
+
       <p class="fadeIn second">
         <br>
         <input type="password" id="id_password2" placeholder="password Conformation" name="password2" maxlength="" required="">
       </p>
-    
+
     <button type="submit" class="fadeIn third">Sign up</button>
   </form>
 </div>
