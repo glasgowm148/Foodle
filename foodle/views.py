@@ -13,6 +13,8 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import registerForm, SubmitForm, contactForm
 from .serializers import DealSerializer
 from django.core.mail import send_mail, BadHeaderError
+from django.template import RequestContext
+
 
 
 def index(request, path=''):
@@ -43,7 +45,7 @@ def like(request):
     if request.method == 'GET':
         deal_id = request.GET.get('deal_id')
 
-        if deal_id: 
+        if deal_id:
             deal = DealModel.objects.get(id=int(deal_id))
             if deal:
                 if deal.been_liked.filter(id=request.user.id).exists():
@@ -53,9 +55,9 @@ def like(request):
                 else:
                     deal.likes += 1
                     deal.been_liked.add(request.user)
-                
+
                 deal.save()
-            
+
     return HttpResponse(deal.likes)
 
 def dislike(request):
@@ -64,7 +66,7 @@ def dislike(request):
     if request.method == 'GET':
         deal_id = request.GET.get('deal_id')
 
-        if deal_id: 
+        if deal_id:
             deal = DealModel.objects.get(id=int(deal_id))
             if deal:
                 if deal.been_disliked.filter(id=request.user.id).exists():
@@ -74,9 +76,9 @@ def dislike(request):
                 else:
                     deal.likes -= 1
                     deal.been_disliked.add(request.user)
-                
+
                 deal.save()
-            
+
     return HttpResponse(deal.likes)
 
 def deal_page(request, deal_name_slug):
@@ -173,7 +175,7 @@ def register(request):
     else:
         form = registerForm()
 
-    return render(request, 'register.html', {'form': form})
+    return render_to_response(request, 'register.html', {'form': form})
 
 class UserViewSet(viewsets.ModelViewSet):
     """
