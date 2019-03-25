@@ -5,12 +5,11 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <mat-icon>info<a mat-list-item href="/about">About Us</a></mat-icon>
-      <
-      <a mat-list-item href="/faq">FAQ</a>
-      <a mat-list-item href="/submit">Account</a>
-      <!-- <mat-icon></mat-icon>-->
-      <a mat-list-item href="/submit">Submit</a>
-      <a mat-list-item href="/login">Login</a>
+      < <a mat-list-item href="/faq">FAQ</a>
+        <a mat-list-item href="/submit">Account</a>
+        <!-- <mat-icon></mat-icon>-->
+        <a mat-list-item href="/submit">Submit</a>
+        <a mat-list-item href="/login">Login</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,6 +21,19 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+
+      <mat-card-content>
+        <mat-slide-toggle [disabled]="sliderVE.disabled" [checked]="sliderVE.checked"
+          (change)="sliderVE.checked = !sliderVE.checked">Vegan</mat-slide-toggle>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-slide-toggle [disabled]="sliderVEG.disabled" [checked]="sliderVEG.checked"
+          (change)="sliderVEG.checked = !sliderVEG.checked">Vegetarian</mat-slide-toggle>
+      </mat-card-content>
+      <mat-card-content>
+        <mat-slide-toggle [disabled]="sliderG.disabled" [checked]="sliderG.checked"
+          (change)="sliderG.checked = !sliderG.checked">Gluten-Free</mat-slide-toggle>
+      </mat-card-content>
       <!--<img src="/static/images/logo.png" alt="logo">  <mat-icon>thumb_up</mat-icon> Most Liked-->
     </mat-toolbar>
     <!-- Add Content Here -->
@@ -43,14 +55,20 @@
           <mat-card-actions>
             <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
             <a mat-raised-button href="{{deal.url}}">Claim</a>
+<<<<<<< HEAD
             <a mat-raised-button href="/deal_page/{{deal.slug}}">Info</a>
 
             <!---  <button mat-button (click)="deal.url">Claim</button>
+=======
+            <a mat-raised-button href="https://www.foodle.cc/deal_page/{{deal.slug}}">Info</a>
+            <button mat-button (click)="deal.url">Claim</button>
+            <!---
+>>>>>>> 3b062dd61591f6c0ad5dff161e5bfb3649b9b5fd
                 <button mat-button (click)="deal.info">Info</button>-->
           </mat-card-actions>
         </mat-card>
       </div>
-       <!--  Angular cards END-->
+      <!--  Angular cards END-->
       <!-- Search Bar -->
       <mat-form-field class="search-form">
         <input matInput placeholder="Search Deals.." type="text">
@@ -58,21 +76,9 @@
       <button button="submit" mat-raised-button color="primary">Search</button>
       <br>
       <mat-tab-group>
+      <!-- Search Bar -->
 
-        <!-- CheckBoxes-->
 
-        <mat-checkbox><small class="text-muted">Vegan</small></mat-checkbox>
-        <mat-checkbox><small class="text-muted">Vegetarian</small></mat-checkbox>
-        <mat-checkbox><small class="text-muted">Gluten-Free</small></mat-checkbox>
-
-        <!--
-            Resources:
-              https://github.com/angular/material2/blob/master/src/dev-app/checkbox/checkbox-demo.html
-              https://www.concretepage.com/angular-2/angular-material/angular-material-checkbox-example
-
-            Demo:
-              https://stackblitz.com/edit/angular-material-flex-layout-seed?file=app%2Fmaterial.module.ts
-        -->
 
         <!-- FIRST TAB START : Most Popular-->
 
@@ -80,7 +86,7 @@
 
         <mat-tab>
           <ng-template mat-tab-label>
-            <mat-icon>folder</mat-icon> Angular + bootstrap
+            <mat-icon>folder</mat-icon> Deals
           </ng-template>
           <!--
             Flexbox Start

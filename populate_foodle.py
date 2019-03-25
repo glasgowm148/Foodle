@@ -25,7 +25,7 @@ def populate():
             "category": "other"
         },
         {
-            'picture': '/deals/foodle.png',
+            'picture': '/deals/soba.png',
             "name": "Chinese offer",
             "info": "Save money on Chinese takeaway.",
             "likes": 22,
@@ -33,7 +33,7 @@ def populate():
             "category": "asian"
         },
         {
-            'picture': '/deals/foodle.png',
+            'picture': '/deals/sobaDeal.png',
             "name": "Bar Soba offer",
             "info": "Bar Soba : 50% off for students.",
             "likes": 73,
@@ -41,7 +41,7 @@ def populate():
             "category": "asian"
         },
         {
-            'picture': '/deals/foodle.png',
+            'picture': '/deals/the78.png',
             "name": "Saucy Burger offer",
             "info": "Free cow with every extra saucy burger!",
             "likes": 322,
@@ -49,12 +49,20 @@ def populate():
             "category": "indian"
         },
         {
-            'picture': '/deals/foodle.png',
+            'picture': '/deals/oneup.png',
             "name": "Soy milk offer",
             "info": "Free soy milk (not oat) on purchases over £20.",
             "likes": 47,
             "url": "https://www.stopbuyingoats.com",
             "category": "vegan"
+        },
+         {
+            'picture': '/deals/dominos.png',
+            "name": "Dominos",
+            "info": "35 precent student discount at dominos",
+            "likes": 417,
+            "url": "https://www.dominos.com",
+            "category": "pizza"
         }
     ]
 
