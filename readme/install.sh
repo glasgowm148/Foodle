@@ -18,7 +18,6 @@ echo "~~~~~~ venv activated - installing project requirements.txt ~~~~~~"
 pip3.6 install -r requirements.txt
 
 
-
 # Custom bash/sh script to enter into the correct directory. 
 echo ""Moving into the foodle/front-end directory""
 echo "$(pwd)"
@@ -27,24 +26,15 @@ echo "$(pwd)"
 cd foodle/front-end || exit
 echo "$(pwd)"
 
-
-#rm -f package-lock.json
-
-
 # clean
+
 npm cache verify
 echo "npm :: removing node_modules"
 
 rm -rf node_modules
-#cd ../..
+#rm -f package-lock.json
 
 
-
-# install globablly (within the environment)
-# npm cache verify
-# if npm version is < 5 then use `npm cache clean`
-
-# rm -f package-lock.json && npm install
 
 echo " ~~~~~~  npm install -g @angular/cli@latest - installs the latest version  ~~~~~~ "
 npm install -g @angular/cli@latest
@@ -56,6 +46,32 @@ ng add @angular/material
 
 
 
+echo " ~~~~~~   ng build... ~~~~~~"
+
+ng build
+echo "~~~~~~ npm installed successfully. ~~~~~~"
+
+
+# CD back into the home directory ./Foodle_dev
+cd ../..
+echo "$(pwd)"
+
+echo " ~~~~~~ Current working directory :: ~~~~~~ "
+echo "$(pwd)"
+
+
+
+echo " ~~~~~~ Git Status :: ~~~~~~ "
+git status
+
+echo "~~~~~~ manage.py runserver ~~~~~~"
+
+# Run the python server - which is linked with angular via the REST framework. 
+python manage.py runserver
+
+
+
+#### LEGACY
 #
 
 # update the node package to be on the same cli as the core
@@ -89,25 +105,8 @@ echo "change selectors here?"
 #  the local directory where npm install @angular/cli was run, 
 # which will use the locally installed angular-cli.
 
-echo " ~~~~~~   ng build... ~~~~~~"
+# install globablly (within the environment)
+# npm cache verify
+# if npm version is < 5 then use `npm cache clean`
 
-ng build
-echo "~~~~~~ npm installed successfully. ~~~~~~"
-
-
-# CD back into the home directory ./Foodle_dev
-cd ../..
-echo "$(pwd)"
-
-echo " ~~~~~~ Current working directory :: ~~~~~~ "
-echo "$(pwd)"
-
-
-
-echo " ~~~~~~ Git Status :: ~~~~~~ "
-git status
-
-echo "~~~~~~ manage.py runserver ~~~~~~"
-
-# Run the python server - which is linked with angular via the REST framework. 
-python manage.py runserver
+# rm -f package-lock.json && npm install

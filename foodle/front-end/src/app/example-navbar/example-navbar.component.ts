@@ -12,6 +12,7 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class ExampleNavbarComponent {
 
+
   public sliderVE = {
     'autoTicks': false,
     'disabled': false,

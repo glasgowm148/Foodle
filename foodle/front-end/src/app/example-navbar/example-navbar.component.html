@@ -1,7 +1,6 @@
 <!-- SideNav start-->
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+  <mat-sidenav #drawer class="sidenav">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <mat-icon>info<a mat-list-item href="/about">About Us</a></mat-icon>
