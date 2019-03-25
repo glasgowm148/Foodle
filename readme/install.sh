@@ -51,11 +51,12 @@ npm install -g @angular/cli@latest
 npm install --save-dev @angular-devkit/build-angular
 npm update
 ng update @angular/cli @angular/core
+npm install bootstrap
+ng add @angular/material
 
 
 
 #
-npm install bootstrap
 
 # update the node package to be on the same cli as the core
 # ng-bootstrap
@@ -69,7 +70,7 @@ echo "change selectors here?"
 #npm install --save @angular/flex-layout@latest 
 
 
-You can use npm-install-peers to find and install required peer dependencies.
+#You can use npm-install-peers to find and install required peer dependencies.
 
 
 # npm install --save-dev jquery@1.9.1 - 3@latest
@@ -81,8 +82,6 @@ You can use npm-install-peers to find and install required peer dependencies.
 # https://www.techiediaries.com/django-angular-tutorial/#Fixing_Hot_Code_Reloadnp
 #npm install webpack-bundle-tracker --save
 
-# Slightly different than the above statement - not sure why, gives you theme options, etc.
-ng add @angular/material
 
 
 
