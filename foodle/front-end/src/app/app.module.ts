@@ -22,7 +22,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ExampleNavbarComponent } from './example-navbar/example-navbar.component';
 import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 import { DealService } from './app-deal/deal.service';
-import {MaterialNavComponent } from './material-nav/material-nav.component'
 
 @NgModule({
   imports: [
@@ -36,10 +35,9 @@ import {MaterialNavComponent } from './material-nav/material-nav.component'
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MaterialNavComponent,
   ],
   entryComponents: [AppComponent],
-  declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent, MaterialNavComponent],
+  declarations: [AppComponent, ExampleNavbarComponent, CardsAngularComponent],
   providers: [ DealService ],
   bootstrap: [AppComponent]
 })
