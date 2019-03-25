@@ -35,7 +35,7 @@ def populate():
         {
             'picture': '/deals/sobaDeal.png',
             "name": "Bar Soba offer",
-            "info": "Bar Soba : 50% off for students.",
+            "info": "Bar Soba : 50 percent off for students.",
             "likes": 73,
             "url": "https://www.barsoba.com",
             "category": "asian"
