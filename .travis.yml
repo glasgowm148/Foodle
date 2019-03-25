@@ -8,12 +8,7 @@ branches:
   - dev
 before_script:
   - cd foodle/front-end
-  - npm install -g @angular/cli
-  - npm install --save-dev @angular-devkit/build-angular
-  - ng update @angular/cli @angular/core
-  - npm install bootstrap
-
-
+  - npm install 
 script:
 - ng lint
 - ng build --prod --base-href https://github.com/glasgowm148/foodle
