@@ -1,5 +1,6 @@
 
 
+// tslint:disable-next-line:import-spacing
 import {propertyMap}  from '../functions/propertyMap';
 import { statusConverter} from '../functions/statusConverter';
 

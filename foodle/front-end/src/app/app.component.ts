@@ -3,7 +3,7 @@ import {DealService } from './app-deal/deal.service';
 import {UserService} from './app-deal/user.service';
 import {throwError} from 'rxjs';
 
-import { Observable, Subscription } from 'rxjs'
+import { Observable, Subscription } from 'rxjs';
 
 
 @Component({

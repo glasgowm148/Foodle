@@ -8932,6 +8932,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_propertyMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/propertyMap */ "./src/app/functions/propertyMap.ts");
 /* harmony import */ var _functions_statusConverter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/statusConverter */ "./src/app/functions/statusConverter.ts");
 
+// tslint:disable-next-line:import-spacing
 
 
 var DealModel = /** @class */ (function () {
@@ -9332,7 +9333,6 @@ var AppModule = /** @class */ (function () {
     return AppModule;
 }());
 
-// platformBrowserDynamic().bootstrapModule(AppModule);
 
 
 /***/ }),
@@ -9488,7 +9488,6 @@ function propertyMap(sourceProperty) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "statusConverter", function() { return statusConverter; });
 function statusConverter(target, key) {
-    var value;
     if (delete target[key]) {
         Object.defineProperty(target, key, {
             get: function () {
@@ -9662,6 +9661,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformB
     window['ngRef'] = ref;
     // Otherwise, log the boot error
 }).catch(function (err) { return console.error(err); });
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_4__["AppModule"]);
 
 
 /***/ }),

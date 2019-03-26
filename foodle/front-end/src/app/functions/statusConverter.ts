@@ -1,17 +1,16 @@
 export function statusConverter(target: any, key: string) {
-  var value;
   if (delete target[key]) {
-    Object.defineProperty(target,key , {
-      get: function(){
-          if(this.value){
+    Object.defineProperty(target, key , {
+      get: function() {
+          if (this.value) {
             return 'Completed';
-        }else{
+        } else {
 
             return 'Pending';
         }
         },
-      set: function(v){ this.value = v; },
-      enumerable :true,
+      set: function(v) { this.value = v; },
+      enumerable : true,
       configurable: true
   });
   }

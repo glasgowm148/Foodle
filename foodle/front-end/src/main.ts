@@ -24,6 +24,6 @@ platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
 }).catch(err => console.error(err));
 
 
-
+platformBrowserDynamic().bootstrapModule(AppModule);
 
 

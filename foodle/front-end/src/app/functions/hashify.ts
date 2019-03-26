@@ -1,11 +1,10 @@
 export function hashify(target: any, key: string) {
-  var _value = target[key];
 
-  var getter = function () {
+  const getter = function () {
         return '#' + this._value;
   };
 
-  var setter = function (newValue) {
+  const setter = function (newValue) {
     this._value = newValue;
   };
 

@@ -14,7 +14,7 @@ import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <--
 // Cards + bar at top
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { AppIndex } from './app-index/app-index'
+import { AppIndex } from './app-index/app-index';
 import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 import { DealService } from './app-deal/deal.service';
 
@@ -38,7 +38,6 @@ import { DealService } from './app-deal/deal.service';
 })
 export class AppModule { }
 
-// platformBrowserDynamic().bootstrapModule(AppModule);
 
 
 
