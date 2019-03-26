@@ -54,7 +54,7 @@
         <!-- FIRST TAB START : Most Popular-->
         <mat-tab>
           <ng-template mat-tab-label>
-            <mat-icon>folder</mat-icon> Latest Deals
+            <mat-icon>folder</mat-icon> Most Popular Deals
           </ng-template>
           <!--
             Flexbox Start
@@ -67,6 +67,7 @@
             https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c
           -->
 
+
           <div class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap.xs="0">
 
 
@@ -74,9 +75,9 @@
             <ng-container *ngFor="let deal of values">
               <!-- select row length by a type property -->
               <!-- with default row length when item.type is not defined -->
-              <div class="item" fxFlex="25%" *ngIf="!deal.type || deal.type === 'halfrow'">
+              <div class="item" fxFlex="25%" *ngIf="!deal.likes || deal.likes > '20'">
 
-                <div fxLayoutAlign="start" class="item-value">
+                <div fxLayoutAlign="start" class="item-value" fxFlexFill >
                   <mat-card>
                     <mat-card-header>
                       <mat-card-title>{{ deal.info }}</mat-card-title>
@@ -87,14 +88,14 @@
                       <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button> -->
                       <a mat-raised-button href="{{deal.url}}">Claim</a>
                       <a mat-raised-button href="/deal_page/{{deal.slug}}">Info</a>
-                      <button mat-button (click)="deal.url">Claim</button>
+                      <button mat-button (click)="deal.url">Like</button>
                       <!--- <button mat-button (click)="deal.info">Info</button>-->
                     </mat-card-actions>
                   </mat-card>
                 </div>
 
               </div>
-              <div class="item" fxFlex="20%" *ngIf="deal.type === 'fullrow'">
+              <div class="item" fxFlex="25%" *ngIf="!deal.likes || deal.likes < '20'">
 
                 <div fxLayoutAlign="start" class="item-value">
                   <mat-card>
