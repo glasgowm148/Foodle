@@ -1,45 +1,14 @@
-<!--
-This is the file called by <app-root>. Current this displays the following
 
-  : APP : Material Nav    --- /material-nav
-  : APP : App tav         --- /tab
-  : CheckBoxes
-  : Cards
-
-  CSS is loaded from app.component.css
-  app.component.ts is where you pass through your data
-  app.module.ts is where the module itself (html/css/ts) is loaded for use by django fromt-end
-  https://www.techiediaries.com/angular-tutorial/
-
--->
 
 <div class="container">
   <app-index></app-index>
 </div>
 
-<!-- Moved to example-navbar
-<h2 class="mt-3">Deal Service Attempt. Django++rest++Angular</h2>
-<div style="display: flex; align-content: space-between;">
-    <mat-card *ngFor="let deal of values" style="margin: auto;">
-      <mat-card-header>
-        <mat-card-title>{{ deal.info }}</mat-card-title>
-        <mat-card-subtitle>{{ deal.category }}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image [src]="deal.picture" [alt]="deal.info">
-      <mat-card-actions>
-    <!---  <button mat-button [routerLink]="['/deal.slug']">Home</button>
-
-        <button mat-button (click)="deal.url">Claim Deal</button>
-        <button mat-button (click)="deal.info">More Information</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-
+<!---
 <ul>
     <li *ngFor="let deal of values">{{deal}}</li>
   </ul>
--->
-<!---
+
 <table width="100%">
   <tr>
     <th>name</th>

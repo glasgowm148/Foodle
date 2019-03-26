@@ -68,6 +68,24 @@
           -->
 
 
+     <!--   <mat-grid-list cols=2 #grid rowHeight="215px" gutterSize="10px">
+              <mat-grid-tile *ngFor="let deal of values">
+                <mat-card class="settings-card">
+                    <mat-card-header>
+                    <mat-card-title>{{ deal.info }}</mat-card-title>
+                    <mat-card-subtitle>{{ deal.category }}, Likes: {{deal.likes}}</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image [src]="deal.picture" [alt]="deal.info">
+                  <mat-card-actions>
+                    <a mat-raised-button href="{{deal.url}}">Claim</a>
+                    <a mat-raised-button href="/deal_page/{{deal.slug}}">Info</a>
+                    <button mat-button (click)="deal.url">Like</button>
+                  </mat-card-actions>
+
+                  </mat-card>
+                  </mat-grid-tile>
+                  </mat-grid-list> -->
+
           <div class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap.xs="0">
 
 
