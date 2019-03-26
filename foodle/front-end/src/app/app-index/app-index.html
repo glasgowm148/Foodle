@@ -1,4 +1,4 @@
-<mat-sidenav-container [class.m2app-dark]="isDarkTheme">
+<mat-sidenav-container>
 
   <mat-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
     <mat-toolbar>
@@ -20,11 +20,11 @@
 
       <mat-toolbar-row>
         <button mat-raised-button color="accent" class="app-sidebar-button">
-          <mat-icon class="example-icon">verified_user</mat-icon>
+          <mat-icon class="example-icon" src="/login">verified_user</mat-icon>
           Login
         </button>
         <button mat-raised-button color="accent" class="app-sidebar-button">
-            <mat-icon class="example-icon">verified_user</mat-icon>
+            <mat-icon class="example-icon" src="/register">verified_user</mat-icon>
             Register
           </button>
       </mat-toolbar-row>
@@ -82,22 +82,11 @@
   <div class="app-content">
 
 
-    <br>
-
-
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 
 
-      <!-- Search Bar -->
-      <mat-form-field class="search-form">
-        <input matInput placeholder="Search Deals.." type="text">
-      </mat-form-field>
-      <button button="submit" mat-raised-button color="primary">Search</button>
-      <br>
-      <!-- Search Bar -->
+
 
       <mat-tab-group>
 
@@ -167,9 +156,16 @@
             <mat-slide-toggle [disabled]="sliderG.disabled" [checked]="sliderG.checked"
               (change)="sliderG.checked = !sliderG.checked">Gluten-Free</mat-slide-toggle>
           </mat-card-content>
+
         </mat-toolbar>
 
-
+   <!-- Search Bar -->
+   <mat-form-field class="search-form">
+      <input matInput placeholder="Search Deals.." type="text">
+    </mat-form-field>
+    <button button="submit" mat-raised-button color="white">Search</button>
+    <br>
+    <!-- Search Bar -->
 
 
           <div class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap.xs="2">
@@ -279,15 +275,6 @@
           <!--- Card  END-->
 
 
-
-
-
-
-
-
-
-
-
         </mat-tab>
 
 
@@ -295,8 +282,8 @@
           <ng-template mat-tab-label>
             <mat-icon>alarm</mat-icon> Saved
           </ng-template>
-          You haven't saved any deals yet - They will appear here when you do.
 
+          You haven't saved any deals yet - They will appear here when you do.
           <mat-progress-bar class="app-progress" mode="indeterminate" aria-label="Indeterminate progress-bar example">
           </mat-progress-bar>
 
@@ -308,7 +295,10 @@
             <mat-icon>map</mat-icon> Liked
           </ng-template>
 
+          <mat-progress-bar class="app-progress" mode="indeterminate" aria-label="Indeterminate progress-bar example">
           You haven't liked any deals yet - They will appear here when you do.
+            </mat-progress-bar>
+
 
         </mat-tab>
 
@@ -322,10 +312,10 @@
         <!-- end of card-->
 
 
-
-
-
       </mat-tab-group>
+
+
+
       <!-- Disabled Angular Dashboard for now
 <app-cards-angular></app-cards-angular>
     -->

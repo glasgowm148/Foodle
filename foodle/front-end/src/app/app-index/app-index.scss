@@ -64,7 +64,7 @@ mat-sidenav-container.m2app-dark {
 
 .slider {
   width: 100%;
-  height: 450px;
+  height: auto;
 }
 
 .app-spinner {
@@ -128,5 +128,9 @@ mat-chip {
 
 .example-spacer {
   flex: 1 1 auto;
+}
+
+.search-form {
+  padding-left: 20em;
 }
 
