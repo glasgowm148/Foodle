@@ -1,37 +1,31 @@
-<!-- SideNav start-->
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <mat-icon>info<a mat-list-item href="/about">About Us</a></mat-icon>
-      < <a mat-list-item href="/faq">FAQ</a>
-        <a mat-list-item href="/submit">Account</a>
-        <!-- <mat-icon></mat-icon>-->
-        <a mat-list-item href="/submit">Submit</a>
-        <a mat-list-item href="/login">Login</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <!-- SideNav end-->
 
     <mat-toolbar color="primary">
+        <a class="navbar-brand" href="./">
+          <img src="static/images/logo.png" alt="logo">
+        </a>
+      </mat-toolbar>
 
 
-      <mat-card-content>
-        <mat-slide-toggle [disabled]="sliderVE.disabled" [checked]="sliderVE.checked"
-          (change)="sliderVE.checked = !sliderVE.checked">Vegan</mat-slide-toggle>
-      </mat-card-content>
-      <mat-card-content>
-        <mat-slide-toggle [disabled]="sliderVEG.disabled" [checked]="sliderVEG.checked"
-          (change)="sliderVEG.checked = !sliderVEG.checked">Vegetarian</mat-slide-toggle>
-      </mat-card-content>
-      <mat-card-content>
-        <mat-slide-toggle [disabled]="sliderG.disabled" [checked]="sliderG.checked"
-          (change)="sliderG.checked = !sliderG.checked">Gluten-Free</mat-slide-toggle>
-      </mat-card-content>
-      <!--<img src="/static/images/logo.png" alt="logo">  <mat-icon>thumb_up</mat-icon> Most Liked-->
+<br>
+   <mat-toolbar color="primary">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>account_box</mat-icon>
+              <span>Your Account</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>send</mat-icon>
+              <span>Submit a Deal</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_on</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
     </mat-toolbar>
-    <!-- Add Content Here -->
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -46,8 +40,9 @@
       </mat-form-field>
       <button button="submit" mat-raised-button color="primary">Search</button>
       <br>
+      <!-- Search Bar -->
+
       <mat-tab-group>
-        <!-- Search Bar -->
 
 
 
@@ -86,7 +81,22 @@
                   </mat-grid-tile>
                   </mat-grid-list> -->
 
-          <div class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap.xs="0">
+                  <mat-card-content>
+                      <mat-slide-toggle [disabled]="sliderVE.disabled" [checked]="sliderVE.checked"
+                        (change)="sliderVE.checked = !sliderVE.checked">Vegan</mat-slide-toggle>
+                    </mat-card-content>
+                    <mat-card-content>
+                      <mat-slide-toggle [disabled]="sliderVEG.disabled" [checked]="sliderVEG.checked"
+                        (change)="sliderVEG.checked = !sliderVEG.checked">Vegetarian</mat-slide-toggle>
+                    </mat-card-content>
+                    <mat-card-content>
+                      <mat-slide-toggle [disabled]="sliderG.disabled" [checked]="sliderG.checked"
+                        (change)="sliderG.checked = !sliderG.checked">Gluten-Free</mat-slide-toggle>
+                    </mat-card-content>
+
+
+
+          <div class="container" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap.xs="2">
 
 
 
@@ -210,6 +220,7 @@
             <mat-icon>alarm</mat-icon> Saved
           </ng-template>
 
+           You haven't saved any deals yet - They will appear here when you do.
         </mat-tab>
 
         <mat-tab>
@@ -217,6 +228,7 @@
             <mat-icon>map</mat-icon> Liked
           </ng-template>
 
+          You haven't liked any deals yet - They will appear here when you do.
 
         </mat-tab>
 
@@ -240,6 +252,3 @@
       <!-- End of angular cards -->
     </div>
 
-
-  </mat-sidenav-content>
-</mat-sidenav-container>
