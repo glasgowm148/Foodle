@@ -1,30 +1,81 @@
+<mat-sidenav-container [class.m2app-dark]="isDarkTheme">
 
+  <mat-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>Settings</span>
+        <span class="app-toolbar-filler"></span>
+        <mat-icon class="example-icon">build</mat-icon>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <button mat-button (click)="isDarkTheme = !isDarkTheme" class="app-sidebar-button">TOGGLE THEME</button>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <span>Account</span>
+        <span class="app-toolbar-filler"></span>
+        <mat-icon class="example-icon">account_circle</mat-icon>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <button mat-raised-button color="accent" class="app-sidebar-button">
+          <mat-icon class="example-icon">verified_user</mat-icon>
+          Login
+        </button>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <span>Favorites</span>
+        <span class="app-toolbar-filler"></span>
+        <mat-icon class="example-icon">favorite</mat-icon>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <button mat-raised-button color="warn" class="app-sidebar-button">
+          <mat-icon class="example-icon">delete</mat-icon>
+          Delete
+        </button>
+      </mat-toolbar-row>
+
+    </mat-toolbar>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-button class="app-menu-button" (click)="sidenav.toggle()">
+      <i class="material-icons">menu</i>
+    </button>
+    <a class="navbar-brand" href="./">
+      <img src="static/images/logo.png" alt="logo">
+    </a>
+
+    <mat-icon>info</mat-icon>
+    <mat-icon>email</mat-icon>
+    <a class="nav-link" href="https://github.com/glasgowm148/foodle_dev"><i class="fab fa-github"></i></a>
+  </mat-toolbar>
+
+  <div class="app-content">
+
+
+    <br>
     <mat-toolbar color="primary">
-        <a class="navbar-brand" href="./">
-          <img src="static/images/logo.png" alt="logo">
-        </a>
-      </mat-toolbar>
-
-
-<br>
-   <mat-toolbar color="primary">
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>account_box</mat-icon>
-              <span>Your Account</span>
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>send</mat-icon>
-              <span>Submit a Deal</span>
-            </button>
-            <button mat-menu-item>
-              <mat-icon>notifications_on</mat-icon>
-              <span>Disable alerts</span>
-            </button>
-          </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>account_box</mat-icon>
+          <span>Your Account</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>send</mat-icon>
+          <span>Submit a Deal</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_on</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
     </mat-toolbar>
 
 
@@ -63,7 +114,7 @@
           -->
 
 
-     <!--   <mat-grid-list cols=2 #grid rowHeight="215px" gutterSize="10px">
+          <!--   <mat-grid-list cols=2 #grid rowHeight="215px" gutterSize="10px">
               <mat-grid-tile *ngFor="let deal of values">
                 <mat-card class="settings-card">
                     <mat-card-header>
@@ -81,18 +132,18 @@
                   </mat-grid-tile>
                   </mat-grid-list> -->
 
-                  <mat-card-content>
-                      <mat-slide-toggle [disabled]="sliderVE.disabled" [checked]="sliderVE.checked"
-                        (change)="sliderVE.checked = !sliderVE.checked">Vegan</mat-slide-toggle>
-                    </mat-card-content>
-                    <mat-card-content>
-                      <mat-slide-toggle [disabled]="sliderVEG.disabled" [checked]="sliderVEG.checked"
-                        (change)="sliderVEG.checked = !sliderVEG.checked">Vegetarian</mat-slide-toggle>
-                    </mat-card-content>
-                    <mat-card-content>
-                      <mat-slide-toggle [disabled]="sliderG.disabled" [checked]="sliderG.checked"
-                        (change)="sliderG.checked = !sliderG.checked">Gluten-Free</mat-slide-toggle>
-                    </mat-card-content>
+          <mat-card-content>
+            <mat-slide-toggle [disabled]="sliderVE.disabled" [checked]="sliderVE.checked"
+              (change)="sliderVE.checked = !sliderVE.checked">Vegan</mat-slide-toggle>
+          </mat-card-content>
+          <mat-card-content>
+            <mat-slide-toggle [disabled]="sliderVEG.disabled" [checked]="sliderVEG.checked"
+              (change)="sliderVEG.checked = !sliderVEG.checked">Vegetarian</mat-slide-toggle>
+          </mat-card-content>
+          <mat-card-content>
+            <mat-slide-toggle [disabled]="sliderG.disabled" [checked]="sliderG.checked"
+              (change)="sliderG.checked = !sliderG.checked">Gluten-Free</mat-slide-toggle>
+          </mat-card-content>
 
 
 
@@ -105,7 +156,7 @@
               <!-- with default row length when item.type is not defined -->
               <div class="item" fxFlex="25%" *ngIf="!deal.likes || deal.likes > '20'">
 
-                <div fxLayoutAlign="start" class="item-value" fxFlexFill >
+                <div fxLayoutAlign="start" class="item-value" fxFlexFill>
                   <mat-card>
                     <mat-card-header>
                       <mat-card-title>{{ deal.info }}</mat-card-title>
@@ -219,8 +270,12 @@
           <ng-template mat-tab-label>
             <mat-icon>alarm</mat-icon> Saved
           </ng-template>
+          You haven't saved any deals yet - They will appear here when you do.
 
-           You haven't saved any deals yet - They will appear here when you do.
+          <mat-progress-bar class="app-progress" mode="indeterminate" aria-label="Indeterminate progress-bar example">
+          </mat-progress-bar>
+
+
         </mat-tab>
 
         <mat-tab>
@@ -251,4 +306,5 @@
     -->
       <!-- End of angular cards -->
     </div>
-
+  </div>
+</mat-sidenav-container>

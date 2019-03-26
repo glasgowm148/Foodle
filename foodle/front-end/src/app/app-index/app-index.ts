@@ -6,7 +6,7 @@ import { Observable, Subscription } from 'rxjs';
 @Component({
   selector: 'app-index',
   templateUrl: './app-index.html',
-  styleUrls: ['./app-index.css']
+  styleUrls: ['./app-index.scss']
 })
 export class AppIndexComponent {
 
