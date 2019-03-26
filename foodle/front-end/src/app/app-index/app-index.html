@@ -58,30 +58,11 @@
 
 
     <br>
-    <mat-toolbar color="primary">
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>account_box</mat-icon>
-          <span>Your Account</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>send</mat-icon>
-          <span>Submit a Deal</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_on</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-      </mat-menu>
-    </mat-toolbar>
+
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <div class="mat-app-background basic-container">
 
 
 
@@ -131,7 +112,24 @@
                   </mat-card>
                   </mat-grid-tile>
                   </mat-grid-list> -->
-
+                  <mat-toolbar color="primary">
+                      <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>account_box</mat-icon>
+                          <span>Your Account</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>send</mat-icon>
+                          <span>Submit a Deal</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_on</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
           <mat-card-content>
             <mat-slide-toggle [disabled]="sliderVE.disabled" [checked]="sliderVE.checked"
               (change)="sliderVE.checked = !sliderVE.checked">Vegan</mat-slide-toggle>
@@ -144,6 +142,8 @@
             <mat-slide-toggle [disabled]="sliderG.disabled" [checked]="sliderG.checked"
               (change)="sliderG.checked = !sliderG.checked">Gluten-Free</mat-slide-toggle>
           </mat-card-content>
+        </mat-toolbar>
+
 
 
 
@@ -305,6 +305,5 @@
 <app-cards-angular></app-cards-angular>
     -->
       <!-- End of angular cards -->
-    </div>
   </div>
 </mat-sidenav-container>
