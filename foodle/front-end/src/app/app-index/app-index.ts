@@ -72,7 +72,7 @@ export class AppIndex {
   }
 
 
-  ngOnDestroy() {
+  /*ngOnDestroy() {
     this.valueSub.unsubscribe();
-  }
+  }*/
 }

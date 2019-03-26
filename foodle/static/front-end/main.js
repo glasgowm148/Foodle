@@ -9177,9 +9177,6 @@ var AppIndex = /** @class */ (function () {
         this.values = this.dealService.list();
         //  this.observableValues = this.dealService.list();
     }
-    AppIndex.prototype.ngOnDestroy = function () {
-        this.valueSub.unsubscribe();
-    };
     AppIndex = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-index',
@@ -9233,9 +9230,6 @@ var AppComponent = /** @class */ (function () {
         this.values = this.dealService.list();
         //  this.observableValues = this.dealService.list();
     }
-    AppComponent.prototype.ngOnDestroy = function () {
-        this.valueSub.unsubscribe();
-    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',

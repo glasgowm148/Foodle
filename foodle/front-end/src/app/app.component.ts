@@ -27,9 +27,9 @@ export class AppComponent  {
   }
 
 
-  ngOnDestroy() {
+  /*ngOnDestroy() {
       this.valueSub.unsubscribe();
-  }
+  }*/
 
 
 

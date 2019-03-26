@@ -10,7 +10,7 @@ export class ModelMapper<T> {
      map(source) {
        Object.keys(this._target).forEach((key) => {
          const mappedKey = this._propertyMapping[key];
-         if (mappedKey){
+         if (mappedKey) {
            this._target[key] = source[mappedKey];
          } else {
            this._target[key] = source[key];
