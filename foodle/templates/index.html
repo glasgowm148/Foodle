@@ -1,78 +1,54 @@
-<!-- base contains js/css imports, navbar,header-->
-{% extends 'base.html' %}
+
 
 {% load staticfiles %}
 
-
-{% block first_item %}
-<img src="{% static 'images/sliders/slide1.png' %}" alt="donut">
-<div class="carousel-caption">
-
-</div>
-{% endblock %}
-
-{% block second_item %}
-<img src="{% static 'images/sliders/slide2.png' %}" alt="donut">
-<div class="carousel-caption">
-</div>
-
-{% endblock %}
-
-{% block content %}
-<!-- Remove Redudndant Bookstrap
-<br />
-<br />
-<br />
-{% if deals %}
-<div class="container-fluid padding">
-  <div class="row padding">
-    {% for deal in deals %}
-    <div class="col-lg-3 col-md-6">
-      <!-- Start of card
-
-      <div class="card">
-        {% if deal.picture %}
-        <img class="card-img-top" src="{{ deal.picture.url }}" alt="deal_image">
-        {% endif %}
-        <div class="card-body">
-            <div class="card bg-primary text-white">
-                <div class="card-body text-center">{{ deal.category }}</div>
-            </div>
-            <br/>
-
-          <h4 class="card-title">{{ deal.info }}</h4>
-          {% if deal.address %}
-          <p class="card-text">Address: {{ deal.address }}</p>
-          {% else %}
-          <p class="card-text">Submission has no address </p>
-          {% endif %}
-
-          <a class="align-self-end btn btn-block btn-outline-primary" href="/deal_page/{{ deal.slug }}" role="button">Deal Info</a> <br />
-          {% if deal.url %}
-          <a class="align-self-end btn btn-block btn-outline-primary" href="{{ deal.url }}" role="button">Deal link</a>
-          {% endif %}
-        </div>
-
-      </div>
-      <br/>
-
-    </div>
-    {% endfor %}
-
-  </div>
-
-</div>
-{% endif %}
-<br />
-<br />
-<br />
-
--->
-
-  <!-- This loads the Angular Root App via foodle/front-end/src/app/app.component.ts
+<head>
+    <script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
+    <script type="text/javascript" src="{% static 'front-end/polyfills.js' %}"></script>
+    <script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
+    <script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
+    <script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
 
 
-  -->
+    {% block head %}{% endblock %}
+
+    <meta charset="utf-8">
+    <title>
+      {% block title_block %}Home{% endblock %} | Foodle
+    </title>
+
+    <base href="/">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+      content="523282884660-toddksam6tqnriecuthb9t1s07gqkmrq.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+    <!-- Bootstrap 4 Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      id="bootstrap-css">
+
+    <!-- Latest version of jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest version of popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest version of bootstrap.js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- FontAwesome for social media icons -->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="/static/front-end/fav/site.webmanifest">
+    <link rel="mask-icon" href="/static/front-end/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#662ec2">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+
 <app-root>Loading...</app-root>
 
 <script type="text/javascript" src="{% static 'front-end/runtime.js' %}"></script>
@@ -80,13 +56,6 @@
 <script type="text/javascript" src="{% static 'front-end/styles.js' %}"></script>
 <script type="text/javascript" src="{% static 'front-end/vendor.js' %}"></script>
 <script type="text/javascript" src="{% static 'front-end/main.js' %}"></script>
-<
+
 
 </div>
-
-
-
-
-
-
-{% endblock %}
