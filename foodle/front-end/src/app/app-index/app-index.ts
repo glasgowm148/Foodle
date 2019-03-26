@@ -8,7 +8,7 @@ import { Observable, Subscription } from 'rxjs';
   templateUrl: './app-index.html',
   styleUrls: ['./app-index.css']
 })
-export class AppIndex {
+export class AppIndexComponent {
 
 
   public sliderVE = {

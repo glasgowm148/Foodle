@@ -9112,20 +9112,20 @@ module.exports = "<!-- SideNav start-->\n<mat-sidenav-container class=\"sidenav-
 /*!****************************************!*\
   !*** ./src/app/app-index/app-index.ts ***!
   \****************************************/
-/*! exports provided: AppIndex */
+/*! exports provided: AppIndexComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppIndex", function() { return AppIndex; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppIndexComponent", function() { return AppIndexComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app-deal/deal.service */ "./src/app/app-deal/deal.service.ts");
 
 
 
-var AppIndex = /** @class */ (function () {
-    function AppIndex(dealService) {
+var AppIndexComponent = /** @class */ (function () {
+    function AppIndexComponent(dealService) {
         var _this = this;
         this.dealService = dealService;
         this.sliderVE = {
@@ -9177,15 +9177,15 @@ var AppIndex = /** @class */ (function () {
         this.values = this.dealService.list();
         //  this.observableValues = this.dealService.list();
     }
-    AppIndex = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    AppIndexComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-index',
             template: __webpack_require__(/*! ./app-index.html */ "./src/app/app-index/app-index.html"),
             styles: [__webpack_require__(/*! ./app-index.css */ "./src/app/app-index/app-index.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_deal_deal_service__WEBPACK_IMPORTED_MODULE_2__["DealService"]])
-    ], AppIndex);
-    return AppIndex;
+    ], AppIndexComponent);
+    return AppIndexComponent;
 }());
 
 
@@ -9319,7 +9319,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"],
             ],
             entryComponents: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _app_index_app_index__WEBPACK_IMPORTED_MODULE_10__["AppIndex"], _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_11__["CardsAngularComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _app_index_app_index__WEBPACK_IMPORTED_MODULE_10__["AppIndexComponent"], _cards_angular_cards_angular_component__WEBPACK_IMPORTED_MODULE_11__["CardsAngularComponent"]],
             providers: [_app_deal_deal_service__WEBPACK_IMPORTED_MODULE_12__["DealService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })

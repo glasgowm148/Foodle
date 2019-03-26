@@ -14,7 +14,7 @@ import { MatGridListModule, MatToolbarModule } from '@angular/material';  // <--
 // Cards + bar at top
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { AppIndex } from './app-index/app-index';
+import { AppIndexComponent } from './app-index/app-index';
 import { CardsAngularComponent } from './cards-angular/cards-angular.component';
 import { DealService } from './app-deal/deal.service';
 
@@ -32,7 +32,7 @@ import { DealService } from './app-deal/deal.service';
     ReactiveFormsModule,
   ],
   entryComponents: [AppComponent],
-  declarations: [AppComponent, AppIndex, CardsAngularComponent],
+  declarations: [AppComponent, AppIndexComponent, CardsAngularComponent],
   providers: [ DealService ],
   bootstrap: [AppComponent]
 })
