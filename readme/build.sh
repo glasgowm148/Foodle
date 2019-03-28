@@ -1,6 +1,6 @@
 . venv/bin/activate
 cd foodle/front-end || exit
-ng build
+ng build --prod 
 cd ../..
 python manage.py makemigrations
 python manage.py migrate
