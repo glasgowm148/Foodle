@@ -31,7 +31,15 @@ A responsive web application for finding nearby deals built with Django and Angu
 
 To deploy a local instance of foodle simply clone into a python 3+ virtual environment and run 
 ```sh
+git clone https://github.com/glasgowm148/Foodle.git
+pip3.6 install virtualenv
+virtualenv -p python3.6 venv
+. venv/bin/activate
+pip3.6 install -r requirements.txt
+./readme/clean.sh (assuming you can run .sh - if not makemigrations)
+python populate_foodle.py
 python manage.py runserver
+
 ```
 Foodle should now be accessible via:
 127.0.0.1:8000
